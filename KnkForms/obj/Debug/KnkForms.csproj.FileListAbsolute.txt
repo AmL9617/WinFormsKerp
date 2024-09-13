@@ -1,0 +1,14 @@
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\bin\Debug\KnkForms.exe.config
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\bin\Debug\KnkForms.exe
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\bin\Debug\KnkForms.pdb
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.csproj.AssemblyReference.cache
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.FormPai.resources
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.Properties.Resources.resources
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.csproj.GenerateResource.cache
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.csproj.Up2Date
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.exe
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.pdb
+C:\Users\User\Documents\main\Knk\KnkForms\KnkForms\obj\Debug\KnkForms.Forms.FormPais.resources

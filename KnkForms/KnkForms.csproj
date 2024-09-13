@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2A737FC-2360-4781-82C0-489496581ECE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KnkForms</RootNamespace>
+    <AssemblyName>KnkForms</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Cidades.cs" />
+    <Compile Include="Classes\Clientes.cs" />
+    <Compile Include="Classes\CondicaoPagamentos.cs" />
+    <Compile Include="Classes\Contadores.cs" />
+    <Compile Include="Classes\Empresas.cs" />
+    <Compile Include="Classes\Estados.cs" />
+    <Compile Include="Classes\FormaPagamentos.cs" />
+    <Compile Include="Forms\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCondicaoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCondicaoPagamento.Designer.cs">
+      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormContador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormContador.Designer.cs">
+      <DependentUpon>FormContador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmpresa.Designer.cs">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFormaPagamento.Designer.cs">
+      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFornecedor.Designer.cs">
+      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFuncionario.Designer.cs">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGrupo.Designer.cs">
+      <DependentUpon>FormGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormListaPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormListaPreco.Designer.cs">
+      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMarca.Designer.cs">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormParcela.Designer.cs">
+      <DependentUpon>FormParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRamoAtividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRamoAtividade.Designer.cs">
+      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRegiao.Designer.cs">
+      <DependentUpon>FormRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTransportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTransportadora.Designer.cs">
+      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVendedor.Designer.cs">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCidade.Designer.cs">
+      <DependentUpon>FormCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEstado.Designer.cs">
+      <DependentUpon>FormEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Fornecedores.cs" />
+    <Compile Include="Classes\Funcionarios.cs" />
+    <Compile Include="Classes\Grupos.cs" />
+    <Compile Include="Classes\ListaPrecos.cs" />
+    <Compile Include="Classes\Marcas.cs" />
+    <Compile Include="Classes\Pai.cs" />
+    <Compile Include="Classes\Paises.cs" />
+    <Compile Include="Classes\Parcelas.cs" />
+    <Compile Include="Classes\RamoAtividades.cs" />
+    <Compile Include="Classes\Regioes.cs" />
+    <Compile Include="Classes\Transportadoras.cs" />
+    <Compile Include="Classes\Vendedores.cs" />
+    <Compile Include="Forms\FormPai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPai.Designer.cs">
+      <DependentUpon>FormPai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPais.Designer.cs">
+      <DependentUpon>FormPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCondicaoPagamento.resx">
+      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormContador.resx">
+      <DependentUpon>FormContador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFormaPagamento.resx">
+      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFornecedor.resx">
+      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFuncionario.resx">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGrupo.resx">
+      <DependentUpon>FormGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormListaPreco.resx">
+      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMarca.resx">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormParcela.resx">
+      <DependentUpon>FormParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRamoAtividade.resx">
+      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRegiao.resx">
+      <DependentUpon>FormRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTransportadora.resx">
+      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVendedor.resx">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCidade.resx">
+      <DependentUpon>FormCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEstado.resx">
+      <DependentUpon>FormEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPai.resx">
+      <DependentUpon>FormPai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPais.resx">
+      <DependentUpon>FormPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
