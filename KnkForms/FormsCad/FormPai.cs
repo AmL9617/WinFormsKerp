@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KnkForms.Classes;
 using Newtonsoft.Json;
+using KnkForms.Forms;
 
 namespace KnkForms
 {
-    public partial class FormPai : Form
+    public partial class FormPai : FormCadastros
     {
         public FormPai()
         {

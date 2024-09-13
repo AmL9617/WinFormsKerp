@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\forms\\formclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\forms\\formclientes.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formclientes.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\classes\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\formscad\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\formscad\\formcontador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcontador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formpai.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formpai.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formpai.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formpai.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\formscad\\formmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\classes\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\user\\documents\\main\\knk\\knkforms\\knkforms\\forms\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\forms\\formtransportadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formtransportadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\forms\\formfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\knkforms\\forms\\formfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\forms\\formfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 192,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,92 +67,145 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormClientes.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.Designer.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormClientes.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.Designer.cs",
-              "RelativeToolTip": "KnkForms\\Forms\\FormClientes.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T14:28:02.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormClientes.resx",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.resx",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormClientes.resx",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.resx",
-              "RelativeToolTip": "KnkForms\\Forms\\FormClientes.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-09-13T14:28:02.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Clientes.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Classes\\Clientes.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Classes\\Clientes.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Classes\\Clientes.cs",
-              "RelativeToolTip": "KnkForms\\Classes\\Clientes.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABMAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T13:17:23.504Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FormTransportadora.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormTransportadora.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormTransportadora.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormTransportadora.cs [Design]",
-              "RelativeToolTip": "KnkForms\\Forms\\FormTransportadora.cs [Design]",
+              "Title": "FormContador.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormContador.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormContador.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormContador.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormContador.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T18:01:41.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormFornecedor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormFornecedor.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormFornecedor.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormFornecedor.cs [Design]",
-              "RelativeToolTip": "KnkForms\\Forms\\FormFornecedor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T17:50:52.895Z"
+              "WhenOpened": "2024-09-13T18:34:59.672Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "FormFuncionario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormFuncionario.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormFuncionario.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormFuncionario.cs [Design]",
-              "RelativeToolTip": "KnkForms\\Forms\\FormFuncionario.cs [Design]",
+              "Title": "FormCadastros.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormCadastros.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadastros.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormCadastros.cs",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadastros.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T17:12:04.867Z"
+              "WhenOpened": "2024-09-13T18:32:56.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormPai.resx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.resx",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormPai.resx",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.resx",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormPai.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-09-13T18:32:31.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormPai.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.Designer.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormPai.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.Designer.cs",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormPai.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:32:30.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormMarca.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormMarca.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormMarca.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormMarca.cs",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormMarca.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:32:28.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormPai.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormPai.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.cs",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormPai.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:31:51.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormPai.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormPai.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormPai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:31:48.793Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCadastros.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormCadastros.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadastros.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormCadastros.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadastros.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:31:09.555Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormClientes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormClientes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormClientes.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormClientes.cs",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormClientes.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAawCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:23:10.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Clientes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Classes\\Clientes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\Clientes.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Classes\\Clientes.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\Clientes.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAA1wDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T18:15:16.411Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "FormClientes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Forms\\FormClientes.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\Forms\\FormClientes.cs [Design]",
-              "RelativeToolTip": "KnkForms\\Forms\\FormClientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormClientes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormClientes.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\main\\Knk\\KnkForms\\KnkForms\\FormsCad\\FormClientes.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormClientes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T18:11:49.625Z",
               "EditorCaption": " [Design]"
