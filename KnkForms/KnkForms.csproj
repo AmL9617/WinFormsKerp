@@ -56,113 +56,185 @@
     <Compile Include="Classes\Empresas.cs" />
     <Compile Include="Classes\Estados.cs" />
     <Compile Include="Classes\FormaPagamentos.cs" />
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConRegiao.Designer.cs">
+      <DependentUpon>FormConRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConTransportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConTransportadora.Designer.cs">
+      <DependentUpon>FormConTransportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConVendedor.Designer.cs">
+      <DependentUpon>FormConVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConCondicaoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConCondicaoPagamento.Designer.cs">
+      <DependentUpon>FormConCondicaoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConContador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConContador.Designer.cs">
+      <DependentUpon>FormConContador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConEmpresa.Designer.cs">
+      <DependentUpon>FormConEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConEstado.Designer.cs">
+      <DependentUpon>FormConEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConFormaPagamento.Designer.cs">
+      <DependentUpon>FormConFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConFornecedor.Designer.cs">
+      <DependentUpon>FormConFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConFuncionario.Designer.cs">
+      <DependentUpon>FormConFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConGrupo.Designer.cs">
+      <DependentUpon>FormConGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsCad\FormCadastros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormsCad\FormCadastros.Designer.cs">
       <DependentUpon>FormCadastros.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormClientes.cs">
+    <Compile Include="FormsCad\FormCadClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormClientes.Designer.cs">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadClientes.Designer.cs">
+      <DependentUpon>FormCadClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormCondicaoPagamento.cs">
+    <Compile Include="FormsCad\FormCadCondicaoPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormCondicaoPagamento.Designer.cs">
-      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadCondicaoPagamento.Designer.cs">
+      <DependentUpon>FormCadCondicaoPagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormContador.cs">
+    <Compile Include="FormsCad\FormCadContador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormContador.Designer.cs">
-      <DependentUpon>FormContador.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadContador.Designer.cs">
+      <DependentUpon>FormCadContador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormEmpresa.cs">
+    <Compile Include="FormsCad\FormCadEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormEmpresa.Designer.cs">
-      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadEmpresa.Designer.cs">
+      <DependentUpon>FormCadEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormFormaPagamento.cs">
+    <Compile Include="FormsCad\FormCadFormaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormFormaPagamento.Designer.cs">
-      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadFormaPagamento.Designer.cs">
+      <DependentUpon>FormCadFormaPagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormFornecedor.cs">
+    <Compile Include="FormsCad\FormCadFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormFornecedor.Designer.cs">
-      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadFornecedor.Designer.cs">
+      <DependentUpon>FormCadFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormFuncionario.cs">
+    <Compile Include="FormsCad\FormCadFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormFuncionario.Designer.cs">
-      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadFuncionario.Designer.cs">
+      <DependentUpon>FormCadFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormGrupo.cs">
+    <Compile Include="FormsCad\FormCadGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormGrupo.Designer.cs">
-      <DependentUpon>FormGrupo.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadGrupo.Designer.cs">
+      <DependentUpon>FormCadGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormListaPreco.cs">
+    <Compile Include="FormsCad\FormCadListaPreco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormListaPreco.Designer.cs">
-      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadListaPreco.Designer.cs">
+      <DependentUpon>FormCadListaPreco.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormMarca.cs">
+    <Compile Include="FormsCad\FormCadMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormMarca.Designer.cs">
-      <DependentUpon>FormMarca.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadMarca.Designer.cs">
+      <DependentUpon>FormCadMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormParcela.cs">
+    <Compile Include="FormsCad\FormCadParcela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormParcela.Designer.cs">
-      <DependentUpon>FormParcela.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadParcela.Designer.cs">
+      <DependentUpon>FormCadParcela.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormRamoAtividade.cs">
+    <Compile Include="FormsCad\FormCadRamoAtividade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormRamoAtividade.Designer.cs">
-      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadRamoAtividade.Designer.cs">
+      <DependentUpon>FormCadRamoAtividade.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormRegiao.cs">
+    <Compile Include="FormsCad\FormCadRegiao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormRegiao.Designer.cs">
-      <DependentUpon>FormRegiao.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadRegiao.Designer.cs">
+      <DependentUpon>FormCadRegiao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormTransportadora.cs">
+    <Compile Include="FormsCad\FormCadTransportadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormTransportadora.Designer.cs">
-      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadTransportadora.Designer.cs">
+      <DependentUpon>FormCadTransportadora.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormVendedor.cs">
+    <Compile Include="FormsCad\FormCadVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormVendedor.Designer.cs">
-      <DependentUpon>FormVendedor.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadVendedor.Designer.cs">
+      <DependentUpon>FormCadVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormCidade.cs">
+    <Compile Include="FormsCad\FormCadCidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormCidade.Designer.cs">
-      <DependentUpon>FormCidade.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadCidade.Designer.cs">
+      <DependentUpon>FormCadCidade.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormEstado.cs">
+    <Compile Include="FormsCad\FormCadEstado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormEstado.Designer.cs">
-      <DependentUpon>FormEstado.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadEstado.Designer.cs">
+      <DependentUpon>FormCadEstado.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Fornecedores.cs" />
     <Compile Include="Classes\Funcionarios.cs" />
@@ -176,76 +248,136 @@
     <Compile Include="Classes\Regioes.cs" />
     <Compile Include="Classes\Transportadoras.cs" />
     <Compile Include="Classes\Vendedores.cs" />
-    <Compile Include="FormsCad\FormPai.cs">
+    <Compile Include="FormsCad\FormCadPai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormPai.Designer.cs">
-      <DependentUpon>FormPai.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadPai.Designer.cs">
+      <DependentUpon>FormCadPai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormPais.cs">
+    <Compile Include="FormsCad\FormCadPais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormPais.Designer.cs">
-      <DependentUpon>FormPais.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadPais.Designer.cs">
+      <DependentUpon>FormCadPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConCidade.Designer.cs">
+      <DependentUpon>FormConCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConCliente.Designer.cs">
+      <DependentUpon>FormConCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConListaPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConListaPreco.Designer.cs">
+      <DependentUpon>FormConListaPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConMarca.Designer.cs">
+      <DependentUpon>FormConMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConPai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConPai.Designer.cs">
+      <DependentUpon>FormConPai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConPais.Designer.cs">
+      <DependentUpon>FormConPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConParcela.Designer.cs">
+      <DependentUpon>FormConParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConRamoAtividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConRamoAtividade.Designer.cs">
+      <DependentUpon>FormConRamoAtividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConsulta.Designer.cs">
+      <DependentUpon>FormConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormsCad\FormClientes.resx">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormCondicaoPagamento.resx">
-      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadClientes.resx">
+      <DependentUpon>FormCadClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormContador.resx">
-      <DependentUpon>FormContador.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadCondicaoPagamento.resx">
+      <DependentUpon>FormCadCondicaoPagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormEmpresa.resx">
-      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadContador.resx">
+      <DependentUpon>FormCadContador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormFormaPagamento.resx">
-      <DependentUpon>FormFormaPagamento.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadEmpresa.resx">
+      <DependentUpon>FormCadEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormFornecedor.resx">
-      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadFormaPagamento.resx">
+      <DependentUpon>FormCadFormaPagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormFuncionario.resx">
-      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadFornecedor.resx">
+      <DependentUpon>FormCadFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormGrupo.resx">
-      <DependentUpon>FormGrupo.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadFuncionario.resx">
+      <DependentUpon>FormCadFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormListaPreco.resx">
-      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadGrupo.resx">
+      <DependentUpon>FormCadGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCad\FormCadListaPreco.resx">
+      <DependentUpon>FormCadListaPreco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormMarca.resx">
-      <DependentUpon>FormMarca.cs</DependentUpon>
+      <DependentUpon>FormCadMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormParcela.resx">
-      <DependentUpon>FormParcela.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadParcela.resx">
+      <DependentUpon>FormCadParcela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormRamoAtividade.resx">
-      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadRamoAtividade.resx">
+      <DependentUpon>FormCadRamoAtividade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormRegiao.resx">
-      <DependentUpon>FormRegiao.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadRegiao.resx">
+      <DependentUpon>FormCadRegiao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormTransportadora.resx">
-      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadTransportadora.resx">
+      <DependentUpon>FormCadTransportadora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormVendedor.resx">
-      <DependentUpon>FormVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadVendedor.resx">
+      <DependentUpon>FormCadVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormCidade.resx">
-      <DependentUpon>FormCidade.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadCidade.resx">
+      <DependentUpon>FormCadCidade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormEstado.resx">
-      <DependentUpon>FormEstado.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadEstado.resx">
+      <DependentUpon>FormCadEstado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormPai.resx">
-      <DependentUpon>FormPai.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadPai.resx">
+      <DependentUpon>FormCadPai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormPais.resx">
-      <DependentUpon>FormPais.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadPais.resx">
+      <DependentUpon>FormCadPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConPai.resx">
+      <DependentUpon>FormConPai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

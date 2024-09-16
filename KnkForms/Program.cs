@@ -16,7 +16,7 @@ namespace KnkForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPai());
+            Application.Run(new FormCadPai());
         }
     }
 }
