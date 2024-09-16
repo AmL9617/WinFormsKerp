@@ -36,7 +36,7 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(165, 119);
+            this.chkAtivo.Location = new System.Drawing.Point(294, 58);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 53;
@@ -45,7 +45,7 @@
             // 
             // txtNomeGrupo
             // 
-            this.txtNomeGrupo.Location = new System.Drawing.Point(35, 119);
+            this.txtNomeGrupo.Location = new System.Drawing.Point(164, 58);
             this.txtNomeGrupo.Name = "txtNomeGrupo";
             this.txtNomeGrupo.Size = new System.Drawing.Size(100, 20);
             this.txtNomeGrupo.TabIndex = 52;
@@ -53,25 +53,24 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(32, 103);
+            this.lbl1.Location = new System.Drawing.Point(161, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(82, 13);
             this.lbl1.TabIndex = 51;
             this.lbl1.Text = "Nome do Grupo";
             // 
-            // FormGrupo
+            // FormCadGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtNomeGrupo);
             this.Controls.Add(this.lbl1);
-            this.Name = "FormGrupo";
+            this.Name = "FormCadGrupo";
             this.Text = "Form Grupo";
+            this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblId, 0);
             this.Controls.SetChildIndex(this.txtId, 0);
-            this.Controls.SetChildIndex(this.lblIdEmp, 0);
-            this.Controls.SetChildIndex(this.txtIdEmp, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);

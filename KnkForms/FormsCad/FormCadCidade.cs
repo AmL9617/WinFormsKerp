@@ -24,7 +24,6 @@ namespace KnkForms.Forms
             Cidades novaCidade = new Cidades();
 
             novaCidade.Id = Convert.ToInt32(txtId.Text);
-            novaCidade.IdEmpresa = Convert.ToInt32(txtIdEmp.Text);
             DateTime dataCadastro;
             DateTime dataModificacao;
 

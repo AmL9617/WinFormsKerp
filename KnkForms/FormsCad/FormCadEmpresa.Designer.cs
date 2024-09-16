@@ -40,7 +40,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.Location = new System.Drawing.Point(35, 120);
+            this.txtRazaoSocial.Location = new System.Drawing.Point(154, 58);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(100, 20);
             this.txtRazaoSocial.TabIndex = 52;
@@ -48,7 +48,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(32, 104);
+            this.lbl1.Location = new System.Drawing.Point(151, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(70, 13);
             this.lbl1.TabIndex = 51;
@@ -56,7 +56,7 @@
             // 
             // txtNomeFant
             // 
-            this.txtNomeFant.Location = new System.Drawing.Point(165, 120);
+            this.txtNomeFant.Location = new System.Drawing.Point(284, 58);
             this.txtNomeFant.Name = "txtNomeFant";
             this.txtNomeFant.Size = new System.Drawing.Size(100, 20);
             this.txtNomeFant.TabIndex = 54;
@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 104);
+            this.label1.Location = new System.Drawing.Point(281, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 53;
@@ -72,7 +72,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.Location = new System.Drawing.Point(289, 120);
+            this.txtCnpj.Location = new System.Drawing.Point(408, 58);
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(100, 20);
             this.txtCnpj.TabIndex = 56;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(286, 104);
+            this.label2.Location = new System.Drawing.Point(405, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 55;
@@ -88,7 +88,7 @@
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(412, 120);
+            this.txtCep.Location = new System.Drawing.Point(531, 58);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
             this.txtCep.TabIndex = 58;
@@ -96,13 +96,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(409, 104);
+            this.label3.Location = new System.Drawing.Point(528, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 57;
             this.label3.Text = "CEP";
             // 
-            // FormEmpresa
+            // FormCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -114,12 +114,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtRazaoSocial);
             this.Controls.Add(this.lbl1);
-            this.Name = "FormEmpresa";
+            this.Name = "FormCadEmpresa";
             this.Text = "Form Empresa";
+            this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblId, 0);
             this.Controls.SetChildIndex(this.txtId, 0);
-            this.Controls.SetChildIndex(this.lblIdEmp, 0);
-            this.Controls.SetChildIndex(this.txtIdEmp, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);

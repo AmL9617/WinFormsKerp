@@ -23,7 +23,6 @@ namespace KnkForms.Forms
             Paises novoPais = new Paises();
 
             novoPais.Id = Convert.ToInt32(txtId.Text);
-            novoPais.IdEmpresa = Convert.ToInt32(txtIdEmp.Text);
 
             DateTime dataCadastro;
             DateTime dataModificacao;

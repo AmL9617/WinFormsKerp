@@ -36,7 +36,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(165, 125);
+            this.txtValor.Location = new System.Drawing.Point(276, 58);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 20);
             this.txtValor.TabIndex = 54;
@@ -44,7 +44,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(162, 109);
+            this.label2.Location = new System.Drawing.Point(273, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 53;
@@ -52,7 +52,7 @@
             // 
             // txtQtd
             // 
-            this.txtQtd.Location = new System.Drawing.Point(35, 125);
+            this.txtQtd.Location = new System.Drawing.Point(146, 58);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(100, 20);
             this.txtQtd.TabIndex = 52;
@@ -60,13 +60,13 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(32, 109);
+            this.lbl1.Location = new System.Drawing.Point(143, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(116, 13);
             this.lbl1.TabIndex = 51;
             this.lbl1.Text = "Quantidade da Parcela";
             // 
-            // FormParcela
+            // FormCadParcela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -74,11 +74,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.lbl1);
-            this.Name = "FormParcela";
+            this.Name = "FormCadParcela";
+            this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblId, 0);
             this.Controls.SetChildIndex(this.txtId, 0);
-            this.Controls.SetChildIndex(this.lblIdEmp, 0);
-            this.Controls.SetChildIndex(this.txtIdEmp, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);

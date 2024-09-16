@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KnkForms.Classes;
 using KnkForms.Forms;
+using KnkForms.FormsCon;
 
 namespace KnkForms
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : FormPai
     {
         public FormPrincipal()
         {
@@ -37,25 +38,24 @@ namespace KnkForms
             cadVendedoresToolStripMenuItem.Click += (sender, e) => OpenRegisterForm(new FormCadVendedor());
 
             // Register click events for each MenuStrip item for Consultation
-            consultaCidadesToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConCidades());
-            consultaClientesToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConClientes());
-            consultaCondicaoPagamentoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConCondicaoPagamento());
-            consultaContadorToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConContador());
-            consultaEmpresaToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConEmpresa());
-            consultaEstadoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConEstado());
-            consultaFormaPagamentoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConFormaPagamento());
-            consultaFornecedorToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConFornecedor());
-            consultaFuncionarioToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConFuncionario());
-            consultaGrupoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConGrupo());
-            consultaListaPrecoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConListaPreco());
-            consultaMarcaToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConMarca());
-            consultaPaiToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConPai());
-            consultaPaisToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConPais());
-            consultaParcelaToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConParcela());
-            consultaRamoAtividadeToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConRamoAtividade());
-            consultaRegiaoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConRegiao());
-            consultaTransportadoraToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConTransportadora());
-            consultaVendedorToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new formConVendedor());
+            conCidadesToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConCidades());
+            conClientesToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConCliente());
+            conCondicaoDePagamentoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConCondicaoPagamento());
+            conContadoresToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConContador());
+            conEmpresasToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConEmpresa());
+            conEstadosToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConEstado());
+            conFormasDePagamentoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConFormaPagamento());
+            conFornecedoresToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConFornecedor());
+            conFuncionariosToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConFuncionario());
+            conGruposToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConGrupo());
+            conListaDePrecosToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConListaPreco());
+            conMarcasToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConMarca());
+            conPaisToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConPais());
+            conParcelasToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConParcela());
+            conRamoDeAtividadesToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConRamoAtividade());
+            conRegiaoToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConRegiao());
+            conTransportadorasToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConTransportadora());
+            conVendedoresToolStripMenuItem.Click += (sender, e) => OpenConsultationForm(new FormConVendedor());
         }
 
         private void OpenRegisterForm(Form registerForm)

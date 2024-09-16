@@ -14,7 +14,7 @@ using KnkForms.Forms;
 
 namespace KnkForms
 {
-    public partial class FormCadPai : FormCadastros
+    public partial class FormCadPai : FormPai
     {
         public FormCadPai()
         {
@@ -26,7 +26,6 @@ namespace KnkForms
             Pai novoPai = new Pai();
 
             novoPai.Id = Convert.ToInt32(txtId.Text);
-            novoPai.IdEmpresa = Convert.ToInt32(txtIdEmp.Text);
             DateTime dataCadastro;
             DateTime dataModificacao;
 

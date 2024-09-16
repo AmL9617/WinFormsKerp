@@ -23,7 +23,6 @@ namespace KnkForms.Classes
             Estados novoEstado = new Estados();
 
             novoEstado.Id = Convert.ToInt32(txtId.Text);
-            novoEstado.IdEmpresa = Convert.ToInt32(txtIdEmp.Text);
             DateTime dataCadastro;
             DateTime dataModificacao;
 

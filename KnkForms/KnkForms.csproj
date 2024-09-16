@@ -56,6 +56,12 @@
     <Compile Include="Classes\Empresas.cs" />
     <Compile Include="Classes\Estados.cs" />
     <Compile Include="Classes\FormaPagamentos.cs" />
+    <Compile Include="FormPai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPai.Designer.cs">
+      <DependentUpon>FormPai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormPai.resx">
+      <DependentUpon>FormPai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadListaPreco.resx">
       <DependentUpon>FormCadListaPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCad\FormCadMarca.resx">
+      <DependentUpon>FormCadMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormMarca.resx">
       <DependentUpon>FormCadMarca.cs</DependentUpon>

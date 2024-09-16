@@ -66,7 +66,7 @@
             this.listVConsulta.HideSelection = false;
             this.listVConsulta.Location = new System.Drawing.Point(37, 96);
             this.listVConsulta.Name = "listVConsulta";
-            this.listVConsulta.Size = new System.Drawing.Size(737, 325);
+            this.listVConsulta.Size = new System.Drawing.Size(737, 312);
             this.listVConsulta.TabIndex = 3;
             this.listVConsulta.UseCompatibleStateImageBehavior = false;
             this.listVConsulta.View = System.Windows.Forms.View.Details;
@@ -80,6 +80,11 @@
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.label1);
             this.Name = "FormConPai";
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.txtPesquisa, 0);
+            this.Controls.SetChildIndex(this.btnPesquisa, 0);
+            this.Controls.SetChildIndex(this.listVConsulta, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

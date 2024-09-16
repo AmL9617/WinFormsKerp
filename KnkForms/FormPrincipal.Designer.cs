@@ -30,7 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadCidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadCondicaoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,25 @@
             this.cadRegioesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadTransportadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conCidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conCondicaoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conContadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conFormasDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conFuncionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conListaDePrecosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conParcelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conRamoDeAtividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conRegiaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conTransportadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,12 +105,6 @@
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
-            // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // cadCidadesToolStripMenuItem
             // 
@@ -202,6 +214,139 @@
             this.cadVendedoresToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.cadVendedoresToolStripMenuItem.Text = "Vendedores";
             // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conCidadesToolStripMenuItem,
+            this.conClientesToolStripMenuItem,
+            this.conCondicaoDePagamentoToolStripMenuItem,
+            this.conContadoresToolStripMenuItem,
+            this.conEmpresasToolStripMenuItem,
+            this.conEstadosToolStripMenuItem,
+            this.conFormasDePagamentoToolStripMenuItem,
+            this.conFornecedoresToolStripMenuItem,
+            this.conFuncionariosToolStripMenuItem,
+            this.conGruposToolStripMenuItem,
+            this.conListaDePrecosToolStripMenuItem,
+            this.conMarcasToolStripMenuItem,
+            this.conPaisToolStripMenuItem,
+            this.conParcelasToolStripMenuItem,
+            this.conRamoDeAtividadesToolStripMenuItem,
+            this.conRegiaoToolStripMenuItem,
+            this.conTransportadorasToolStripMenuItem,
+            this.conVendedoresToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // conCidadesToolStripMenuItem
+            // 
+            this.conCidadesToolStripMenuItem.Name = "conCidadesToolStripMenuItem";
+            this.conCidadesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conCidadesToolStripMenuItem.Text = "Cidades";
+            // 
+            // conClientesToolStripMenuItem
+            // 
+            this.conClientesToolStripMenuItem.Name = "conClientesToolStripMenuItem";
+            this.conClientesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conClientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // conCondicaoDePagamentoToolStripMenuItem
+            // 
+            this.conCondicaoDePagamentoToolStripMenuItem.Name = "conCondicaoDePagamentoToolStripMenuItem";
+            this.conCondicaoDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conCondicaoDePagamentoToolStripMenuItem.Text = "Condição de Pagamento";
+            // 
+            // conContadoresToolStripMenuItem
+            // 
+            this.conContadoresToolStripMenuItem.Name = "conContadoresToolStripMenuItem";
+            this.conContadoresToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conContadoresToolStripMenuItem.Text = "Contadores";
+            // 
+            // conEmpresasToolStripMenuItem
+            // 
+            this.conEmpresasToolStripMenuItem.Name = "conEmpresasToolStripMenuItem";
+            this.conEmpresasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conEmpresasToolStripMenuItem.Text = "Empresas";
+            // 
+            // conEstadosToolStripMenuItem
+            // 
+            this.conEstadosToolStripMenuItem.Name = "conEstadosToolStripMenuItem";
+            this.conEstadosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conEstadosToolStripMenuItem.Text = "Estados";
+            // 
+            // conFormasDePagamentoToolStripMenuItem
+            // 
+            this.conFormasDePagamentoToolStripMenuItem.Name = "conFormasDePagamentoToolStripMenuItem";
+            this.conFormasDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conFormasDePagamentoToolStripMenuItem.Text = "Formas de Pagamento";
+            // 
+            // conFornecedoresToolStripMenuItem
+            // 
+            this.conFornecedoresToolStripMenuItem.Name = "conFornecedoresToolStripMenuItem";
+            this.conFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conFornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
+            // conFuncionariosToolStripMenuItem
+            // 
+            this.conFuncionariosToolStripMenuItem.Name = "conFuncionariosToolStripMenuItem";
+            this.conFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conFuncionariosToolStripMenuItem.Text = "Funcionários";
+            // 
+            // conGruposToolStripMenuItem
+            // 
+            this.conGruposToolStripMenuItem.Name = "conGruposToolStripMenuItem";
+            this.conGruposToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conGruposToolStripMenuItem.Text = "Grupos";
+            // 
+            // conListaDePrecosToolStripMenuItem
+            // 
+            this.conListaDePrecosToolStripMenuItem.Name = "conListaDePrecosToolStripMenuItem";
+            this.conListaDePrecosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conListaDePrecosToolStripMenuItem.Text = "Lista de Preços";
+            // 
+            // conMarcasToolStripMenuItem
+            // 
+            this.conMarcasToolStripMenuItem.Name = "conMarcasToolStripMenuItem";
+            this.conMarcasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conMarcasToolStripMenuItem.Text = "Marcas";
+            // 
+            // conPaisToolStripMenuItem
+            // 
+            this.conPaisToolStripMenuItem.Name = "conPaisToolStripMenuItem";
+            this.conPaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conPaisToolStripMenuItem.Text = "Países";
+            // 
+            // conParcelasToolStripMenuItem
+            // 
+            this.conParcelasToolStripMenuItem.Name = "conParcelasToolStripMenuItem";
+            this.conParcelasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conParcelasToolStripMenuItem.Text = "Parcelas";
+            // 
+            // conRamoDeAtividadesToolStripMenuItem
+            // 
+            this.conRamoDeAtividadesToolStripMenuItem.Name = "conRamoDeAtividadesToolStripMenuItem";
+            this.conRamoDeAtividadesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conRamoDeAtividadesToolStripMenuItem.Text = "Ramo de Atividades";
+            // 
+            // conRegiaoToolStripMenuItem
+            // 
+            this.conRegiaoToolStripMenuItem.Name = "conRegiaoToolStripMenuItem";
+            this.conRegiaoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conRegiaoToolStripMenuItem.Text = "Regiões";
+            // 
+            // conTransportadorasToolStripMenuItem
+            // 
+            this.conTransportadorasToolStripMenuItem.Name = "conTransportadorasToolStripMenuItem";
+            this.conTransportadorasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conTransportadorasToolStripMenuItem.Text = "Transportadoras";
+            // 
+            // conVendedoresToolStripMenuItem
+            // 
+            this.conVendedoresToolStripMenuItem.Name = "conVendedoresToolStripMenuItem";
+            this.conVendedoresToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.conVendedoresToolStripMenuItem.Text = "Vendedores";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +386,23 @@
         private System.Windows.Forms.ToolStripMenuItem cadRegioesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadTransportadorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadVendedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conCidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conCondicaoDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conContadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conEmpresasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conEstadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conFormasDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conFornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conFuncionariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conGruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conListaDePrecosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conMarcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conPaisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conParcelasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conRamoDeAtividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conRegiaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conTransportadorasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conVendedoresToolStripMenuItem;
     }
 }

@@ -30,13 +30,13 @@
         {
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtIdEmp = new System.Windows.Forms.TextBox();
-            this.lblIdEmp = new System.Windows.Forms.Label();
             this.txtDataCad = new System.Windows.Forms.TextBox();
             this.lblDataCad = new System.Windows.Forms.Label();
             this.txtDataAlt = new System.Windows.Forms.TextBox();
             this.lblDataAlteracao = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.lblIdUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblId
@@ -55,25 +55,9 @@
             this.txtId.Size = new System.Drawing.Size(92, 20);
             this.txtId.TabIndex = 1;
             // 
-            // txtIdEmp
-            // 
-            this.txtIdEmp.Location = new System.Drawing.Point(165, 58);
-            this.txtIdEmp.Name = "txtIdEmp";
-            this.txtIdEmp.Size = new System.Drawing.Size(92, 20);
-            this.txtIdEmp.TabIndex = 3;
-            // 
-            // lblIdEmp
-            // 
-            this.lblIdEmp.AutoSize = true;
-            this.lblIdEmp.Location = new System.Drawing.Point(162, 42);
-            this.lblIdEmp.Name = "lblIdEmp";
-            this.lblIdEmp.Size = new System.Drawing.Size(62, 13);
-            this.lblIdEmp.TabIndex = 2;
-            this.lblIdEmp.Text = "ID Empresa";
-            // 
             // txtDataCad
             // 
-            this.txtDataCad.Location = new System.Drawing.Point(289, 58);
+            this.txtDataCad.Location = new System.Drawing.Point(276, 418);
             this.txtDataCad.Name = "txtDataCad";
             this.txtDataCad.Size = new System.Drawing.Size(92, 20);
             this.txtDataCad.TabIndex = 5;
@@ -81,7 +65,7 @@
             // lblDataCad
             // 
             this.lblDataCad.AutoSize = true;
-            this.lblDataCad.Location = new System.Drawing.Point(286, 42);
+            this.lblDataCad.Location = new System.Drawing.Point(273, 402);
             this.lblDataCad.Name = "lblDataCad";
             this.lblDataCad.Size = new System.Drawing.Size(90, 13);
             this.lblDataCad.TabIndex = 4;
@@ -89,7 +73,7 @@
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.Location = new System.Drawing.Point(412, 58);
+            this.txtDataAlt.Location = new System.Drawing.Point(399, 418);
             this.txtDataAlt.Name = "txtDataAlt";
             this.txtDataAlt.Size = new System.Drawing.Size(92, 20);
             this.txtDataAlt.TabIndex = 7;
@@ -97,7 +81,7 @@
             // lblDataAlteracao
             // 
             this.lblDataAlteracao.AutoSize = true;
-            this.lblDataAlteracao.Location = new System.Drawing.Point(409, 42);
+            this.lblDataAlteracao.Location = new System.Drawing.Point(396, 402);
             this.lblDataAlteracao.Name = "lblDataAlteracao";
             this.lblDataAlteracao.Size = new System.Drawing.Size(93, 13);
             this.lblDataAlteracao.TabIndex = 6;
@@ -105,7 +89,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(694, 410);
+            this.btnSalvar.Location = new System.Drawing.Point(611, 414);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(82, 24);
             this.btnSalvar.TabIndex = 8;
@@ -113,22 +97,48 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // FormPai
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Location = new System.Drawing.Point(164, 418);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(92, 20);
+            this.txtIdUsuario.TabIndex = 11;
+            // 
+            // lblIdUser
+            // 
+            this.lblIdUser.AutoSize = true;
+            this.lblIdUser.Location = new System.Drawing.Point(161, 402);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(55, 13);
+            this.lblIdUser.TabIndex = 10;
+            this.lblIdUser.Text = "Id Usuário";
+            // 
+            // FormCadPai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdUsuario);
+            this.Controls.Add(this.lblIdUser);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDataAlt);
             this.Controls.Add(this.lblDataAlteracao);
             this.Controls.Add(this.txtDataCad);
             this.Controls.Add(this.lblDataCad);
-            this.Controls.Add(this.txtIdEmp);
-            this.Controls.Add(this.lblIdEmp);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
-            this.Name = "FormPai";
+            this.Name = "FormCadPai";
             this.Text = "Form Pai";
+            this.Controls.SetChildIndex(this.lblId, 0);
+            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblDataCad, 0);
+            this.Controls.SetChildIndex(this.txtDataCad, 0);
+            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
+            this.Controls.SetChildIndex(this.txtDataAlt, 0);
+            this.Controls.SetChildIndex(this.btnSalvar, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
+            this.Controls.SetChildIndex(this.lblIdUser, 0);
+            this.Controls.SetChildIndex(this.txtIdUsuario, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,13 +147,13 @@
         #endregion
         public System.Windows.Forms.TextBox txtId;
         public System.Windows.Forms.Label lblId;
-        public System.Windows.Forms.TextBox txtIdEmp;
-        public System.Windows.Forms.Label lblIdEmp;
         public System.Windows.Forms.TextBox txtDataCad;
         public System.Windows.Forms.Label lblDataCad;
         public System.Windows.Forms.TextBox txtDataAlt;
         public System.Windows.Forms.Label lblDataAlteracao;
         public System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.TextBox txtIdUsuario;
+        public System.Windows.Forms.Label lblIdUser;
     }
 }
 
