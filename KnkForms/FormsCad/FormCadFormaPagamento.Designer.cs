@@ -96,8 +96,8 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadFormaPagamento";
             this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);

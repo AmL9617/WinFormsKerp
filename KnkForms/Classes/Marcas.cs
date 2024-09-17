@@ -6,9 +6,28 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Marcas:Pai
+    internal class Marcas : Pai
     {
-        public string NomeMarca {  get; set; }
-        public bool Ativo { get; set; }
+        protected string nomeMarca;
+        protected bool ativo;
+
+        public Marcas()
+        {
+            nomeMarca = "";
+            ativo = false;
+        }
+
+        public string NomeMarca
+        {
+            get { return nomeMarca; }
+            set { nomeMarca = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
     }
+
 }

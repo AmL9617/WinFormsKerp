@@ -6,9 +6,28 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Grupos:Pai
+    internal class Grupos : Pai
     {
-        public string NomeGrupo { get; set; }
-        public bool Ativo {  get; set; }
+        protected string nomeGrupo;
+        protected bool ativo;
+
+        public Grupos()
+        {
+            nomeGrupo = "";
+            ativo = false;
+        }
+
+        public string NomeGrupo
+        {
+            get { return nomeGrupo; }
+            set { nomeGrupo = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
     }
+
 }

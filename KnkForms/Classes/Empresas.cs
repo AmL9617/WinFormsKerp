@@ -6,11 +6,44 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Empresas:Pai
+    internal class Empresas : Pai
     {
-        public string RazaoSocial { get; set; }
-        public string NomeFantasia { get; set; }
-        public string Cnpj { get; set; }
-        public string Cep { get; set; }
+        protected string razaoSocial;
+        protected string nomeFantasia;
+        protected string cnpj;
+        protected string cep;
+
+        public Empresas()
+        {
+            razaoSocial = "";
+            nomeFantasia = "";
+            cnpj = "";
+            cep = "";
+        }
+
+        public string RazaoSocial
+        {
+            get { return razaoSocial; }
+            set { razaoSocial = value; }
+        }
+
+        public string NomeFantasia
+        {
+            get { return nomeFantasia; }
+            set { nomeFantasia = value; }
+        }
+
+        public string Cnpj
+        {
+            get { return cnpj; }
+            set { cnpj = value; }
+        }
+
+        public string Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
     }
+
 }

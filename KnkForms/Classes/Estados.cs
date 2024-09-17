@@ -6,14 +6,47 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Estados:Pai
+    internal class Estados : Pai
     {
-        public string NomeEstado { get; set; }
-        public char Sigla { get; set; }
-        public bool Ativo { get; set; }
+        protected string nomeEstado;
+        protected char sigla;
+        protected bool ativo;
+        protected int codPais; // Temporarily using int for future implementation
 
-        public int pais { get; set; } //Por enquanto int para depois 
-        //implementar get que retorna todos os dados
-        //public Paises pais { get; set; }
+        public Estados()
+        {
+            nomeEstado = "";
+            sigla = '\0'; // Default value for char
+            ativo = false;
+            codPais = 0; // Default value for int
+        }
+
+        public string NomeEstado
+        {
+            get { return nomeEstado; }
+            set { nomeEstado = value; }
+        }
+
+        public char Sigla
+        {
+            get { return sigla; }
+            set { sigla = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
+
+        public int CodPais
+        {
+            get { return codPais; }
+            set { codPais = value; }
+        }
+
+        // Placeholder for future implementation
+        // public Paises Pais { get; set; }
     }
+
 }

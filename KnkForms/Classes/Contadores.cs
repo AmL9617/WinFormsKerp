@@ -6,20 +6,116 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Contadores:Pai
+    internal class Contadores : Pai
     {
-        public string NomeContador { get; set; }
-        public string Endereco { get; set; }
-        public int Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cep { get; set; }
-        public string Telefone { get; set; }
-        public string Fax { get; set; }
-        public string Celular { get; set; }
-        public string Contato { get; set; }
-        public string Email { get; set; }
-        public string Cnpj { get; set; }
-        public string Crc { get; set; }
+        protected string nomeContador;
+        protected string endereco;
+        protected int numero;
+        protected string complemento;
+        protected string bairro;
+        protected string cep;
+        protected string telefone;
+        protected string fax;
+        protected string celular;
+        protected string contato;
+        protected string email;
+        protected string cnpj;
+        protected string crc;
+
+        public Contadores()
+        {
+            nomeContador = "";
+            endereco = "";
+            numero = 0;
+            complemento = "";
+            bairro = "";
+            cep = "";
+            telefone = "";
+            fax = "";
+            celular = "";
+            contato = "";
+            email = "";
+            cnpj = "";
+            crc = "";
+        }
+
+        public string NomeContador
+        {
+            get { return nomeContador; }
+            set { nomeContador = value; }
+        }
+
+        public string Endereco
+        {
+            get { return endereco; }
+            set { endereco = value; }
+        }
+
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+
+        public string Complemento
+        {
+            get { return complemento; }
+            set { complemento = value; }
+        }
+
+        public string Bairro
+        {
+            get { return bairro; }
+            set { bairro = value; }
+        }
+
+        public string Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
+
+        public string Telefone
+        {
+            get { return telefone; }
+            set { telefone = value; }
+        }
+
+        public string Fax
+        {
+            get { return fax; }
+            set { fax = value; }
+        }
+
+        public string Celular
+        {
+            get { return celular; }
+            set { celular = value; }
+        }
+
+        public string Contato
+        {
+            get { return contato; }
+            set { contato = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        public string Cnpj
+        {
+            get { return cnpj; }
+            set { cnpj = value; }
+        }
+
+        public string Crc
+        {
+            get { return crc; }
+            set { crc = value; }
+        }
     }
+
 }

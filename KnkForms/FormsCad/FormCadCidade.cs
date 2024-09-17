@@ -23,7 +23,7 @@ namespace KnkForms.Forms
         {
             Cidades novaCidade = new Cidades();
 
-            novaCidade.Id = Convert.ToInt32(txtId.Text);
+            novaCidade.Cod = Convert.ToInt32(txtCod.Text);
             DateTime dataCadastro;
             DateTime dataModificacao;
 
@@ -49,7 +49,7 @@ namespace KnkForms.Forms
 
             novaCidade.NomeCidade = txtNomeCidade.Text;
             novaCidade.DDD = Convert.ToChar(txtDDD.Text);
-            novaCidade.estado = Convert.ToInt32(txtIdEstado.Text);
+            novaCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
             novaCidade.Ativo = chkAtivo.Checked;
 
             using (HttpClient httpClient = new HttpClient())

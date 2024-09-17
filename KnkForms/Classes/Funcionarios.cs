@@ -6,25 +6,156 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Funcionarios:Pai
+    internal class Funcionarios : Pai
     {
-        public string NomeFuncionario { get; set; }
-        public bool Ativo { get; set; }
-        public string Logradouro { get; set; }
-        public int Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cep { get; set; }
-        public string Telefone { get; set; }
-        public string Celular { get; set; }
-        public string Email { get; set; }
-        public string Observacoes { get; set; }
-        public float Salario { get; set; }
-        public DateTime DataAdmissao { get; set; }
-        public DateTime DataDemissao { get; set; }
-        public string Sexo { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public string Rg { get; set; }
-        public string Cpf { get; set; }
+        protected string nomeFuncionario;
+        protected bool ativo;
+        protected string logradouro;
+        protected int numero;
+        protected string complemento;
+        protected string bairro;
+        protected string cep;
+        protected string telefone;
+        protected string celular;
+        protected string email;
+        protected string observacoes;
+        protected float salario;
+        protected DateTime dataAdmissao;
+        protected DateTime dataDemissao;
+        protected string sexo;
+        protected DateTime dataNascimento;
+        protected string rg;
+        protected string cpf;
+
+        public Funcionarios()
+        {
+            nomeFuncionario = "";
+            ativo = false;
+            logradouro = "";
+            numero = 0;
+            complemento = "";
+            bairro = "";
+            cep = "";
+            telefone = "";
+            celular = "";
+            email = "";
+            observacoes = "";
+            salario = 0.0f;
+            dataAdmissao = DateTime.MinValue;
+            dataDemissao = DateTime.MinValue;
+            sexo = "";
+            dataNascimento = DateTime.MinValue;
+            rg = "";
+            cpf = "";
+        }
+
+        public string NomeFuncionario
+        {
+            get { return nomeFuncionario; }
+            set { nomeFuncionario = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
+
+        public string Logradouro
+        {
+            get { return logradouro; }
+            set { logradouro = value; }
+        }
+
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+
+        public string Complemento
+        {
+            get { return complemento; }
+            set { complemento = value; }
+        }
+
+        public string Bairro
+        {
+            get { return bairro; }
+            set { bairro = value; }
+        }
+
+        public string Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
+
+        public string Telefone
+        {
+            get { return telefone; }
+            set { telefone = value; }
+        }
+
+        public string Celular
+        {
+            get { return celular; }
+            set { celular = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        public string Observacoes
+        {
+            get { return observacoes; }
+            set { observacoes = value; }
+        }
+
+        public float Salario
+        {
+            get { return salario; }
+            set { salario = value; }
+        }
+
+        public DateTime DataAdmissao
+        {
+            get { return dataAdmissao; }
+            set { dataAdmissao = value; }
+        }
+
+        public DateTime DataDemissao
+        {
+            get { return dataDemissao; }
+            set { dataDemissao = value; }
+        }
+
+        public string Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
+
+        public DateTime DataNascimento
+        {
+            get { return dataNascimento; }
+            set { dataNascimento = value; }
+        }
+
+        public string Rg
+        {
+            get { return rg; }
+            set { rg = value; }
+        }
+
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
+        }
     }
+
 }

@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblCod = new System.Windows.Forms.Label();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.txtDataCad = new System.Windows.Forms.TextBox();
             this.lblDataCad = new System.Windows.Forms.Label();
             this.txtDataAlt = new System.Windows.Forms.TextBox();
             this.lblDataAlteracao = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
-            this.lblIdUser = new System.Windows.Forms.Label();
+            this.txtCodUser = new System.Windows.Forms.TextBox();
+            this.lblCodUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblId
+            // lblCod
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(32, 42);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Location = new System.Drawing.Point(32, 42);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(40, 13);
+            this.lblCod.TabIndex = 0;
+            this.lblCod.Text = "Código";
             // 
-            // txtId
+            // txtCod
             // 
-            this.txtId.Location = new System.Drawing.Point(35, 58);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(92, 20);
-            this.txtId.TabIndex = 1;
+            this.txtCod.Location = new System.Drawing.Point(35, 58);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(92, 20);
+            this.txtCod.TabIndex = 1;
             // 
             // txtDataCad
             // 
@@ -97,63 +97,63 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtIdUsuario
+            // txtCodUser
             // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(164, 418);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(92, 20);
-            this.txtIdUsuario.TabIndex = 11;
+            this.txtCodUser.Location = new System.Drawing.Point(164, 418);
+            this.txtCodUser.Name = "txtCodUser";
+            this.txtCodUser.Size = new System.Drawing.Size(92, 20);
+            this.txtCodUser.TabIndex = 11;
             // 
-            // lblIdUser
+            // lblCodUser
             // 
-            this.lblIdUser.AutoSize = true;
-            this.lblIdUser.Location = new System.Drawing.Point(161, 402);
-            this.lblIdUser.Name = "lblIdUser";
-            this.lblIdUser.Size = new System.Drawing.Size(55, 13);
-            this.lblIdUser.TabIndex = 10;
-            this.lblIdUser.Text = "Id Usuário";
+            this.lblCodUser.AutoSize = true;
+            this.lblCodUser.Location = new System.Drawing.Point(161, 402);
+            this.lblCodUser.Name = "lblCodUser";
+            this.lblCodUser.Size = new System.Drawing.Size(79, 13);
+            this.lblCodUser.TabIndex = 10;
+            this.lblCodUser.Text = "Código Usuário";
             // 
             // FormCadPai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtIdUsuario);
-            this.Controls.Add(this.lblIdUser);
+            this.Controls.Add(this.txtCodUser);
+            this.Controls.Add(this.lblCodUser);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDataAlt);
             this.Controls.Add(this.lblDataAlteracao);
             this.Controls.Add(this.txtDataCad);
             this.Controls.Add(this.lblDataCad);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtCod);
+            this.Controls.Add(this.lblCod);
             this.Name = "FormCadPai";
             this.Text = "Form Pai";
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblIdUser, 0);
-            this.Controls.SetChildIndex(this.txtIdUsuario, 0);
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.Label lblId;
+        public System.Windows.Forms.TextBox txtCod;
+        public System.Windows.Forms.Label lblCod;
         public System.Windows.Forms.TextBox txtDataCad;
         public System.Windows.Forms.Label lblDataCad;
         public System.Windows.Forms.TextBox txtDataAlt;
         public System.Windows.Forms.Label lblDataAlteracao;
         public System.Windows.Forms.Button btnSalvar;
-        public System.Windows.Forms.TextBox txtIdUsuario;
-        public System.Windows.Forms.Label lblIdUser;
+        public System.Windows.Forms.TextBox txtCodUser;
+        public System.Windows.Forms.Label lblCodUser;
     }
 }
 

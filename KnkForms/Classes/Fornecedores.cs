@@ -6,28 +6,180 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Fornecedores:Pai
+    internal class Fornecedores : Pai
     {
-        public string Industria { get; set; }
-        public bool FisicaJuridica { get; set; }
-        public bool Ativo { get; set; }
-        public string RazaoSocial { get; set; }
-        public string NomeFantasia { get; set; }
-        public string Endereco { get; set; }
-        public int Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cep { get; set; }
-        public string TipoContato { get; set; }
-        public string Contato { get; set; }
-        public string Observacao { get; set; }
-        public string CNPJ { get; set; }
-        public string InscricaoEstadual { get; set; }
-        public string Trade { get; set; }
-        public int CodProdIgual { get; set; }
-        public float LimiteCredito { get; set; }
-        public string Observacoes { get; set; }
-        public bool VerEmClientes { get; set; }
-        public DateTime UltimoMovimento { get; set; }
+        protected string industria;
+        protected bool fisicaJuridica;
+        protected bool ativo;
+        protected string razaoSocial;
+        protected string nomeFantasia;
+        protected string endereco;
+        protected int numero;
+        protected string complemento;
+        protected string bairro;
+        protected string cep;
+        protected string tipoContato;
+        protected string contato;
+        protected string observacao;
+        protected string cnpj;
+        protected string inscricaoEstadual;
+        protected string trade;
+        protected int codProdIgual;
+        protected float limiteCredito;
+        protected string observacoes;
+        protected bool verEmClientes;
+        protected DateTime ultimoMovimento;
+
+        public Fornecedores()
+        {
+            industria = "";
+            fisicaJuridica = false;
+            ativo = false;
+            razaoSocial = "";
+            nomeFantasia = "";
+            endereco = "";
+            numero = 0;
+            complemento = "";
+            bairro = "";
+            cep = "";
+            tipoContato = "";
+            contato = "";
+            observacao = "";
+            cnpj = "";
+            inscricaoEstadual = "";
+            trade = "";
+            codProdIgual = 0;
+            limiteCredito = 0.0f;
+            observacoes = "";
+            verEmClientes = false;
+            ultimoMovimento = DateTime.MinValue;
+        }
+
+        public string Industria
+        {
+            get { return industria; }
+            set { industria = value; }
+        }
+
+        public bool FisicaJuridica
+        {
+            get { return fisicaJuridica; }
+            set { fisicaJuridica = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
+
+        public string RazaoSocial
+        {
+            get { return razaoSocial; }
+            set { razaoSocial = value; }
+        }
+
+        public string NomeFantasia
+        {
+            get { return nomeFantasia; }
+            set { nomeFantasia = value; }
+        }
+
+        public string Endereco
+        {
+            get { return endereco; }
+            set { endereco = value; }
+        }
+
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+
+        public string Complemento
+        {
+            get { return complemento; }
+            set { complemento = value; }
+        }
+
+        public string Bairro
+        {
+            get { return bairro; }
+            set { bairro = value; }
+        }
+
+        public string Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
+
+        public string TipoContato
+        {
+            get { return tipoContato; }
+            set { tipoContato = value; }
+        }
+
+        public string Contato
+        {
+            get { return contato; }
+            set { contato = value; }
+        }
+
+        public string Observacao
+        {
+            get { return observacao; }
+            set { observacao = value; }
+        }
+
+        public string CNPJ
+        {
+            get { return cnpj; }
+            set { cnpj = value; }
+        }
+
+        public string InscricaoEstadual
+        {
+            get { return inscricaoEstadual; }
+            set { inscricaoEstadual = value; }
+        }
+
+        public string Trade
+        {
+            get { return trade; }
+            set { trade = value; }
+        }
+
+        public int CodProdIgual
+        {
+            get { return codProdIgual; }
+            set { codProdIgual = value; }
+        }
+
+        public float LimiteCredito
+        {
+            get { return limiteCredito; }
+            set { limiteCredito = value; }
+        }
+
+        public string Observacoes
+        {
+            get { return observacoes; }
+            set { observacoes = value; }
+        }
+
+        public bool VerEmClientes
+        {
+            get { return verEmClientes; }
+            set { verEmClientes = value; }
+        }
+
+        public DateTime UltimoMovimento
+        {
+            get { return ultimoMovimento; }
+            set { ultimoMovimento = value; }
+        }
     }
+
 }

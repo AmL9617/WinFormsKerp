@@ -68,14 +68,6 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadMarca";
             this.Text = "Form Marca";
-            this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
-            this.Controls.SetChildIndex(this.lblDataCad, 0);
-            this.Controls.SetChildIndex(this.txtDataCad, 0);
-            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
-            this.Controls.SetChildIndex(this.txtDataAlt, 0);
-            this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.txtMarca, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);

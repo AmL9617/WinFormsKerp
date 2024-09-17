@@ -14,5 +14,45 @@ namespace KnkForms.FormsCon
         {
             InitializeComponent();
         }
+
+        protected virtual void Incluir()
+        {
+
+        }
+
+        protected virtual void Alterar()
+        {
+
+        }
+
+        protected virtual void Excluir()
+        {
+
+        }
+
+        protected virtual void Pesquisar()
+        {
+
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            Incluir();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Alterar();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Excluir();
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
     }
 }

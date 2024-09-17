@@ -6,9 +6,28 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Regioes:Pai
+    internal class Regioes : Pai
     {
-        public string NomeRegiao {  get; set; }
-        public bool Ativo {  get; set; }
+        protected string nomeRegiao;
+        protected bool ativo;
+
+        public Regioes()
+        {
+            nomeRegiao = "";
+            ativo = false;
+        }
+
+        public string NomeRegiao
+        {
+            get { return nomeRegiao; }
+            set { nomeRegiao = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
     }
+
 }

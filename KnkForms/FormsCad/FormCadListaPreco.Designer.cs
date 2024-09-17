@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMargemLucro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdMarca = new System.Windows.Forms.TextBox();
+            this.txtCodMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdGrupo = new System.Windows.Forms.TextBox();
+            this.txtCodGrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -89,42 +89,42 @@
             this.label2.TabIndex = 55;
             this.label2.Text = "Margem de Lucro";
             // 
-            // txtIdMarca
+            // txtCodMarca
             // 
-            this.txtIdMarca.Location = new System.Drawing.Point(537, 58);
-            this.txtIdMarca.Name = "txtIdMarca";
-            this.txtIdMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtIdMarca.TabIndex = 58;
+            this.txtCodMarca.Location = new System.Drawing.Point(537, 58);
+            this.txtCodMarca.Name = "txtCodMarca";
+            this.txtCodMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtCodMarca.TabIndex = 58;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(534, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 57;
-            this.label3.Text = "Id Marca";
+            this.label3.Text = "Código Marca";
             // 
-            // txtIdGrupo
+            // txtCodGrupo
             // 
-            this.txtIdGrupo.Location = new System.Drawing.Point(660, 58);
-            this.txtIdGrupo.Name = "txtIdGrupo";
-            this.txtIdGrupo.Size = new System.Drawing.Size(100, 20);
-            this.txtIdGrupo.TabIndex = 60;
+            this.txtCodGrupo.Location = new System.Drawing.Point(35, 123);
+            this.txtCodGrupo.Name = "txtCodGrupo";
+            this.txtCodGrupo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodGrupo.TabIndex = 60;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(657, 42);
+            this.label4.Location = new System.Drawing.Point(32, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 59;
-            this.label4.Text = "Id Grupo";
+            this.label4.Text = "Código Grupo";
             // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(35, 106);
+            this.chkAtivo.Location = new System.Drawing.Point(715, 38);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(56, 17);
             this.chkAtivo.TabIndex = 63;
@@ -136,9 +136,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.txtIdGrupo);
+            this.Controls.Add(this.txtCodGrupo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtIdMarca);
+            this.Controls.Add(this.txtCodMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMargemLucro);
             this.Controls.Add(this.label2);
@@ -148,9 +148,11 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadListaPreco";
             this.Text = "Form Lista de Preços";
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
@@ -163,9 +165,9 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtMargemLucro, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.txtIdMarca, 0);
+            this.Controls.SetChildIndex(this.txtCodMarca, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtIdGrupo, 0);
+            this.Controls.SetChildIndex(this.txtCodGrupo, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,9 +182,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMargemLucro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdMarca;
+        private System.Windows.Forms.TextBox txtCodMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdGrupo;
+        private System.Windows.Forms.TextBox txtCodGrupo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkAtivo;
     }

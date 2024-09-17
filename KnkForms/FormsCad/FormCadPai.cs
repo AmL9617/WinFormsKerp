@@ -21,50 +21,9 @@ namespace KnkForms
             InitializeComponent();
         }
 
-        public async Task Salvar()
+        protected virtual void Salvar()
         {
-            Pai novoPai = new Pai();
 
-            novoPai.Id = Convert.ToInt32(txtId.Text);
-            DateTime dataCadastro;
-            DateTime dataModificacao;
-
-            if (DateTime.TryParse(txtDataCad.Text, out dataCadastro))
-            {
-                novoPai.DataCadastro = dataCadastro;
-            }
-            else
-            {
-                MessageBox.Show("Data de cadastro inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
-
-            if (DateTime.TryParse(txtDataAlt.Text, out dataModificacao))
-            {
-                novoPai.DataModificacao = dataModificacao;
-            }
-            else
-            {
-                MessageBox.Show("Data de modificação inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
-
-            using (HttpClient httpClient = new HttpClient())
-            {
-                try
-                {
-                    string jsonItem = JsonConvert.SerializeObject(novoPai);
-                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7077/ativ3", content);
-                    response.EnsureSuccessStatusCode();
-
-                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ocorreu um erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
 
 

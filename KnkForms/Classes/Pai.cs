@@ -6,11 +6,43 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Pai
-    { 
-        public int Id { get; set; }
-        public int IdEmpresa { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime DataModificacao { get; set; }
+    internal class Pai
+    {
+        protected int cod;
+        protected int codEmpresa;
+        protected DateTime dataCadastro;
+        protected DateTime dataModificacao;
+
+        public Pai()
+        {
+            cod = 0;
+            codEmpresa = 0;
+            dataCadastro = DateTime.MinValue;
+            dataModificacao = DateTime.MinValue;
+        }
+
+        public int Cod
+        {
+            get { return cod; }
+            set { cod = value; }
+        }
+
+        public int CodEmpresa
+        {
+            get { return codEmpresa; }
+            set { codEmpresa = value; }
+        }
+
+        public DateTime DataCadastro
+        {
+            get { return dataCadastro; }
+            set { dataCadastro = value; }
+        }
+
+        public DateTime DataModificacao
+        {
+            get { return dataModificacao; }
+            set { dataModificacao = value; }
+        }
     }
 }

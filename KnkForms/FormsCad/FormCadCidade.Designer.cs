@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIdEstado = new System.Windows.Forms.TextBox();
+            this.txtCodEstado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtDDD = new System.Windows.Forms.TextBox();
@@ -41,26 +41,26 @@
             // 
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtIdEstado
+            // txtCodEstado
             // 
-            this.txtIdEstado.Location = new System.Drawing.Point(490, 58);
-            this.txtIdEstado.Name = "txtIdEstado";
-            this.txtIdEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtIdEstado.TabIndex = 36;
+            this.txtCodEstado.Location = new System.Drawing.Point(418, 58);
+            this.txtCodEstado.Name = "txtCodEstado";
+            this.txtCodEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtCodEstado.TabIndex = 36;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(487, 42);
+            this.label1.Location = new System.Drawing.Point(415, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 35;
-            this.label1.Text = "ID Estado";
+            this.label1.Text = "Código Estado";
             // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(165, 58);
+            this.chkAtivo.Location = new System.Drawing.Point(728, 21);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 34;
@@ -69,7 +69,7 @@
             // 
             // txtDDD
             // 
-            this.txtDDD.Location = new System.Drawing.Point(366, 58);
+            this.txtDDD.Location = new System.Drawing.Point(294, 58);
             this.txtDDD.Name = "txtDDD";
             this.txtDDD.Size = new System.Drawing.Size(100, 20);
             this.txtDDD.TabIndex = 33;
@@ -77,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(363, 42);
+            this.label2.Location = new System.Drawing.Point(291, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 32;
@@ -85,7 +85,7 @@
             // 
             // txtNomeCidade
             // 
-            this.txtNomeCidade.Location = new System.Drawing.Point(236, 58);
+            this.txtNomeCidade.Location = new System.Drawing.Point(164, 58);
             this.txtNomeCidade.Name = "txtNomeCidade";
             this.txtNomeCidade.Size = new System.Drawing.Size(100, 20);
             this.txtNomeCidade.TabIndex = 31;
@@ -93,7 +93,7 @@
             // lblNomeCidade
             // 
             this.lblNomeCidade.AutoSize = true;
-            this.lblNomeCidade.Location = new System.Drawing.Point(233, 42);
+            this.lblNomeCidade.Location = new System.Drawing.Point(161, 42);
             this.lblNomeCidade.Name = "lblNomeCidade";
             this.lblNomeCidade.Size = new System.Drawing.Size(86, 13);
             this.lblNomeCidade.TabIndex = 30;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtIdEstado);
+            this.Controls.Add(this.txtCodEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtDDD);
@@ -112,9 +112,11 @@
             this.Controls.Add(this.lblNomeCidade);
             this.Name = "FormCadCidade";
             this.Text = "Form Cidade";
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
@@ -126,7 +128,7 @@
             this.Controls.SetChildIndex(this.txtDDD, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.txtIdEstado, 0);
+            this.Controls.SetChildIndex(this.txtCodEstado, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +136,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtIdEstado;
+        private System.Windows.Forms.TextBox txtCodEstado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtDDD;

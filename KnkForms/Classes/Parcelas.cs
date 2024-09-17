@@ -6,9 +6,28 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Parcelas:FormaPagamentos
+    internal class Parcelas : FormaPagamentos
     {
-        public int Quantidade { get;set; }
-        public float Valor { get;set; }
+        protected int quantidade;
+        protected float valor;
+
+        public Parcelas()
+        {
+            quantidade = 0;
+            valor = 0.0f;
+        }
+
+        public int Quantidade
+        {
+            get { return quantidade; }
+            set { quantidade = value; }
+        }
+
+        public float Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+        }
     }
+
 }

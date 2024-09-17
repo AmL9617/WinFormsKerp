@@ -14,62 +14,55 @@ namespace KnkForms.Forms
 {
     public partial class FormCadPais : KnkForms.FormCadPai
     {
+        Paises oPais;
         public FormCadPais()
         {
             InitializeComponent();
         }
-        public async Task Salvar()
+
+        public override void SetFrmCadastro(Object obj)
         {
-            Paises novoPais = new Paises();
+            oFormCadPais = (FormCadPais)obj;
+        }
 
-            novoPais.Id = Convert.ToInt32(txtId.Text);
 
-            DateTime dataCadastro;
-            DateTime dataModificacao;
+        public override void CarregaObj(Object obj)
+        {
+            oPais = (Paises)obj;
+        }
 
-            if (DateTime.TryParse(txtDataCad.Text, out dataCadastro))
-            {
-                novoPais.DataCadastro = dataCadastro;
-            }
-            else
-            {
-                MessageBox.Show("Data de cadastro inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void LimpaTxt()
+        {
+            txtCod.Clear();
+            txtNomePais.Clear();
+            txtTipoPais.Clear();
+            txtSigla.Clear();
+            txtDdi.Clear();
+            txtCodUser.Clear();
+            txtDataCad.Clear();
+            txtDataAlt.Clear();
+        }
 
-            if (DateTime.TryParse(txtDataAlt.Text, out dataModificacao))
-            {
-                novoPais.DataModificacao = dataModificacao;
-            }
-            else
-            {
-                MessageBox.Show("Data de modificação inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void CarregaTxt()
+        {
+            txtCod.Text = oPais.Cod;
+            txtNomePais.Text = oPais.NomePais;
+            txtTipoPais.Text=oPais.TipoPais;
+            txtSigla.Text = oPais.Sigla;
+            txtDdi.Text = oPais.DDI;
+            txtCodUser.Text = oPais.CodUser;
+            txtDataCad.Text= oPais.DataCadastro;
 
-            novoPais.NomePais = txtNomePais.Text;
-            novoPais.TipoPais = txtTipoPais.Text;
-            novoPais.Sigla = Convert.ToChar(txtSigla.Text);
-            novoPais.DDI = Convert.ToInt32(txtDdi.Text);
-            novoPais.Ativo = chkAtivo.Checked;
+        }
 
-            using (HttpClient httpClient = new HttpClient())
-            {
-                try
-                {
-                    string jsonItem = JsonConvert.SerializeObject(novoPais);
-                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+        public override void DesbloqueiaTxt()
+        {
 
-                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7077/ativ3", content);
-                    response.EnsureSuccessStatusCode();
+        }
 
-                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ocorreu um erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+        public override void Salvar()
+        {
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

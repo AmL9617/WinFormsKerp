@@ -39,7 +39,7 @@
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormPai
             // 

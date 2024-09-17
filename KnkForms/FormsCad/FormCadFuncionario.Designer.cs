@@ -83,7 +83,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(276, 55);
+            this.txtNome.Location = new System.Drawing.Point(153, 58);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 168;
@@ -187,7 +187,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(661, 55);
+            this.txtNumero.Location = new System.Drawing.Point(538, 58);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
             this.txtNumero.TabIndex = 153;
@@ -195,7 +195,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(658, 39);
+            this.label8.Location = new System.Drawing.Point(535, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 152;
@@ -203,7 +203,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(406, 55);
+            this.txtEndereco.Location = new System.Drawing.Point(283, 58);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(225, 20);
@@ -212,7 +212,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(403, 39);
+            this.label4.Location = new System.Drawing.Point(280, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 150;
@@ -221,7 +221,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(273, 38);
+            this.lbl1.Location = new System.Drawing.Point(150, 41);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(96, 13);
             this.lbl1.TabIndex = 148;
@@ -230,7 +230,7 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(150, 58);
+            this.chkAtivo.Location = new System.Drawing.Point(726, 24);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 174;
@@ -392,9 +392,11 @@
             this.Name = "FormCadFuncionario";
             this.Text = "Form Funcionário";
             this.Load += new System.EventHandler(this.FormFuncionario_Load);
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblId, 0);
-            this.Controls.SetChildIndex(this.txtId, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);

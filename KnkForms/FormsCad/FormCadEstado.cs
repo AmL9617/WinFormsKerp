@@ -22,7 +22,7 @@ namespace KnkForms.Classes
         {
             Estados novoEstado = new Estados();
 
-            novoEstado.Id = Convert.ToInt32(txtId.Text);
+            novoEstado.Cod = Convert.ToInt32(txtCod.Text);
             DateTime dataCadastro;
             DateTime dataModificacao;
 
@@ -48,7 +48,7 @@ namespace KnkForms.Classes
 
             novoEstado.NomeEstado = txtNomeEstado.Text;
             novoEstado.Sigla = Convert.ToChar(txtSigla.Text);
-            novoEstado.pais = Convert.ToInt32(txtIdPais.Text);
+            novoEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
             novoEstado.Ativo = chkAtivo.Checked;
 
             using (HttpClient httpClient = new HttpClient())

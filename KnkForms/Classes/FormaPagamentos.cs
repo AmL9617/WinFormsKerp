@@ -6,10 +6,36 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class FormaPagamentos:Pai
+    internal class FormaPagamentos : Pai
     {
-        public string Nome { get; set; }
-        public string OperacaoDisponivel { get; set; }
-        public string Nfce { get; set; }
+        protected string nome;
+        protected string operacaoDisponivel;
+        protected string nfce;
+
+        public FormaPagamentos()
+        {
+            nome = "";
+            operacaoDisponivel = "";
+            nfce = "";
+        }
+
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public string OperacaoDisponivel
+        {
+            get { return operacaoDisponivel; }
+            set { operacaoDisponivel = value; }
+        }
+
+        public string Nfce
+        {
+            get { return nfce; }
+            set { nfce = value; }
+        }
     }
+
 }

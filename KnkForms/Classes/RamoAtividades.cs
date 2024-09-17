@@ -6,9 +6,28 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class RamoAtividades:Pai
+    internal class RamoAtividades : Pai
     {
-        public string NomeRamo {  get; set; }
-        public bool Ativo {  get; set; }
+        protected string nomeRamo;
+        protected bool ativo;
+
+        public RamoAtividades()
+        {
+            nomeRamo = "";
+            ativo = false;
+        }
+
+        public string NomeRamo
+        {
+            get { return nomeRamo; }
+            set { nomeRamo = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
     }
+
 }

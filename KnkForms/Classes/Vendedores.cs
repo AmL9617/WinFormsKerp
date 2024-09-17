@@ -6,13 +6,60 @@ using System.Threading.Tasks;
 
 namespace KnkForms.Classes
 {
-    public class Vendedores : Pai
+    internal class Vendedores : Pai
     {
-        public string NomeVendedor {get; set;}
-        public bool Ativo {get; set;}
-        public string Tipo {get; set;}
-        public float Comissao {get; set;}
-        public DateTime ComissaoPrazo {get; set;}
-        public string Observacao {get; set;}
-}
+        protected string nomeVendedor;
+        protected bool ativo;
+        protected string tipo;
+        protected float comissao;
+        protected DateTime comissaoPrazo;
+        protected string observacao;
+
+        public Vendedores()
+        {
+            nomeVendedor = "";
+            ativo = false;
+            tipo = "";
+            comissao = 0.0f;
+            comissaoPrazo = DateTime.MinValue;
+            observacao = "";
+        }
+
+        public string NomeVendedor
+        {
+            get { return nomeVendedor; }
+            set { nomeVendedor = value; }
+        }
+
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
+
+        public string Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
+
+        public float Comissao
+        {
+            get { return comissao; }
+            set { comissao = value; }
+        }
+
+        public DateTime ComissaoPrazo
+        {
+            get { return comissaoPrazo; }
+            set { comissaoPrazo = value; }
+        }
+
+        public string Observacao
+        {
+            get { return observacao; }
+            set { observacao = value; }
+        }
+    }
+
 }
