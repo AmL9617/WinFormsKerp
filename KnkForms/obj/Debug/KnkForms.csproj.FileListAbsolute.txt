@@ -64,3 +64,4 @@ C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.cspro
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.exe
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.pdb
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormPai.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConPais.resources

@@ -8,71 +8,92 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KnkForms.FormsCon;
 
 namespace KnkForms.Classes
 {
     public partial class FormCadEstado : KnkForms.FormCadPai
     {
+        Estados oEstado;
+        FormConPais oFrmConPaises;
         public FormCadEstado()
         {
             InitializeComponent();
         }
 
-        public async Task Salvar()
+        public override void ConhecaObj(Object obj)
         {
-            Estados novoEstado = new Estados();
+            oEstado = (Estados)obj;
+        }
 
-            novoEstado.Cod = Convert.ToInt32(txtCod.Text);
-            DateTime dataCadastro;
-            DateTime dataModificacao;
+        public override void LimpaTxt()
+        {
+            txtCod.Clear();
+            txtNomeEstado.Clear();
+            txtSigla.Clear();
+            txtCodPais.Clear();
+            chkAtivo.Checked = false;
+            txtCodUser.Clear();
+            txtDataCad.Clear();
+            txtDataAlt.Clear();
+        }
 
-            if (DateTime.TryParse(txtDataCad.Text, out dataCadastro))
-            {
-                novoEstado.DataCadastro = dataCadastro;
-            }
-            else
-            {
-                MessageBox.Show("Data de cadastro inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void CarregaTxt()
+        {
+            txtCod.Text = Convert.ToString(oEstado.Cod);
+            txtNomeEstado.Text = oEstado.NomeEstado;
+            txtSigla.Text = Convert.ToString(oEstado.Sigla);
+            txtCodPais.Text = Convert.ToString(oEstado.CodPais);
+            chkAtivo.Checked = oEstado.Ativo;
+            txtCodUser.Text = Convert.ToString(oEstado.CodEmpresa);
+            txtDataCad.Text = Convert.ToString(oEstado.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(oEstado.DataModificacao);
+        }
 
-            if (DateTime.TryParse(txtDataAlt.Text, out dataModificacao))
-            {
-                novoEstado.DataModificacao = dataModificacao;
-            }
-            else
-            {
-                MessageBox.Show("Data de modificação inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void BloqueiaTxt()
+        {
+            txtCod.Enabled = false;
+            txtNomeEstado.Enabled = false;
+            txtSigla.Enabled = false;
+            txtCodPais.Enabled = false;
+            chkAtivo.Enabled = false;
+            txtCodUser.Enabled = false;
+            txtDataCad.Enabled = false;
+            txtDataAlt.Enabled = false;
+        }
 
-            novoEstado.NomeEstado = txtNomeEstado.Text;
-            novoEstado.Sigla = Convert.ToChar(txtSigla.Text);
-            novoEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
-            novoEstado.Ativo = chkAtivo.Checked;
+        public override void DesbloqueiaTxt()
+        {
+            txtCod.Enabled = true;
+            txtNomeEstado.Enabled = true;
+            txtSigla.Enabled = true;
+            txtCodPais.Enabled = true;
+            txtCodUser.Enabled = true;
+            chkAtivo.Enabled=true;
+            txtDataCad.Enabled = true;
+            txtDataAlt.Enabled = true;
+        }
 
-            using (HttpClient httpClient = new HttpClient())
-            {
-                try
-                {
-                    string jsonItem = JsonConvert.SerializeObject(novoEstado);
-                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
-
-                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7077/ativ3", content);
-                    response.EnsureSuccessStatusCode();
-
-                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ocorreu um erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+        public override void Salvar()
+        {
+            oEstado.Cod = Convert.ToInt32(txtCod.Text);
+            oEstado.NomeEstado = txtNomeEstado.Text;
+            oEstado.Sigla = Convert.ToChar(txtSigla.Text);
+            oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
+            oEstado.Ativo = chkAtivo.Checked;
+            oEstado.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Salvar();
+        }
+
+        public void setFrmConPaises(Object obj)
+        {
+            oFrmConPaises = (FormConPais)obj;
         }
     }
 }

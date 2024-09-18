@@ -11,11 +11,14 @@ namespace KnkForms.Classes
         protected string nome;
         protected bool ativo;
         protected string tipo;
-        protected float taxaJuro;
+        protected double taxaJuro;
         protected string operacaoDisponivel;
         protected DateTime prazo;
 
-        // Aggregation part
+        //Placeholder
+        protected int codParcela;
+
+        //Agregação
         protected Parcelas parcelas;
 
         public CondicaoPagamentos()
@@ -26,7 +29,8 @@ namespace KnkForms.Classes
             taxaJuro = 0.0f;
             operacaoDisponivel = "";
             prazo = DateTime.MinValue;
-            parcelas = null;
+            parcelas = new Parcelas();
+            codParcela = 0;
         }
 
         public string Nome
@@ -47,7 +51,7 @@ namespace KnkForms.Classes
             set { tipo = value; }
         }
 
-        public float TaxaJuro
+        public double TaxaJuro
         {
             get { return taxaJuro; }
             set { taxaJuro = value; }
@@ -64,7 +68,11 @@ namespace KnkForms.Classes
             get { return prazo; }
             set { prazo = value; }
         }
-
+        public int CodParcela
+        {
+            get { return codParcela; }
+            set { codParcela = value; }
+        }
         public Parcelas Parcelas
         {
             get { return parcelas; }

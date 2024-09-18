@@ -22,6 +22,8 @@ namespace KnkForms.Classes
         protected string inscMunicipalSuframa;
         protected string cnpj;
         protected string regimeTributarioDaEmpresa;
+        protected DateTime dataCad2;
+        protected DateTime dataCadAlt2;
         protected DateTime dataFundacao;
         protected string regimeSemSt;
         protected string produtorRural;
@@ -33,7 +35,20 @@ namespace KnkForms.Classes
         protected string observacoes;
         protected DateTime ultimaCompra;
 
-        // Aggregation parts
+        //Placeholder
+        protected int codRamoAtividades;
+        protected int codRegioes;
+        protected int codVendedores;
+        protected int codFuncionarios;
+        protected int codCondicaoPagamentos;
+        protected int codCidades;
+        protected int codTransportadoras;
+        protected int codContadores;
+        protected int codFornecedores;
+        protected int codListaPrecos;
+
+
+        //Agregação
         protected RamoAtividades ramoAtividades;
         protected Regioes regioes;
         protected Vendedores vendedores;
@@ -61,6 +76,8 @@ namespace KnkForms.Classes
             inscMunicipalSuframa = "";
             cnpj = "";
             regimeTributarioDaEmpresa = "";
+            dataCad2 = DateTime.MinValue;
+            dataCadAlt2 = DateTime.MinValue;
             dataFundacao = DateTime.MinValue;
             regimeSemSt = "";
             produtorRural = "";
@@ -72,17 +89,28 @@ namespace KnkForms.Classes
             observacoes = "";
             ultimaCompra = DateTime.MinValue;
 
-            // Initialize aggregation parts
-            ramoAtividades = null;
-            regioes = null;
-            vendedores = null;
-            funcionarios = null;
-            condicaoPagamentos = null;
-            cidades = null;
-            transportadoras = null;
-            contadores = null;
-            fornecedores = null;
-            listaPrecos = null;
+            
+            ramoAtividades = new RamoAtividades();
+            regioes = new Regioes();
+            vendedores = new Vendedores();
+            funcionarios = new Funcionarios();
+            condicaoPagamentos = new CondicaoPagamentos();
+            cidades = new Cidades();
+            transportadoras = new Transportadoras();
+            contadores = new Contadores();
+            fornecedores = new Fornecedores();
+            listaPrecos = new ListaPrecos();
+
+            codRamoAtividades = 0;
+            codRegioes = 0;
+            codVendedores = 0;
+            codFuncionarios = 0;
+            codCondicaoPagamentos = 0;
+            codCidades = 0;
+            codTransportadoras = 0;
+            codContadores = 0;
+            codFornecedores = 0;
+            codListaPrecos = 0;
         }
 
         public string Nome
@@ -169,6 +197,18 @@ namespace KnkForms.Classes
             set { regimeTributarioDaEmpresa = value; }
         }
 
+        public DateTime DataCad2
+        {
+            get { return dataCad2; }
+            set { dataCad2 = value; }
+        }
+
+        public DateTime DataCadAlt2
+        {
+            get { return dataCadAlt2; }
+            set { dataCadAlt2 = value; }
+        }
+
         public DateTime DataFundacao
         {
             get { return dataFundacao; }
@@ -231,7 +271,7 @@ namespace KnkForms.Classes
         }
 
 
-        // Aggregation properties
+     
         public RamoAtividades RamoAtividades
         {
             get { return ramoAtividades; }
@@ -290,6 +330,67 @@ namespace KnkForms.Classes
         {
             get { return listaPrecos; }
             set { listaPrecos = value; }
+        }
+
+
+        public int CodRamoAtividades
+        {
+            get { return codRamoAtividades; }
+            set { codRamoAtividades = value; }
+        }
+
+        public int CodRegioes
+        {
+            get { return codRegioes; }
+            set { codRegioes = value; }
+        }
+
+        public int CodVendedores
+        {
+            get { return codVendedores; }
+            set { codVendedores = value; }
+        }
+
+        public int CodFuncionarios
+        {
+            get { return codFuncionarios; }
+            set { codFuncionarios = value; }
+        }
+
+        public int CodCondicaoPagamentos
+        {
+            get { return codCondicaoPagamentos; }
+            set { codCondicaoPagamentos = value; }
+        }
+
+        public int CodCidades
+        {
+            get { return codCidades; }
+            set { codCidades = value; }
+        }
+
+        public int CodTransportadoras
+        {
+            get { return codTransportadoras; }
+            set { codTransportadoras = value; }
+        }
+
+        public int CodContadores
+        {
+            get { return codContadores; }
+            set { codContadores = value; }
+        }
+
+        public int CodFornecedores
+        {
+            get { return codFornecedores; }
+            set { codFornecedores = value; }
+        }
+
+        public int CodListaPrecos
+        {
+            get { return codListaPrecos; }
+            set { codListaPrecos = value; }
         }
     }
 

@@ -20,13 +20,8 @@ namespace KnkForms.Forms
             InitializeComponent();
         }
 
-        public override void SetFrmCadastro(Object obj)
-        {
-            oFormCadPais = (FormCadPais)obj;
-        }
 
-
-        public override void CarregaObj(Object obj)
+        public override void ConhecaObj(Object obj)
         {
             oPais = (Paises)obj;
         }
@@ -41,28 +36,59 @@ namespace KnkForms.Forms
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
+            chkAtivo.Checked = false;
         }
 
         public override void CarregaTxt()
         {
-            txtCod.Text = oPais.Cod;
+            txtCod.Text = Convert.ToString(oPais.Cod);
             txtNomePais.Text = oPais.NomePais;
             txtTipoPais.Text=oPais.TipoPais;
-            txtSigla.Text = oPais.Sigla;
-            txtDdi.Text = oPais.DDI;
-            txtCodUser.Text = oPais.CodUser;
-            txtDataCad.Text= oPais.DataCadastro;
+            txtSigla.Text = Convert.ToString(oPais.Sigla);
+            txtDdi.Text = Convert.ToString(oPais.DDI);
+            txtCodUser.Text = Convert.ToString(oPais.CodEmpresa);
+            txtDataCad.Text= Convert.ToString(oPais.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(oPais.DataModificacao);
+            chkAtivo.Checked = oPais.Ativo;
+        }
 
+        public override void BloqueiaTxt()
+        {
+            txtCod.Enabled = false;
+            txtNomePais.Enabled = false;
+            txtTipoPais.Enabled = false;
+            txtSigla.Enabled = false;
+            txtDdi.Enabled = false;
+            txtCodUser.Enabled = false;
+            txtDataCad.Enabled = false;
+            txtDataAlt.Enabled = false;
+            chkAtivo.Enabled = false;
         }
 
         public override void DesbloqueiaTxt()
         {
-
+            txtCod.Enabled = true;
+            txtNomePais.Enabled = true;
+            txtTipoPais.Enabled = true;
+            txtSigla.Enabled = true;
+            txtDdi.Enabled = true;
+            txtCodUser.Enabled = true;
+            txtDataCad.Enabled = true;
+            txtDataAlt.Enabled = true;
+            chkAtivo.Enabled = true;
         }
 
         public override void Salvar()
         {
-
+            oPais.Cod = Convert.ToInt32(txtCod.Text);
+            oPais.NomePais = txtNomePais.Text;
+            oPais.TipoPais = txtTipoPais.Text;
+            oPais.Sigla = Convert.ToChar(txtSigla.Text);
+            oPais.DDI = Convert.ToInt32(txtDdi.Text);
+            oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oPais.Ativo = chkAtivo.Checked;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

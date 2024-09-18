@@ -18,7 +18,7 @@ namespace KnkForms.Classes
         {
             nomePais = "";
             tipoPais = "";
-            sigla = '\0'; // Default value for char
+            sigla = '\0'; 
             ddi = 0;
             ativo = false;
         }

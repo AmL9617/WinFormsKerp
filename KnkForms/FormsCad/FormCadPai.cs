@@ -21,7 +21,28 @@ namespace KnkForms
             InitializeComponent();
         }
 
-        protected virtual void Salvar()
+        public virtual void ConhecaObj(Object obj)
+        {
+
+        }
+        public virtual void LimpaTxt()
+        {
+
+        }
+        public virtual void CarregaTxt()
+        {
+
+        }
+        public virtual void BloqueiaTxt()
+        {
+
+        }
+        public virtual void DesbloqueiaTxt()
+        {
+
+        }
+
+        public virtual void Salvar()
         {
 
         }

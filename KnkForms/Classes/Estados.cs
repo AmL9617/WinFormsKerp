@@ -11,14 +11,20 @@ namespace KnkForms.Classes
         protected string nomeEstado;
         protected char sigla;
         protected bool ativo;
-        protected int codPais; // Temporarily using int for future implementation
+
+        //Placeholder
+        protected int codPais;
+
+        //Agregação
+        protected Paises pais;
 
         public Estados()
         {
             nomeEstado = "";
-            sigla = '\0'; // Default value for char
+            sigla = '\0'; 
             ativo = false;
-            codPais = 0; // Default value for int
+            codPais = 0; 
+            pais = new Paises();
         }
 
         public string NomeEstado
@@ -44,9 +50,12 @@ namespace KnkForms.Classes
             get { return codPais; }
             set { codPais = value; }
         }
+        public Paises Pais
+        {
+            get { return pais; }
+            set { pais = value; }
+        }
 
-        // Placeholder for future implementation
-        // public Paises Pais { get; set; }
     }
 
 }

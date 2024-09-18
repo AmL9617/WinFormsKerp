@@ -14,61 +14,75 @@ namespace KnkForms.Forms
 {
     public partial class FormCadCidade : KnkForms.FormCadPai
     {
+        Cidades aCidade;
         public FormCadCidade()
         {
             InitializeComponent();
         }
 
-        public async Task Salvar()
+        public override void ConhecaObj(Object obj)
         {
-            Cidades novaCidade = new Cidades();
+            aCidade = (Cidades)obj;
+        }
 
-            novaCidade.Cod = Convert.ToInt32(txtCod.Text);
-            DateTime dataCadastro;
-            DateTime dataModificacao;
+        public override void LimpaTxt()
+        {
+            txtCod.Clear();
+            txtNomeCidade.Clear();
+            txtDDD.Clear();
+            txtCodEstado.Clear();
+            txtCodUser.Clear();
+            txtDataCad.Clear();
+            txtDataAlt.Clear();
+            chkAtivo.Checked = false;
+        }
 
-            if (DateTime.TryParse(txtDataCad.Text, out dataCadastro))
-            {
-                novaCidade.DataCadastro = dataCadastro;
-            }
-            else
-            {
-                MessageBox.Show("Data de cadastro inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void CarregaTxt()
+        {
+            txtCod.Text = Convert.ToString(aCidade.Cod);
+            txtNomeCidade.Text = aCidade.NomeCidade;
+            txtDDD.Text = Convert.ToString(aCidade.DDD);
+            txtCodEstado.Text = Convert.ToString(aCidade.CodEstado);
+            txtCodUser.Text = Convert.ToString(aCidade.CodEmpresa);
+            txtDataCad.Text = Convert.ToString(aCidade.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(aCidade.DataModificacao);
+            chkAtivo.Checked = aCidade.Ativo;
+        }
 
-            if (DateTime.TryParse(txtDataAlt.Text, out dataModificacao))
-            {
-                novaCidade.DataModificacao = dataModificacao;
-            }
-            else
-            {
-                MessageBox.Show("Data de modificação inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        public override void BloqueiaTxt()
+        {
+            txtCod.Enabled = false;
+            txtNomeCidade.Enabled = false;
+            txtDDD.Enabled = false;
+            txtCodEstado.Enabled = false;
+            txtCodUser.Enabled = false;
+            txtDataCad.Enabled = false;
+            txtDataAlt.Enabled = false;
+            chkAtivo.Enabled = false;
+        }
 
-            novaCidade.NomeCidade = txtNomeCidade.Text;
-            novaCidade.DDD = Convert.ToChar(txtDDD.Text);
-            novaCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
-            novaCidade.Ativo = chkAtivo.Checked;
+        public override void DesbloqueiaTxt()
+        {
+            txtCod.Enabled = true;
+            txtNomeCidade.Enabled = true;
+            txtDDD.Enabled = true;
+            txtCodEstado.Enabled = true;
+            txtCodUser.Enabled = true;
+            txtDataCad.Enabled = true;
+            txtDataAlt.Enabled = true;
+            chkAtivo.Enabled = true;
+        }
 
-            using (HttpClient httpClient = new HttpClient())
-            {
-                try
-                {
-                    string jsonItem = JsonConvert.SerializeObject(novaCidade);
-                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
-
-                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7077/ativ3", content);
-                    response.EnsureSuccessStatusCode();
-
-                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ocorreu um erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+        public override void Salvar()
+        {
+            aCidade.Cod = Convert.ToInt32(txtCod.Text);
+            aCidade.NomeCidade = txtNomeCidade.Text;
+            aCidade.DDD = Convert.ToInt32(txtDDD.Text);
+            aCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
+            aCidade.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            aCidade.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            aCidade.Ativo = chkAtivo.Checked;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

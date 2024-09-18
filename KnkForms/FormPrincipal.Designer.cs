@@ -183,6 +183,7 @@
             this.cadPaisesToolStripMenuItem.Name = "cadPaisesToolStripMenuItem";
             this.cadPaisesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.cadPaisesToolStripMenuItem.Text = "Países";
+            this.cadPaisesToolStripMenuItem.Click += new System.EventHandler(this.cadPaisesToolStripMenuItem_Click);
             // 
             // cadParcelasToolStripMenuItem
             // 
@@ -356,6 +357,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.Text = "FormPrincipal";
+            this.Controls.SetChildIndex(this.menuStrip1, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -48,7 +48,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.txtObsDiv = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.datUltComp = new System.Windows.Forms.DateTimePicker();
+            this.dataUltComp = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
             this.dataUltAlt = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
@@ -62,10 +62,10 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnSalvarAtiv = new System.Windows.Forms.Button();
             this.listVAtiv = new System.Windows.Forms.ListView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIdRamoAtiv = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPessoasAut = new System.Windows.Forms.TextBox();
             this.txtIdVend = new System.Windows.Forms.TextBox();
             this.txtIdReg = new System.Windows.Forms.TextBox();
             this.txtIdCondPag = new System.Windows.Forms.TextBox();
@@ -87,6 +87,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.chkProdRur = new System.Windows.Forms.CheckBox();
             this.chkReg = new System.Windows.Forms.CheckBox();
             this.txtCnpj = new System.Windows.Forms.TextBox();
@@ -100,10 +104,6 @@
             this.chkRev = new System.Windows.Forms.CheckBox();
             this.chkCons = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -261,7 +261,7 @@
             // 
             this.tabPage6.Controls.Add(this.txtObsDiv);
             this.tabPage6.Controls.Add(this.label27);
-            this.tabPage6.Controls.Add(this.datUltComp);
+            this.tabPage6.Controls.Add(this.dataUltComp);
             this.tabPage6.Controls.Add(this.label26);
             this.tabPage6.Controls.Add(this.dataUltAlt);
             this.tabPage6.Controls.Add(this.label25);
@@ -292,12 +292,12 @@
             this.label27.TabIndex = 145;
             this.label27.Text = "Observações";
             // 
-            // datUltComp
+            // dataUltComp
             // 
-            this.datUltComp.Location = new System.Drawing.Point(254, 29);
-            this.datUltComp.Name = "datUltComp";
-            this.datUltComp.Size = new System.Drawing.Size(87, 20);
-            this.datUltComp.TabIndex = 144;
+            this.dataUltComp.Location = new System.Drawing.Point(254, 29);
+            this.dataUltComp.Name = "dataUltComp";
+            this.dataUltComp.Size = new System.Drawing.Size(87, 20);
+            this.dataUltComp.TabIndex = 144;
             // 
             // label26
             // 
@@ -392,7 +392,7 @@
             // 
             this.tabPage4.Controls.Add(this.btnSalvarAtiv);
             this.tabPage4.Controls.Add(this.listVAtiv);
-            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.txtIdRamoAtiv);
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -420,12 +420,12 @@
             this.listVAtiv.TabIndex = 133;
             this.listVAtiv.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox2
+            // txtIdRamoAtiv
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 20);
-            this.textBox2.TabIndex = 132;
+            this.txtIdRamoAtiv.Location = new System.Drawing.Point(15, 28);
+            this.txtIdRamoAtiv.Name = "txtIdRamoAtiv";
+            this.txtIdRamoAtiv.Size = new System.Drawing.Size(292, 20);
+            this.txtIdRamoAtiv.TabIndex = 132;
             // 
             // label21
             // 
@@ -438,7 +438,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.txtPessoasAut);
             this.tabPage3.Controls.Add(this.txtIdVend);
             this.tabPage3.Controls.Add(this.txtIdReg);
             this.tabPage3.Controls.Add(this.txtIdCondPag);
@@ -457,12 +457,12 @@
             this.tabPage3.Text = "Dados Compl.";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtPessoasAut
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(713, 20);
-            this.textBox1.TabIndex = 137;
+            this.txtPessoasAut.Location = new System.Drawing.Point(9, 124);
+            this.txtPessoasAut.Name = "txtPessoasAut";
+            this.txtPessoasAut.Size = new System.Drawing.Size(713, 20);
+            this.txtPessoasAut.TabIndex = 137;
             // 
             // txtIdVend
             // 
@@ -587,7 +587,7 @@
             // 
             this.txtObsContato.Location = new System.Drawing.Point(278, 42);
             this.txtObsContato.Name = "txtObsContato";
-            this.txtObsContato.Size = new System.Drawing.Size(100, 20);
+            this.txtObsContato.Size = new System.Drawing.Size(230, 20);
             this.txtObsContato.TabIndex = 132;
             // 
             // txtTipoContato
@@ -671,6 +671,42 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Fiscal";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(593, 22);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(96, 13);
+            this.label30.TabIndex = 132;
+            this.label30.Text = "Data de Fundação";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(213, 90);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(34, 13);
+            this.label29.TabIndex = 131;
+            this.label29.Text = "CNPJ";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(213, 19);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(155, 13);
+            this.label28.TabIndex = 130;
+            this.label28.Text = "Inscrição Municipal/SUFRAMA";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 90);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(94, 13);
+            this.label23.TabIndex = 129;
+            this.label23.Text = "Inscrição Estadual";
             // 
             // chkProdRur
             // 
@@ -780,42 +816,6 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 0;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(20, 90);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(94, 13);
-            this.label23.TabIndex = 129;
-            this.label23.Text = "Inscrição Estadual";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(213, 19);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(155, 13);
-            this.label28.TabIndex = 130;
-            this.label28.Text = "Inscrição Municipal/SUFRAMA";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(213, 90);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(34, 13);
-            this.label29.TabIndex = 131;
-            this.label29.Text = "CNPJ";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(593, 22);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(96, 13);
-            this.label30.TabIndex = 132;
-            this.label30.Text = "Data de Fundação";
-            // 
             // FormCadClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -907,7 +907,7 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TextBox txtObsDiv;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DateTimePicker datUltComp;
+        private System.Windows.Forms.DateTimePicker dataUltComp;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker dataUltAlt;
         private System.Windows.Forms.Label label25;
@@ -921,10 +921,10 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnSalvarAtiv;
         private System.Windows.Forms.ListView listVAtiv;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtIdRamoAtiv;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPessoasAut;
         private System.Windows.Forms.TextBox txtIdVend;
         private System.Windows.Forms.TextBox txtIdReg;
         private System.Windows.Forms.TextBox txtIdCondPag;

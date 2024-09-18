@@ -23,11 +23,14 @@ namespace KnkForms
 
             //Cadastro
             oFormCadPais = new FormCadPais();
+
+            oFormConPais.SetFrmCadastro(oFormCadPais);
         }
 
-        public void PecaPaises()
+        public void PecaPaises(Object obj)
         {
-            oFormCadPais.ShowDialog();
+            oFormConPais.ConhecaObj(obj);
+            oFormConPais.ShowDialog();
         }
     }
 }

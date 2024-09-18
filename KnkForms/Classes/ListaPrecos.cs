@@ -13,7 +13,11 @@ namespace KnkForms.Classes
         protected float margemLucro;
         protected bool todas;
 
-        // Aggregation part
+        //Placeholder
+        protected int codMarca;
+        protected int codGrupo;
+
+        //Agregação
         protected Marcas marcas;
         protected Grupos grupos;
 
@@ -23,8 +27,10 @@ namespace KnkForms.Classes
             descontoMaximo = 0.0f;
             margemLucro = 0.0f;
             todas = false;
-            marcas = null;
-            grupos = null;
+            marcas = new Marcas();
+            grupos = new Grupos();
+            codMarca = 0;
+            codGrupo = 0;
         }
 
         public string NomeLista

@@ -54,5 +54,15 @@ namespace KnkForms.FormsCon
         {
             Pesquisar();
         }
+
+        public virtual void SetFrmCadastro(Object form)
+        {
+
+        }
+
+        public virtual void ConhecaObj(Object obj)
+        {
+
+        }
     }
 }
