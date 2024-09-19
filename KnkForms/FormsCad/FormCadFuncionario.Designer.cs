@@ -223,9 +223,9 @@
             this.lbl1.AutoSize = true;
             this.lbl1.Location = new System.Drawing.Point(150, 41);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(96, 13);
+            this.lbl1.Size = new System.Drawing.Size(108, 13);
             this.lbl1.TabIndex = 148;
-            this.lbl1.Text = "Nome do Contador";
+            this.lbl1.Text = "Nome do Funcionário";
             // 
             // chkAtivo
             // 
@@ -391,7 +391,6 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadFuncionario";
             this.Text = "Form Funcionário";
-            this.Load += new System.EventHandler(this.FormFuncionario_Load);
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);

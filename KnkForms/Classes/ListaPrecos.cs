@@ -9,8 +9,8 @@ namespace KnkForms.Classes
     internal class ListaPrecos : Pai
     {
         protected string nomeLista;
-        protected float descontoMaximo;
-        protected float margemLucro;
+        protected double descontoMaximo;
+        protected double margemLucro;
         protected bool todas;
 
         //Placeholder
@@ -39,13 +39,13 @@ namespace KnkForms.Classes
             set { nomeLista = value; }
         }
 
-        public float DescontoMaximo
+        public double DescontoMaximo
         {
             get { return descontoMaximo; }
             set { descontoMaximo = value; }
         }
 
-        public float MargemLucro
+        public double MargemLucro
         {
             get { return margemLucro; }
             set { margemLucro = value; }
@@ -55,6 +55,18 @@ namespace KnkForms.Classes
         {
             get { return todas; }
             set { todas = value; }
+        }
+
+        public int CodMarca
+        {
+            get { return codMarca; }
+            set { CodMarca = value; }
+        }
+
+        public int CodGrupo
+        {
+            get { return codGrupo; }
+            set { CodGrupo = value; }
         }
 
         public Marcas Marcas

@@ -25,7 +25,7 @@ namespace KnkForms.Classes
         protected string inscricaoEstadual;
         protected string trade;
         protected int codProdIgual;
-        protected float limiteCredito;
+        protected double limiteCredito;
         protected string observacoes;
         protected bool verEmClientes;
         protected DateTime ultimoMovimento;
@@ -157,7 +157,7 @@ namespace KnkForms.Classes
             set { codProdIgual = value; }
         }
 
-        public float LimiteCredito
+        public double LimiteCredito
         {
             get { return limiteCredito; }
             set { limiteCredito = value; }

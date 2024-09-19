@@ -16,17 +16,155 @@ namespace KnkForms
     public partial class FormPrincipal : FormPai
     {
         Interfaces aInter;
+        
+        Cidades aCidade;
+        Clientes oCliente;
+        CondicaoPagamentos aCondPag;
+        Contadores oContador;
+        Empresas aEmpresa;
+        Estados oEstado;
+        FormaPagamentos aFormaPag;
+        Fornecedores oFornecedor;
+        Funcionarios oFuncionario;
+        Grupos oGrupo;
+        ListaPrecos aListaPreco;
+        Marcas aMarca;
         Paises oPais;
+        Parcelas aParcela;
+        RamoAtividades oRamoAtiv;
+        Regioes aRegiao;
+        Transportadoras aTransportadora;
+        Vendedores oVendedor;
+
         public FormPrincipal()
         {
             InitializeComponent();
             aInter = new Interfaces();
+            aCidade = new Cidades();
+            oCliente = new Clientes();
+            aCondPag = new CondicaoPagamentos();
+            oContador = new Contadores();
+            aEmpresa = new Empresas();
+            oEstado = new Estados();
+            aFormaPag = new FormaPagamentos();
+            oFornecedor = new Fornecedores();
+            oFuncionario = new Funcionarios();
+            oGrupo = new Grupos();
+            aListaPreco = new ListaPrecos();
+            aMarca = new Marcas();
             oPais = new Paises();
+            aParcela = new Parcelas();
+            oRamoAtiv = new RamoAtividades();
+            aRegiao = new Regioes();
+            aTransportadora = new Transportadoras();
+            oVendedor = new Vendedores();
+        }
+
+        //Cadastros
+        private void cadCidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aInter.PecaCidades(aCidade);
+        }
+
+        private void cadClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaClientes(oCliente);
+        }
+
+        private void cadCondicaoDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaCondicoesPagamento(aCondPag);
+        }
+
+        private void cadContadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaContadores(oContador);
+        }
+
+        private void cadEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaEmpresas(aEmpresa);
+        }
+
+        private void cadEstadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaEstados(oEstado);
+        }
+
+        private void cadFormaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaFormasPagamento(aFormaPag);
+        }
+
+        private void cadFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaFornecedores(oFornecedor);
+        }
+
+        private void cadFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaFuncionarios(oFuncionario);
+        }
+
+        private void cadGruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaGrupos(oGrupo);
+        }
+
+        private void cadListaDePrecosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aInter.PecaListaPrecos(aListaPreco);
+
+        }
+
+        private void cadMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaMarcas(aMarca);
         }
 
         private void cadPaisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             aInter.PecaPaises(oPais);
+        }
+
+        private void cadParcelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaParcelas(aParcela);
+        }
+
+        private void cadRamoDeAtividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaRamosAtividade(oRamoAtiv);
+        }
+
+        private void cadRegioesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaRegioes(aRegiao);
+        }
+
+        private void cadTransportadorasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaTransportadoras(aTransportadora);
+        }
+
+        private void cadVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            aInter.PecaVendedores(oVendedor);
         }
     }
 }

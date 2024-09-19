@@ -11,22 +11,21 @@ namespace KnkForms.Forms
 {
     public partial class FormCadRamoAtividade : KnkForms.FormCadPai
     {
+        RamoAtividades oRamo;
         public FormCadRamoAtividade()
         {
             InitializeComponent();
         }
         public override void ConhecaObj(Object obj)
         {
-            oPais = (Paises)obj;
+            oRamo = (RamoAtividades)obj;
         }
 
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomePais.Clear();
-            txtTipoPais.Clear();
-            txtSigla.Clear();
-            txtDdi.Clear();
+            txtNomeRamo.Clear();
+            chkAtivo.Checked = false;
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -34,23 +33,19 @@ namespace KnkForms.Forms
 
         public override void CarregaTxt()
         {
-            txtCod.Text = Convert.ToString(oPais.Cod);
-            txtNomePais.Text = oPais.NomePais;
-            txtTipoPais.Text = oPais.TipoPais;
-            txtSigla.Text = Convert.ToString(oPais.Sigla);
-            txtDdi.Text = Convert.ToString(oPais.DDI);
-            txtCodUser.Text = Convert.ToString(oPais.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oPais.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oPais.DataModificacao);
+            txtCod.Text = Convert.ToString(oRamo.Cod);
+            txtNomeRamo.Text = oRamo.NomeRamo;
+            chkAtivo.Checked = oRamo.Ativo;
+            txtCodUser.Text = Convert.ToString(oRamo.CodEmpresa);
+            txtDataCad.Text = Convert.ToString(oRamo.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(oRamo.DataModificacao);
         }
 
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomePais.Enabled = false;
-            txtTipoPais.Enabled = false;
-            txtSigla.Enabled = false;
-            txtDdi.Enabled = false;
+            txtNomeRamo.Enabled = false;
+            chkAtivo.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -59,10 +54,8 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomePais.Enabled = true;
-            txtTipoPais.Enabled = true;
-            txtSigla.Enabled = true;
-            txtDdi.Enabled = true;
+            txtNomeRamo.Enabled = true;
+            chkAtivo.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
@@ -70,14 +63,12 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oPais.Cod = Convert.ToInt32(txtCod.Text);
-            oPais.NomePais = txtNomePais.Text;
-            oPais.TipoPais = txtTipoPais.Text;
-            oPais.Sigla = Convert.ToChar(txtSigla.Text);
-            oPais.DDI = Convert.ToInt32(txtDdi.Text);
-            oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oRamo.Cod = Convert.ToInt32(txtCod.Text);
+            oRamo.NomeRamo = txtNomeRamo.Text;
+            oRamo.Ativo = chkAtivo.Checked;
+            oRamo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            oRamo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
     }
 }

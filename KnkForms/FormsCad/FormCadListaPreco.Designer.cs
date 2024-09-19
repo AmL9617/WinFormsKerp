@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodGrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.chkTodas = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtNomeLista
@@ -121,21 +121,21 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Código Grupo";
             // 
-            // chkAtivo
+            // chkTodas
             // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(715, 38);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(56, 17);
-            this.chkAtivo.TabIndex = 63;
-            this.chkAtivo.Text = "Todas";
-            this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkTodas.AutoSize = true;
+            this.chkTodas.Location = new System.Drawing.Point(715, 38);
+            this.chkTodas.Name = "chkTodas";
+            this.chkTodas.Size = new System.Drawing.Size(56, 17);
+            this.chkTodas.TabIndex = 63;
+            this.chkTodas.Text = "Todas";
+            this.chkTodas.UseVisualStyleBackColor = true;
             // 
             // FormCadListaPreco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chkAtivo);
+            this.Controls.Add(this.chkTodas);
             this.Controls.Add(this.txtCodGrupo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCodMarca);
@@ -168,7 +168,7 @@
             this.Controls.SetChildIndex(this.txtCodMarca, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtCodGrupo, 0);
-            this.Controls.SetChildIndex(this.chkAtivo, 0);
+            this.Controls.SetChildIndex(this.chkTodas, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +186,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodGrupo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.CheckBox chkTodas;
     }
 }

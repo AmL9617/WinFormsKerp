@@ -64,7 +64,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.txtInndustria = new System.Windows.Forms.TextBox();
+            this.txtIndustria = new System.Windows.Forms.TextBox();
             this.chkVerCliente = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -366,12 +366,12 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
-            // txtInndustria
+            // txtIndustria
             // 
-            this.txtInndustria.Location = new System.Drawing.Point(154, 58);
-            this.txtInndustria.Name = "txtInndustria";
-            this.txtInndustria.Size = new System.Drawing.Size(100, 20);
-            this.txtInndustria.TabIndex = 158;
+            this.txtIndustria.Location = new System.Drawing.Point(154, 58);
+            this.txtIndustria.Name = "txtIndustria";
+            this.txtIndustria.Size = new System.Drawing.Size(100, 20);
+            this.txtIndustria.TabIndex = 158;
             // 
             // chkVerCliente
             // 
@@ -388,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkVerCliente);
-            this.Controls.Add(this.txtInndustria);
+            this.Controls.Add(this.txtIndustria);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.dataUltMov);
             this.Controls.Add(this.txtObservacao);
@@ -473,7 +473,7 @@
             this.Controls.SetChildIndex(this.txtObservacao, 0);
             this.Controls.SetChildIndex(this.dataUltMov, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
-            this.Controls.SetChildIndex(this.txtInndustria, 0);
+            this.Controls.SetChildIndex(this.txtIndustria, 0);
             this.Controls.SetChildIndex(this.chkVerCliente, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -518,7 +518,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.CheckBox chkAtivo;
-        private System.Windows.Forms.TextBox txtInndustria;
+        private System.Windows.Forms.TextBox txtIndustria;
         private System.Windows.Forms.CheckBox chkVerCliente;
     }
 }

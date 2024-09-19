@@ -22,17 +22,18 @@ namespace KnkForms.Classes
         protected string inscMunicipalSuframa;
         protected string cnpj;
         protected string regimeTributarioDaEmpresa;
-        protected DateTime dataCad2;
-        protected DateTime dataCadAlt2;
+       
         protected DateTime dataFundacao;
-        protected string regimeSemSt;
-        protected string produtorRural;
+        protected bool regimeSemSt;
+        protected bool produtorRural;
         protected string tipoContato;
         protected string contato;
-        protected string observacao;
+        protected string obsContato;
         protected bool verEmFornecedores;
         protected string pessoasAutorizadas;
-        protected string observacoes;
+        protected string obsDiv;
+        protected DateTime dataCad2;
+        protected DateTime dataUltAlt2;
         protected DateTime ultimaCompra;
 
         //Placeholder
@@ -77,16 +78,16 @@ namespace KnkForms.Classes
             cnpj = "";
             regimeTributarioDaEmpresa = "";
             dataCad2 = DateTime.MinValue;
-            dataCadAlt2 = DateTime.MinValue;
+            dataUltAlt2 = DateTime.MinValue;
             dataFundacao = DateTime.MinValue;
-            regimeSemSt = "";
-            produtorRural = "";
+            regimeSemSt = false;
+            produtorRural = false;
             tipoContato = "";
             contato = "";
-            observacao = "";
+            obsContato = "";
             verEmFornecedores = false;
             pessoasAutorizadas = "";
-            observacoes = "";
+            obsDiv = "";
             ultimaCompra = DateTime.MinValue;
 
             
@@ -203,10 +204,10 @@ namespace KnkForms.Classes
             set { dataCad2 = value; }
         }
 
-        public DateTime DataCadAlt2
+        public DateTime DataUltAlt2
         {
-            get { return dataCadAlt2; }
-            set { dataCadAlt2 = value; }
+            get { return dataUltAlt2; }
+            set { dataUltAlt2 = value; }
         }
 
         public DateTime DataFundacao
@@ -215,13 +216,13 @@ namespace KnkForms.Classes
             set { dataFundacao = value; }
         }
 
-        public string RegimeSemSt
+        public bool RegimeSemSt
         {
             get { return regimeSemSt; }
             set { regimeSemSt = value; }
         }
 
-        public string ProdutorRural
+        public bool ProdutorRural
         {
             get { return produtorRural; }
             set { produtorRural = value; }
@@ -239,10 +240,10 @@ namespace KnkForms.Classes
             set { contato = value; }
         }
 
-        public string Observacao
+        public string ObsContato
         {
-            get { return observacao; }
-            set { observacao = value; }
+            get { return obsContato; }
+            set { obsContato = value; }
         }
 
         public bool VerEmFornecedores
@@ -257,10 +258,10 @@ namespace KnkForms.Classes
             set { pessoasAutorizadas = value; }
         }
 
-        public string Observacoes
+        public string ObsDiv
         {
-            get { return observacoes; }
-            set { observacoes = value; }
+            get { return obsDiv; }
+            set { obsDiv = value; }
         }
 
 

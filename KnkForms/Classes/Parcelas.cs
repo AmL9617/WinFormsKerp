@@ -9,7 +9,7 @@ namespace KnkForms.Classes
     internal class Parcelas : FormaPagamentos
     {
         protected int quantidade;
-        protected float valor;
+        protected double valor;
 
         public Parcelas()
         {
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
             set { quantidade = value; }
         }
 
-        public float Valor
+        public double Valor
         {
             get { return valor; }
             set { valor = value; }

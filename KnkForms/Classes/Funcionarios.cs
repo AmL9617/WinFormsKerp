@@ -10,7 +10,7 @@ namespace KnkForms.Classes
     {
         protected string nomeFuncionario;
         protected bool ativo;
-        protected string logradouro;
+        protected string endereco;
         protected int numero;
         protected string complemento;
         protected string bairro;
@@ -19,7 +19,7 @@ namespace KnkForms.Classes
         protected string celular;
         protected string email;
         protected string observacoes;
-        protected float salario;
+        protected double salario;
         protected DateTime dataAdmissao;
         protected DateTime dataDemissao;
         protected string sexo;
@@ -31,7 +31,7 @@ namespace KnkForms.Classes
         {
             nomeFuncionario = "";
             ativo = false;
-            logradouro = "";
+            endereco = "";
             numero = 0;
             complemento = "";
             bairro = "";
@@ -61,10 +61,10 @@ namespace KnkForms.Classes
             set { ativo = value; }
         }
 
-        public string Logradouro
+        public string Endereco
         {
-            get { return logradouro; }
-            set { logradouro = value; }
+            get { return endereco; }
+            set { endereco = value; }
         }
 
         public int Numero
@@ -115,7 +115,7 @@ namespace KnkForms.Classes
             set { observacoes = value; }
         }
 
-        public float Salario
+        public double Salario
         {
             get { return salario; }
             set { salario = value; }

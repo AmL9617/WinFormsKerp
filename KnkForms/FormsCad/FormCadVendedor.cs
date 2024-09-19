@@ -10,22 +10,25 @@ namespace KnkForms.Classes
 {
     public partial class FormCadVendedor : KnkForms.FormCadPai
     {
+        Vendedores oVendedor;
         public FormCadVendedor()
         {
             InitializeComponent();
         }
         public override void ConhecaObj(Object obj)
         {
-            oPais = (Paises)obj;
+            oVendedor = (Vendedores)obj;
         }
 
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomePais.Clear();
-            txtTipoPais.Clear();
-            txtSigla.Clear();
-            txtDdi.Clear();
+            txtNomeVendedor.Clear();
+            txtTipo.Clear();
+            txtComissao.Clear();
+            dataComissao.Value = DateTime.Today;
+            chkAtivo.Checked = false;
+            txtObservacao.Clear();
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -33,23 +36,27 @@ namespace KnkForms.Classes
 
         public override void CarregaTxt()
         {
-            txtCod.Text = Convert.ToString(oPais.Cod);
-            txtNomePais.Text = oPais.NomePais;
-            txtTipoPais.Text = oPais.TipoPais;
-            txtSigla.Text = Convert.ToString(oPais.Sigla);
-            txtDdi.Text = Convert.ToString(oPais.DDI);
-            txtCodUser.Text = Convert.ToString(oPais.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oPais.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oPais.DataModificacao);
+            txtCod.Text = Convert.ToString(oVendedor.Cod);
+            txtNomeVendedor.Text = oVendedor.NomeVendedor;
+            txtTipo.Text = oVendedor.Tipo;
+            txtComissao.Text = Convert.ToString(oVendedor.Comissao);
+            chkAtivo.Checked = oVendedor.Ativo;
+            dataComissao.Value = oVendedor.ComissaoPrazo;
+            txtObservacao.Text = Convert.ToString(oVendedor.Observacao);
+            txtCodUser.Text = Convert.ToString(oVendedor.CodEmpresa);
+            txtDataCad.Text = Convert.ToString(oVendedor.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(oVendedor.DataModificacao);
         }
 
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomePais.Enabled = false;
-            txtTipoPais.Enabled = false;
-            txtSigla.Enabled = false;
-            txtDdi.Enabled = false;
+            txtNomeVendedor.Enabled = false;
+            txtTipo.Enabled = false;
+            txtComissao.Enabled = false;
+            chkAtivo.Enabled = false;
+            dataComissao.Enabled = false;
+            txtObservacao.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -58,10 +65,12 @@ namespace KnkForms.Classes
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomePais.Enabled = true;
-            txtTipoPais.Enabled = true;
-            txtSigla.Enabled = true;
-            txtDdi.Enabled = true;
+            txtNomeVendedor.Enabled = true;
+            txtTipo.Enabled = true;
+            txtComissao.Enabled = true;
+            chkAtivo.Enabled = true;
+            dataComissao.Enabled = true;
+            txtObservacao.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
@@ -69,14 +78,16 @@ namespace KnkForms.Classes
 
         public override void Salvar()
         {
-            oPais.Cod = Convert.ToInt32(txtCod.Text);
-            oPais.NomePais = txtNomePais.Text;
-            oPais.TipoPais = txtTipoPais.Text;
-            oPais.Sigla = Convert.ToChar(txtSigla.Text);
-            oPais.DDI = Convert.ToInt32(txtDdi.Text);
-            oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oVendedor.Cod = Convert.ToInt32(txtCod.Text);
+            oVendedor.NomeVendedor = txtNomeVendedor.Text;
+            oVendedor.Tipo = txtTipo.Text;
+            oVendedor.Comissao = Convert.ToDouble(txtComissao.Text);
+            oVendedor.ComissaoPrazo = dataComissao.Value;
+            oVendedor.Ativo = chkAtivo.Checked;
+            oVendedor.Observacao = txtObservacao.Text;
+            oVendedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            oVendedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            oVendedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
     }
 }

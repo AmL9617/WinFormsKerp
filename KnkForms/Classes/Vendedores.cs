@@ -11,7 +11,7 @@ namespace KnkForms.Classes
         protected string nomeVendedor;
         protected bool ativo;
         protected string tipo;
-        protected float comissao;
+        protected double comissao;
         protected DateTime comissaoPrazo;
         protected string observacao;
 
@@ -43,7 +43,7 @@ namespace KnkForms.Classes
             set { tipo = value; }
         }
 
-        public float Comissao
+        public double Comissao
         {
             get { return comissao; }
             set { comissao = value; }
