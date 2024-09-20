@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodParcela = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chkAtivo
@@ -149,10 +150,21 @@
             this.label7.TabIndex = 64;
             this.label7.Text = "Código Parcela";
             // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Location = new System.Drawing.Point(292, 113);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
+            this.btnConsulta.TabIndex = 66;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // FormCadCondicaoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodParcela);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtOpDisp);
@@ -191,6 +203,7 @@
             this.Controls.SetChildIndex(this.txtOpDisp, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtCodParcela, 0);
+            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +224,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodParcela;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

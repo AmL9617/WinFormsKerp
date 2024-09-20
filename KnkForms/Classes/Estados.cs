@@ -16,15 +16,24 @@ namespace KnkForms.Classes
         protected int codPais;
 
         //Agregação
-        protected Paises pais;
+        protected Paises oPais;
 
-        public Estados()
+        public Estados():base()
         {
             nomeEstado = "";
             sigla = '\0'; 
             ativo = false;
             codPais = 0; 
-            pais = new Paises();
+            oPais = new Paises();
+        }
+
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string nomeEstado, char sigla, bool Ativo, int codPais, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        {
+            nomeEstado = nomeEstado;
+            sigla = sigla;
+            ativo = ativo;
+            codPais = codPais;
+            oPais = oPais;
         }
 
         public string NomeEstado
@@ -52,8 +61,8 @@ namespace KnkForms.Classes
         }
         public Paises Pais
         {
-            get { return pais; }
-            set { pais = value; }
+            get { return oPais; }
+            set { oPais = value; }
         }
 
     }

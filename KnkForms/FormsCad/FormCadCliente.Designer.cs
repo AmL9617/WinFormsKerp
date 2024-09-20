@@ -1,6 +1,6 @@
 ﻿namespace KnkForms.Forms
 {
-    partial class FormCadClientes
+    partial class FormCadCliente
     {
         /// <summary>
         /// Required designer variable.

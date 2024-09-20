@@ -21,6 +21,14 @@ namespace KnkForms.Classes
             dataModificacao = DateTime.MinValue;
         }
 
+        public Pai(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao)
+        {
+            this.cod = cod;
+            this.codEmpresa = codEmpresa;
+            this.dataCadastro = dataCadastro;
+            this.dataModificacao = dataModificacao;
+        }
+
         public int Cod
         {
             get { return cod; }

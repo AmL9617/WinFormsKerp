@@ -35,6 +35,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtCodPais = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -99,10 +100,21 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Código País";
             // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Location = new System.Drawing.Point(532, 55);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(75, 23);
+            this.btnConsulta.TabIndex = 30;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // FormCadEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodPais);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkAtivo);
@@ -111,6 +123,7 @@
             this.Controls.Add(this.txtNomeEstado);
             this.Controls.Add(this.lblNomeEstado);
             this.Name = "FormCadEstado";
+            this.Text = "Form Estado";
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
@@ -128,6 +141,7 @@
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtCodPais, 0);
+            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +156,6 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtCodPais;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

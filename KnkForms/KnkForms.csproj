@@ -134,11 +134,11 @@
     <Compile Include="FormsCon\FormConGrupo.Designer.cs">
       <DependentUpon>FormConGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCad\FormCadClientes.cs">
+    <Compile Include="FormsCad\FormCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsCad\FormCadClientes.Designer.cs">
-      <DependentUpon>FormCadClientes.cs</DependentUpon>
+    <Compile Include="FormsCad\FormCadCliente.Designer.cs">
+      <DependentUpon>FormCadCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsCad\FormCadCondicaoPagamento.cs">
       <SubType>Form</SubType>
@@ -317,8 +317,8 @@
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormCadClientes.resx">
-      <DependentUpon>FormCadClientes.cs</DependentUpon>
+    <EmbeddedResource Include="FormsCad\FormCadCliente.resx">
+      <DependentUpon>FormCadCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadCondicaoPagamento.resx">
       <DependentUpon>FormCadCondicaoPagamento.cs</DependentUpon>
@@ -375,11 +375,62 @@
     <EmbeddedResource Include="FormsCad\FormCadPais.resx">
       <DependentUpon>FormCadPais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConCidade.resx">
+      <DependentUpon>FormConCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConCliente.resx">
+      <DependentUpon>FormConCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConCondicaoPagamento.resx">
+      <DependentUpon>FormConCondicaoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConContador.resx">
+      <DependentUpon>FormConContador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConEmpresa.resx">
+      <DependentUpon>FormConEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConEstado.resx">
+      <DependentUpon>FormConEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConFormaPagamento.resx">
+      <DependentUpon>FormConFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConFornecedor.resx">
+      <DependentUpon>FormConFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConFuncionario.resx">
+      <DependentUpon>FormConFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConGrupo.resx">
+      <DependentUpon>FormConGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConListaPreco.resx">
+      <DependentUpon>FormConListaPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConMarca.resx">
+      <DependentUpon>FormConMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConPai.resx">
       <DependentUpon>FormConPai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConPais.resx">
       <DependentUpon>FormConPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConParcela.resx">
+      <DependentUpon>FormConParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConRamoAtividade.resx">
+      <DependentUpon>FormConRamoAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConRegiao.resx">
+      <DependentUpon>FormConRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConTransportadora.resx">
+      <DependentUpon>FormConTransportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConVendedor.resx">
+      <DependentUpon>FormConVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

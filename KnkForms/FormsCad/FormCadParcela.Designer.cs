@@ -75,6 +75,9 @@
             this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadParcela";
+            this.Text = "Form Parcela";
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblCod, 0);
             this.Controls.SetChildIndex(this.txtCod, 0);

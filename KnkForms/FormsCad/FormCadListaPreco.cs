@@ -1,4 +1,5 @@
 ﻿using KnkForms.Classes;
+using KnkForms.FormsCon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,14 +12,16 @@ namespace KnkForms.Forms
 {
     public partial class FormCadListaPreco : KnkForms.FormCadPai
     {
-        ListaPrecos aLista;
+        ListaPrecos aListaPreco;
+        FormConMarca oFrmConMarcas;
+        FormConGrupo oFrmConGrupos;
         public FormCadListaPreco()
         {
             InitializeComponent();
         }
         public override void ConhecaObj(Object obj)
         {
-            aLista = (ListaPrecos)obj;
+            aListaPreco = (ListaPrecos)obj;
         }
 
         public override void LimpaTxt()
@@ -37,16 +40,16 @@ namespace KnkForms.Forms
 
         public override void CarregaTxt()
         {
-            txtCod.Text = Convert.ToString(aLista.Cod);
-            txtNomeLista.Text = aLista.NomeLista;
-            txtDescMax.Text = Convert.ToString(aLista.DescontoMaximo);
-            txtMargemLucro.Text = Convert.ToString(aLista.MargemLucro);
-            txtCodMarca.Text = Convert.ToString(aLista.CodMarca);
-            txtCodGrupo.Text = Convert.ToString(aLista.CodGrupo);
-            txtCodUser.Text = Convert.ToString(aLista.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aLista.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aLista.DataModificacao);
-            chkTodas.Checked = aLista.Todas;
+            txtCod.Text = Convert.ToString(aListaPreco.Cod);
+            txtNomeLista.Text = aListaPreco.NomeLista;
+            txtDescMax.Text = Convert.ToString(aListaPreco.DescontoMaximo);
+            txtMargemLucro.Text = Convert.ToString(aListaPreco.MargemLucro);
+            txtCodMarca.Text = Convert.ToString(aListaPreco.CodMarca);
+            txtCodGrupo.Text = Convert.ToString(aListaPreco.CodGrupo);
+            txtCodUser.Text = Convert.ToString(aListaPreco.CodEmpresa);
+            txtDataCad.Text = Convert.ToString(aListaPreco.DataCadastro);
+            txtDataAlt.Text = Convert.ToString(aListaPreco.DataModificacao);
+            chkTodas.Checked = aListaPreco.Todas;
         }
 
         public override void BloqueiaTxt()
@@ -79,15 +82,34 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            aLista.Cod = Convert.ToInt32(txtCod.Text);
-            aLista.NomeLista = txtNomeLista.Text;
-            aLista.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
-            aLista.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
-            aLista.CodMarca = Convert.ToInt32(txtCodMarca.Text);
-            aLista.CodGrupo = Convert.ToInt32(txtCodGrupo.Text);
-            aLista.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            aLista.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            aLista.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            aListaPreco.Cod = Convert.ToInt32(txtCod.Text);
+            aListaPreco.NomeLista = txtNomeLista.Text;
+            aListaPreco.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
+            aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
+            aListaPreco.CodMarca = Convert.ToInt32(txtCodMarca.Text);
+            aListaPreco.CodGrupo = Convert.ToInt32(txtCodGrupo.Text);
+            aListaPreco.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
+            aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+            aListaPreco.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+        }
+        public void setFrmConMarcas(Object obj)
+        {
+            oFrmConMarcas = (FormConMarca)obj;
+        }
+        public void setFrmConGrupos(Object obj)
+        {
+            oFrmConGrupos = (FormConGrupo)obj;
+        }
+        private void btnConsultaMarca_Click(object sender, EventArgs e)
+        {
+            oFrmConMarcas.ConhecaObj(aListaPreco.Marcas);
+            oFrmConMarcas.ShowDialog();
+        }
+
+        private void btnConsultaGrupo_Click(object sender, EventArgs e)
+        {
+            oFrmConGrupos.ConhecaObj(aListaPreco.Grupos);
+            oFrmConGrupos.ShowDialog();
         }
     }
 }

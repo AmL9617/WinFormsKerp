@@ -95,5 +95,11 @@ namespace KnkForms.Classes
         {
             oFrmConPaises = (FormConPais)obj;
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            oFrmConPaises.ConhecaObj(oEstado.Pais);
+            oFrmConPaises.ShowDialog();
+        }
     }
 }

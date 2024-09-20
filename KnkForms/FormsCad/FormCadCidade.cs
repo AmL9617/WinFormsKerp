@@ -1,4 +1,5 @@
 ﻿using KnkForms.Classes;
+using KnkForms.FormsCon;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace KnkForms.Forms
     public partial class FormCadCidade : KnkForms.FormCadPai
     {
         Cidades aCidade;
+        FormConEstado oFrmConEstados;
         public FormCadCidade()
         {
             InitializeComponent();
@@ -88,6 +90,15 @@ namespace KnkForms.Forms
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Salvar();
+        }
+        public void setFrmConEstados(Object obj)
+        {
+            oFrmConEstados = (FormConEstado)obj;
+        }
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            oFrmConEstados.ConhecaObj(aCidade.Estado);
+            oFrmConEstados.ShowDialog();
         }
     }
 }

@@ -95,6 +95,9 @@
             this.Controls.Add(this.txtNomePagamento);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadFormaPagamento";
+            this.Text = "Form Forma de Pagamento";
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblCod, 0);
             this.Controls.SetChildIndex(this.txtCod, 0);

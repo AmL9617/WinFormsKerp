@@ -1,4 +1,5 @@
 ﻿using KnkForms.Classes;
+using KnkForms.FormsCon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ namespace KnkForms.Forms
     public partial class FormCadCondicaoPagamento : KnkForms.FormCadPai
     {
         CondicaoPagamentos aCondPag;
+        FormConParcela oFrmConParcela;
         public FormCadCondicaoPagamento()
         {
             InitializeComponent();
@@ -89,6 +91,15 @@ namespace KnkForms.Forms
             aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCondPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+        }
+        public void setFrmConParcelas(Object obj)
+        {
+            oFrmConParcela = (FormConParcela)obj;
+        }
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            oFrmConParcela.ConhecaObj(aCondPag.Parcelas);
+            oFrmConParcela.ShowDialog();
         }
     }
 }

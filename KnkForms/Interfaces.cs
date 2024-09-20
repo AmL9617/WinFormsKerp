@@ -33,7 +33,7 @@ namespace KnkForms
 
         //Cadastros
         FormCadCidade oFormCadCidade;
-        FormCadClientes oFormCadCliente;
+        FormCadCliente oFormCadCliente;
         FormCadCondicaoPagamento oFormCadCondPag;
         FormCadContador oFormCadContador;
         FormCadEmpresa oFormCadEmpresa;
@@ -76,7 +76,7 @@ namespace KnkForms
 
             // Cadastros
             oFormCadCidade = new FormCadCidade();
-            oFormCadCliente = new FormCadClientes();
+            oFormCadCliente = new FormCadCliente();
             oFormCadCondPag = new FormCadCondicaoPagamento();
             oFormCadContador = new FormCadContador();
             oFormCadEmpresa = new FormCadEmpresa();
@@ -106,17 +106,19 @@ namespace KnkForms
             oFormConGrupo.SetFrmCadastro(oFormCadGrupo);
             oFormConListaPreco.SetFrmCadastro(oFormCadListaPreco);
             oFormConMarca.SetFrmCadastro(oFormCadMarca);
+            oFormConPais.SetFrmCadastro(oFormCadPais);
             oFormConParcela.SetFrmCadastro(oFormCadParcela);
             oFormConRamoAtiv.SetFrmCadastro(oFormCadRamoAtiv);
             oFormConRegiao.SetFrmCadastro(oFormCadRegiao);
             oFormConTransportadora.SetFrmCadastro(oFormCadTransportadora);
             oFormConVendedor.SetFrmCadastro(oFormCadVendedor);
-        }
 
-        public void PecaPaises(Object obj)
-        {
-            oFormConPais.ConhecaObj(obj);
-            oFormConPais.ShowDialog();
+            //Agregação
+            oFormCadCidade.setFrmConEstados(oFormConEstado);
+            oFormCadCondPag.setFrmConParcelas(oFormConParcela);
+            oFormCadEstado.setFrmConPaises(oFormConPais);
+            oFormCadListaPreco.setFrmConMarcas(oFormConMarca);
+            oFormCadListaPreco.setFrmConGrupos(oFormConGrupo);
         }
 
         public void PecaCidades(Object obj)
@@ -189,6 +191,11 @@ namespace KnkForms
         {
             oFormConMarca.ConhecaObj(obj);
             oFormConMarca.ShowDialog();
+        }
+        public void PecaPaises(Object obj)
+        {
+            oFormConPais.ConhecaObj(obj);
+            oFormConPais.ShowDialog();
         }
 
         public void PecaParcelas(Object obj)

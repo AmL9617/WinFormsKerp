@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace KnkForms.Forms
 {
-    public partial class FormCadClientes : KnkForms.FormCadPai
+    public partial class FormCadCliente : KnkForms.FormCadPai
     {
         Clientes oCliente;
-        public FormCadClientes()
+        public FormCadCliente()
         {
             InitializeComponent();
         }

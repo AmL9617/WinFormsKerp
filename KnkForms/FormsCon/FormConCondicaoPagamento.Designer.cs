@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormConCondicaoPagamento
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormConCondicaoPagamento";
+            this.Text = "Form Condição de Pagamentos";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

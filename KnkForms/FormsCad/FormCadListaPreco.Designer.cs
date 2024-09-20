@@ -39,6 +39,8 @@
             this.txtCodGrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkTodas = new System.Windows.Forms.CheckBox();
+            this.btnConsultaMarca = new System.Windows.Forms.Button();
+            this.btnConsultaGrupo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeLista
@@ -124,17 +126,39 @@
             // chkTodas
             // 
             this.chkTodas.AutoSize = true;
-            this.chkTodas.Location = new System.Drawing.Point(715, 38);
+            this.chkTodas.Location = new System.Drawing.Point(732, 21);
             this.chkTodas.Name = "chkTodas";
             this.chkTodas.Size = new System.Drawing.Size(56, 17);
             this.chkTodas.TabIndex = 63;
             this.chkTodas.Text = "Todas";
             this.chkTodas.UseVisualStyleBackColor = true;
             // 
+            // btnConsultaMarca
+            // 
+            this.btnConsultaMarca.Location = new System.Drawing.Point(656, 55);
+            this.btnConsultaMarca.Name = "btnConsultaMarca";
+            this.btnConsultaMarca.Size = new System.Drawing.Size(98, 23);
+            this.btnConsultaMarca.TabIndex = 64;
+            this.btnConsultaMarca.Text = "Consulta Marca";
+            this.btnConsultaMarca.UseVisualStyleBackColor = true;
+            this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
+            // 
+            // btnConsultaGrupo
+            // 
+            this.btnConsultaGrupo.Location = new System.Drawing.Point(157, 123);
+            this.btnConsultaGrupo.Name = "btnConsultaGrupo";
+            this.btnConsultaGrupo.Size = new System.Drawing.Size(103, 23);
+            this.btnConsultaGrupo.TabIndex = 65;
+            this.btnConsultaGrupo.Text = "Consulta Grupo";
+            this.btnConsultaGrupo.UseVisualStyleBackColor = true;
+            this.btnConsultaGrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
+            // 
             // FormCadListaPreco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsultaGrupo);
+            this.Controls.Add(this.btnConsultaMarca);
             this.Controls.Add(this.chkTodas);
             this.Controls.Add(this.txtCodGrupo);
             this.Controls.Add(this.label4);
@@ -169,6 +193,8 @@
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtCodGrupo, 0);
             this.Controls.SetChildIndex(this.chkTodas, 0);
+            this.Controls.SetChildIndex(this.btnConsultaMarca, 0);
+            this.Controls.SetChildIndex(this.btnConsultaGrupo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +213,7 @@
         private System.Windows.Forms.TextBox txtCodGrupo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkTodas;
+        private System.Windows.Forms.Button btnConsultaMarca;
+        private System.Windows.Forms.Button btnConsultaGrupo;
     }
 }

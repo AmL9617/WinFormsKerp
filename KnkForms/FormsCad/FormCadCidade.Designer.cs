@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeCidade = new System.Windows.Forms.TextBox();
             this.lblNomeCidade = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -101,10 +102,21 @@
             this.lblNomeCidade.TabIndex = 30;
             this.lblNomeCidade.Text = "Nome da Cidade";
             // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Location = new System.Drawing.Point(535, 58);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
+            this.btnConsulta.TabIndex = 66;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // FormCadCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkAtivo);
@@ -131,6 +143,7 @@
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtCodEstado, 0);
+            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +158,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomeCidade;
         private System.Windows.Forms.Label lblNomeCidade;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

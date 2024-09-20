@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KnkForms.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,45 @@ namespace KnkForms.Classes
 {
     public partial class FormConFornecedor : KnkForms.FormsCon.FormConPai
     {
+        FormCadFornecedor oFormCadFornecedor;
+        Fornecedores oFornecedor;
         public FormConFornecedor()
         {
             InitializeComponent();
         }
+        public override void SetFrmCadastro(Object form)
+        {
+            oFormCadFornecedor = (FormCadFornecedor)form;
+        }
+
+        public override void ConhecaObj(Object obj)
+        {
+            oFornecedor = (Fornecedores)obj;
+        }
+
+        protected override void Incluir()
+        {
+            oFormCadFornecedor.ConhecaObj(oFornecedor);
+            oFormCadFornecedor.LimpaTxt();
+            oFormCadFornecedor.ShowDialog();
+        }
+
+        protected override void Alterar()
+        {
+            oFormCadFornecedor.LimpaTxt();
+            oFormCadFornecedor.CarregaTxt();
+            oFormCadFornecedor.ShowDialog();
+        }
+
+        protected override void Excluir()
+        {
+            oFormCadFornecedor.LimpaTxt();
+            oFormCadFornecedor.ConhecaObj(oFornecedor);
+            oFormCadFornecedor.CarregaTxt();
+            oFormCadFornecedor.BloqueiaTxt();
+            oFormCadFornecedor.ShowDialog();
+            oFormCadFornecedor.DesbloqueiaTxt();
+        }
+
     }
 }

@@ -438,6 +438,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadTransportadora";
+            this.Text = "Form Transportadora";
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
