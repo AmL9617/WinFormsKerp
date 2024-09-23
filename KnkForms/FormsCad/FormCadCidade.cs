@@ -16,7 +16,7 @@ namespace KnkForms.Forms
     public partial class FormCadCidade : KnkForms.FormCadPai
     {
         Cidades aCidade;
-        FormConEstado oFrmConEstados;
+        FormConEstados oFrmConEstados;
         public FormCadCidade()
         {
             InitializeComponent();
@@ -93,7 +93,7 @@ namespace KnkForms.Forms
         }
         public void setFrmConEstados(Object obj)
         {
-            oFrmConEstados = (FormConEstado)obj;
+            oFrmConEstados = (FormConEstados)obj;
         }
         private void btnConsulta_Click(object sender, EventArgs e)
         {

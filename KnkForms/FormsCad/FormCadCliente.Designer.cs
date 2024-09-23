@@ -104,6 +104,12 @@
             this.chkRev = new System.Windows.Forms.CheckBox();
             this.chkCons = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnPesquisarListaPreco = new System.Windows.Forms.Button();
+            this.btnPesquisarCondPag = new System.Windows.Forms.Button();
+            this.btnPesquisarRegiao = new System.Windows.Forms.Button();
+            this.btnPesquisarVendedor = new System.Windows.Forms.Button();
+            this.btnPesquisarRamoAtiv = new System.Windows.Forms.Button();
+            this.btnPesquisarTransportadora = new System.Windows.Forms.Button();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -342,6 +348,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.btnPesquisarTransportadora);
             this.tabPage5.Controls.Add(this.btnSalvarTransp);
             this.tabPage5.Controls.Add(this.listVTrans);
             this.tabPage5.Controls.Add(this.txtTransp);
@@ -390,6 +397,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnPesquisarRamoAtiv);
             this.tabPage4.Controls.Add(this.btnSalvarAtiv);
             this.tabPage4.Controls.Add(this.listVAtiv);
             this.tabPage4.Controls.Add(this.txtIdRamoAtiv);
@@ -438,6 +446,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnPesquisarVendedor);
+            this.tabPage3.Controls.Add(this.btnPesquisarRegiao);
+            this.tabPage3.Controls.Add(this.btnPesquisarCondPag);
+            this.tabPage3.Controls.Add(this.btnPesquisarListaPreco);
             this.tabPage3.Controls.Add(this.txtPessoasAut);
             this.tabPage3.Controls.Add(this.txtIdVend);
             this.tabPage3.Controls.Add(this.txtIdReg);
@@ -482,14 +494,14 @@
             // 
             this.txtIdCondPag.Location = new System.Drawing.Point(9, 74);
             this.txtIdCondPag.Name = "txtIdCondPag";
-            this.txtIdCondPag.Size = new System.Drawing.Size(292, 20);
+            this.txtIdCondPag.Size = new System.Drawing.Size(276, 20);
             this.txtIdCondPag.TabIndex = 130;
             // 
             // txtIdListPrec
             // 
             this.txtIdListPrec.Location = new System.Drawing.Point(9, 32);
             this.txtIdListPrec.Name = "txtIdListPrec";
-            this.txtIdListPrec.Size = new System.Drawing.Size(292, 20);
+            this.txtIdListPrec.Size = new System.Drawing.Size(276, 20);
             this.txtIdListPrec.TabIndex = 128;
             // 
             // label20
@@ -570,7 +582,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(26, 74);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(695, 65);
+            this.listView1.Size = new System.Drawing.Size(695, 110);
             this.listView1.TabIndex = 134;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -816,7 +828,66 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 0;
             // 
-            // FormCadClientes
+            // btnPesquisarListaPreco
+            // 
+            this.btnPesquisarListaPreco.Location = new System.Drawing.Point(291, 29);
+            this.btnPesquisarListaPreco.Name = "btnPesquisarListaPreco";
+            this.btnPesquisarListaPreco.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarListaPreco.TabIndex = 138;
+            this.btnPesquisarListaPreco.Text = "⌕";
+            this.btnPesquisarListaPreco.UseVisualStyleBackColor = true;
+            this.btnPesquisarListaPreco.Click += new System.EventHandler(this.btnPesquisarListaPreco_Click);
+            // 
+            // btnPesquisarCondPag
+            // 
+            this.btnPesquisarCondPag.Location = new System.Drawing.Point(291, 72);
+            this.btnPesquisarCondPag.Name = "btnPesquisarCondPag";
+            this.btnPesquisarCondPag.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarCondPag.TabIndex = 139;
+            this.btnPesquisarCondPag.Text = "⌕";
+            this.btnPesquisarCondPag.UseVisualStyleBackColor = true;
+            this.btnPesquisarCondPag.Click += new System.EventHandler(this.btnPesquisarCondPag_Click);
+            // 
+            // btnPesquisarRegiao
+            // 
+            this.btnPesquisarRegiao.Location = new System.Drawing.Point(606, 32);
+            this.btnPesquisarRegiao.Name = "btnPesquisarRegiao";
+            this.btnPesquisarRegiao.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarRegiao.TabIndex = 140;
+            this.btnPesquisarRegiao.Text = "⌕";
+            this.btnPesquisarRegiao.UseVisualStyleBackColor = true;
+            this.btnPesquisarRegiao.Click += new System.EventHandler(this.btnPesquisarRegiao_Click);
+            // 
+            // btnPesquisarVendedor
+            // 
+            this.btnPesquisarVendedor.Location = new System.Drawing.Point(606, 72);
+            this.btnPesquisarVendedor.Name = "btnPesquisarVendedor";
+            this.btnPesquisarVendedor.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarVendedor.TabIndex = 141;
+            this.btnPesquisarVendedor.Text = "⌕";
+            this.btnPesquisarVendedor.UseVisualStyleBackColor = true;
+            this.btnPesquisarVendedor.Click += new System.EventHandler(this.btnPesquisarVendedor_Click);
+            // 
+            // btnPesquisarRamoAtiv
+            // 
+            this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(313, 25);
+            this.btnPesquisarRamoAtiv.Name = "btnPesquisarRamoAtiv";
+            this.btnPesquisarRamoAtiv.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarRamoAtiv.TabIndex = 136;
+            this.btnPesquisarRamoAtiv.Text = "⌕";
+            this.btnPesquisarRamoAtiv.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisarTransportadora
+            // 
+            this.btnPesquisarTransportadora.Location = new System.Drawing.Point(313, 28);
+            this.btnPesquisarTransportadora.Name = "btnPesquisarTransportadora";
+            this.btnPesquisarTransportadora.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarTransportadora.TabIndex = 139;
+            this.btnPesquisarTransportadora.Text = "⌕";
+            this.btnPesquisarTransportadora.UseVisualStyleBackColor = true;
+            this.btnPesquisarTransportadora.Click += new System.EventHandler(this.btnPesquisarTransportadora_Click);
+            // 
+            // FormCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -838,7 +909,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.Menu);
-            this.Name = "FormCadClientes";
+            this.Name = "FormCadCliente";
             this.Text = "Form Cliente";
             this.Controls.SetChildIndex(this.Menu, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
@@ -963,5 +1034,11 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button btnPesquisarVendedor;
+        private System.Windows.Forms.Button btnPesquisarRegiao;
+        private System.Windows.Forms.Button btnPesquisarCondPag;
+        private System.Windows.Forms.Button btnPesquisarListaPreco;
+        private System.Windows.Forms.Button btnPesquisarTransportadora;
+        private System.Windows.Forms.Button btnPesquisarRamoAtiv;
     }
 }

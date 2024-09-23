@@ -13,8 +13,8 @@ namespace KnkForms.Forms
     public partial class FormCadListaPreco : KnkForms.FormCadPai
     {
         ListaPrecos aListaPreco;
-        FormConMarca oFrmConMarcas;
-        FormConGrupo oFrmConGrupos;
+        FormConMarcas oFrmConMarcas;
+        FormConGrupos oFrmConGrupos;
         public FormCadListaPreco()
         {
             InitializeComponent();
@@ -94,11 +94,11 @@ namespace KnkForms.Forms
         }
         public void setFrmConMarcas(Object obj)
         {
-            oFrmConMarcas = (FormConMarca)obj;
+            oFrmConMarcas = (FormConMarcas)obj;
         }
         public void setFrmConGrupos(Object obj)
         {
-            oFrmConGrupos = (FormConGrupo)obj;
+            oFrmConGrupos = (FormConGrupos)obj;
         }
         private void btnConsultaMarca_Click(object sender, EventArgs e)
         {

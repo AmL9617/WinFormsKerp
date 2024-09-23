@@ -13,7 +13,7 @@ namespace KnkForms.Forms
     public partial class FormCadCondicaoPagamento : KnkForms.FormCadPai
     {
         CondicaoPagamentos aCondPag;
-        FormConParcela oFrmConParcela;
+        FormConParcelas oFrmConParcela;
         public FormCadCondicaoPagamento()
         {
             InitializeComponent();
@@ -94,7 +94,7 @@ namespace KnkForms.Forms
         }
         public void setFrmConParcelas(Object obj)
         {
-            oFrmConParcela = (FormConParcela)obj;
+            oFrmConParcela = (FormConParcelas)obj;
         }
         private void btnConsulta_Click(object sender, EventArgs e)
         {

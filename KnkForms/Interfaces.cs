@@ -12,24 +12,24 @@ namespace KnkForms
     internal class Interfaces
     {
         //Consultas
-        FormConCidades oFormConCidade;
-        FormConCliente oFormConCliente;
-        FormConCondicaoPagamento oFormConCondPag;
-        FormConContador oFormConContador;
-        FormConEmpresa oFormConEmpresa;
-        FormConEstado oFormConEstado;
-        FormConFormaPagamento oFormConFormaPag;
-        FormConFornecedor oFormConFornecedor;
-        FormConFuncionario oFormConFuncionario;
-        FormConGrupo oFormConGrupo;
-        FormConListaPreco oFormConListaPreco;
-        FormConMarca oFormConMarca;
-        FormConPais oFormConPais;
-        FormConParcela oFormConParcela;
-        FormConRamoAtividade oFormConRamoAtiv;
-        FormConRegiao oFormConRegiao;
-        FormConTransportadora oFormConTransportadora;
-        FormConVendedor oFormConVendedor;
+        FormConCidades oFormConCidades;
+        FormConClientes oFormConClientes;
+        FormConCondicaoPagamentos oFormConCondPag;
+        FormConContadores oFormConContadores;
+        FormConEmpresas oFormConEmpresas;
+        FormConEstados oFormConEstados;
+        FormConFormaPagamentos oFormConFormaPag;
+        FormConFornecedores oFormConFornecedores;
+        FormConFuncionarios oFormConFuncionarios;
+        FormConGrupos oFormConGrupos;
+        FormConListaPrecos oFormConListaPrecos;
+        FormConMarcas oFormConMarcas;
+        FormConPaises oFormConPaises;
+        FormConParcelas oFormConParcelas;
+        FormConRamoAtividades oFormConRamoAtividades;
+        FormConRegioes oFormConRegioes;
+        FormConTransportadoras oFormConTransportadoras;
+        FormConVendedores oFormConVendedores;
 
         //Cadastros
         FormCadCidade oFormCadCidade;
@@ -55,24 +55,24 @@ namespace KnkForms
         public Interfaces()
         {
             // Consultas
-            oFormConCidade = new FormConCidades();
-            oFormConCliente = new FormConCliente();
-            oFormConCondPag = new FormConCondicaoPagamento();
-            oFormConContador = new FormConContador();
-            oFormConEmpresa = new FormConEmpresa();
-            oFormConEstado = new FormConEstado();
-            oFormConFormaPag = new FormConFormaPagamento();
-            oFormConFornecedor = new FormConFornecedor();
-            oFormConFuncionario = new FormConFuncionario();
-            oFormConGrupo = new FormConGrupo();
-            oFormConListaPreco = new FormConListaPreco();
-            oFormConMarca = new FormConMarca();
-            oFormConPais = new FormConPais();
-            oFormConParcela = new FormConParcela();
-            oFormConRamoAtiv = new FormConRamoAtividade();
-            oFormConRegiao = new FormConRegiao();
-            oFormConTransportadora = new FormConTransportadora();
-            oFormConVendedor = new FormConVendedor();
+            oFormConCidades = new FormConCidades();
+            oFormConClientes = new FormConClientes();
+            oFormConCondPag = new FormConCondicaoPagamentos();
+            oFormConContadores = new FormConContadores();
+            oFormConEmpresas = new FormConEmpresas();
+            oFormConEstados = new FormConEstados();
+            oFormConFormaPag = new FormConFormaPagamentos();
+            oFormConFornecedores = new FormConFornecedores();
+            oFormConFuncionarios = new FormConFuncionarios();
+            oFormConGrupos = new FormConGrupos();
+            oFormConListaPrecos = new FormConListaPrecos();
+            oFormConMarcas = new FormConMarcas();
+            oFormConPaises = new FormConPaises();
+            oFormConParcelas = new FormConParcelas();
+            oFormConRamoAtividades = new FormConRamoAtividades();
+            oFormConRegioes = new FormConRegioes();
+            oFormConTransportadoras = new FormConTransportadoras();
+            oFormConVendedores = new FormConVendedores();
 
             // Cadastros
             oFormCadCidade = new FormCadCidade();
@@ -94,43 +94,48 @@ namespace KnkForms
             oFormCadTransportadora = new FormCadTransportadora();
             oFormCadVendedor = new FormCadVendedor();
 
-            oFormConCidade.SetFrmCadastro(oFormCadCidade);
-            oFormConCliente.SetFrmCadastro(oFormCadCliente);
+            oFormConCidades.SetFrmCadastro(oFormCadCidade);
+            oFormConClientes.SetFrmCadastro(oFormCadCliente);
             oFormConCondPag.SetFrmCadastro(oFormCadCondPag);
-            oFormConContador.SetFrmCadastro(oFormCadContador);
-            oFormConEmpresa.SetFrmCadastro(oFormCadEmpresa);
-            oFormConEstado.SetFrmCadastro(oFormCadEstado);
+            oFormConContadores.SetFrmCadastro(oFormCadContador);
+            oFormConEmpresas.SetFrmCadastro(oFormCadEmpresa);
+            oFormConEstados.SetFrmCadastro(oFormCadEstado);
             oFormConFormaPag.SetFrmCadastro(oFormCadFormaPag);
-            oFormConFornecedor.SetFrmCadastro(oFormCadFornecedor);
-            oFormConFuncionario.SetFrmCadastro(oFormCadFuncionario);
-            oFormConGrupo.SetFrmCadastro(oFormCadGrupo);
-            oFormConListaPreco.SetFrmCadastro(oFormCadListaPreco);
-            oFormConMarca.SetFrmCadastro(oFormCadMarca);
-            oFormConPais.SetFrmCadastro(oFormCadPais);
-            oFormConParcela.SetFrmCadastro(oFormCadParcela);
-            oFormConRamoAtiv.SetFrmCadastro(oFormCadRamoAtiv);
-            oFormConRegiao.SetFrmCadastro(oFormCadRegiao);
-            oFormConTransportadora.SetFrmCadastro(oFormCadTransportadora);
-            oFormConVendedor.SetFrmCadastro(oFormCadVendedor);
+            oFormConFornecedores.SetFrmCadastro(oFormCadFornecedor);
+            oFormConFuncionarios.SetFrmCadastro(oFormCadFuncionario);
+            oFormConGrupos.SetFrmCadastro(oFormCadGrupo);
+            oFormConListaPrecos.SetFrmCadastro(oFormCadListaPreco);
+            oFormConMarcas.SetFrmCadastro(oFormCadMarca);
+            oFormConPaises.SetFrmCadastro(oFormCadPais);
+            oFormConParcelas.SetFrmCadastro(oFormCadParcela);
+            oFormConRamoAtividades.SetFrmCadastro(oFormCadRamoAtiv);
+            oFormConRegioes.SetFrmCadastro(oFormCadRegiao);
+            oFormConTransportadoras.SetFrmCadastro(oFormCadTransportadora);
+            oFormConVendedores.SetFrmCadastro(oFormCadVendedor);
 
             //Agregação
-            oFormCadCidade.setFrmConEstados(oFormConEstado);
-            oFormCadCondPag.setFrmConParcelas(oFormConParcela);
-            oFormCadEstado.setFrmConPaises(oFormConPais);
-            oFormCadListaPreco.setFrmConMarcas(oFormConMarca);
-            oFormCadListaPreco.setFrmConGrupos(oFormConGrupo);
+            oFormCadCidade.setFrmConEstados(oFormConEstados);
+            oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
+            oFormCadEstado.setFrmConPaises(oFormConPaises);
+            oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
+            oFormCadListaPreco.setFrmConGrupos(oFormConGrupos);
+            oFormCadCliente.setFrmConCondPag(oFormConCondPag);
+            oFormCadCliente.setFrmConListaPrecos(oFormConListaPrecos);
+            oFormCadCliente.setFrmConRegioes(oFormConRegioes);
+            oFormCadCliente.setFrmConTransportadoras(oFormConTransportadoras);
+            oFormCadCliente.setFrmConVendedores(oFormConVendedores);
         }
 
         public void PecaCidades(Object obj)
         {
-            oFormConCidade.ConhecaObj(obj);
-            oFormConCidade.ShowDialog();
+            oFormConCidades.ConhecaObj(obj);
+            oFormConCidades.ShowDialog();
         }
 
         public void PecaClientes(Object obj)
         {
-            oFormConCliente.ConhecaObj(obj);
-            oFormConCliente.ShowDialog();
+            oFormConClientes.ConhecaObj(obj);
+            oFormConClientes.ShowDialog();
         }
 
         public void PecaCondicoesPagamento(Object obj)
@@ -141,20 +146,20 @@ namespace KnkForms
 
         public void PecaContadores(Object obj)
         {
-            oFormConContador.ConhecaObj(obj);
-            oFormConContador.ShowDialog();
+            oFormConContadores.ConhecaObj(obj);
+            oFormConContadores.ShowDialog();
         }
 
         public void PecaEmpresas(Object obj)
         {
-            oFormConEmpresa.ConhecaObj(obj);
-            oFormConEmpresa.ShowDialog();
+            oFormConEmpresas.ConhecaObj(obj);
+            oFormConEmpresas.ShowDialog();
         }
 
         public void PecaEstados(Object obj)
         {
-            oFormConEstado.ConhecaObj(obj);
-            oFormConEstado.ShowDialog();
+            oFormConEstados.ConhecaObj(obj);
+            oFormConEstados.ShowDialog();
         }
 
         public void PecaFormasPagamento(Object obj)
@@ -165,67 +170,67 @@ namespace KnkForms
 
         public void PecaFornecedores(Object obj)
         {
-            oFormConFornecedor.ConhecaObj(obj);
-            oFormConFornecedor.ShowDialog();
+            oFormConFornecedores.ConhecaObj(obj);
+            oFormConFornecedores.ShowDialog();
         }
 
         public void PecaFuncionarios(Object obj)
         {
-            oFormConFuncionario.ConhecaObj(obj);
-            oFormConFuncionario.ShowDialog();
+            oFormConFuncionarios.ConhecaObj(obj);
+            oFormConFuncionarios.ShowDialog();
         }
 
         public void PecaGrupos(Object obj)
         {
-            oFormConGrupo.ConhecaObj(obj);
-            oFormConGrupo.ShowDialog();
+            oFormConGrupos.ConhecaObj(obj);
+            oFormConGrupos.ShowDialog();
         }
 
         public void PecaListaPrecos(Object obj)
         {
-            oFormConListaPreco.ConhecaObj(obj);
-            oFormConListaPreco.ShowDialog();
+            oFormConListaPrecos.ConhecaObj(obj);
+            oFormConListaPrecos.ShowDialog();
         }
 
         public void PecaMarcas(Object obj)
         {
-            oFormConMarca.ConhecaObj(obj);
-            oFormConMarca.ShowDialog();
+            oFormConMarcas.ConhecaObj(obj);
+            oFormConMarcas.ShowDialog();
         }
         public void PecaPaises(Object obj)
         {
-            oFormConPais.ConhecaObj(obj);
-            oFormConPais.ShowDialog();
+            oFormConPaises.ConhecaObj(obj);
+            oFormConPaises.ShowDialog();
         }
 
         public void PecaParcelas(Object obj)
         {
-            oFormConParcela.ConhecaObj(obj);
-            oFormConParcela.ShowDialog();
+            oFormConParcelas.ConhecaObj(obj);
+            oFormConParcelas.ShowDialog();
         }
 
         public void PecaRamosAtividade(Object obj)
         {
-            oFormConRamoAtiv.ConhecaObj(obj);
-            oFormConRamoAtiv.ShowDialog();
+            oFormConRamoAtividades.ConhecaObj(obj);
+            oFormConRamoAtividades.ShowDialog();
         }
 
         public void PecaRegioes(Object obj)
         {
-            oFormConRegiao.ConhecaObj(obj);
-            oFormConRegiao.ShowDialog();
+            oFormConRegioes.ConhecaObj(obj);
+            oFormConRegioes.ShowDialog();
         }
 
         public void PecaTransportadoras(Object obj)
         {
-            oFormConTransportadora.ConhecaObj(obj);
-            oFormConTransportadora.ShowDialog();
+            oFormConTransportadoras.ConhecaObj(obj);
+            oFormConTransportadoras.ShowDialog();
         }
 
         public void PecaVendedores(Object obj)
         {
-            oFormConVendedor.ConhecaObj(obj);
-            oFormConVendedor.ShowDialog();
+            oFormConVendedores.ConhecaObj(obj);
+            oFormConVendedores.ShowDialog();
         }
     }
 }

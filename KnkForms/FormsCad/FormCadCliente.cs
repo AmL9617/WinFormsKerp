@@ -1,4 +1,5 @@
 ﻿using KnkForms.Classes;
+using KnkForms.FormsCon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,12 @@ namespace KnkForms.Forms
     public partial class FormCadCliente : KnkForms.FormCadPai
     {
         Clientes oCliente;
+
+        FormConListaPrecos oFrmConListaPrecos;
+        FormConCondicaoPagamentos oFrmConCondPag;
+        FormConRegioes oFrmConRegioes;
+        FormConVendedores oFrmConVendedores;
+        FormConTransportadoras oFrmConTransportadoras;
         public FormCadCliente()
         {
             InitializeComponent();
@@ -130,13 +137,13 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false; 
 
-            chkCons.Checked = false;
-            chkRev.Checked = false;
+            chkCons.Enabled = false;
+            chkRev.Enabled = false;
             txtInscEst.Enabled = false;
             txtSuframa.Enabled = false;
             txtCnpj.Enabled = false;
-            chkReg.Checked = false;
-            chkProdRur.Checked = false;
+            chkReg.Enabled = false;
+            chkProdRur.Enabled = false;
             dataFundacao.Enabled = false;
 
             txtContato.Enabled = false;
@@ -176,13 +183,13 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
 
-            chkCons.Checked = true;
-            chkRev.Checked = true;
+            chkCons.Enabled = true;
+            chkRev.Enabled = true;
             txtInscEst.Enabled = true;
             txtSuframa.Enabled = true;
             txtCnpj.Enabled = true;
-            chkReg.Checked = true;
-            chkProdRur.Checked = true;
+            chkReg.Enabled = true;
+            chkProdRur.Enabled = true;
             dataFundacao.Enabled = true;
 
             txtContato.Enabled = true;
@@ -250,6 +257,62 @@ namespace KnkForms.Forms
             oCliente.DataUltAlt2 = dataUltAlt.Value;
             oCliente.UltimaCompra = dataUltComp.Value;
             oCliente.ObsDiv = txtObsDiv.Text;
+        }
+
+        public void setFrmConListaPrecos(Object obj)
+        {
+            oFrmConListaPrecos = (FormConListaPrecos)obj;
+        }
+
+        public void setFrmConCondPag(Object obj)
+        {
+            oFrmConCondPag = (FormConCondicaoPagamentos)obj;
+        }
+
+        public void setFrmConRegioes(Object obj)
+        {
+            oFrmConRegioes = (FormConRegioes)obj;
+        }
+
+        public void setFrmConVendedores(Object obj)
+        {
+            oFrmConVendedores = (FormConVendedores)obj;
+        }
+
+        public void setFrmConTransportadoras(Object obj)
+        {
+            oFrmConTransportadoras = (FormConTransportadoras)obj;
+        }
+
+
+        private void btnPesquisarListaPreco_Click(object sender, EventArgs e)
+        {
+            oFrmConListaPrecos.ConhecaObj(oCliente.ListaPrecos);
+            oFrmConListaPrecos.ShowDialog();
+        }
+
+        private void btnPesquisarCondPag_Click(object sender, EventArgs e)
+        {
+            oFrmConCondPag.ConhecaObj(oCliente.CondicaoPagamentos);
+            oFrmConCondPag.ShowDialog();
+        }
+
+        private void btnPesquisarRegiao_Click(object sender, EventArgs e)
+        {
+            oFrmConRegioes.ConhecaObj(oCliente.Regioes);
+            oFrmConRegioes.ShowDialog();
+        }
+
+        private void btnPesquisarVendedor_Click(object sender, EventArgs e)
+        {
+            oFrmConVendedores.ConhecaObj(oCliente.Vendedores);
+            oFrmConVendedores.ShowDialog();
+        }
+
+        private void btnPesquisarTransportadora_Click(object sender, EventArgs e)
+        {
+            oFrmConTransportadoras.ConhecaObj(oCliente.Transportadoras);
+            oFrmConTransportadoras.ShowDialog();
         }
     }
 }
