@@ -34,7 +34,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oRamo.Cod);
-            txtNomeRamo.Text = oRamo.NomeRamo;
+            txtNomeRamo.Text = oRamo.Ramo;
             chkAtivo.Checked = oRamo.Ativo;
             txtCodUser.Text = Convert.ToString(oRamo.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oRamo.DataCadastro);
@@ -64,7 +64,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oRamo.Cod = Convert.ToInt32(txtCod.Text);
-            oRamo.NomeRamo = txtNomeRamo.Text;
+            oRamo.Ramo = txtNomeRamo.Text;
             oRamo.Ativo = chkAtivo.Checked;
             oRamo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);

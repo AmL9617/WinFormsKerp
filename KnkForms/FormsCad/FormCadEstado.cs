@@ -29,7 +29,7 @@ namespace KnkForms.Classes
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomeEstado.Clear();
+            txtEstado.Clear();
             txtSigla.Clear();
             txtCodPais.Clear();
             chkAtivo.Checked = false;
@@ -41,7 +41,7 @@ namespace KnkForms.Classes
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oEstado.Cod);
-            txtNomeEstado.Text = oEstado.NomeEstado;
+            txtEstado.Text = oEstado.Estado;
             txtSigla.Text = Convert.ToString(oEstado.Sigla);
             txtCodPais.Text = Convert.ToString(oEstado.CodPais);
             chkAtivo.Checked = oEstado.Ativo;
@@ -53,7 +53,7 @@ namespace KnkForms.Classes
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomeEstado.Enabled = false;
+            txtEstado.Enabled = false;
             txtSigla.Enabled = false;
             txtCodPais.Enabled = false;
             chkAtivo.Enabled = false;
@@ -65,7 +65,7 @@ namespace KnkForms.Classes
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomeEstado.Enabled = true;
+            txtEstado.Enabled = true;
             txtSigla.Enabled = true;
             txtCodPais.Enabled = true;
             txtCodUser.Enabled = true;
@@ -77,7 +77,7 @@ namespace KnkForms.Classes
         public override void Salvar()
         {
             oEstado.Cod = Convert.ToInt32(txtCod.Text);
-            oEstado.NomeEstado = txtNomeEstado.Text;
+            oEstado.Estado = txtEstado.Text;
             oEstado.Sigla = Convert.ToChar(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
             oEstado.Ativo = chkAtivo.Checked;

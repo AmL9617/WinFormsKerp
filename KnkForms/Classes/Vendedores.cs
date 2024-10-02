@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Vendedores : Pai
     {
-        protected string nomeVendedor;
+        protected string vendedor;
         protected bool ativo;
         protected string tipo;
         protected double comissao;
@@ -17,7 +17,7 @@ namespace KnkForms.Classes
 
         public Vendedores()
         {
-            nomeVendedor = "";
+            vendedor = "";
             ativo = false;
             tipo = "";
             comissao = 0.0f;
@@ -25,10 +25,10 @@ namespace KnkForms.Classes
             observacao = "";
         }
 
-        public string NomeVendedor
+        public string Vendedor
         {
-            get { return nomeVendedor; }
-            set { nomeVendedor = value; }
+            get { return vendedor; }
+            set { vendedor = value; }
         }
 
         public bool Ativo

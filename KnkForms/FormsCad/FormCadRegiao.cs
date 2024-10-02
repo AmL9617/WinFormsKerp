@@ -24,7 +24,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomeRegiao.Clear();
+            txtRegiao.Clear();
             chkAtivo.Checked = false;
             txtCodUser.Clear();
             txtDataCad.Clear();
@@ -34,7 +34,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oRegiao.Cod);
-            txtNomeRegiao.Text = oRegiao.NomeRegiao;
+            txtRegiao.Text = oRegiao.Regiao;
             chkAtivo.Checked = oRegiao.Ativo;
             txtCodUser.Text = Convert.ToString(oRegiao.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oRegiao.DataCadastro);
@@ -44,7 +44,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomeRegiao.Enabled = false;
+            txtRegiao.Enabled = false;
             chkAtivo.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
@@ -54,7 +54,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomeRegiao.Enabled = true;
+            txtRegiao.Enabled = true;
             chkAtivo.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
@@ -64,7 +64,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oRegiao.Cod = Convert.ToInt32(txtCod.Text);
-            oRegiao.NomeRegiao = txtNomeRegiao.Text;
+            oRegiao.Regiao = txtRegiao.Text;
             oRegiao.Ativo = chkAtivo.Checked;
             oRegiao.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);

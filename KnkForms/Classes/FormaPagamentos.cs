@@ -8,21 +8,21 @@ namespace KnkForms.Classes
 {
     internal class FormaPagamentos : Pai
     {
-        protected string nome;
+        protected string formaPag;
         protected string operacaoDisponivel;
         protected string nfce;
 
         public FormaPagamentos()
         {
-            nome = "";
+            formaPag = "";
             operacaoDisponivel = "";
             nfce = "";
         }
 
-        public string Nome
+        public string FormaPag
         {
-            get { return nome; }
-            set { nome = value; }
+            get { return formaPag; }
+            set { formaPag = value; }
         }
 
         public string OperacaoDisponivel

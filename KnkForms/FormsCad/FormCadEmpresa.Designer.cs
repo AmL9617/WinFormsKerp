@@ -40,15 +40,16 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.Location = new System.Drawing.Point(154, 58);
+            this.txtRazaoSocial.Location = new System.Drawing.Point(113, 58);
+            this.txtRazaoSocial.MaxLength = 100;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(100, 20);
+            this.txtRazaoSocial.Size = new System.Drawing.Size(127, 20);
             this.txtRazaoSocial.TabIndex = 52;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(151, 42);
+            this.lbl1.Location = new System.Drawing.Point(110, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(70, 13);
             this.lbl1.TabIndex = 51;
@@ -56,15 +57,16 @@
             // 
             // txtNomeFant
             // 
-            this.txtNomeFant.Location = new System.Drawing.Point(284, 58);
+            this.txtNomeFant.Location = new System.Drawing.Point(254, 58);
+            this.txtNomeFant.MaxLength = 100;
             this.txtNomeFant.Name = "txtNomeFant";
-            this.txtNomeFant.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeFant.Size = new System.Drawing.Size(139, 20);
             this.txtNomeFant.TabIndex = 54;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(281, 42);
+            this.label1.Location = new System.Drawing.Point(251, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 53;
@@ -73,6 +75,7 @@
             // txtCnpj
             // 
             this.txtCnpj.Location = new System.Drawing.Point(408, 58);
+            this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(100, 20);
             this.txtCnpj.TabIndex = 56;
@@ -89,6 +92,7 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(531, 58);
+            this.txtCep.MaxLength = 15;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
             this.txtCep.TabIndex = 58;
@@ -116,6 +120,8 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadEmpresa";
             this.Text = "Form Empresa";
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblCod, 0);
             this.Controls.SetChildIndex(this.txtCod, 0);

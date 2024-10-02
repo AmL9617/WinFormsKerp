@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class CondicaoPagamentos : Pai
     {
-        protected string nome;
+        protected string condPag;
         protected bool ativo;
         protected string tipo;
         protected double taxaJuro;
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
 
         public CondicaoPagamentos()
         {
-            nome = "";
+            condPag = "";
             ativo = false;
             tipo = "";
             taxaJuro = 0.0f;
@@ -33,10 +33,10 @@ namespace KnkForms.Classes
             codParcela = 0;
         }
 
-        public string Nome
+        public string CondPag
         {
-            get { return nome; }
-            set { nome = value; }
+            get { return condPag; }
+            set { condPag = value; }
         }
 
         public bool Ativo

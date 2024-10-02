@@ -27,7 +27,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomeLista.Clear();
+            txtLista.Clear();
             txtDescMax.Clear();
             txtMargemLucro.Clear();
             txtCodMarca.Clear();
@@ -41,7 +41,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aListaPreco.Cod);
-            txtNomeLista.Text = aListaPreco.NomeLista;
+            txtLista.Text = aListaPreco.Lista;
             txtDescMax.Text = Convert.ToString(aListaPreco.DescontoMaximo);
             txtMargemLucro.Text = Convert.ToString(aListaPreco.MargemLucro);
             txtCodMarca.Text = Convert.ToString(aListaPreco.CodMarca);
@@ -55,7 +55,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomeLista.Enabled = false;
+            txtLista.Enabled = false;
             txtDescMax.Enabled = false;
             txtMargemLucro.Enabled = false;
             txtCodMarca.Enabled = false;
@@ -69,7 +69,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomeLista.Enabled = true;
+            txtLista.Enabled = true;
             txtDescMax.Enabled = true;
             txtMargemLucro.Enabled = true;
             txtCodMarca.Enabled = true;
@@ -83,7 +83,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aListaPreco.Cod = Convert.ToInt32(txtCod.Text);
-            aListaPreco.NomeLista = txtNomeLista.Text;
+            aListaPreco.Lista = txtLista.Text;
             aListaPreco.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
             aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
             aListaPreco.CodMarca = Convert.ToInt32(txtCodMarca.Text);

@@ -24,7 +24,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNome.Clear();
+            txtContador.Clear();
             txtCrc.Clear();
             txtCnpj.Clear();
             txtEndereco.Clear();
@@ -45,7 +45,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oContador.Cod);
-            txtNome.Text = oContador.NomeContador;
+            txtContador.Text = oContador.Contador;
             txtCrc.Text = oContador.Crc;
             txtCnpj.Text = oContador.Cnpj;
             txtEndereco.Text = oContador.Endereco;
@@ -66,7 +66,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNome.Enabled = false;
+            txtContador.Enabled = false;
             txtCrc.Enabled = false;
             txtCnpj.Enabled = false;
             txtEndereco.Enabled = false;
@@ -87,7 +87,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNome.Enabled = true;
+            txtContador.Enabled = true;
             txtCrc.Enabled = true;
             txtCnpj.Enabled = true;
             txtEndereco.Enabled = true;
@@ -109,7 +109,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oContador.Cod = Convert.ToInt32(txtCod.Text);
-            oContador.NomeContador = txtNome.Text;
+            oContador.Contador = txtContador.Text;
             oContador.Crc = txtCrc.Text;
             oContador.Cnpj = txtCnpj.Text;
             oContador.Endereco = txtEndereco.Text;

@@ -40,7 +40,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aCondPag.Cod);
-            txtCondPag.Text = aCondPag.Nome;
+            txtCondPag.Text = aCondPag.CondPag;
             txtTipo.Text = aCondPag.Tipo;
             txtTaxaJuro.Text = Convert.ToString(aCondPag.TaxaJuro);
             dataPrazo.Value = aCondPag.Prazo;
@@ -82,7 +82,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aCondPag.Cod = Convert.ToInt32(txtCod.Text);
-            aCondPag.Nome = txtCondPag.Text;
+            aCondPag.CondPag = txtCondPag.Text;
             aCondPag.Tipo = txtTipo.Text;
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
             aCondPag.CodParcela = Convert.ToInt32(txtCodParcela.Text);

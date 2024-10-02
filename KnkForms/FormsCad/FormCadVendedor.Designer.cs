@@ -33,7 +33,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNomeVendedor = new System.Windows.Forms.TextBox();
+            this.txtVendedor = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,15 +43,15 @@
             // 
             // txtComissao
             // 
-            this.txtComissao.Location = new System.Drawing.Point(407, 58);
+            this.txtComissao.Location = new System.Drawing.Point(414, 58);
             this.txtComissao.Name = "txtComissao";
-            this.txtComissao.Size = new System.Drawing.Size(100, 20);
+            this.txtComissao.Size = new System.Drawing.Size(73, 20);
             this.txtComissao.TabIndex = 43;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(404, 42);
+            this.label1.Location = new System.Drawing.Point(411, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 42;
@@ -69,39 +69,41 @@
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(283, 58);
+            this.txtTipo.Location = new System.Drawing.Point(318, 58);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.Size = new System.Drawing.Size(70, 20);
             this.txtTipo.TabIndex = 40;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 42);
+            this.label2.Location = new System.Drawing.Point(315, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 39;
             this.label2.Text = "Tipo";
             // 
-            // txtNomeVendedor
+            // txtVendedor
             // 
-            this.txtNomeVendedor.Location = new System.Drawing.Point(153, 58);
-            this.txtNomeVendedor.Name = "txtNomeVendedor";
-            this.txtNomeVendedor.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeVendedor.TabIndex = 38;
+            this.txtVendedor.Location = new System.Drawing.Point(122, 58);
+            this.txtVendedor.MaxLength = 100;
+            this.txtVendedor.Name = "txtVendedor";
+            this.txtVendedor.Size = new System.Drawing.Size(177, 20);
+            this.txtVendedor.TabIndex = 38;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(150, 42);
+            this.lbl1.Location = new System.Drawing.Point(119, 42);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(99, 13);
+            this.lbl1.Size = new System.Drawing.Size(53, 13);
             this.lbl1.TabIndex = 37;
-            this.lbl1.Text = "Nome do Vendedor";
+            this.lbl1.Text = "Vendedor";
             // 
             // txtObservacao
             // 
             this.txtObservacao.Location = new System.Drawing.Point(35, 130);
+            this.txtObservacao.MaxLength = 3000;
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(741, 262);
@@ -119,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(517, 39);
+            this.label5.Location = new System.Drawing.Point(502, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 44;
@@ -127,7 +129,7 @@
             // 
             // dataComissao
             // 
-            this.dataComissao.Location = new System.Drawing.Point(523, 58);
+            this.dataComissao.Location = new System.Drawing.Point(508, 58);
             this.dataComissao.Name = "dataComissao";
             this.dataComissao.Size = new System.Drawing.Size(85, 20);
             this.dataComissao.TabIndex = 51;
@@ -145,7 +147,7 @@
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNomeVendedor);
+            this.Controls.Add(this.txtVendedor);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadVendedor";
             this.Text = "Form Vendedor";
@@ -160,7 +162,7 @@
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
-            this.Controls.SetChildIndex(this.txtNomeVendedor, 0);
+            this.Controls.SetChildIndex(this.txtVendedor, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtTipo, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
@@ -182,7 +184,7 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNomeVendedor;
+        private System.Windows.Forms.TextBox txtVendedor;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.Label label4;

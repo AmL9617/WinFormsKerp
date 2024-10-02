@@ -8,19 +8,19 @@ namespace KnkForms.Classes
 {
     internal class Marcas : Pai
     {
-        protected string nomeMarca;
+        protected string marca;
         protected bool ativo;
 
         public Marcas()
         {
-            nomeMarca = "";
+            marca = "";
             ativo = false;
         }
 
-        public string NomeMarca
+        public string Marca
         {
-            get { return nomeMarca; }
-            set { nomeMarca = value; }
+            get { return marca; }
+            set { marca = value; }
         }
 
         public bool Ativo

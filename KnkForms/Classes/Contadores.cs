@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Contadores : Pai
     {
-        protected string nomeContador;
+        protected string contador;
         protected string endereco;
         protected int numero;
         protected string complemento;
@@ -24,7 +24,7 @@ namespace KnkForms.Classes
 
         public Contadores()
         {
-            nomeContador = "";
+            contador = "";
             endereco = "";
             numero = 0;
             complemento = "";
@@ -39,10 +39,10 @@ namespace KnkForms.Classes
             crc = "";
         }
 
-        public string NomeContador
+        public string Contador
         {
-            get { return nomeContador; }
-            set { nomeContador = value; }
+            get { return contador; }
+            set { contador = value; }
         }
 
         public string Endereco

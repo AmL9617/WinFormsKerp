@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Estados : Pai
     {
-        protected string nomeEstado;
+        protected string estado;
         protected char sigla;
         protected bool ativo;
 
@@ -20,26 +20,26 @@ namespace KnkForms.Classes
 
         public Estados():base()
         {
-            nomeEstado = "";
+            estado = "";
             sigla = '\0'; 
             ativo = false;
             codPais = 0; 
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string nomeEstado, char sigla, bool Ativo, int codPais, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
-            nomeEstado = nomeEstado;
+            estado = Estado;
             sigla = sigla;
             ativo = ativo;
             codPais = codPais;
             oPais = oPais;
         }
 
-        public string NomeEstado
+        public string Estado
         {
-            get { return nomeEstado; }
-            set { nomeEstado = value; }
+            get { return estado; }
+            set { estado = value; }
         }
 
         public char Sigla

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.txtCep = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -55,16 +55,22 @@
             this.dataCad = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnPesquisarTransportadora = new System.Windows.Forms.Button();
             this.btnSalvarTransp = new System.Windows.Forms.Button();
             this.listVTrans = new System.Windows.Forms.ListView();
             this.txtTransp = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnPesquisarRamoAtiv = new System.Windows.Forms.Button();
             this.btnSalvarAtiv = new System.Windows.Forms.Button();
             this.listVAtiv = new System.Windows.Forms.ListView();
             this.txtIdRamoAtiv = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnPesquisarVendedor = new System.Windows.Forms.Button();
+            this.btnPesquisarRegiao = new System.Windows.Forms.Button();
+            this.btnPesquisarCondPag = new System.Windows.Forms.Button();
+            this.btnPesquisarListaPreco = new System.Windows.Forms.Button();
             this.txtPessoasAut = new System.Windows.Forms.TextBox();
             this.txtIdVend = new System.Windows.Forms.TextBox();
             this.txtIdReg = new System.Windows.Forms.TextBox();
@@ -101,15 +107,8 @@
             this.dataFundacao = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.chkRev = new System.Windows.Forms.CheckBox();
-            this.chkCons = new System.Windows.Forms.CheckBox();
+            this.chkConsRev = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnPesquisarListaPreco = new System.Windows.Forms.Button();
-            this.btnPesquisarCondPag = new System.Windows.Forms.Button();
-            this.btnPesquisarRegiao = new System.Windows.Forms.Button();
-            this.btnPesquisarVendedor = new System.Windows.Forms.Button();
-            this.btnPesquisarRamoAtiv = new System.Windows.Forms.Button();
-            this.btnPesquisarTransportadora = new System.Windows.Forms.Button();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -119,16 +118,18 @@
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtNome
+            // txtCliente
             // 
-            this.txtNome.Location = new System.Drawing.Point(143, 58);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
-            this.txtNome.TabIndex = 190;
+            this.txtCliente.Location = new System.Drawing.Point(113, 58);
+            this.txtCliente.MaxLength = 100;
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(146, 20);
+            this.txtCliente.TabIndex = 190;
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(424, 111);
+            this.txtCep.Location = new System.Drawing.Point(186, 111);
+            this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
             this.txtCep.TabIndex = 183;
@@ -136,7 +137,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(421, 95);
+            this.label9.Location = new System.Drawing.Point(183, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 13);
             this.label9.TabIndex = 182;
@@ -144,15 +145,16 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(293, 111);
+            this.txtBairro.Location = new System.Drawing.Point(38, 111);
+            this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(100, 20);
+            this.txtBairro.Size = new System.Drawing.Size(117, 20);
             this.txtBairro.TabIndex = 181;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(290, 95);
+            this.label6.Location = new System.Drawing.Point(35, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 180;
@@ -160,16 +162,17 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(35, 112);
+            this.txtComplemento.Location = new System.Drawing.Point(557, 58);
+            this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(224, 20);
+            this.txtComplemento.Size = new System.Drawing.Size(178, 20);
             this.txtComplemento.TabIndex = 179;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 96);
+            this.label7.Location = new System.Drawing.Point(554, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 178;
@@ -177,15 +180,16 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(528, 58);
+            this.txtNumero.Location = new System.Drawing.Point(492, 58);
+            this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(52, 20);
             this.txtNumero.TabIndex = 177;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(525, 42);
+            this.label8.Location = new System.Drawing.Point(489, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 176;
@@ -194,9 +198,10 @@
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(273, 58);
+            this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(225, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(196, 20);
             this.txtEndereco.TabIndex = 175;
             // 
             // label4
@@ -211,11 +216,11 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(140, 41);
+            this.lbl1.Location = new System.Drawing.Point(110, 41);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(85, 13);
+            this.lbl1.Size = new System.Drawing.Size(39, 13);
             this.lbl1.TabIndex = 173;
-            this.lbl1.Text = "Nome do Cliente";
+            this.lbl1.Text = "Cliente";
             // 
             // chkAtivo
             // 
@@ -233,7 +238,7 @@
             this.boxFisJur.Items.AddRange(new object[] {
             "Fisica",
             "Juridica"});
-            this.boxFisJur.Location = new System.Drawing.Point(547, 111);
+            this.boxFisJur.Location = new System.Drawing.Point(307, 110);
             this.boxFisJur.Name = "boxFisJur";
             this.boxFisJur.Size = new System.Drawing.Size(95, 21);
             this.boxFisJur.TabIndex = 195;
@@ -241,7 +246,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(544, 96);
+            this.label2.Location = new System.Drawing.Point(304, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 194;
@@ -249,15 +254,15 @@
             // 
             // txtCodCidade
             // 
-            this.txtCodCidade.Location = new System.Drawing.Point(662, 112);
+            this.txtCodCidade.Location = new System.Drawing.Point(422, 111);
             this.txtCodCidade.Name = "txtCodCidade";
-            this.txtCodCidade.Size = new System.Drawing.Size(100, 20);
+            this.txtCodCidade.Size = new System.Drawing.Size(47, 20);
             this.txtCodCidade.TabIndex = 197;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(659, 96);
+            this.label1.Location = new System.Drawing.Point(419, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 196;
@@ -284,6 +289,7 @@
             // txtObsDiv
             // 
             this.txtObsDiv.Location = new System.Drawing.Point(15, 74);
+            this.txtObsDiv.MaxLength = 300;
             this.txtObsDiv.Multiline = true;
             this.txtObsDiv.Name = "txtObsDiv";
             this.txtObsDiv.Size = new System.Drawing.Size(707, 113);
@@ -361,6 +367,16 @@
             this.tabPage5.Text = "Transportadoras";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // btnPesquisarTransportadora
+            // 
+            this.btnPesquisarTransportadora.Location = new System.Drawing.Point(313, 28);
+            this.btnPesquisarTransportadora.Name = "btnPesquisarTransportadora";
+            this.btnPesquisarTransportadora.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarTransportadora.TabIndex = 139;
+            this.btnPesquisarTransportadora.Text = "⌕";
+            this.btnPesquisarTransportadora.UseVisualStyleBackColor = true;
+            this.btnPesquisarTransportadora.Click += new System.EventHandler(this.btnPesquisarTransportadora_Click);
+            // 
             // btnSalvarTransp
             // 
             this.btnSalvarTransp.Location = new System.Drawing.Point(632, 26);
@@ -409,6 +425,15 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Atividades";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisarRamoAtiv
+            // 
+            this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(313, 25);
+            this.btnPesquisarRamoAtiv.Name = "btnPesquisarRamoAtiv";
+            this.btnPesquisarRamoAtiv.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarRamoAtiv.TabIndex = 136;
+            this.btnPesquisarRamoAtiv.Text = "⌕";
+            this.btnPesquisarRamoAtiv.UseVisualStyleBackColor = true;
             // 
             // btnSalvarAtiv
             // 
@@ -469,11 +494,52 @@
             this.tabPage3.Text = "Dados Compl.";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnPesquisarVendedor
+            // 
+            this.btnPesquisarVendedor.Location = new System.Drawing.Point(606, 72);
+            this.btnPesquisarVendedor.Name = "btnPesquisarVendedor";
+            this.btnPesquisarVendedor.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarVendedor.TabIndex = 141;
+            this.btnPesquisarVendedor.Text = "⌕";
+            this.btnPesquisarVendedor.UseVisualStyleBackColor = true;
+            this.btnPesquisarVendedor.Click += new System.EventHandler(this.btnPesquisarVendedor_Click);
+            // 
+            // btnPesquisarRegiao
+            // 
+            this.btnPesquisarRegiao.Location = new System.Drawing.Point(606, 32);
+            this.btnPesquisarRegiao.Name = "btnPesquisarRegiao";
+            this.btnPesquisarRegiao.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarRegiao.TabIndex = 140;
+            this.btnPesquisarRegiao.Text = "⌕";
+            this.btnPesquisarRegiao.UseVisualStyleBackColor = true;
+            this.btnPesquisarRegiao.Click += new System.EventHandler(this.btnPesquisarRegiao_Click);
+            // 
+            // btnPesquisarCondPag
+            // 
+            this.btnPesquisarCondPag.Location = new System.Drawing.Point(291, 72);
+            this.btnPesquisarCondPag.Name = "btnPesquisarCondPag";
+            this.btnPesquisarCondPag.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarCondPag.TabIndex = 139;
+            this.btnPesquisarCondPag.Text = "⌕";
+            this.btnPesquisarCondPag.UseVisualStyleBackColor = true;
+            this.btnPesquisarCondPag.Click += new System.EventHandler(this.btnPesquisarCondPag_Click);
+            // 
+            // btnPesquisarListaPreco
+            // 
+            this.btnPesquisarListaPreco.Location = new System.Drawing.Point(291, 29);
+            this.btnPesquisarListaPreco.Name = "btnPesquisarListaPreco";
+            this.btnPesquisarListaPreco.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarListaPreco.TabIndex = 138;
+            this.btnPesquisarListaPreco.Text = "⌕";
+            this.btnPesquisarListaPreco.UseVisualStyleBackColor = true;
+            this.btnPesquisarListaPreco.Click += new System.EventHandler(this.btnPesquisarListaPreco_Click);
+            // 
             // txtPessoasAut
             // 
             this.txtPessoasAut.Location = new System.Drawing.Point(9, 124);
+            this.txtPessoasAut.Multiline = true;
             this.txtPessoasAut.Name = "txtPessoasAut";
-            this.txtPessoasAut.Size = new System.Drawing.Size(713, 20);
+            this.txtPessoasAut.Size = new System.Drawing.Size(713, 54);
             this.txtPessoasAut.TabIndex = 137;
             // 
             // txtIdVend
@@ -516,7 +582,7 @@
             // chkVerForn
             // 
             this.chkVerForn.AutoSize = true;
-            this.chkVerForn.Location = new System.Drawing.Point(9, 171);
+            this.chkVerForn.Location = new System.Drawing.Point(9, 184);
             this.chkVerForn.Name = "chkVerForn";
             this.chkVerForn.Size = new System.Drawing.Size(127, 17);
             this.chkVerForn.TabIndex = 135;
@@ -673,8 +739,7 @@
             this.tabPage1.Controls.Add(this.dataFundacao);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.chkRev);
-            this.tabPage1.Controls.Add(this.chkCons);
+            this.tabPage1.Controls.Add(this.chkConsRev);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -743,13 +808,15 @@
             // txtCnpj
             // 
             this.txtCnpj.Location = new System.Drawing.Point(216, 106);
+            this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(100, 20);
+            this.txtCnpj.Size = new System.Drawing.Size(68, 20);
             this.txtCnpj.TabIndex = 126;
             // 
             // txtSuframa
             // 
             this.txtSuframa.Location = new System.Drawing.Point(216, 35);
+            this.txtSuframa.MaxLength = 30;
             this.txtSuframa.Name = "txtSuframa";
             this.txtSuframa.Size = new System.Drawing.Size(100, 20);
             this.txtSuframa.TabIndex = 124;
@@ -757,8 +824,9 @@
             // txtInscEst
             // 
             this.txtInscEst.Location = new System.Drawing.Point(21, 106);
+            this.txtInscEst.MaxLength = 30;
             this.txtInscEst.Name = "txtInscEst";
-            this.txtInscEst.Size = new System.Drawing.Size(100, 20);
+            this.txtInscEst.Size = new System.Drawing.Size(95, 20);
             this.txtInscEst.TabIndex = 120;
             // 
             // label10
@@ -800,25 +868,15 @@
             this.label16.Size = new System.Drawing.Size(0, 13);
             this.label16.TabIndex = 119;
             // 
-            // chkRev
+            // chkConsRev
             // 
-            this.chkRev.AutoSize = true;
-            this.chkRev.Location = new System.Drawing.Point(104, 38);
-            this.chkRev.Name = "chkRev";
-            this.chkRev.Size = new System.Drawing.Size(70, 17);
-            this.chkRev.TabIndex = 2;
-            this.chkRev.Text = "Revenda";
-            this.chkRev.UseVisualStyleBackColor = true;
-            // 
-            // chkCons
-            // 
-            this.chkCons.AutoSize = true;
-            this.chkCons.Location = new System.Drawing.Point(21, 38);
-            this.chkCons.Name = "chkCons";
-            this.chkCons.Size = new System.Drawing.Size(81, 17);
-            this.chkCons.TabIndex = 1;
-            this.chkCons.Text = "Consumidor";
-            this.chkCons.UseVisualStyleBackColor = true;
+            this.chkConsRev.AutoSize = true;
+            this.chkConsRev.Location = new System.Drawing.Point(21, 38);
+            this.chkConsRev.Name = "chkConsRev";
+            this.chkConsRev.Size = new System.Drawing.Size(130, 17);
+            this.chkConsRev.TabIndex = 1;
+            this.chkConsRev.Text = "Consumidor/Revenda";
+            this.chkConsRev.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -827,65 +885,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 0;
-            // 
-            // btnPesquisarListaPreco
-            // 
-            this.btnPesquisarListaPreco.Location = new System.Drawing.Point(291, 29);
-            this.btnPesquisarListaPreco.Name = "btnPesquisarListaPreco";
-            this.btnPesquisarListaPreco.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarListaPreco.TabIndex = 138;
-            this.btnPesquisarListaPreco.Text = "⌕";
-            this.btnPesquisarListaPreco.UseVisualStyleBackColor = true;
-            this.btnPesquisarListaPreco.Click += new System.EventHandler(this.btnPesquisarListaPreco_Click);
-            // 
-            // btnPesquisarCondPag
-            // 
-            this.btnPesquisarCondPag.Location = new System.Drawing.Point(291, 72);
-            this.btnPesquisarCondPag.Name = "btnPesquisarCondPag";
-            this.btnPesquisarCondPag.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarCondPag.TabIndex = 139;
-            this.btnPesquisarCondPag.Text = "⌕";
-            this.btnPesquisarCondPag.UseVisualStyleBackColor = true;
-            this.btnPesquisarCondPag.Click += new System.EventHandler(this.btnPesquisarCondPag_Click);
-            // 
-            // btnPesquisarRegiao
-            // 
-            this.btnPesquisarRegiao.Location = new System.Drawing.Point(606, 32);
-            this.btnPesquisarRegiao.Name = "btnPesquisarRegiao";
-            this.btnPesquisarRegiao.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarRegiao.TabIndex = 140;
-            this.btnPesquisarRegiao.Text = "⌕";
-            this.btnPesquisarRegiao.UseVisualStyleBackColor = true;
-            this.btnPesquisarRegiao.Click += new System.EventHandler(this.btnPesquisarRegiao_Click);
-            // 
-            // btnPesquisarVendedor
-            // 
-            this.btnPesquisarVendedor.Location = new System.Drawing.Point(606, 72);
-            this.btnPesquisarVendedor.Name = "btnPesquisarVendedor";
-            this.btnPesquisarVendedor.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarVendedor.TabIndex = 141;
-            this.btnPesquisarVendedor.Text = "⌕";
-            this.btnPesquisarVendedor.UseVisualStyleBackColor = true;
-            this.btnPesquisarVendedor.Click += new System.EventHandler(this.btnPesquisarVendedor_Click);
-            // 
-            // btnPesquisarRamoAtiv
-            // 
-            this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(313, 25);
-            this.btnPesquisarRamoAtiv.Name = "btnPesquisarRamoAtiv";
-            this.btnPesquisarRamoAtiv.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarRamoAtiv.TabIndex = 136;
-            this.btnPesquisarRamoAtiv.Text = "⌕";
-            this.btnPesquisarRamoAtiv.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisarTransportadora
-            // 
-            this.btnPesquisarTransportadora.Location = new System.Drawing.Point(313, 28);
-            this.btnPesquisarTransportadora.Name = "btnPesquisarTransportadora";
-            this.btnPesquisarTransportadora.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarTransportadora.TabIndex = 139;
-            this.btnPesquisarTransportadora.Text = "⌕";
-            this.btnPesquisarTransportadora.UseVisualStyleBackColor = true;
-            this.btnPesquisarTransportadora.Click += new System.EventHandler(this.btnPesquisarTransportadora_Click);
             // 
             // FormCadCliente
             // 
@@ -896,7 +895,7 @@
             this.Controls.Add(this.boxFisJur);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtBairro);
@@ -923,7 +922,7 @@
             this.Controls.SetChildIndex(this.txtBairro, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.txtCep, 0);
-            this.Controls.SetChildIndex(this.txtNome, 0);
+            this.Controls.SetChildIndex(this.txtCliente, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.boxFisJur, 0);
@@ -958,7 +957,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBairro;
@@ -1027,8 +1026,7 @@
         private System.Windows.Forms.DateTimePicker dataFundacao;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox chkRev;
-        private System.Windows.Forms.CheckBox chkCons;
+        private System.Windows.Forms.CheckBox chkConsRev;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label28;

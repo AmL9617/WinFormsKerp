@@ -24,7 +24,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNome.Clear();
+            txtFuncionario.Clear();
             txtEndereco.Clear();
             txtNumero.Clear();
             chkAtivo.Checked = false;
@@ -50,7 +50,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oFuncionario.Cod);
-            txtNome.Text = oFuncionario.NomeFuncionario;
+            txtFuncionario.Text = oFuncionario.Funcionario;
             txtEndereco.Text = oFuncionario.Endereco;
             txtNumero.Text = Convert.ToString(oFuncionario.Numero);
             chkAtivo.Checked = oFuncionario.Ativo;
@@ -77,7 +77,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNome.Enabled = false;
+            txtFuncionario.Enabled = false;
             txtEndereco.Enabled = false;
             txtNumero.Enabled = false;
             chkAtivo.Enabled = false;
@@ -104,7 +104,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNome.Enabled = true;
+            txtFuncionario.Enabled = true;
             txtEndereco.Enabled = true;
             txtNumero.Enabled = true;
             chkAtivo.Enabled = true;
@@ -131,7 +131,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oFuncionario.Cod = Convert.ToInt32(txtCod.Text);
-            oFuncionario.NomeFuncionario = txtNome.Text;
+            oFuncionario.Funcionario = txtFuncionario.Text;
             oFuncionario.Endereco = txtEndereco.Text;
             oFuncionario.Numero = Convert.ToInt32(txtNumero.Text);
             oFuncionario.Ativo = chkAtivo.Checked;

@@ -36,15 +36,15 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(276, 58);
+            this.txtValor.Location = new System.Drawing.Point(249, 58);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.Size = new System.Drawing.Size(68, 20);
             this.txtValor.TabIndex = 54;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 42);
+            this.label2.Location = new System.Drawing.Point(246, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 53;
@@ -52,15 +52,15 @@
             // 
             // txtQtd
             // 
-            this.txtQtd.Location = new System.Drawing.Point(146, 58);
+            this.txtQtd.Location = new System.Drawing.Point(118, 58);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(100, 20);
+            this.txtQtd.Size = new System.Drawing.Size(90, 20);
             this.txtQtd.TabIndex = 52;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(143, 42);
+            this.lbl1.Location = new System.Drawing.Point(115, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(116, 13);
             this.lbl1.TabIndex = 51;

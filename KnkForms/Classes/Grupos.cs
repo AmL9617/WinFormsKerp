@@ -8,19 +8,19 @@ namespace KnkForms.Classes
 {
     internal class Grupos : Pai
     {
-        protected string nomeGrupo;
+        protected string grupo;
         protected bool ativo;
 
         public Grupos()
         {
-            nomeGrupo = "";
+            grupo = "";
             ativo = false;
         }
 
-        public string NomeGrupo
+        public string Grupo
         {
-            get { return nomeGrupo; }
-            set { nomeGrupo = value; }
+            get { return grupo; }
+            set { grupo = value; }
         }
 
         public bool Ativo

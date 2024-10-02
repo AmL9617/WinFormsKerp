@@ -31,7 +31,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aMarca.Cod);
-            txtMarca.Text = aMarca.NomeMarca;
+            txtMarca.Text = aMarca.Marca;
             chkAtivo.Checked = aMarca.Ativo;
             txtCodUser.Text = Convert.ToString(aMarca.CodEmpresa);
             txtDataCad.Text = Convert.ToString(aMarca.DataCadastro);
@@ -61,7 +61,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aMarca.Cod = Convert.ToInt32(txtCod.Text);
-            aMarca.NomeMarca = txtMarca.Text;
+            aMarca.Marca = txtMarca.Text;
             aMarca.Ativo = chkAtivo.Checked;
             aMarca.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aMarca.DataCadastro = Convert.ToDateTime(txtDataCad.Text);

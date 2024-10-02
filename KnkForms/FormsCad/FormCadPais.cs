@@ -29,7 +29,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomePais.Clear();
+            txtPais.Clear();
             txtTipoPais.Clear();
             txtSigla.Clear();
             txtDdi.Clear();
@@ -42,7 +42,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oPais.Cod);
-            txtNomePais.Text = oPais.NomePais;
+            txtPais.Text = oPais.Pais;
             txtTipoPais.Text=oPais.TipoPais;
             txtSigla.Text = Convert.ToString(oPais.Sigla);
             txtDdi.Text = Convert.ToString(oPais.DDI);
@@ -55,7 +55,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomePais.Enabled = false;
+            txtPais.Enabled = false;
             txtTipoPais.Enabled = false;
             txtSigla.Enabled = false;
             txtDdi.Enabled = false;
@@ -68,7 +68,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomePais.Enabled = true;
+            txtPais.Enabled = true;
             txtTipoPais.Enabled = true;
             txtSigla.Enabled = true;
             txtDdi.Enabled = true;
@@ -81,7 +81,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oPais.Cod = Convert.ToInt32(txtCod.Text);
-            oPais.NomePais = txtNomePais.Text;
+            oPais.Pais = txtPais.Text;
             oPais.TipoPais = txtTipoPais.Text;
             oPais.Sigla = Convert.ToChar(txtSigla.Text);
             oPais.DDI = Convert.ToInt32(txtDdi.Text);

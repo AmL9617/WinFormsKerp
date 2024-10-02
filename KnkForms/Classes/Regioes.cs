@@ -8,19 +8,19 @@ namespace KnkForms.Classes
 {
     internal class Regioes : Pai
     {
-        protected string nomeRegiao;
+        protected string regiao;
         protected bool ativo;
 
         public Regioes()
         {
-            nomeRegiao = "";
+            regiao = "";
             ativo = false;
         }
 
-        public string NomeRegiao
+        public string Regiao
         {
-            get { return nomeRegiao; }
-            set { nomeRegiao = value; }
+            get { return regiao; }
+            set { regiao = value; }
         }
 
         public bool Ativo

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.txtNomeGrupo = new System.Windows.Forms.TextBox();
+            this.txtGrupo = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,28 +43,29 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
-            // txtNomeGrupo
+            // txtGrupo
             // 
-            this.txtNomeGrupo.Location = new System.Drawing.Point(164, 58);
-            this.txtNomeGrupo.Name = "txtNomeGrupo";
-            this.txtNomeGrupo.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeGrupo.TabIndex = 52;
+            this.txtGrupo.Location = new System.Drawing.Point(120, 58);
+            this.txtGrupo.MaxLength = 30;
+            this.txtGrupo.Name = "txtGrupo";
+            this.txtGrupo.Size = new System.Drawing.Size(120, 20);
+            this.txtGrupo.TabIndex = 52;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(161, 42);
+            this.lbl1.Location = new System.Drawing.Point(117, 42);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(82, 13);
+            this.lbl1.Size = new System.Drawing.Size(36, 13);
             this.lbl1.TabIndex = 51;
-            this.lbl1.Text = "Nome do Grupo";
+            this.lbl1.Text = "Grupo";
             // 
             // FormCadGrupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.txtNomeGrupo);
+            this.Controls.Add(this.txtGrupo);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadGrupo";
             this.Text = "Form Grupo";
@@ -79,7 +80,7 @@
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
-            this.Controls.SetChildIndex(this.txtNomeGrupo, 0);
+            this.Controls.SetChildIndex(this.txtGrupo, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,7 +90,7 @@
         #endregion
 
         private System.Windows.Forms.CheckBox chkAtivo;
-        private System.Windows.Forms.TextBox txtNomeGrupo;
+        private System.Windows.Forms.TextBox txtGrupo;
         private System.Windows.Forms.Label lbl1;
     }
 }

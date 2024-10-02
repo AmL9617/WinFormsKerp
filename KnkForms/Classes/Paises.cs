@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Paises : Pai
     {
-        protected string nomePais;
+        protected string pais;
         protected string tipoPais;
         protected char sigla;
         protected int ddi;
@@ -16,17 +16,17 @@ namespace KnkForms.Classes
 
         public Paises()
         {
-            nomePais = "";
+            pais = "";
             tipoPais = "";
             sigla = '\0'; 
             ddi = 0;
             ativo = false;
         }
 
-        public string NomePais
+        public string Pais
         {
-            get { return nomePais; }
-            set { nomePais = value; }
+            get { return pais; }
+            set { pais = value; }
         }
 
         public string TipoPais

@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Cidades : Pai
     {
-        protected string nomeCidade;
+        protected string cidade;
         protected int ddd;
         protected bool ativo;
 
@@ -19,17 +19,17 @@ namespace KnkForms.Classes
 
         public Cidades()
         {
-            nomeCidade = "";
+            cidade = "";
             ddd = 0;
             ativo = false;
             estado = new Estados();
             codEstado = 0; 
         }
 
-        public string NomeCidade
+        public string Cidade
         {
-            get { return nomeCidade; }
-            set { nomeCidade = value; }
+            get { return cidade; }
+            set { cidade = value; }
         }
 
         public int DDD

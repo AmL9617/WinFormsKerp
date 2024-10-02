@@ -45,19 +45,20 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(152, 58);
+            this.txtMarca.Location = new System.Drawing.Point(118, 58);
+            this.txtMarca.MaxLength = 30;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.Size = new System.Drawing.Size(122, 20);
             this.txtMarca.TabIndex = 52;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(149, 42);
+            this.lbl1.Location = new System.Drawing.Point(115, 42);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(83, 13);
+            this.lbl1.Size = new System.Drawing.Size(37, 13);
             this.lbl1.TabIndex = 51;
-            this.lbl1.Text = "Nome da Marca";
+            this.lbl1.Text = "Marca";
             // 
             // FormCadMarca
             // 
@@ -68,6 +69,16 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadMarca";
             this.Text = "Form Marca";
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
+            this.Controls.SetChildIndex(this.lblDataCad, 0);
+            this.Controls.SetChildIndex(this.txtDataCad, 0);
+            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
+            this.Controls.SetChildIndex(this.txtDataAlt, 0);
+            this.Controls.SetChildIndex(this.btnSalvar, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.txtMarca, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);

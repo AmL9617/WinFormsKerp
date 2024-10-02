@@ -30,7 +30,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomeCidade.Clear();
+            txtCidade.Clear();
             txtDDD.Clear();
             txtCodEstado.Clear();
             txtCodUser.Clear();
@@ -42,7 +42,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aCidade.Cod);
-            txtNomeCidade.Text = aCidade.NomeCidade;
+            txtCidade.Text = aCidade.Cidade;
             txtDDD.Text = Convert.ToString(aCidade.DDD);
             txtCodEstado.Text = Convert.ToString(aCidade.CodEstado);
             txtCodUser.Text = Convert.ToString(aCidade.CodEmpresa);
@@ -54,7 +54,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomeCidade.Enabled = false;
+            txtCidade.Enabled = false;
             txtDDD.Enabled = false;
             txtCodEstado.Enabled = false;
             txtCodUser.Enabled = false;
@@ -66,7 +66,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomeCidade.Enabled = true;
+            txtCidade.Enabled = true;
             txtDDD.Enabled = true;
             txtCodEstado.Enabled = true;
             txtCodUser.Enabled = true;
@@ -78,7 +78,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aCidade.Cod = Convert.ToInt32(txtCod.Text);
-            aCidade.NomeCidade = txtNomeCidade.Text;
+            aCidade.Cidade = txtCidade.Text;
             aCidade.DDD = Convert.ToInt32(txtDDD.Text);
             aCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
             aCidade.CodEmpresa = Convert.ToInt32(txtCodUser.Text);

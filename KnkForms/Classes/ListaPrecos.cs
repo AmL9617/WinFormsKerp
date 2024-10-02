@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class ListaPrecos : Pai
     {
-        protected string nomeLista;
+        protected string lista;
         protected double descontoMaximo;
         protected double margemLucro;
         protected bool todas;
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
 
         public ListaPrecos()
         {
-            nomeLista = "";
+            lista = "";
             descontoMaximo = 0.0f;
             margemLucro = 0.0f;
             todas = false;
@@ -33,10 +33,10 @@ namespace KnkForms.Classes
             codGrupo = 0;
         }
 
-        public string NomeLista
+        public string Lista
         {
-            get { return nomeLista; }
-            set { nomeLista = value; }
+            get { return lista; }
+            set { lista = value; }
         }
 
         public double DescontoMaximo

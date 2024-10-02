@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNomePagamento = new System.Windows.Forms.TextBox();
+            this.txtFormaPagamento = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtOpDisp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,33 +36,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtNomePagamento
+            // txtFormaPagamento
             // 
-            this.txtNomePagamento.Location = new System.Drawing.Point(157, 58);
-            this.txtNomePagamento.Name = "txtNomePagamento";
-            this.txtNomePagamento.Size = new System.Drawing.Size(100, 20);
-            this.txtNomePagamento.TabIndex = 52;
+            this.txtFormaPagamento.Location = new System.Drawing.Point(114, 58);
+            this.txtFormaPagamento.MaxLength = 30;
+            this.txtFormaPagamento.Name = "txtFormaPagamento";
+            this.txtFormaPagamento.Size = new System.Drawing.Size(113, 20);
+            this.txtFormaPagamento.TabIndex = 52;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(154, 42);
+            this.lbl1.Location = new System.Drawing.Point(111, 42);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(107, 13);
+            this.lbl1.Size = new System.Drawing.Size(108, 13);
             this.lbl1.TabIndex = 51;
-            this.lbl1.Text = "Nome do Pagamento";
+            this.lbl1.Text = "Forma de Pagamento";
             // 
             // txtOpDisp
             // 
-            this.txtOpDisp.Location = new System.Drawing.Point(287, 58);
+            this.txtOpDisp.Location = new System.Drawing.Point(245, 58);
+            this.txtOpDisp.MaxLength = 30;
             this.txtOpDisp.Name = "txtOpDisp";
-            this.txtOpDisp.Size = new System.Drawing.Size(100, 20);
+            this.txtOpDisp.Size = new System.Drawing.Size(118, 20);
             this.txtOpDisp.TabIndex = 54;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 42);
+            this.label1.Location = new System.Drawing.Point(242, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 53;
@@ -70,7 +72,7 @@
             // 
             // txtNfce
             // 
-            this.txtNfce.Location = new System.Drawing.Point(411, 58);
+            this.txtNfce.Location = new System.Drawing.Point(380, 58);
             this.txtNfce.Name = "txtNfce";
             this.txtNfce.Size = new System.Drawing.Size(100, 20);
             this.txtNfce.TabIndex = 56;
@@ -78,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(408, 42);
+            this.label2.Location = new System.Drawing.Point(377, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 55;
@@ -92,7 +94,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOpDisp);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNomePagamento);
+            this.Controls.Add(this.txtFormaPagamento);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadFormaPagamento";
             this.Text = "Form Forma de Pagamento";
@@ -107,7 +109,7 @@
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
-            this.Controls.SetChildIndex(this.txtNomePagamento, 0);
+            this.Controls.SetChildIndex(this.txtFormaPagamento, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtOpDisp, 0);
             this.Controls.SetChildIndex(this.label2, 0);
@@ -118,7 +120,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNomePagamento;
+        private System.Windows.Forms.TextBox txtFormaPagamento;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtOpDisp;
         private System.Windows.Forms.Label label1;

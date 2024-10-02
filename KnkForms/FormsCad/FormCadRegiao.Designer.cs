@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNomeRegiao = new System.Windows.Forms.TextBox();
+            this.txtRegiao = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // txtNomeRegiao
+            // txtRegiao
             // 
-            this.txtNomeRegiao.Location = new System.Drawing.Point(160, 58);
-            this.txtNomeRegiao.Name = "txtNomeRegiao";
-            this.txtNomeRegiao.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeRegiao.TabIndex = 45;
+            this.txtRegiao.Location = new System.Drawing.Point(116, 58);
+            this.txtRegiao.MaxLength = 50;
+            this.txtRegiao.Name = "txtRegiao";
+            this.txtRegiao.Size = new System.Drawing.Size(140, 20);
+            this.txtRegiao.TabIndex = 45;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(157, 42);
+            this.lbl1.Location = new System.Drawing.Point(113, 42);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(87, 13);
+            this.lbl1.Size = new System.Drawing.Size(41, 13);
             this.lbl1.TabIndex = 44;
-            this.lbl1.Text = "Nome da Região";
+            this.lbl1.Text = "Região";
             // 
             // chkAtivo
             // 
@@ -64,7 +65,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.txtNomeRegiao);
+            this.Controls.Add(this.txtRegiao);
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadRegiao";
             this.Text = "Form Região";
@@ -79,7 +80,7 @@
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
-            this.Controls.SetChildIndex(this.txtNomeRegiao, 0);
+            this.Controls.SetChildIndex(this.txtRegiao, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -87,7 +88,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNomeRegiao;
+        private System.Windows.Forms.TextBox txtRegiao;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.CheckBox chkAtivo;
     }

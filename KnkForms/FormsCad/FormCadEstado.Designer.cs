@@ -30,7 +30,7 @@
         {
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNomeEstado = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblNomeEstado = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtCodPais = new System.Windows.Forms.TextBox();
@@ -44,35 +44,37 @@
             // 
             // txtSigla
             // 
-            this.txtSigla.Location = new System.Drawing.Point(285, 58);
+            this.txtSigla.Location = new System.Drawing.Point(263, 58);
+            this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
-            this.txtSigla.Size = new System.Drawing.Size(100, 20);
+            this.txtSigla.Size = new System.Drawing.Size(42, 20);
             this.txtSigla.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(282, 42);
+            this.label2.Location = new System.Drawing.Point(260, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Sigla";
             // 
-            // txtNomeEstado
+            // txtEstado
             // 
-            this.txtNomeEstado.Location = new System.Drawing.Point(155, 58);
-            this.txtNomeEstado.Name = "txtNomeEstado";
-            this.txtNomeEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeEstado.TabIndex = 20;
+            this.txtEstado.Location = new System.Drawing.Point(114, 58);
+            this.txtEstado.MaxLength = 50;
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(126, 20);
+            this.txtEstado.TabIndex = 20;
             // 
             // lblNomeEstado
             // 
             this.lblNomeEstado.AutoSize = true;
-            this.lblNomeEstado.Location = new System.Drawing.Point(152, 42);
+            this.lblNomeEstado.Location = new System.Drawing.Point(111, 42);
             this.lblNomeEstado.Name = "lblNomeEstado";
-            this.lblNomeEstado.Size = new System.Drawing.Size(86, 13);
+            this.lblNomeEstado.Size = new System.Drawing.Size(40, 13);
             this.lblNomeEstado.TabIndex = 19;
-            this.lblNomeEstado.Text = "Nome do Estado";
+            this.lblNomeEstado.Text = "Estado";
             // 
             // chkAtivo
             // 
@@ -86,15 +88,15 @@
             // 
             // txtCodPais
             // 
-            this.txtCodPais.Location = new System.Drawing.Point(409, 58);
+            this.txtCodPais.Location = new System.Drawing.Point(328, 58);
             this.txtCodPais.Name = "txtCodPais";
-            this.txtCodPais.Size = new System.Drawing.Size(100, 20);
+            this.txtCodPais.Size = new System.Drawing.Size(40, 20);
             this.txtCodPais.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(406, 42);
+            this.label1.Location = new System.Drawing.Point(325, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 28;
@@ -102,7 +104,7 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(532, 55);
+            this.btnConsulta.Location = new System.Drawing.Point(399, 55);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(75, 23);
             this.btnConsulta.TabIndex = 30;
@@ -120,7 +122,7 @@
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNomeEstado);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblNomeEstado);
             this.Name = "FormCadEstado";
             this.Text = "Form Estado";
@@ -128,7 +130,7 @@
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
             this.Controls.SetChildIndex(this.lblNomeEstado, 0);
-            this.Controls.SetChildIndex(this.txtNomeEstado, 0);
+            this.Controls.SetChildIndex(this.txtEstado, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtSigla, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
@@ -151,7 +153,7 @@
 
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNomeEstado;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblNomeEstado;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtCodPais;

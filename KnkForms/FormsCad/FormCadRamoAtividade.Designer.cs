@@ -45,19 +45,20 @@
             // 
             // txtNomeRamo
             // 
-            this.txtNomeRamo.Location = new System.Drawing.Point(153, 58);
+            this.txtNomeRamo.Location = new System.Drawing.Point(124, 58);
+            this.txtNomeRamo.MaxLength = 30;
             this.txtNomeRamo.Name = "txtNomeRamo";
-            this.txtNomeRamo.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeRamo.Size = new System.Drawing.Size(132, 20);
             this.txtNomeRamo.TabIndex = 60;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(150, 42);
+            this.label1.Location = new System.Drawing.Point(121, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 59;
-            this.label1.Text = "Nome do Ramo";
+            this.label1.Text = "Ramo de Atividade";
             // 
             // FormCadRamoAtividade
             // 

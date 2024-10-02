@@ -8,7 +8,7 @@ namespace KnkForms.Classes
 {
     internal class Clientes : Pai
     {
-        protected string nome;
+        protected string cliente;
         protected string razaoSocial;
         protected string endereco;
         protected int numero;
@@ -63,7 +63,7 @@ namespace KnkForms.Classes
 
         public Clientes()
         {
-            nome = "";
+            cliente = "";
             razaoSocial = "";
             endereco = "";
             numero = 0;
@@ -114,10 +114,10 @@ namespace KnkForms.Classes
             codListaPrecos = 0;
         }
 
-        public string Nome
+        public string Cliente
         {
-            get { return nome; }
-            set { nome = value; }
+            get { return cliente; }
+            set { cliente = value; }
         }
 
         public string RazaoSocial

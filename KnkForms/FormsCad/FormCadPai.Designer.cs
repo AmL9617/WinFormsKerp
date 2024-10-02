@@ -52,14 +52,14 @@
             // 
             this.txtCod.Location = new System.Drawing.Point(35, 58);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(92, 20);
+            this.txtCod.Size = new System.Drawing.Size(63, 20);
             this.txtCod.TabIndex = 1;
             // 
             // txtDataCad
             // 
             this.txtDataCad.Location = new System.Drawing.Point(276, 418);
             this.txtDataCad.Name = "txtDataCad";
-            this.txtDataCad.Size = new System.Drawing.Size(92, 20);
+            this.txtDataCad.Size = new System.Drawing.Size(87, 20);
             this.txtDataCad.TabIndex = 5;
             // 
             // lblDataCad
@@ -101,7 +101,7 @@
             // 
             this.txtCodUser.Location = new System.Drawing.Point(164, 418);
             this.txtCodUser.Name = "txtCodUser";
-            this.txtCodUser.Size = new System.Drawing.Size(92, 20);
+            this.txtCodUser.Size = new System.Drawing.Size(59, 20);
             this.txtCodUser.TabIndex = 11;
             // 
             // lblCodUser

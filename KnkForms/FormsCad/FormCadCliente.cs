@@ -31,7 +31,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNome.Clear();
+            txtCliente.Clear();
             txtEndereco.Clear();
             txtNumero.Clear();
             txtComplemento.Clear();
@@ -45,7 +45,7 @@ namespace KnkForms.Forms
             txtDataCad.Clear();
             txtDataAlt.Clear();
 
-            chkCons.Checked = false;
+            chkConsRev.Checked = false;
             chkRev.Checked = false;
             txtInscEst.Clear();
             txtSuframa.Clear();
@@ -78,7 +78,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oCliente.Cod);
-            txtNome.Text = oCliente.Nome;
+            txtCliente.Text = oCliente.Cliente;
             txtEndereco.Text = oCliente.Endereco; 
             txtNumero.Text = Convert.ToString(oCliente.Numero);
             txtComplemento.Text = oCliente.Complemento;
@@ -124,7 +124,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNome.Enabled = false;
+            txtCliente.Enabled = false;
             txtEndereco.Enabled = false;
             txtNumero.Enabled = false;
             txtComplemento.Enabled = false;
@@ -137,7 +137,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false; 
 
-            chkCons.Enabled = false;
+            chkConsRev.Enabled = false;
             chkRev.Enabled = false;
             txtInscEst.Enabled = false;
             txtSuframa.Enabled = false;
@@ -170,7 +170,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNome.Enabled = true;
+            txtCliente.Enabled = true;
             txtEndereco.Enabled = true;
             txtNumero.Enabled = true;
             txtComplemento.Enabled = true;
@@ -183,7 +183,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
 
-            chkCons.Enabled = true;
+            chkConsRev.Enabled = true;
             chkRev.Enabled = true;
             txtInscEst.Enabled = true;
             txtSuframa.Enabled = true;
@@ -216,7 +216,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oCliente.Cod = Convert.ToInt32(txtCod.Text);
-            oCliente.Nome = txtNome.Text;
+            oCliente.Cliente = txtCliente.Text;
             oCliente.Endereco = txtEndereco.Text;
             oCliente.Numero = Convert.ToInt32(txtNumero.Text);
             oCliente.Complemento = txtComplemento.Text;

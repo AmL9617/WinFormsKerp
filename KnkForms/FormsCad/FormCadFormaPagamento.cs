@@ -24,7 +24,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtNomePagamento.Clear();
+            txtFormaPagamento.Clear();
             txtOpDisp.Clear();
             txtNfce.Clear();
             txtCodUser.Clear();
@@ -35,7 +35,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aFormaPag.Cod);
-            txtNomePagamento.Text = aFormaPag.Nome;
+            txtFormaPagamento.Text = aFormaPag.FormaPag;
             txtOpDisp.Text = aFormaPag.OperacaoDisponivel;
             txtNfce.Text = aFormaPag.Nfce;
             txtCodUser.Text = Convert.ToString(aFormaPag.CodEmpresa);
@@ -46,7 +46,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtNomePagamento.Enabled = false;
+            txtFormaPagamento.Enabled = false;
             txtOpDisp.Enabled = false;
             txtNfce.Enabled = false;
             txtCodUser.Enabled = false;
@@ -57,7 +57,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtNomePagamento.Enabled = true;
+            txtFormaPagamento.Enabled = true;
             txtOpDisp.Enabled = true;
             txtNfce.Enabled = true;
             txtCodUser.Enabled = true;
@@ -68,7 +68,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aFormaPag.Cod = Convert.ToInt32(txtCod.Text);
-            aFormaPag.Nome = txtNomePagamento.Text;
+            aFormaPag.FormaPag = txtFormaPagamento.Text;
             aFormaPag.OperacaoDisponivel = txtOpDisp.Text;
             aFormaPag.Nfce = txtNfce.Text;
             aFormaPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
