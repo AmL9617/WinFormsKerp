@@ -10,11 +10,13 @@ namespace KnkForms.Classes
     {
         protected string regiao;
         protected bool ativo;
+        protected string descricao;
 
         public Regioes()
         {
             regiao = "";
             ativo = false;
+            descricao = "";
         }
 
         public string Regiao
@@ -27,6 +29,11 @@ namespace KnkForms.Classes
         {
             get { return ativo; }
             set { ativo = value; }
+        }
+        public string Descricao
+        {
+            get { return descricao; }
+            set { descricao = value; }
         }
     }
 

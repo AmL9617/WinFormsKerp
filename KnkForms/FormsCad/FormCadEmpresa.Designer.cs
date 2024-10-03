@@ -92,7 +92,7 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(531, 58);
-            this.txtCep.MaxLength = 15;
+            this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
             this.txtCep.TabIndex = 58;

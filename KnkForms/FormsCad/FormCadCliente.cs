@@ -14,6 +14,7 @@ namespace KnkForms.Forms
     {
         Clientes oCliente;
 
+        FormConCidades oFrmConCidades;
         FormConListaPrecos oFrmConListaPrecos;
         FormConCondicaoPagamentos oFrmConCondPag;
         FormConRegioes oFrmConRegioes;
@@ -46,7 +47,6 @@ namespace KnkForms.Forms
             txtDataAlt.Clear();
 
             chkConsRev.Checked = false;
-            chkRev.Checked = false;
             txtInscEst.Clear();
             txtSuframa.Clear();
             txtCnpj.Clear();
@@ -138,7 +138,6 @@ namespace KnkForms.Forms
             txtDataAlt.Enabled = false; 
 
             chkConsRev.Enabled = false;
-            chkRev.Enabled = false;
             txtInscEst.Enabled = false;
             txtSuframa.Enabled = false;
             txtCnpj.Enabled = false;
@@ -184,7 +183,6 @@ namespace KnkForms.Forms
             txtDataAlt.Enabled = true;
 
             chkConsRev.Enabled = true;
-            chkRev.Enabled = true;
             txtInscEst.Enabled = true;
             txtSuframa.Enabled = true;
             txtCnpj.Enabled = true;
@@ -229,8 +227,7 @@ namespace KnkForms.Forms
             oCliente.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oCliente.DataModificacao = Convert.ToDateTime(txtDataAlt);
 
-            // chkCons.Checked = oCliente.ConsumidorRevenda;
-            //chkRev.Checked = false;
+            //oCliente.ConsumidorRevenda;
             oCliente.InscricaoEstadual = txtInscEst.Text;
             oCliente.InscMunicipalSuframa = txtSuframa.Text;
             oCliente.CNPJ = txtCnpj.Text;
@@ -259,6 +256,11 @@ namespace KnkForms.Forms
             oCliente.ObsDiv = txtObsDiv.Text;
         }
 
+        public void setFrmConCidades(Object obj)
+        {
+            oFrmConCidades =(FormConCidades)obj;
+        }
+
         public void setFrmConListaPrecos(Object obj)
         {
             oFrmConListaPrecos = (FormConListaPrecos)obj;
@@ -285,6 +287,11 @@ namespace KnkForms.Forms
         }
 
 
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            oFrmConCidades.ConhecaObj(oCliente.Cidades);
+            oFrmConCidades.ShowDialog();
+        }
         private void btnPesquisarListaPreco_Click(object sender, EventArgs e)
         {
             oFrmConListaPrecos.ConhecaObj(oCliente.ListaPrecos);
@@ -314,5 +321,7 @@ namespace KnkForms.Forms
             oFrmConTransportadoras.ConhecaObj(oCliente.Transportadoras);
             oFrmConTransportadoras.ShowDialog();
         }
+
+        
     }
 }

@@ -37,6 +37,8 @@
             this.txtDdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.boxNacional = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -79,7 +81,7 @@
             // txtSigla
             // 
             this.txtSigla.Location = new System.Drawing.Point(344, 58);
-            this.txtSigla.MaxLength = 5;
+            this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(42, 20);
             this.txtSigla.TabIndex = 14;
@@ -120,10 +122,29 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
+            // boxNacional
+            // 
+            this.boxNacional.FormattingEnabled = true;
+            this.boxNacional.Location = new System.Drawing.Point(467, 58);
+            this.boxNacional.Name = "boxNacional";
+            this.boxNacional.Size = new System.Drawing.Size(80, 21);
+            this.boxNacional.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(465, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "O país é nacional?";
+            // 
             // FormCadPais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.boxNacional);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtDdi);
             this.Controls.Add(this.label3);
@@ -154,6 +175,8 @@
             this.Controls.SetChildIndex(this.txtDataCad, 0);
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
+            this.Controls.SetChildIndex(this.boxNacional, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +193,7 @@
         private System.Windows.Forms.TextBox txtDdi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.ComboBox boxNacional;
+        private System.Windows.Forms.Label label4;
     }
 }

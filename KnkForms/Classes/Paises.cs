@@ -13,6 +13,7 @@ namespace KnkForms.Classes
         protected char sigla;
         protected int ddi;
         protected bool ativo;
+        protected char nacional;
 
         public Paises()
         {
@@ -21,6 +22,7 @@ namespace KnkForms.Classes
             sigla = '\0'; 
             ddi = 0;
             ativo = false;
+            nacional = '\0';
         }
 
         public string Pais
@@ -51,6 +53,11 @@ namespace KnkForms.Classes
         {
             get { return ativo; }
             set { ativo = value; }
+        }
+        public char Nacional
+        {
+            get { return nacional; }
+            set { nacional = value; }
         }
     }
 

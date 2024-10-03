@@ -109,6 +109,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.chkConsRev = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -886,10 +887,21 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 0;
             // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Location = new System.Drawing.Point(492, 111);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
+            this.btnConsulta.TabIndex = 133;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // FormCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodCidade);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boxFisJur);
@@ -938,6 +950,7 @@
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
+            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -1038,5 +1051,6 @@
         private System.Windows.Forms.Button btnPesquisarListaPreco;
         private System.Windows.Forms.Button btnPesquisarTransportadora;
         private System.Windows.Forms.Button btnPesquisarRamoAtiv;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

@@ -44,7 +44,7 @@
             // 
             // txtCodEstado
             // 
-            this.txtCodEstado.Location = new System.Drawing.Point(335, 58);
+            this.txtCodEstado.Location = new System.Drawing.Point(325, 58);
             this.txtCodEstado.Name = "txtCodEstado";
             this.txtCodEstado.Size = new System.Drawing.Size(43, 20);
             this.txtCodEstado.TabIndex = 36;
@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 42);
+            this.label1.Location = new System.Drawing.Point(322, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 35;
@@ -106,7 +106,7 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(418, 55);
+            this.btnConsulta.Location = new System.Drawing.Point(399, 58);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
             this.btnConsulta.TabIndex = 66;

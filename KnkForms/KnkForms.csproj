@@ -53,9 +53,11 @@
     <Compile Include="Classes\Clientes.cs" />
     <Compile Include="Classes\CondicaoPagamentos.cs" />
     <Compile Include="Classes\Contadores.cs" />
+    <Compile Include="Classes\Contatos.cs" />
     <Compile Include="Classes\Empresas.cs" />
     <Compile Include="Classes\Estados.cs" />
     <Compile Include="Classes\FormaPagamentos.cs" />
+    <Compile Include="Classes\RamoAtividadesClientes.cs" />
     <Compile Include="FormPai.cs">
       <SubType>Form</SubType>
     </Compile>

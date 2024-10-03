@@ -29,6 +29,7 @@ namespace KnkForms.Forms
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
+            txtDescricao.Clear();
         }
 
         public override void CarregaTxt()
@@ -39,6 +40,7 @@ namespace KnkForms.Forms
             txtCodUser.Text = Convert.ToString(oRegiao.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oRegiao.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oRegiao.DataModificacao);
+            txtDescricao.Text = oRegiao.Descricao;
         }
 
         public override void BloqueiaTxt()
@@ -49,6 +51,7 @@ namespace KnkForms.Forms
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
+            txtDescricao.Enabled = false;
         }
 
         public override void DesbloqueiaTxt()
@@ -59,6 +62,7 @@ namespace KnkForms.Forms
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
+            txtDescricao.Enabled = true;
         }
 
         public override void Salvar()
@@ -69,6 +73,7 @@ namespace KnkForms.Forms
             oRegiao.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRegiao.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oRegiao.Descricao = txtDescricao.Text;
         }
     }
 }

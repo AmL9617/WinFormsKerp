@@ -11,6 +11,8 @@ namespace KnkForms.Classes
         protected string estado;
         protected char sigla;
         protected bool ativo;
+        protected double per_icms;
+        protected int icms;
 
         //Placeholder
         protected int codPais;
@@ -23,15 +25,19 @@ namespace KnkForms.Classes
             estado = "";
             sigla = '\0'; 
             ativo = false;
-            codPais = 0; 
+            codPais = 0;
+            per_icms = 0;
+            icms = 0;
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double per_icms, int icms, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
             estado = Estado;
             sigla = sigla;
             ativo = ativo;
+            per_icms = per_icms;
+            icms = icms;
             codPais = codPais;
             oPais = oPais;
         }
@@ -58,6 +64,17 @@ namespace KnkForms.Classes
         {
             get { return codPais; }
             set { codPais = value; }
+        }
+        public double Per_icms
+        {
+            get { return per_icms; }
+            set { per_icms = value; }
+        }
+
+        public int Icms
+        {
+            get { return icms; }
+            set { icms = value; }
         }
         public Paises Pais
         {

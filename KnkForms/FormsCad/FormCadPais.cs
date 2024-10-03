@@ -63,6 +63,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
             chkAtivo.Enabled = false;
+            boxNacional.Enabled = false;
         }
 
         public override void DesbloqueiaTxt()
@@ -76,6 +77,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
             chkAtivo.Enabled = true;
+            boxNacional.Enabled = true;
         }
 
         public override void Salvar()

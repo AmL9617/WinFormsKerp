@@ -31,6 +31,8 @@
             this.txtRegiao = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtRegiao
@@ -60,10 +62,29 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(276, 58);
+            this.txtDescricao.MaxLength = 30;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(140, 20);
+            this.txtDescricao.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(273, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Descrição";
+            // 
             // FormCadRegiao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtRegiao);
             this.Controls.Add(this.lbl1);
@@ -82,6 +103,8 @@
             this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.txtRegiao, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.txtDescricao, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +114,7 @@
         private System.Windows.Forms.TextBox txtRegiao;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label1;
     }
 }

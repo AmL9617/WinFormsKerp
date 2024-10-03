@@ -36,6 +36,10 @@
             this.txtCodPais = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.txtIcms = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPercIcms = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -104,7 +108,7 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(399, 55);
+            this.btnConsulta.Location = new System.Drawing.Point(396, 55);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(75, 23);
             this.btnConsulta.TabIndex = 30;
@@ -112,10 +116,48 @@
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
+            // txtIcms
+            // 
+            this.txtIcms.Location = new System.Drawing.Point(596, 58);
+            this.txtIcms.MaxLength = 8;
+            this.txtIcms.Name = "txtIcms";
+            this.txtIcms.Size = new System.Drawing.Size(62, 20);
+            this.txtIcms.TabIndex = 34;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(593, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "ICMS";
+            // 
+            // txtPercIcms
+            // 
+            this.txtPercIcms.Location = new System.Drawing.Point(492, 58);
+            this.txtPercIcms.MaxLength = 8;
+            this.txtPercIcms.Name = "txtPercIcms";
+            this.txtPercIcms.Size = new System.Drawing.Size(70, 20);
+            this.txtPercIcms.TabIndex = 32;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(489, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Percentual ICMS";
+            // 
             // FormCadEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIcms);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPercIcms);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodPais);
             this.Controls.Add(this.label1);
@@ -144,6 +186,10 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtCodPais, 0);
             this.Controls.SetChildIndex(this.btnConsulta, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.txtPercIcms, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.txtIcms, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +205,9 @@
         private System.Windows.Forms.TextBox txtCodPais;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.TextBox txtIcms;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPercIcms;
+        private System.Windows.Forms.Label label4;
     }
 }

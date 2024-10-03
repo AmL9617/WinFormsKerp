@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadpais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadpais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\ramoatividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\ramoatividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\ramoatividadesclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\ramoatividadesclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormCadPais.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPais.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadPais.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPais.cs [Design]",
-              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadPais.cs [Design]",
+              "Title": "Contatos.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Contatos.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\Contatos.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Contatos.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\Contatos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T17:21:31.428Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-03T19:21:47.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RamoAtividades.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividades.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\RamoAtividades.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividades.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\RamoAtividades.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:54:35.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RamoAtividadesClientes.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividadesClientes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\RamoAtividadesClientes.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividadesClientes.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\RamoAtividadesClientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:54:22.381Z",
+              "EditorCaption": ""
             }
           ]
         }
