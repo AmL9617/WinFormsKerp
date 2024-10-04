@@ -3,16 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\contatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\ramoatividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\ramoatividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadtransportadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadtransportadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\ramoatividadesclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\ramoatividadesclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadparcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadparcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadpais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadpais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadlistapreco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadlistapreco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadgrupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadgrupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadformapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadformapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcontador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcontador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcondicaopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcondicaopagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,47 +85,236 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 279,
+          "DockedWidth": 240,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Contatos.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Contatos.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Classes\\Contatos.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Contatos.cs",
-              "RelativeToolTip": "KnkForms\\Classes\\Contatos.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Title": "FormCadVendedor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadVendedor.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadVendedor.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadVendedor.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadVendedor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T19:21:47.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T19:20:13.857Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RamoAtividades.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividades.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Classes\\RamoAtividades.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividades.cs",
-              "RelativeToolTip": "KnkForms\\Classes\\RamoAtividades.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Title": "FormCadTransportadora.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadTransportadora.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadTransportadora.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadTransportadora.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadTransportadora.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T18:54:35.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T19:20:05.015Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RamoAtividadesClientes.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividadesClientes.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Classes\\RamoAtividadesClientes.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\RamoAtividadesClientes.cs",
-              "RelativeToolTip": "KnkForms\\Classes\\RamoAtividadesClientes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Title": "FormCadRegiao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadRegiao.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T18:54:22.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T19:20:03.609Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCadParcela.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadParcela.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadParcela.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadParcela.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadParcela.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:20:02.404Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormCadPais.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPais.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadPais.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPais.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadPais.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:54.437Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormCadPai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPai.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadPai.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadPai.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadPai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:53.672Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormCadMarca.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadMarca.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadMarca.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadMarca.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadMarca.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:52.063Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormCadListaPreco.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadListaPreco.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadListaPreco.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadListaPreco.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadListaPreco.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:47.17Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormCadGrupo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadGrupo.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadGrupo.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadGrupo.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadGrupo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:45.764Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormCadFuncionario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFuncionario.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadFuncionario.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFuncionario.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadFuncionario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:39.812Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormCadFornecedor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFornecedor.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadFornecedor.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFornecedor.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadFornecedor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:32.517Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormCadFormaPagamento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFormaPagamento.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadFormaPagamento.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadFormaPagamento.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadFormaPagamento.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:30.33Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormCadEstado.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEstado.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadEstado.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEstado.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadEstado.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:25.206Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormCadEmpresa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEmpresa.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadEmpresa.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEmpresa.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadEmpresa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:22.144Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormCadContato.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContato.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadContato.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContato.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadContato.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:15.083Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormCadContador.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContador.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadContador.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContador.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadContador.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:12.459Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormCadCondicaoPagamento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCondicaoPagamento.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadCondicaoPagamento.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCondicaoPagamento.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadCondicaoPagamento.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:08.96Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormCadCidade.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCidade.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadCidade.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCidade.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadCidade.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:19:07.069Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormCadCliente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCliente.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadCliente.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCliente.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadCliente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:03:44.314Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

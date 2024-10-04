@@ -42,9 +42,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 9;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 10;
+            // 
             // btnSalvar
             // 
+            this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 8;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 12;
             // 
             // txtSigla
             // 
@@ -52,7 +69,7 @@
             this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(42, 20);
-            this.txtSigla.TabIndex = 24;
+            this.txtSigla.TabIndex = 3;
             // 
             // label2
             // 
@@ -69,7 +86,7 @@
             this.txtEstado.MaxLength = 50;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(126, 20);
-            this.txtEstado.TabIndex = 20;
+            this.txtEstado.TabIndex = 2;
             // 
             // lblNomeEstado
             // 
@@ -86,7 +103,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(727, 28);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 27;
+            this.chkAtivo.TabIndex = 7;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -111,7 +128,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(396, 55);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(75, 23);
-            this.btnConsulta.TabIndex = 30;
+            this.btnConsulta.TabIndex = 4;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
@@ -122,7 +139,7 @@
             this.txtIcms.MaxLength = 8;
             this.txtIcms.Name = "txtIcms";
             this.txtIcms.Size = new System.Drawing.Size(62, 20);
-            this.txtIcms.TabIndex = 34;
+            this.txtIcms.TabIndex = 6;
             // 
             // label3
             // 
@@ -139,7 +156,7 @@
             this.txtPercIcms.MaxLength = 8;
             this.txtPercIcms.Name = "txtPercIcms";
             this.txtPercIcms.Size = new System.Drawing.Size(70, 20);
-            this.txtPercIcms.TabIndex = 32;
+            this.txtPercIcms.TabIndex = 5;
             // 
             // label4
             // 

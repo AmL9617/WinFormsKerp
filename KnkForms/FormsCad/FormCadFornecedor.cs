@@ -1,4 +1,5 @@
 ﻿using KnkForms.Classes;
+using KnkForms.FormsCon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ namespace KnkForms.Forms
     public partial class FormCadFornecedor : KnkForms.FormCadPai
     {
         Fornecedores oFornecedor;
+        FormConContatos oFrmConContatos;
         public FormCadFornecedor()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace KnkForms.Forms
             txtTrade.Clear();
             txtCodProd.Clear();
             txtLimite.Clear();
-            txtTipoCont.Clear();
+            txtContato.Clear();
             txtInscEst.Clear();
             txtCnpj.Clear();
             dataUltMov.Value = DateTime.Today;
@@ -61,12 +63,12 @@ namespace KnkForms.Forms
             txtTrade.Text = oFornecedor.Trade;
             txtCodProd.Text = Convert.ToString(oFornecedor.CodProdIgual);
             txtLimite.Text = Convert.ToString(oFornecedor.LimiteCredito);
-            txtTipoCont.Text = oFornecedor.TipoContato;
+            txtContato.Text = Convert.ToString(oFornecedor.CodContatos);
             txtInscEst.Text = oFornecedor.InscricaoEstadual;
             txtCnpj.Text = oFornecedor.CNPJ;
             dataUltMov.Value = oFornecedor.UltimoMovimento;
             chkVerCliente.Checked = oFornecedor.VerEmClientes;
-            txtObservacao.Text = oFornecedor.Observacao;
+            txtObservacao.Text = oFornecedor.Observacoes;
             chkAtivo.Checked = oFornecedor.Ativo;
             txtCodUser.Text = Convert.ToString(oFornecedor.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oFornecedor.DataCadastro);
@@ -87,7 +89,7 @@ namespace KnkForms.Forms
             txtTrade.Enabled = false;
             txtCodProd.Enabled = false;
             txtLimite.Enabled = false;
-            txtTipoCont.Enabled = false;
+            txtContato.Enabled = false;
             txtInscEst.Enabled = false;
             txtCnpj.Enabled = false;
             dataUltMov.Enabled = false;
@@ -113,7 +115,7 @@ namespace KnkForms.Forms
             txtTrade.Enabled = true;
             txtCodProd.Enabled = true;
             txtLimite.Enabled = true;
-            txtTipoCont.Enabled = true;
+            txtContato.Enabled = true;
             txtInscEst.Enabled = true;
             txtCnpj.Enabled = true;
             dataUltMov.Enabled = true;
@@ -139,16 +141,26 @@ namespace KnkForms.Forms
             oFornecedor.Trade = txtTrade.Text;
             oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd);
             oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite);
-            oFornecedor.TipoContato = txtContato.Text;
+            oFornecedor.CodContatos = Convert.ToInt32(txtContato);
             oFornecedor.InscricaoEstadual = txtInscEst.Text;
             oFornecedor.CNPJ = txtCnpj.Text;
             oFornecedor.UltimoMovimento = dataUltMov.Value;
             oFornecedor.VerEmClientes = chkAtivo.Checked;
-            oFornecedor.Observacao = txtObservacao.Text;
+            oFornecedor.Observacoes = txtObservacao.Text;
             oFornecedor.Ativo = chkAtivo.Checked;
             oFornecedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFornecedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+        }
+
+        public void setFrmConContatos(Object obj)
+        {
+            oFrmConContatos = (FormConContatos)obj;
+        }
+        private void btnPesquisarContato_Click(object sender, EventArgs e)
+        {
+            oFrmConContatos.ConhecaObj(oFornecedor.Contatos);
+            oFrmConContatos.ShowDialog();
         }
     }
 }

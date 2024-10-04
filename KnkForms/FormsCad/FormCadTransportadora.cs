@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KnkForms.FormsCon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ namespace KnkForms.Classes
     public partial class FormCadTransportadora : KnkForms.FormCadPai
     {
         Transportadoras aTransportadora;
+        FormConContatos oFrmConContatos;
         public FormCadTransportadora()
         {
             InitializeComponent();
@@ -58,7 +60,7 @@ namespace KnkForms.Classes
             txtTelefone.Text = aTransportadora.Telefone;
             txtFax.Text = aTransportadora.Fax;
             txtCelular.Text = aTransportadora.Celular;
-            txtContato.Text = aTransportadora.Contato;
+            txtContato.Text = Convert.ToString(aTransportadora.CodContatos);
             txtWebsite.Text = aTransportadora.Website;
             txtEmail.Text = aTransportadora.Email;
             txtCnpj.Text = aTransportadora.CNPJ;
@@ -133,7 +135,7 @@ namespace KnkForms.Classes
             txtTelefone.Text = aTransportadora.Telefone;
             aTransportadora.Fax = txtFax.Text;
             aTransportadora.Celular = txtCelular.Text;
-            aTransportadora.Contato = txtContato.Text;
+            aTransportadora.CodContatos = Convert.ToInt32(txtContato.Text);
             aTransportadora.Website = txtWebsite.Text;
             aTransportadora.Email = txtEmail.Text;
             aTransportadora.CNPJ = txtCnpj.Text;
@@ -143,6 +145,16 @@ namespace KnkForms.Classes
             aTransportadora.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aTransportadora.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aTransportadora.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+        }
+
+        public void setFrmConContatos(Object obj)
+        {
+            oFrmConContatos = (FormConContatos)obj;
+        }
+        private void btnPesquisarContato_Click(object sender, EventArgs e)
+        {
+            oFrmConContatos.ConhecaObj(aTransportadora.Contatos);
+            oFrmConContatos.ShowDialog();
         }
     }
 }

@@ -82,3 +82,5 @@ C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Forms
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Classes.FormConRegioes.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Classes.FormConTransportadoras.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Classes.FormConVendedores.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadContato.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConContatos.resources

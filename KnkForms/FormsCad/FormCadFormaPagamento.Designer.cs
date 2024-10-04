@@ -36,13 +36,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 6;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 5;
+            // 
             // txtFormaPagamento
             // 
             this.txtFormaPagamento.Location = new System.Drawing.Point(114, 58);
             this.txtFormaPagamento.MaxLength = 30;
             this.txtFormaPagamento.Name = "txtFormaPagamento";
             this.txtFormaPagamento.Size = new System.Drawing.Size(113, 20);
-            this.txtFormaPagamento.TabIndex = 52;
+            this.txtFormaPagamento.TabIndex = 2;
             // 
             // lbl1
             // 
@@ -59,7 +67,7 @@
             this.txtOpDisp.MaxLength = 30;
             this.txtOpDisp.Name = "txtOpDisp";
             this.txtOpDisp.Size = new System.Drawing.Size(118, 20);
-            this.txtOpDisp.TabIndex = 54;
+            this.txtOpDisp.TabIndex = 3;
             // 
             // label1
             // 
@@ -75,7 +83,7 @@
             this.txtNfce.Location = new System.Drawing.Point(380, 58);
             this.txtNfce.Name = "txtNfce";
             this.txtNfce.Size = new System.Drawing.Size(100, 20);
-            this.txtNfce.TabIndex = 56;
+            this.txtNfce.TabIndex = 4;
             // 
             // label2
             // 

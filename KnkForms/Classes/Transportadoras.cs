@@ -21,7 +21,6 @@ namespace KnkForms.Classes
         protected string telefone;
         protected string fax;
         protected string celular;
-        protected string contato;
         protected string website;
         protected string email;
         protected string observacao;
@@ -29,6 +28,10 @@ namespace KnkForms.Classes
         protected string inscricaoEstadual;
         protected string cnpj;
 
+        //Placeholder
+        protected int codContatos;
+        //Agregação
+        protected Contatos contatos;
         public Transportadoras()
         {
             transportadoraCliente = "";
@@ -44,13 +47,15 @@ namespace KnkForms.Classes
             telefone = "";
             fax = "";
             celular = "";
-            contato = "";
             website = "";
             email = "";
             observacao = "";
             ultimaCompra = DateTime.MinValue;
             inscricaoEstadual = "";
             cnpj = "";
+
+            codContatos = 0;
+            contatos = new Contatos();
         }
 
         public string TransportadoraCliente
@@ -131,12 +136,6 @@ namespace KnkForms.Classes
             set { celular = value; }
         }
 
-        public string Contato
-        {
-            get { return contato; }
-            set { contato = value; }
-        }
-
         public string Website
         {
             get { return website; }
@@ -171,6 +170,17 @@ namespace KnkForms.Classes
         {
             get { return cnpj; }
             set { cnpj = value; }
+        }
+
+        public int CodContatos
+        {
+            get { return codContatos; }
+            set { codContatos = value; }
+        }
+        public Contatos Contatos
+        {
+            get { return contatos; }
+            set { contatos = value; }
         }
     }
 

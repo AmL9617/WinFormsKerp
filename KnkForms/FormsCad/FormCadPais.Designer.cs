@@ -41,9 +41,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 9;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 10;
+            // 
             // btnSalvar
             // 
+            this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 8;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 12;
             // 
             // lblNomePais
             // 
@@ -60,14 +77,14 @@
             this.txtPais.MaxLength = 50;
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(100, 20);
-            this.txtPais.TabIndex = 10;
+            this.txtPais.TabIndex = 2;
             // 
             // txtTipoPais
             // 
             this.txtTipoPais.Location = new System.Drawing.Point(235, 58);
             this.txtTipoPais.Name = "txtTipoPais";
             this.txtTipoPais.Size = new System.Drawing.Size(90, 20);
-            this.txtTipoPais.TabIndex = 12;
+            this.txtTipoPais.TabIndex = 3;
             // 
             // label1
             // 
@@ -84,7 +101,7 @@
             this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(42, 20);
-            this.txtSigla.TabIndex = 14;
+            this.txtSigla.TabIndex = 4;
             // 
             // label2
             // 
@@ -101,7 +118,7 @@
             this.txtDdi.MaxLength = 3;
             this.txtDdi.Name = "txtDdi";
             this.txtDdi.Size = new System.Drawing.Size(35, 20);
-            this.txtDdi.TabIndex = 16;
+            this.txtDdi.TabIndex = 5;
             // 
             // label3
             // 
@@ -118,7 +135,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(727, 28);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 18;
+            this.chkAtivo.TabIndex = 7;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -128,7 +145,7 @@
             this.boxNacional.Location = new System.Drawing.Point(467, 58);
             this.boxNacional.Name = "boxNacional";
             this.boxNacional.Size = new System.Drawing.Size(80, 21);
-            this.boxNacional.TabIndex = 19;
+            this.boxNacional.TabIndex = 6;
             // 
             // label4
             // 

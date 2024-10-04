@@ -20,6 +20,7 @@ namespace KnkForms.Forms
         FormConRegioes oFrmConRegioes;
         FormConVendedores oFrmConVendedores;
         FormConTransportadoras oFrmConTransportadoras;
+        FormConContatos oFrmConContatos;
         public FormCadCliente()
         {
             InitializeComponent();
@@ -55,8 +56,6 @@ namespace KnkForms.Forms
             dataFundacao.Value = DateTime.Today;
 
             txtContato.Clear();
-            txtTipoContato.Clear();
-            txtObsContato.Clear();
 
             txtIdListPrec.Clear();
             txtIdCondPag.Clear();
@@ -100,10 +99,7 @@ namespace KnkForms.Forms
             chkProdRur.Checked = oCliente.ProdutorRural;
             dataFundacao.Value = oCliente.DataFundacao;
 
-            txtContato.Text = oCliente.Contato;
-            txtTipoContato.Text = oCliente.TipoContato;
-            txtObsContato.Text = oCliente.ObsContato;
-
+            txtContato.Text = Convert.ToString(oCliente.CodContatos);
             txtIdListPrec.Text = Convert.ToString(oCliente.CodListaPrecos);
             txtIdCondPag.Text = Convert.ToString(oCliente.CodCondicaoPagamentos);
             txtIdReg.Text = Convert.ToString(oCliente.CodRegioes);
@@ -146,9 +142,7 @@ namespace KnkForms.Forms
             dataFundacao.Enabled = false;
 
             txtContato.Enabled = false;
-            txtTipoContato.Enabled = false;
-            txtObsContato.Enabled = false;
-
+           
             txtIdListPrec.Enabled = false;
             txtIdCondPag.Enabled = false;
             txtIdReg.Enabled = false;
@@ -191,9 +185,7 @@ namespace KnkForms.Forms
             dataFundacao.Enabled = true;
 
             txtContato.Enabled = true;
-            txtTipoContato.Enabled = true;
-            txtObsContato.Enabled = true;
-
+           
             txtIdListPrec.Enabled = true;
             txtIdCondPag.Enabled = true;
             txtIdReg.Enabled = true;
@@ -235,9 +227,7 @@ namespace KnkForms.Forms
             oCliente.ProdutorRural = chkProdRur.Checked;
             oCliente.DataFundacao = dataFundacao.Value; 
 
-            oCliente.Contato = txtContato.Text;
-            oCliente.TipoContato = txtTipoContato.Text;
-            oCliente.ObsContato = txtObsContato.Text;
+            oCliente.CodContatos = Convert.ToInt32(txtContato.Text);
 
             oCliente.CodListaPrecos = Convert.ToInt32(txtIdListPrec.Text);
             oCliente.CodCondicaoPagamentos = Convert.ToInt32(txtIdCondPag.Text);
@@ -285,7 +275,10 @@ namespace KnkForms.Forms
         {
             oFrmConTransportadoras = (FormConTransportadoras)obj;
         }
-
+        public void setFrmConContatos(Object obj)
+        {
+            oFrmConContatos = (FormConContatos)obj;
+        }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -322,6 +315,10 @@ namespace KnkForms.Forms
             oFrmConTransportadoras.ShowDialog();
         }
 
-        
+        private void btnConContato_Click(object sender, EventArgs e)
+        {
+            oFrmConContatos.ConhecaObj(oCliente.Contatos);
+            oFrmConContatos.ShowDialog();
+        }
     }
 }

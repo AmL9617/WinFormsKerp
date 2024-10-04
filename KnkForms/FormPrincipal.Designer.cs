@@ -48,6 +48,7 @@
             this.cadRegioesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadTransportadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.cadClientesToolStripMenuItem,
             this.cadCondicaoDePagamentoToolStripMenuItem,
             this.cadContadorToolStripMenuItem,
+            this.contatosToolStripMenuItem,
             this.cadEmpresaToolStripMenuItem,
             this.cadEstadosToolStripMenuItem,
             this.cadFormaDePagamentoToolStripMenuItem,
@@ -212,6 +214,13 @@
             this.cadVendedoresToolStripMenuItem.Text = "Vendedores";
             this.cadVendedoresToolStripMenuItem.Click += new System.EventHandler(this.cadVendedoresToolStripMenuItem_Click);
             // 
+            // contatosToolStripMenuItem
+            // 
+            this.contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
+            this.contatosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.contatosToolStripMenuItem.Text = "Contatos";
+            this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,5 +261,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadRegioesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadTransportadorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadVendedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contatosToolStripMenuItem;
     }
 }

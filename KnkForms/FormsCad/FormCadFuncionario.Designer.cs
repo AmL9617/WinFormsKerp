@@ -65,12 +65,32 @@
             this.label18 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 21;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 22;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 23;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 20;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 24;
+            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(35, 159);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(224, 20);
-            this.txtEmail.TabIndex = 172;
+            this.txtEmail.TabIndex = 11;
             // 
             // label14
             // 
@@ -87,14 +107,14 @@
             this.txtFuncionario.MaxLength = 100;
             this.txtFuncionario.Name = "txtFuncionario";
             this.txtFuncionario.Size = new System.Drawing.Size(197, 20);
-            this.txtFuncionario.TabIndex = 168;
+            this.txtFuncionario.TabIndex = 2;
             // 
             // txtSalario
             // 
             this.txtSalario.Location = new System.Drawing.Point(276, 159);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(81, 20);
-            this.txtSalario.TabIndex = 167;
+            this.txtSalario.TabIndex = 12;
             // 
             // label12
             // 
@@ -110,7 +130,7 @@
             this.txtCelular.Location = new System.Drawing.Point(661, 108);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
-            this.txtCelular.TabIndex = 165;
+            this.txtCelular.TabIndex = 10;
             // 
             // label13
             // 
@@ -126,7 +146,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(530, 108);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 163;
+            this.txtTelefone.TabIndex = 9;
             // 
             // label3
             // 
@@ -143,7 +163,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
-            this.txtCep.TabIndex = 161;
+            this.txtCep.TabIndex = 8;
             // 
             // label9
             // 
@@ -160,7 +180,7 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(167, 20);
-            this.txtBairro.TabIndex = 157;
+            this.txtBairro.TabIndex = 7;
             // 
             // label6
             // 
@@ -178,7 +198,7 @@
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(192, 20);
-            this.txtComplemento.TabIndex = 155;
+            this.txtComplemento.TabIndex = 6;
             // 
             // label7
             // 
@@ -195,7 +215,7 @@
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(51, 20);
-            this.txtNumero.TabIndex = 153;
+            this.txtNumero.TabIndex = 4;
             // 
             // label8
             // 
@@ -213,7 +233,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(225, 20);
-            this.txtEndereco.TabIndex = 151;
+            this.txtEndereco.TabIndex = 3;
             // 
             // label4
             // 
@@ -239,7 +259,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(726, 24);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 174;
+            this.chkAtivo.TabIndex = 5;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +268,7 @@
             this.dataAdmissao.Location = new System.Drawing.Point(374, 162);
             this.dataAdmissao.Name = "dataAdmissao";
             this.dataAdmissao.Size = new System.Drawing.Size(85, 20);
-            this.dataAdmissao.TabIndex = 176;
+            this.dataAdmissao.TabIndex = 13;
             // 
             // label5
             // 
@@ -264,7 +284,7 @@
             this.dataDemissao.Location = new System.Drawing.Point(477, 162);
             this.dataDemissao.Name = "dataDemissao";
             this.dataDemissao.Size = new System.Drawing.Size(85, 20);
-            this.dataDemissao.TabIndex = 178;
+            this.dataDemissao.TabIndex = 14;
             // 
             // label1
             // 
@@ -280,7 +300,7 @@
             this.dataNascimento.Location = new System.Drawing.Point(578, 162);
             this.dataNascimento.Name = "dataNascimento";
             this.dataNascimento.Size = new System.Drawing.Size(85, 20);
-            this.dataNascimento.TabIndex = 180;
+            this.dataNascimento.TabIndex = 15;
             // 
             // label2
             // 
@@ -296,7 +316,7 @@
             this.txtRg.Location = new System.Drawing.Point(35, 215);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(100, 20);
-            this.txtRg.TabIndex = 186;
+            this.txtRg.TabIndex = 17;
             // 
             // label10
             // 
@@ -313,7 +333,7 @@
             this.txtCpf.MaxLength = 18;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(100, 20);
-            this.txtCpf.TabIndex = 184;
+            this.txtCpf.TabIndex = 18;
             // 
             // label11
             // 
@@ -329,7 +349,7 @@
             this.txtSexo.Location = new System.Drawing.Point(696, 162);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(32, 20);
-            this.txtSexo.TabIndex = 182;
+            this.txtSexo.TabIndex = 16;
             // 
             // label15
             // 
@@ -347,7 +367,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(741, 118);
-            this.txtObservacao.TabIndex = 188;
+            this.txtObservacao.TabIndex = 19;
             // 
             // label18
             // 

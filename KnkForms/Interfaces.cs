@@ -1,5 +1,6 @@
 ﻿using KnkForms.Classes;
 using KnkForms.Forms;
+using KnkForms.FormsCad;
 using KnkForms.FormsCon;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace KnkForms
         FormConClientes oFormConClientes;
         FormConCondicaoPagamentos oFormConCondPag;
         FormConContadores oFormConContadores;
+        FormConContatos oFormConContatos;
         FormConEmpresas oFormConEmpresas;
         FormConEstados oFormConEstados;
         FormConFormaPagamentos oFormConFormaPag;
@@ -36,6 +38,7 @@ namespace KnkForms
         FormCadCliente oFormCadCliente;
         FormCadCondicaoPagamento oFormCadCondPag;
         FormCadContador oFormCadContador;
+        FormCadContato oFormCadContato;
         FormCadEmpresa oFormCadEmpresa;
         FormCadEstado oFormCadEstado;
         FormCadFormaPagamento oFormCadFormaPag;
@@ -59,6 +62,7 @@ namespace KnkForms
             oFormConClientes = new FormConClientes();
             oFormConCondPag = new FormConCondicaoPagamentos();
             oFormConContadores = new FormConContadores();
+            oFormConContatos = new FormConContatos();
             oFormConEmpresas = new FormConEmpresas();
             oFormConEstados = new FormConEstados();
             oFormConFormaPag = new FormConFormaPagamentos();
@@ -79,6 +83,7 @@ namespace KnkForms
             oFormCadCliente = new FormCadCliente();
             oFormCadCondPag = new FormCadCondicaoPagamento();
             oFormCadContador = new FormCadContador();
+            oFormCadContato = new FormCadContato();
             oFormCadEmpresa = new FormCadEmpresa();
             oFormCadEstado = new FormCadEstado();
             oFormCadFormaPag = new FormCadFormaPagamento();
@@ -98,6 +103,7 @@ namespace KnkForms
             oFormConClientes.SetFrmCadastro(oFormCadCliente);
             oFormConCondPag.SetFrmCadastro(oFormCadCondPag);
             oFormConContadores.SetFrmCadastro(oFormCadContador);
+            oFormConContatos.SetFrmCadastro(oFormCadContato);
             oFormConEmpresas.SetFrmCadastro(oFormCadEmpresa);
             oFormConEstados.SetFrmCadastro(oFormCadEstado);
             oFormConFormaPag.SetFrmCadastro(oFormCadFormaPag);
@@ -115,15 +121,19 @@ namespace KnkForms
 
             //Agregação
             oFormCadCidade.setFrmConEstados(oFormConEstados);
-            oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
-            oFormCadEstado.setFrmConPaises(oFormConPaises);
-            oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
-            oFormCadListaPreco.setFrmConGrupos(oFormConGrupos);
+            oFormCadCliente.setFrmConContatos(oFormConContatos);
             oFormCadCliente.setFrmConCondPag(oFormConCondPag);
             oFormCadCliente.setFrmConListaPrecos(oFormConListaPrecos);
             oFormCadCliente.setFrmConRegioes(oFormConRegioes);
             oFormCadCliente.setFrmConTransportadoras(oFormConTransportadoras);
             oFormCadCliente.setFrmConVendedores(oFormConVendedores);
+            oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
+            oFormCadContador.setFrmConContatos(oFormConContatos);
+            oFormCadEstado.setFrmConPaises(oFormConPaises);
+            oFormCadFornecedor.setFrmConContatos(oFormConContatos);
+            oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
+            oFormCadListaPreco.setFrmConGrupos(oFormConGrupos);
+            oFormCadTransportadora.setFrmConContatos(oFormConContatos);
         }
 
         public void PecaCidades(Object obj)
@@ -150,6 +160,11 @@ namespace KnkForms
             oFormConContadores.ShowDialog();
         }
 
+        public void PecaContatos(Object obj)
+        {
+            oFormConContatos.ConhecaObj(obj);
+            oFormConContatos.ShowDialog();
+        }
         public void PecaEmpresas(Object obj)
         {
             oFormConEmpresas.ConhecaObj(obj);

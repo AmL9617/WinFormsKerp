@@ -26,9 +26,6 @@ namespace KnkForms.Classes
         protected DateTime dataFundacao;
         protected bool regimeSemSt;
         protected bool produtorRural;
-        protected string tipoContato;
-        protected string contato;
-        protected string obsContato;
         protected bool verEmFornecedores;
         protected string pessoasAutorizadas;
         protected string obsDiv;
@@ -47,7 +44,7 @@ namespace KnkForms.Classes
         protected int codContadores;
         protected int codFornecedores;
         protected int codListaPrecos;
-
+        protected int codContatos;
 
         //Agregação
         protected RamoAtividades ramoAtividades;
@@ -60,6 +57,7 @@ namespace KnkForms.Classes
         protected Contadores contadores;
         protected Fornecedores fornecedores;
         protected ListaPrecos listaPrecos;
+        protected Contatos contatos;
 
         public Clientes()
         {
@@ -82,9 +80,6 @@ namespace KnkForms.Classes
             dataFundacao = DateTime.MinValue;
             regimeSemSt = false;
             produtorRural = false;
-            tipoContato = "";
-            contato = "";
-            obsContato = "";
             verEmFornecedores = false;
             pessoasAutorizadas = "";
             obsDiv = "";
@@ -101,6 +96,7 @@ namespace KnkForms.Classes
             contadores = new Contadores();
             fornecedores = new Fornecedores();
             listaPrecos = new ListaPrecos();
+            contatos = new Contatos();
 
             codRamoAtividades = 0;
             codRegioes = 0;
@@ -112,6 +108,7 @@ namespace KnkForms.Classes
             codContadores = 0;
             codFornecedores = 0;
             codListaPrecos = 0;
+            codContatos = 0;
         }
 
         public string Cliente
@@ -228,24 +225,6 @@ namespace KnkForms.Classes
             set { produtorRural = value; }
         }
 
-        public string TipoContato
-        {
-            get { return tipoContato; }
-            set { tipoContato = value; }
-        }
-
-        public string Contato
-        {
-            get { return contato; }
-            set { contato = value; }
-        }
-
-        public string ObsContato
-        {
-            get { return obsContato; }
-            set { obsContato = value; }
-        }
-
         public bool VerEmFornecedores
         {
             get { return verEmFornecedores; }
@@ -333,6 +312,12 @@ namespace KnkForms.Classes
             set { listaPrecos = value; }
         }
 
+        public Contatos Contatos
+        {
+            get { return contatos; } 
+            set {  contatos = value; }
+        }
+
 
         public int CodRamoAtividades
         {
@@ -392,6 +377,11 @@ namespace KnkForms.Classes
         {
             get { return codListaPrecos; }
             set { codListaPrecos = value; }
+        }
+        public int CodContatos
+        {
+            get { return codContatos; }
+            set { codContatos = value; }
         }
     }
 

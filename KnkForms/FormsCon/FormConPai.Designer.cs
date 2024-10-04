@@ -37,6 +37,10 @@
             this.btnIncluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 7;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -80,7 +84,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(610, 414);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 10;
+            this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -90,7 +94,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(529, 414);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -100,7 +104,7 @@
             this.btnIncluir.Location = new System.Drawing.Point(448, 414);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(75, 23);
-            this.btnIncluir.TabIndex = 12;
+            this.btnIncluir.TabIndex = 4;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);

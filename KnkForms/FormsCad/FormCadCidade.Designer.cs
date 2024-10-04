@@ -38,9 +38,26 @@
             this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 7;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 8;
+            // 
             // btnSalvar
             // 
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 6;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 10;
             // 
             // txtCodEstado
             // 
@@ -61,12 +78,10 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Checked = true;
-            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Location = new System.Drawing.Point(728, 21);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 34;
+            this.chkAtivo.TabIndex = 5;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -76,7 +91,7 @@
             this.txtDDD.MaxLength = 3;
             this.txtDDD.Name = "txtDDD";
             this.txtDDD.Size = new System.Drawing.Size(41, 20);
-            this.txtDDD.TabIndex = 33;
+            this.txtDDD.TabIndex = 3;
             // 
             // label2
             // 
@@ -93,7 +108,7 @@
             this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(142, 20);
-            this.txtCidade.TabIndex = 31;
+            this.txtCidade.TabIndex = 2;
             // 
             // lblNomeCidade
             // 
@@ -109,7 +124,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(399, 58);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
-            this.btnConsulta.TabIndex = 66;
+            this.btnConsulta.TabIndex = 4;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);

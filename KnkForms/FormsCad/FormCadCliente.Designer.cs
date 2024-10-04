@@ -83,13 +83,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnConContato = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.btnContato = new System.Windows.Forms.Button();
-            this.txtObsContato = new System.Windows.Forms.TextBox();
-            this.txtTipoContato = new System.Windows.Forms.TextBox();
             this.txtContato = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -119,13 +116,33 @@
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 37;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 38;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 39;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 36;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 40;
+            // 
             // txtCliente
             // 
             this.txtCliente.Location = new System.Drawing.Point(113, 58);
             this.txtCliente.MaxLength = 100;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(146, 20);
-            this.txtCliente.TabIndex = 190;
+            this.txtCliente.TabIndex = 2;
             // 
             // txtCep
             // 
@@ -133,7 +150,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
-            this.txtCep.TabIndex = 183;
+            this.txtCep.TabIndex = 8;
             // 
             // label9
             // 
@@ -150,7 +167,7 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(117, 20);
-            this.txtBairro.TabIndex = 181;
+            this.txtBairro.TabIndex = 7;
             // 
             // label6
             // 
@@ -168,7 +185,7 @@
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(178, 20);
-            this.txtComplemento.TabIndex = 179;
+            this.txtComplemento.TabIndex = 5;
             // 
             // label7
             // 
@@ -185,7 +202,7 @@
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(52, 20);
-            this.txtNumero.TabIndex = 177;
+            this.txtNumero.TabIndex = 4;
             // 
             // label8
             // 
@@ -203,7 +220,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(196, 20);
-            this.txtEndereco.TabIndex = 175;
+            this.txtEndereco.TabIndex = 3;
             // 
             // label4
             // 
@@ -229,7 +246,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(738, 24);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 193;
+            this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -242,7 +259,7 @@
             this.boxFisJur.Location = new System.Drawing.Point(307, 110);
             this.boxFisJur.Name = "boxFisJur";
             this.boxFisJur.Size = new System.Drawing.Size(95, 21);
-            this.boxFisJur.TabIndex = 195;
+            this.boxFisJur.TabIndex = 9;
             // 
             // label2
             // 
@@ -258,7 +275,7 @@
             this.txtCodCidade.Location = new System.Drawing.Point(422, 111);
             this.txtCodCidade.Name = "txtCodCidade";
             this.txtCodCidade.Size = new System.Drawing.Size(47, 20);
-            this.txtCodCidade.TabIndex = 197;
+            this.txtCodCidade.TabIndex = 100;
             // 
             // label1
             // 
@@ -294,7 +311,7 @@
             this.txtObsDiv.Multiline = true;
             this.txtObsDiv.Name = "txtObsDiv";
             this.txtObsDiv.Size = new System.Drawing.Size(707, 113);
-            this.txtObsDiv.TabIndex = 146;
+            this.txtObsDiv.TabIndex = 35;
             // 
             // label27
             // 
@@ -310,7 +327,7 @@
             this.dataUltComp.Location = new System.Drawing.Point(254, 29);
             this.dataUltComp.Name = "dataUltComp";
             this.dataUltComp.Size = new System.Drawing.Size(87, 20);
-            this.dataUltComp.TabIndex = 144;
+            this.dataUltComp.TabIndex = 34;
             // 
             // label26
             // 
@@ -326,7 +343,7 @@
             this.dataUltAlt.Location = new System.Drawing.Point(142, 29);
             this.dataUltAlt.Name = "dataUltAlt";
             this.dataUltAlt.Size = new System.Drawing.Size(87, 20);
-            this.dataUltAlt.TabIndex = 142;
+            this.dataUltAlt.TabIndex = 33;
             // 
             // label25
             // 
@@ -342,7 +359,7 @@
             this.dataCad.Location = new System.Drawing.Point(16, 29);
             this.dataCad.Name = "dataCad";
             this.dataCad.Size = new System.Drawing.Size(87, 20);
-            this.dataCad.TabIndex = 140;
+            this.dataCad.TabIndex = 32;
             // 
             // label24
             // 
@@ -373,7 +390,7 @@
             this.btnPesquisarTransportadora.Location = new System.Drawing.Point(313, 28);
             this.btnPesquisarTransportadora.Name = "btnPesquisarTransportadora";
             this.btnPesquisarTransportadora.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarTransportadora.TabIndex = 139;
+            this.btnPesquisarTransportadora.TabIndex = 30;
             this.btnPesquisarTransportadora.Text = "⌕";
             this.btnPesquisarTransportadora.UseVisualStyleBackColor = true;
             this.btnPesquisarTransportadora.Click += new System.EventHandler(this.btnPesquisarTransportadora_Click);
@@ -383,7 +400,7 @@
             this.btnSalvarTransp.Location = new System.Drawing.Point(632, 26);
             this.btnSalvarTransp.Name = "btnSalvarTransp";
             this.btnSalvarTransp.Size = new System.Drawing.Size(70, 21);
-            this.btnSalvarTransp.TabIndex = 138;
+            this.btnSalvarTransp.TabIndex = 31;
             this.btnSalvarTransp.Text = "Salvar";
             this.btnSalvarTransp.UseVisualStyleBackColor = true;
             // 
@@ -432,7 +449,7 @@
             this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(313, 25);
             this.btnPesquisarRamoAtiv.Name = "btnPesquisarRamoAtiv";
             this.btnPesquisarRamoAtiv.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarRamoAtiv.TabIndex = 136;
+            this.btnPesquisarRamoAtiv.TabIndex = 28;
             this.btnPesquisarRamoAtiv.Text = "⌕";
             this.btnPesquisarRamoAtiv.UseVisualStyleBackColor = true;
             // 
@@ -441,7 +458,7 @@
             this.btnSalvarAtiv.Location = new System.Drawing.Point(651, 27);
             this.btnSalvarAtiv.Name = "btnSalvarAtiv";
             this.btnSalvarAtiv.Size = new System.Drawing.Size(70, 21);
-            this.btnSalvarAtiv.TabIndex = 134;
+            this.btnSalvarAtiv.TabIndex = 29;
             this.btnSalvarAtiv.Text = "Salvar";
             this.btnSalvarAtiv.UseVisualStyleBackColor = true;
             // 
@@ -500,7 +517,7 @@
             this.btnPesquisarVendedor.Location = new System.Drawing.Point(606, 72);
             this.btnPesquisarVendedor.Name = "btnPesquisarVendedor";
             this.btnPesquisarVendedor.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarVendedor.TabIndex = 141;
+            this.btnPesquisarVendedor.TabIndex = 25;
             this.btnPesquisarVendedor.Text = "⌕";
             this.btnPesquisarVendedor.UseVisualStyleBackColor = true;
             this.btnPesquisarVendedor.Click += new System.EventHandler(this.btnPesquisarVendedor_Click);
@@ -510,7 +527,7 @@
             this.btnPesquisarRegiao.Location = new System.Drawing.Point(606, 32);
             this.btnPesquisarRegiao.Name = "btnPesquisarRegiao";
             this.btnPesquisarRegiao.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarRegiao.TabIndex = 140;
+            this.btnPesquisarRegiao.TabIndex = 23;
             this.btnPesquisarRegiao.Text = "⌕";
             this.btnPesquisarRegiao.UseVisualStyleBackColor = true;
             this.btnPesquisarRegiao.Click += new System.EventHandler(this.btnPesquisarRegiao_Click);
@@ -520,7 +537,7 @@
             this.btnPesquisarCondPag.Location = new System.Drawing.Point(291, 72);
             this.btnPesquisarCondPag.Name = "btnPesquisarCondPag";
             this.btnPesquisarCondPag.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarCondPag.TabIndex = 139;
+            this.btnPesquisarCondPag.TabIndex = 24;
             this.btnPesquisarCondPag.Text = "⌕";
             this.btnPesquisarCondPag.UseVisualStyleBackColor = true;
             this.btnPesquisarCondPag.Click += new System.EventHandler(this.btnPesquisarCondPag_Click);
@@ -530,7 +547,7 @@
             this.btnPesquisarListaPreco.Location = new System.Drawing.Point(291, 29);
             this.btnPesquisarListaPreco.Name = "btnPesquisarListaPreco";
             this.btnPesquisarListaPreco.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarListaPreco.TabIndex = 138;
+            this.btnPesquisarListaPreco.TabIndex = 22;
             this.btnPesquisarListaPreco.Text = "⌕";
             this.btnPesquisarListaPreco.UseVisualStyleBackColor = true;
             this.btnPesquisarListaPreco.Click += new System.EventHandler(this.btnPesquisarListaPreco_Click);
@@ -541,7 +558,7 @@
             this.txtPessoasAut.Multiline = true;
             this.txtPessoasAut.Name = "txtPessoasAut";
             this.txtPessoasAut.Size = new System.Drawing.Size(713, 54);
-            this.txtPessoasAut.TabIndex = 137;
+            this.txtPessoasAut.TabIndex = 26;
             // 
             // txtIdVend
             // 
@@ -586,7 +603,7 @@
             this.chkVerForn.Location = new System.Drawing.Point(9, 184);
             this.chkVerForn.Name = "chkVerForn";
             this.chkVerForn.Size = new System.Drawing.Size(127, 17);
-            this.chkVerForn.TabIndex = 135;
+            this.chkVerForn.TabIndex = 27;
             this.chkVerForn.Text = "Ver em Fornecedores";
             this.chkVerForn.UseVisualStyleBackColor = true;
             // 
@@ -628,13 +645,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnConContato);
             this.tabPage2.Controls.Add(this.listView1);
             this.tabPage2.Controls.Add(this.btnContato);
-            this.tabPage2.Controls.Add(this.txtObsContato);
-            this.tabPage2.Controls.Add(this.txtTipoContato);
             this.tabPage2.Controls.Add(this.txtContato);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -643,6 +657,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Contato";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnConContato
+            // 
+            this.btnConContato.Location = new System.Drawing.Point(438, 42);
+            this.btnConContato.Name = "btnConContato";
+            this.btnConContato.Size = new System.Drawing.Size(18, 23);
+            this.btnConContato.TabIndex = 19;
+            this.btnConContato.Text = "⌕";
+            this.btnConContato.UseVisualStyleBackColor = true;
+            this.btnConContato.Click += new System.EventHandler(this.btnConContato_Click);
             // 
             // listView1
             // 
@@ -658,48 +682,16 @@
             this.btnContato.Location = new System.Drawing.Point(616, 37);
             this.btnContato.Name = "btnContato";
             this.btnContato.Size = new System.Drawing.Size(81, 24);
-            this.btnContato.TabIndex = 133;
+            this.btnContato.TabIndex = 21;
             this.btnContato.Text = "Adicionar";
             this.btnContato.UseVisualStyleBackColor = true;
-            // 
-            // txtObsContato
-            // 
-            this.txtObsContato.Location = new System.Drawing.Point(278, 42);
-            this.txtObsContato.Name = "txtObsContato";
-            this.txtObsContato.Size = new System.Drawing.Size(230, 20);
-            this.txtObsContato.TabIndex = 132;
-            // 
-            // txtTipoContato
-            // 
-            this.txtTipoContato.Location = new System.Drawing.Point(155, 42);
-            this.txtTipoContato.Name = "txtTipoContato";
-            this.txtTipoContato.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoContato.TabIndex = 130;
             // 
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(25, 42);
             this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(100, 20);
-            this.txtContato.TabIndex = 128;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(275, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
-            this.label11.TabIndex = 131;
-            this.label11.Text = "Observação";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(152, 26);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 13);
-            this.label12.TabIndex = 129;
-            this.label12.Text = "Tipo de Contato";
+            this.txtContato.Size = new System.Drawing.Size(405, 20);
+            this.txtContato.TabIndex = 20;
             // 
             // label13
             // 
@@ -722,7 +714,7 @@
             this.Menu.Name = "Menu";
             this.Menu.SelectedIndex = 0;
             this.Menu.Size = new System.Drawing.Size(741, 233);
-            this.Menu.TabIndex = 9;
+            this.Menu.TabIndex = 11;
             // 
             // tabPage1
             // 
@@ -792,7 +784,7 @@
             this.chkProdRur.Location = new System.Drawing.Point(411, 106);
             this.chkProdRur.Name = "chkProdRur";
             this.chkProdRur.Size = new System.Drawing.Size(94, 17);
-            this.chkProdRur.TabIndex = 128;
+            this.chkProdRur.TabIndex = 18;
             this.chkProdRur.Text = "Produtor Rural";
             this.chkProdRur.UseVisualStyleBackColor = true;
             // 
@@ -802,7 +794,7 @@
             this.chkReg.Location = new System.Drawing.Point(413, 35);
             this.chkReg.Name = "chkReg";
             this.chkReg.Size = new System.Drawing.Size(101, 17);
-            this.chkReg.TabIndex = 127;
+            this.chkReg.TabIndex = 14;
             this.chkReg.Text = "Regime sem ST";
             this.chkReg.UseVisualStyleBackColor = true;
             // 
@@ -812,7 +804,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(68, 20);
-            this.txtCnpj.TabIndex = 126;
+            this.txtCnpj.TabIndex = 17;
             // 
             // txtSuframa
             // 
@@ -820,7 +812,7 @@
             this.txtSuframa.MaxLength = 30;
             this.txtSuframa.Name = "txtSuframa";
             this.txtSuframa.Size = new System.Drawing.Size(100, 20);
-            this.txtSuframa.TabIndex = 124;
+            this.txtSuframa.TabIndex = 13;
             // 
             // txtInscEst
             // 
@@ -828,7 +820,7 @@
             this.txtInscEst.MaxLength = 30;
             this.txtInscEst.Name = "txtInscEst";
             this.txtInscEst.Size = new System.Drawing.Size(95, 20);
-            this.txtInscEst.TabIndex = 120;
+            this.txtInscEst.TabIndex = 16;
             // 
             // label10
             // 
@@ -851,7 +843,7 @@
             this.dataFundacao.Location = new System.Drawing.Point(596, 38);
             this.dataFundacao.Name = "dataFundacao";
             this.dataFundacao.Size = new System.Drawing.Size(113, 20);
-            this.dataFundacao.TabIndex = 122;
+            this.dataFundacao.TabIndex = 15;
             // 
             // label19
             // 
@@ -875,7 +867,7 @@
             this.chkConsRev.Location = new System.Drawing.Point(21, 38);
             this.chkConsRev.Name = "chkConsRev";
             this.chkConsRev.Size = new System.Drawing.Size(130, 17);
-            this.chkConsRev.TabIndex = 1;
+            this.chkConsRev.TabIndex = 12;
             this.chkConsRev.Text = "Consumidor/Revenda";
             this.chkConsRev.UseVisualStyleBackColor = true;
             // 
@@ -892,7 +884,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(492, 111);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
-            this.btnConsulta.TabIndex = 133;
+            this.btnConsulta.TabIndex = 10;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
@@ -940,6 +932,7 @@
             this.Controls.SetChildIndex(this.boxFisJur, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtCodCidade, 0);
+            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
@@ -950,7 +943,6 @@
             this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
             this.Controls.SetChildIndex(this.txtDataAlt, 0);
             this.Controls.SetChildIndex(this.btnSalvar, 0);
-            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -1021,11 +1013,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnContato;
-        private System.Windows.Forms.TextBox txtObsContato;
-        private System.Windows.Forms.TextBox txtTipoContato;
         private System.Windows.Forms.TextBox txtContato;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabControl Menu;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1052,5 +1040,6 @@
         private System.Windows.Forms.Button btnPesquisarTransportadora;
         private System.Windows.Forms.Button btnPesquisarRamoAtiv;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnConContato;
     }
 }

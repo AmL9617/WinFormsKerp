@@ -70,6 +70,18 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsCad\FormCadContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCad\FormCadContato.Designer.cs">
+      <DependentUpon>FormCadContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConContatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConContatos.Designer.cs">
+      <DependentUpon>FormConContatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsCon\FormConRegioes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +340,9 @@
     <EmbeddedResource Include="FormsCad\FormCadContador.resx">
       <DependentUpon>FormCadContador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsCad\FormCadContato.resx">
+      <DependentUpon>FormCadContato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadEmpresa.resx">
       <DependentUpon>FormCadEmpresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConContadores.resx">
       <DependentUpon>FormConContadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConContatos.resx">
+      <DependentUpon>FormConContatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConEmpresas.resx">
       <DependentUpon>FormConEmpresas.cs</DependentUpon>

@@ -54,19 +54,40 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtCrc = new System.Windows.Forms.TextBox();
+            this.btnPesquisarContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 17;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 18;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 19;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 16;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 20;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(526, 169);
+            this.txtEmail.Location = new System.Drawing.Point(35, 228);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(167, 20);
-            this.txtEmail.TabIndex = 146;
+            this.txtEmail.TabIndex = 15;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(523, 153);
+            this.label14.Location = new System.Drawing.Point(32, 212);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 145;
@@ -78,7 +99,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(123, 20);
-            this.txtCnpj.TabIndex = 144;
+            this.txtCnpj.TabIndex = 4;
             // 
             // label15
             // 
@@ -95,15 +116,15 @@
             this.txtContador.MaxLength = 100;
             this.txtContador.Name = "txtContador";
             this.txtContador.Size = new System.Drawing.Size(140, 20);
-            this.txtContador.TabIndex = 142;
+            this.txtContador.TabIndex = 2;
             // 
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(288, 169);
             this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(216, 20);
-            this.txtContato.TabIndex = 140;
+            this.txtContato.Size = new System.Drawing.Size(369, 20);
+            this.txtContato.TabIndex = 14;
             // 
             // label12
             // 
@@ -119,7 +140,7 @@
             this.txtCelular.Location = new System.Drawing.Point(158, 169);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(116, 20);
-            this.txtCelular.TabIndex = 138;
+            this.txtCelular.TabIndex = 12;
             // 
             // label13
             // 
@@ -135,7 +156,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(611, 112);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 136;
+            this.txtTelefone.TabIndex = 10;
             // 
             // label3
             // 
@@ -152,7 +173,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(113, 20);
-            this.txtCep.TabIndex = 134;
+            this.txtCep.TabIndex = 9;
             // 
             // label9
             // 
@@ -168,7 +189,7 @@
             this.txtFax.Location = new System.Drawing.Point(34, 169);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(116, 20);
-            this.txtFax.TabIndex = 132;
+            this.txtFax.TabIndex = 11;
             // 
             // label10
             // 
@@ -185,7 +206,7 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(165, 20);
-            this.txtBairro.TabIndex = 130;
+            this.txtBairro.TabIndex = 8;
             // 
             // label6
             // 
@@ -203,7 +224,7 @@
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(201, 20);
-            this.txtComplemento.TabIndex = 128;
+            this.txtComplemento.TabIndex = 7;
             // 
             // label7
             // 
@@ -219,7 +240,7 @@
             this.txtNumero.Location = new System.Drawing.Point(35, 112);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(46, 20);
-            this.txtNumero.TabIndex = 126;
+            this.txtNumero.TabIndex = 6;
             // 
             // label8
             // 
@@ -237,7 +258,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(207, 20);
-            this.txtEndereco.TabIndex = 124;
+            this.txtEndereco.TabIndex = 5;
             // 
             // label4
             // 
@@ -271,12 +292,23 @@
             this.txtCrc.Location = new System.Drawing.Point(276, 58);
             this.txtCrc.Name = "txtCrc";
             this.txtCrc.Size = new System.Drawing.Size(100, 20);
-            this.txtCrc.TabIndex = 147;
+            this.txtCrc.TabIndex = 3;
+            // 
+            // btnPesquisarContato
+            // 
+            this.btnPesquisarContato.Location = new System.Drawing.Point(663, 169);
+            this.btnPesquisarContato.Name = "btnPesquisarContato";
+            this.btnPesquisarContato.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarContato.TabIndex = 13;
+            this.btnPesquisarContato.Text = "⌕";
+            this.btnPesquisarContato.UseVisualStyleBackColor = true;
+            this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
             // 
             // FormCadContador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPesquisarContato);
             this.Controls.Add(this.txtCrc);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label14);
@@ -341,6 +373,7 @@
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.txtEmail, 0);
             this.Controls.SetChildIndex(this.txtCrc, 0);
+            this.Controls.SetChildIndex(this.btnPesquisarContato, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +407,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtCrc;
+        private System.Windows.Forms.Button btnPesquisarContato;
     }
 }

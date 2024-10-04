@@ -43,13 +43,33 @@
             this.btnConsultaGrupo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 9;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 10;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 11;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 8;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 12;
+            // 
             // txtLista
             // 
             this.txtLista.Location = new System.Drawing.Point(114, 57);
             this.txtLista.MaxLength = 30;
             this.txtLista.Name = "txtLista";
             this.txtLista.Size = new System.Drawing.Size(126, 20);
-            this.txtLista.TabIndex = 52;
+            this.txtLista.TabIndex = 2;
             // 
             // lbl1
             // 
@@ -65,7 +85,7 @@
             this.txtDescMax.Location = new System.Drawing.Point(263, 58);
             this.txtDescMax.Name = "txtDescMax";
             this.txtDescMax.Size = new System.Drawing.Size(65, 20);
-            this.txtDescMax.TabIndex = 54;
+            this.txtDescMax.TabIndex = 3;
             // 
             // label1
             // 
@@ -81,7 +101,7 @@
             this.txtMargemLucro.Location = new System.Drawing.Point(365, 58);
             this.txtMargemLucro.Name = "txtMargemLucro";
             this.txtMargemLucro.Size = new System.Drawing.Size(64, 20);
-            this.txtMargemLucro.TabIndex = 56;
+            this.txtMargemLucro.TabIndex = 4;
             // 
             // label2
             // 
@@ -130,7 +150,7 @@
             this.chkTodas.Location = new System.Drawing.Point(732, 21);
             this.chkTodas.Name = "chkTodas";
             this.chkTodas.Size = new System.Drawing.Size(56, 17);
-            this.chkTodas.TabIndex = 63;
+            this.chkTodas.TabIndex = 6;
             this.chkTodas.Text = "Todas";
             this.chkTodas.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +159,7 @@
             this.btnConsultaMarca.Location = new System.Drawing.Point(540, 56);
             this.btnConsultaMarca.Name = "btnConsultaMarca";
             this.btnConsultaMarca.Size = new System.Drawing.Size(98, 23);
-            this.btnConsultaMarca.TabIndex = 64;
+            this.btnConsultaMarca.TabIndex = 5;
             this.btnConsultaMarca.Text = "Consulta Marca";
             this.btnConsultaMarca.UseVisualStyleBackColor = true;
             this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
@@ -149,7 +169,7 @@
             this.btnConsultaGrupo.Location = new System.Drawing.Point(114, 123);
             this.btnConsultaGrupo.Name = "btnConsultaGrupo";
             this.btnConsultaGrupo.Size = new System.Drawing.Size(103, 23);
-            this.btnConsultaGrupo.TabIndex = 65;
+            this.btnConsultaGrupo.TabIndex = 7;
             this.btnConsultaGrupo.Text = "Consulta Grupo";
             this.btnConsultaGrupo.UseVisualStyleBackColor = true;
             this.btnConsultaGrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);

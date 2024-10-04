@@ -33,13 +33,29 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 6;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 7;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 4;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 8;
+            // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
             this.chkAtivo.Location = new System.Drawing.Point(721, 27);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 53;
+            this.chkAtivo.TabIndex = 3;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -49,7 +65,7 @@
             this.txtGrupo.MaxLength = 30;
             this.txtGrupo.Name = "txtGrupo";
             this.txtGrupo.Size = new System.Drawing.Size(120, 20);
-            this.txtGrupo.TabIndex = 52;
+            this.txtGrupo.TabIndex = 2;
             // 
             // lbl1
             // 

@@ -38,13 +38,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 7;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 8;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 9;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 6;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 10;
+            // 
             // txtRazaoSocial
             // 
             this.txtRazaoSocial.Location = new System.Drawing.Point(113, 58);
             this.txtRazaoSocial.MaxLength = 100;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(127, 20);
-            this.txtRazaoSocial.TabIndex = 52;
+            this.txtRazaoSocial.TabIndex = 2;
             // 
             // lbl1
             // 
@@ -61,7 +81,7 @@
             this.txtNomeFant.MaxLength = 100;
             this.txtNomeFant.Name = "txtNomeFant";
             this.txtNomeFant.Size = new System.Drawing.Size(139, 20);
-            this.txtNomeFant.TabIndex = 54;
+            this.txtNomeFant.TabIndex = 3;
             // 
             // label1
             // 
@@ -78,7 +98,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(100, 20);
-            this.txtCnpj.TabIndex = 56;
+            this.txtCnpj.TabIndex = 4;
             // 
             // label2
             // 
@@ -95,7 +115,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
-            this.txtCep.TabIndex = 58;
+            this.txtCep.TabIndex = 5;
             // 
             // label3
             // 

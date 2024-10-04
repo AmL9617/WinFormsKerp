@@ -34,12 +34,28 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 6;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 7;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 4;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 8;
+            // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(249, 58);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(68, 20);
-            this.txtValor.TabIndex = 54;
+            this.txtValor.TabIndex = 3;
             // 
             // label2
             // 
@@ -55,7 +71,7 @@
             this.txtQtd.Location = new System.Drawing.Point(118, 58);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(90, 20);
-            this.txtQtd.TabIndex = 52;
+            this.txtQtd.TabIndex = 2;
             // 
             // lbl1
             // 

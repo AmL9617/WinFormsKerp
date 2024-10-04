@@ -18,9 +18,6 @@ namespace KnkForms.Classes
         protected string complemento;
         protected string bairro;
         protected string cep;
-        protected string tipoContato;
-        protected string contato;
-        protected string observacao;
         protected string cnpj;
         protected string inscricaoEstadual;
         protected string trade;
@@ -30,6 +27,10 @@ namespace KnkForms.Classes
         protected bool verEmClientes;
         protected DateTime ultimoMovimento;
 
+        //Placeholder
+        protected int codContatos;
+        //Agregação
+        protected Contatos contatos;
         public Fornecedores()
         {
             industria = "";
@@ -42,9 +43,6 @@ namespace KnkForms.Classes
             complemento = "";
             bairro = "";
             cep = "";
-            tipoContato = "";
-            contato = "";
-            observacao = "";
             cnpj = "";
             inscricaoEstadual = "";
             trade = "";
@@ -53,6 +51,9 @@ namespace KnkForms.Classes
             observacoes = "";
             verEmClientes = false;
             ultimoMovimento = DateTime.MinValue;
+
+            codContatos = 0;
+            contatos = new Contatos();
         }
 
         public string Industria
@@ -115,24 +116,6 @@ namespace KnkForms.Classes
             set { cep = value; }
         }
 
-        public string TipoContato
-        {
-            get { return tipoContato; }
-            set { tipoContato = value; }
-        }
-
-        public string Contato
-        {
-            get { return contato; }
-            set { contato = value; }
-        }
-
-        public string Observacao
-        {
-            get { return observacao; }
-            set { observacao = value; }
-        }
-
         public string CNPJ
         {
             get { return cnpj; }
@@ -179,6 +162,18 @@ namespace KnkForms.Classes
         {
             get { return ultimoMovimento; }
             set { ultimoMovimento = value; }
+        }
+
+
+        public int CodContatos
+        {
+            get { return codContatos; }
+            set { codContatos = value; }
+        }
+        public Contatos Contatos
+        {
+            get { return contatos; }
+            set { contatos = value; }
         }
     }
 

@@ -41,12 +41,32 @@
             this.dataComissao = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 9;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 10;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 11;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 8;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 12;
+            // 
             // txtComissao
             // 
             this.txtComissao.Location = new System.Drawing.Point(414, 58);
             this.txtComissao.Name = "txtComissao";
             this.txtComissao.Size = new System.Drawing.Size(73, 20);
-            this.txtComissao.TabIndex = 43;
+            this.txtComissao.TabIndex = 4;
             // 
             // label1
             // 
@@ -63,7 +83,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(738, 35);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 41;
+            this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -72,7 +92,7 @@
             this.txtTipo.Location = new System.Drawing.Point(318, 58);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(70, 20);
-            this.txtTipo.TabIndex = 40;
+            this.txtTipo.TabIndex = 3;
             // 
             // label2
             // 
@@ -89,7 +109,7 @@
             this.txtVendedor.MaxLength = 100;
             this.txtVendedor.Name = "txtVendedor";
             this.txtVendedor.Size = new System.Drawing.Size(177, 20);
-            this.txtVendedor.TabIndex = 38;
+            this.txtVendedor.TabIndex = 2;
             // 
             // lbl1
             // 
@@ -107,7 +127,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(741, 262);
-            this.txtObservacao.TabIndex = 47;
+            this.txtObservacao.TabIndex = 7;
             // 
             // label4
             // 
@@ -132,7 +152,7 @@
             this.dataComissao.Location = new System.Drawing.Point(508, 58);
             this.dataComissao.Name = "dataComissao";
             this.dataComissao.Size = new System.Drawing.Size(85, 20);
-            this.dataComissao.TabIndex = 51;
+            this.dataComissao.TabIndex = 5;
             // 
             // FormCadVendedor
             // 

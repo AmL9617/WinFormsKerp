@@ -36,8 +36,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtInscEst = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtTipoCont = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtContato = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtLimite = new System.Windows.Forms.TextBox();
@@ -66,14 +64,35 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtIndustria = new System.Windows.Forms.TextBox();
             this.chkVerCliente = new System.Windows.Forms.CheckBox();
+            this.btnPesquisarContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 22;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 23;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 24;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 21;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 25;
             // 
             // dataUltMov
             // 
             this.dataUltMov.Location = new System.Drawing.Point(287, 222);
             this.dataUltMov.Name = "dataUltMov";
             this.dataUltMov.Size = new System.Drawing.Size(113, 20);
-            this.dataUltMov.TabIndex = 156;
+            this.dataUltMov.TabIndex = 18;
             // 
             // txtObservacao
             // 
@@ -82,7 +101,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(753, 92);
-            this.txtObservacao.TabIndex = 155;
+            this.txtObservacao.TabIndex = 20;
             // 
             // label18
             // 
@@ -108,7 +127,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(100, 20);
-            this.txtCnpj.TabIndex = 150;
+            this.txtCnpj.TabIndex = 17;
             // 
             // label15
             // 
@@ -125,7 +144,7 @@
             this.txtInscEst.MaxLength = 30;
             this.txtInscEst.Name = "txtInscEst";
             this.txtInscEst.Size = new System.Drawing.Size(100, 20);
-            this.txtInscEst.TabIndex = 148;
+            this.txtInscEst.TabIndex = 16;
             // 
             // label16
             // 
@@ -136,29 +155,12 @@
             this.label16.TabIndex = 147;
             this.label16.Text = "Inscrição Estadual";
             // 
-            // txtTipoCont
-            // 
-            this.txtTipoCont.Location = new System.Drawing.Point(593, 170);
-            this.txtTipoCont.MaxLength = 4;
-            this.txtTipoCont.Name = "txtTipoCont";
-            this.txtTipoCont.Size = new System.Drawing.Size(52, 20);
-            this.txtTipoCont.TabIndex = 146;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(590, 154);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 13);
-            this.label11.TabIndex = 145;
-            this.label11.Text = "Tipo de Contato";
-            // 
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(481, 170);
             this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(100, 20);
-            this.txtContato.TabIndex = 144;
+            this.txtContato.Size = new System.Drawing.Size(267, 20);
+            this.txtContato.TabIndex = 555;
             // 
             // label12
             // 
@@ -174,7 +176,7 @@
             this.txtLimite.Location = new System.Drawing.Point(389, 170);
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(67, 20);
-            this.txtLimite.TabIndex = 142;
+            this.txtLimite.TabIndex = 14;
             // 
             // label13
             // 
@@ -190,7 +192,7 @@
             this.txtTrade.Location = new System.Drawing.Point(163, 170);
             this.txtTrade.Name = "txtTrade";
             this.txtTrade.Size = new System.Drawing.Size(100, 20);
-            this.txtTrade.TabIndex = 140;
+            this.txtTrade.TabIndex = 12;
             // 
             // label3
             // 
@@ -207,7 +209,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 20);
-            this.txtCep.TabIndex = 138;
+            this.txtCep.TabIndex = 11;
             // 
             // label9
             // 
@@ -223,7 +225,7 @@
             this.txtCodProd.Location = new System.Drawing.Point(286, 170);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(61, 20);
-            this.txtCodProd.TabIndex = 136;
+            this.txtCodProd.TabIndex = 13;
             // 
             // label10
             // 
@@ -240,7 +242,7 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(170, 20);
-            this.txtBairro.TabIndex = 134;
+            this.txtBairro.TabIndex = 10;
             // 
             // label6
             // 
@@ -258,7 +260,7 @@
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(179, 20);
-            this.txtComplemento.TabIndex = 132;
+            this.txtComplemento.TabIndex = 9;
             // 
             // label7
             // 
@@ -275,7 +277,7 @@
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(41, 20);
-            this.txtNumero.TabIndex = 130;
+            this.txtNumero.TabIndex = 8;
             // 
             // label8
             // 
@@ -293,7 +295,7 @@
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(205, 20);
-            this.txtEndereco.TabIndex = 128;
+            this.txtEndereco.TabIndex = 7;
             // 
             // label4
             // 
@@ -310,7 +312,7 @@
             this.txtNomeFantasia.MaxLength = 100;
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.Size = new System.Drawing.Size(170, 20);
-            this.txtNomeFantasia.TabIndex = 126;
+            this.txtNomeFantasia.TabIndex = 5;
             // 
             // label5
             // 
@@ -330,7 +332,7 @@
             this.boxFisJur.Location = new System.Drawing.Point(286, 56);
             this.boxFisJur.Name = "boxFisJur";
             this.boxFisJur.Size = new System.Drawing.Size(95, 21);
-            this.boxFisJur.TabIndex = 124;
+            this.boxFisJur.TabIndex = 3;
             // 
             // txtRazaoSocial
             // 
@@ -338,7 +340,7 @@
             this.txtRazaoSocial.MaxLength = 100;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(164, 20);
-            this.txtRazaoSocial.TabIndex = 122;
+            this.txtRazaoSocial.TabIndex = 4;
             // 
             // label1
             // 
@@ -373,7 +375,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(725, 24);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 157;
+            this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -383,7 +385,7 @@
             this.txtIndustria.MaxLength = 50;
             this.txtIndustria.Name = "txtIndustria";
             this.txtIndustria.Size = new System.Drawing.Size(165, 20);
-            this.txtIndustria.TabIndex = 158;
+            this.txtIndustria.TabIndex = 2;
             // 
             // chkVerCliente
             // 
@@ -391,14 +393,25 @@
             this.chkVerCliente.Location = new System.Drawing.Point(417, 222);
             this.chkVerCliente.Name = "chkVerCliente";
             this.chkVerCliente.Size = new System.Drawing.Size(99, 17);
-            this.chkVerCliente.TabIndex = 159;
+            this.chkVerCliente.TabIndex = 19;
             this.chkVerCliente.Text = "Ver em Clientes";
             this.chkVerCliente.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisarContato
+            // 
+            this.btnPesquisarContato.Location = new System.Drawing.Point(757, 170);
+            this.btnPesquisarContato.Name = "btnPesquisarContato";
+            this.btnPesquisarContato.Size = new System.Drawing.Size(18, 23);
+            this.btnPesquisarContato.TabIndex = 15;
+            this.btnPesquisarContato.Text = "⌕";
+            this.btnPesquisarContato.UseVisualStyleBackColor = true;
+            this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
             // 
             // FormCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPesquisarContato);
             this.Controls.Add(this.chkVerCliente);
             this.Controls.Add(this.txtIndustria);
             this.Controls.Add(this.chkAtivo);
@@ -410,8 +423,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtInscEst);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtTipoCont);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtContato);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtLimite);
@@ -474,8 +485,6 @@
             this.Controls.SetChildIndex(this.txtLimite, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txtContato, 0);
-            this.Controls.SetChildIndex(this.label11, 0);
-            this.Controls.SetChildIndex(this.txtTipoCont, 0);
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.txtInscEst, 0);
             this.Controls.SetChildIndex(this.label15, 0);
@@ -487,6 +496,7 @@
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.txtIndustria, 0);
             this.Controls.SetChildIndex(this.chkVerCliente, 0);
+            this.Controls.SetChildIndex(this.btnPesquisarContato, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,8 +512,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtInscEst;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtTipoCont;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtContato;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtLimite;
@@ -532,5 +540,6 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtIndustria;
         private System.Windows.Forms.CheckBox chkVerCliente;
+        private System.Windows.Forms.Button btnPesquisarContato;
     }
 }

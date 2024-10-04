@@ -44,13 +44,33 @@
             this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 11;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.TabIndex = 12;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.TabIndex = 13;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 10;
+            // 
+            // btnSair
+            // 
+            this.btnSair.TabIndex = 14;
+            // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
             this.chkAtivo.Location = new System.Drawing.Point(725, 27);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 53;
+            this.chkAtivo.TabIndex = 7;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -59,7 +79,7 @@
             this.txtCondPag.Location = new System.Drawing.Point(113, 58);
             this.txtCondPag.Name = "txtCondPag";
             this.txtCondPag.Size = new System.Drawing.Size(121, 20);
-            this.txtCondPag.TabIndex = 52;
+            this.txtCondPag.TabIndex = 2;
             // 
             // lbl1
             // 
@@ -75,7 +95,7 @@
             this.dataPrazo.Location = new System.Drawing.Point(576, 58);
             this.dataPrazo.Name = "dataPrazo";
             this.dataPrazo.Size = new System.Drawing.Size(85, 20);
-            this.dataPrazo.TabIndex = 59;
+            this.dataPrazo.TabIndex = 6;
             // 
             // label5
             // 
@@ -91,7 +111,7 @@
             this.txtTaxaJuro.Location = new System.Drawing.Point(330, 58);
             this.txtTaxaJuro.Name = "txtTaxaJuro";
             this.txtTaxaJuro.Size = new System.Drawing.Size(59, 20);
-            this.txtTaxaJuro.TabIndex = 57;
+            this.txtTaxaJuro.TabIndex = 4;
             // 
             // label1
             // 
@@ -107,7 +127,7 @@
             this.txtTipo.Location = new System.Drawing.Point(249, 58);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(65, 20);
-            this.txtTipo.TabIndex = 55;
+            this.txtTipo.TabIndex = 3;
             // 
             // label2
             // 
@@ -123,7 +143,7 @@
             this.txtOpDisp.Location = new System.Drawing.Point(422, 58);
             this.txtOpDisp.Name = "txtOpDisp";
             this.txtOpDisp.Size = new System.Drawing.Size(129, 20);
-            this.txtOpDisp.TabIndex = 63;
+            this.txtOpDisp.TabIndex = 5;
             // 
             // label4
             // 
@@ -139,7 +159,7 @@
             this.txtCodParcela.Location = new System.Drawing.Point(36, 116);
             this.txtCodParcela.Name = "txtCodParcela";
             this.txtCodParcela.Size = new System.Drawing.Size(48, 20);
-            this.txtCodParcela.TabIndex = 65;
+            this.txtCodParcela.TabIndex = 9;
             // 
             // label7
             // 
@@ -155,7 +175,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(113, 113);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
-            this.btnConsulta.TabIndex = 66;
+            this.btnConsulta.TabIndex = 8;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);

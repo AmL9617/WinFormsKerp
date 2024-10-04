@@ -17,10 +17,14 @@ namespace KnkForms.Classes
         protected string telefone;
         protected string fax;
         protected string celular;
-        protected string contato;
         protected string email;
         protected string cnpj;
         protected string crc;
+
+        //Placeholder
+        protected int codContatos;
+        //Agregação
+        protected Contatos contatos;
 
         public Contadores()
         {
@@ -33,10 +37,12 @@ namespace KnkForms.Classes
             telefone = "";
             fax = "";
             celular = "";
-            contato = "";
             email = "";
             cnpj = "";
             crc = "";
+
+            codContatos = 0;
+            contatos = new Contatos();
         }
 
         public string Contador
@@ -93,11 +99,6 @@ namespace KnkForms.Classes
             set { celular = value; }
         }
 
-        public string Contato
-        {
-            get { return contato; }
-            set { contato = value; }
-        }
 
         public string Email
         {
@@ -115,6 +116,17 @@ namespace KnkForms.Classes
         {
             get { return crc; }
             set { crc = value; }
+        }
+
+        public int CodContatos
+        {
+            get { return codContatos; }
+            set { codContatos = value; }
+        }
+        public Contatos Contatos
+        {
+            get { return contatos; }
+            set { contatos = value; }
         }
     }
 
