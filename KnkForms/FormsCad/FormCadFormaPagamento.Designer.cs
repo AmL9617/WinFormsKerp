@@ -49,7 +49,7 @@
             this.txtFormaPagamento.Location = new System.Drawing.Point(114, 58);
             this.txtFormaPagamento.MaxLength = 30;
             this.txtFormaPagamento.Name = "txtFormaPagamento";
-            this.txtFormaPagamento.Size = new System.Drawing.Size(113, 20);
+            this.txtFormaPagamento.Size = new System.Drawing.Size(197, 20);
             this.txtFormaPagamento.TabIndex = 2;
             // 
             // lbl1
@@ -63,16 +63,16 @@
             // 
             // txtOpDisp
             // 
-            this.txtOpDisp.Location = new System.Drawing.Point(245, 58);
+            this.txtOpDisp.Location = new System.Drawing.Point(326, 58);
             this.txtOpDisp.MaxLength = 30;
             this.txtOpDisp.Name = "txtOpDisp";
-            this.txtOpDisp.Size = new System.Drawing.Size(118, 20);
+            this.txtOpDisp.Size = new System.Drawing.Size(197, 20);
             this.txtOpDisp.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 42);
+            this.label1.Location = new System.Drawing.Point(323, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 53;
@@ -80,7 +80,7 @@
             // 
             // txtNfce
             // 
-            this.txtNfce.Location = new System.Drawing.Point(380, 58);
+            this.txtNfce.Location = new System.Drawing.Point(540, 58);
             this.txtNfce.Name = "txtNfce";
             this.txtNfce.Size = new System.Drawing.Size(100, 20);
             this.txtNfce.TabIndex = 4;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(377, 42);
+            this.label2.Location = new System.Drawing.Point(537, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 55;

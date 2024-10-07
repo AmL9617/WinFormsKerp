@@ -39,7 +39,7 @@ namespace KnkForms.Forms
             txtComplemento.Clear();
             txtBairro.Clear();
             txtCep.Clear();
-            //Fisica ou juridica
+            boxFisJur.Text = "";
             txtCodCidade.Clear();
             chkAtivo.Checked = false;
 
@@ -83,6 +83,10 @@ namespace KnkForms.Forms
             txtComplemento.Text = oCliente.Complemento;
             txtBairro.Text = oCliente.Bairro;
             txtCep.Text = oCliente.Cep;
+            if (oCliente.FisicaJuridica == false)
+                boxFisJur.Text = "Fisica";
+            else if (oCliente.FisicaJuridica == true)
+                boxFisJur.Text = "Juridica";
             txtCodCidade.Text = Convert.ToString(oCliente.CodCidades);
             chkAtivo.Checked = oCliente.Ativo;
 
@@ -90,8 +94,7 @@ namespace KnkForms.Forms
             txtDataCad.Text = Convert.ToString(oCliente.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oCliente.DataModificacao);
 
-            // chkCons.Checked = oCliente.ConsumidorRevenda;
-            //chkRev.Checked = false;
+            chkConsRev.Checked = oCliente.ConsumidorRevenda;
             txtInscEst.Text = oCliente.InscricaoEstadual;
             txtSuframa.Text = oCliente.InscMunicipalSuframa;
             txtCnpj.Text = oCliente.CNPJ;
@@ -126,6 +129,7 @@ namespace KnkForms.Forms
             txtComplemento.Enabled = false;
             txtBairro.Enabled = false;
             txtCep.Enabled = false;
+            boxFisJur.Enabled = false;
             txtCodCidade.Enabled = false;
             chkAtivo.Enabled = false;
 
@@ -169,6 +173,7 @@ namespace KnkForms.Forms
             txtComplemento.Enabled = true;
             txtBairro.Enabled = true;
             txtCep.Enabled = true;
+            boxFisJur.Enabled = true;
             txtCodCidade.Enabled = true;
             chkAtivo.Enabled = true;
 
@@ -212,6 +217,10 @@ namespace KnkForms.Forms
             oCliente.Complemento = txtComplemento.Text;
             oCliente.Bairro = txtBairro.Text;
             oCliente.Cep = txtCep.Text;
+            if (boxFisJur.Text == "Fisica")
+                oCliente.FisicaJuridica = false;
+            else if (boxFisJur.Text == "Juridica")
+                oCliente.FisicaJuridica = true;
             oCliente.CodCidades = Convert.ToInt32(txtCodCidade.Text);
             oCliente.Ativo = chkAtivo.Checked;
 
@@ -219,7 +228,7 @@ namespace KnkForms.Forms
             oCliente.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oCliente.DataModificacao = Convert.ToDateTime(txtDataAlt);
 
-            //oCliente.ConsumidorRevenda;
+            oCliente.ConsumidorRevenda = chkConsRev.Checked;
             oCliente.InscricaoEstadual = txtInscEst.Text;
             oCliente.InscMunicipalSuframa = txtSuframa.Text;
             oCliente.CNPJ = txtCnpj.Text;

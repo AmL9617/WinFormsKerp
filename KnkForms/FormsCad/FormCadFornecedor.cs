@@ -27,6 +27,7 @@ namespace KnkForms.Forms
         {
             txtCod.Clear();
             txtIndustria.Clear();
+            boxFisJur.Text = "";
             txtRazaoSocial.Clear();
             txtNomeFantasia.Clear();
             txtEndereco.Clear();
@@ -53,6 +54,10 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(oFornecedor.Cod);
             txtIndustria.Text = oFornecedor.Industria;
+            if (oFornecedor.FisicaJuridica == false)
+                boxFisJur.Text = "Fisica";
+            else if (oFornecedor.FisicaJuridica == true)
+                boxFisJur.Text = "Juridica";
             txtRazaoSocial.Text = oFornecedor.RazaoSocial;
             txtNomeFantasia.Text = Convert.ToString(oFornecedor.NomeFantasia);
             txtEndereco.Text = oFornecedor.Endereco;
@@ -79,6 +84,7 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = false;
             txtIndustria.Enabled = false;
+            boxFisJur.Enabled = false;
             txtRazaoSocial.Enabled = false;
             txtNomeFantasia.Enabled = false;
             txtEndereco.Enabled = false;
@@ -105,6 +111,7 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = true;
             txtIndustria.Enabled = true;
+            boxFisJur.Enabled = true;
             txtRazaoSocial.Enabled = true;
             txtNomeFantasia.Enabled = true;
             txtEndereco.Enabled = true;
@@ -131,6 +138,10 @@ namespace KnkForms.Forms
         {
             oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
             oFornecedor.Industria = txtIndustria.Text;
+            if (boxFisJur.Text == "Fisica")
+                oFornecedor.FisicaJuridica = false;
+            else if (boxFisJur.Text == "Juridica")
+                oFornecedor.FisicaJuridica = true;
             oFornecedor.RazaoSocial = txtRazaoSocial.Text;
             oFornecedor.NomeFantasia = txtNomeFantasia.Text;
             oFornecedor.Endereco = txtEndereco.Text;

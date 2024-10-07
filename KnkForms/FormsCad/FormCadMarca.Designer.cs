@@ -64,7 +64,7 @@
             this.txtMarca.Location = new System.Drawing.Point(118, 58);
             this.txtMarca.MaxLength = 30;
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(122, 20);
+            this.txtMarca.Size = new System.Drawing.Size(197, 20);
             this.txtMarca.TabIndex = 2;
             // 
             // lbl1

@@ -54,7 +54,7 @@
             // 
             this.txtPesquisa.Location = new System.Drawing.Point(37, 51);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(217, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(307, 20);
             this.txtPesquisa.TabIndex = 1;
             // 
             // btnPesquisa

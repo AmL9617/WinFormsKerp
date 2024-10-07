@@ -61,15 +61,15 @@
             // 
             // txtCodEstado
             // 
-            this.txtCodEstado.Location = new System.Drawing.Point(325, 58);
+            this.txtCodEstado.Location = new System.Drawing.Point(449, 58);
             this.txtCodEstado.Name = "txtCodEstado";
-            this.txtCodEstado.Size = new System.Drawing.Size(43, 20);
+            this.txtCodEstado.Size = new System.Drawing.Size(63, 20);
             this.txtCodEstado.TabIndex = 36;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(322, 42);
+            this.label1.Location = new System.Drawing.Point(446, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 35;
@@ -87,7 +87,7 @@
             // 
             // txtDDD
             // 
-            this.txtDDD.Location = new System.Drawing.Point(267, 58);
+            this.txtDDD.Location = new System.Drawing.Point(391, 58);
             this.txtDDD.MaxLength = 3;
             this.txtDDD.Name = "txtDDD";
             this.txtDDD.Size = new System.Drawing.Size(41, 20);
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 42);
+            this.label2.Location = new System.Drawing.Point(388, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 32;
@@ -107,7 +107,7 @@
             this.txtCidade.Location = new System.Drawing.Point(114, 58);
             this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(142, 20);
+            this.txtCidade.Size = new System.Drawing.Size(260, 20);
             this.txtCidade.TabIndex = 2;
             // 
             // lblNomeCidade
@@ -121,7 +121,7 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(399, 58);
+            this.btnConsulta.Location = new System.Drawing.Point(523, 58);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
             this.btnConsulta.TabIndex = 4;

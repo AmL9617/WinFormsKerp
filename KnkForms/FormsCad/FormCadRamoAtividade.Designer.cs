@@ -64,7 +64,7 @@
             this.txtNomeRamo.Location = new System.Drawing.Point(124, 58);
             this.txtNomeRamo.MaxLength = 30;
             this.txtNomeRamo.Name = "txtNomeRamo";
-            this.txtNomeRamo.Size = new System.Drawing.Size(132, 20);
+            this.txtNomeRamo.Size = new System.Drawing.Size(197, 20);
             this.txtNomeRamo.TabIndex = 2;
             // 
             // label1

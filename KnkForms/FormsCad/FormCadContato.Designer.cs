@@ -38,18 +38,44 @@
             // 
             // txtDataCad
             // 
+            this.txtDataCad.Location = new System.Drawing.Point(137, 418);
             this.txtDataCad.TabIndex = 6;
+            // 
+            // lblDataCad
+            // 
+            this.lblDataCad.Location = new System.Drawing.Point(134, 402);
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.Location = new System.Drawing.Point(260, 418);
+            // 
+            // lblDataAlteracao
+            // 
+            this.lblDataAlteracao.Location = new System.Drawing.Point(257, 402);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(472, 414);
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Location = new System.Drawing.Point(25, 418);
             this.txtCodUser.TabIndex = 5;
+            // 
+            // lblCodUser
+            // 
+            this.lblCodUser.Location = new System.Drawing.Point(22, 402);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(567, 414);
             // 
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(35, 114);
             this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(576, 20);
+            this.txtContato.Size = new System.Drawing.Size(614, 20);
             this.txtContato.TabIndex = 3;
             // 
             // label1
@@ -66,7 +92,7 @@
             this.txtTipo.Location = new System.Drawing.Point(114, 58);
             this.txtTipo.MaxLength = 50;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(140, 20);
+            this.txtTipo.Size = new System.Drawing.Size(260, 20);
             this.txtTipo.TabIndex = 2;
             // 
             // lbl1
@@ -84,7 +110,7 @@
             this.txtObservacao.MaxLength = 500;
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(576, 95);
+            this.txtObservacao.Size = new System.Drawing.Size(614, 95);
             this.txtObservacao.TabIndex = 4;
             // 
             // label2
@@ -99,7 +125,7 @@
             // FormCadContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(670, 450);
             this.Controls.Add(this.txtObservacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtContato);

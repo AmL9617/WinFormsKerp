@@ -68,7 +68,7 @@
             this.txtLista.Location = new System.Drawing.Point(114, 57);
             this.txtLista.MaxLength = 30;
             this.txtLista.Name = "txtLista";
-            this.txtLista.Size = new System.Drawing.Size(126, 20);
+            this.txtLista.Size = new System.Drawing.Size(197, 20);
             this.txtLista.TabIndex = 2;
             // 
             // lbl1
@@ -82,7 +82,7 @@
             // 
             // txtDescMax
             // 
-            this.txtDescMax.Location = new System.Drawing.Point(263, 58);
+            this.txtDescMax.Location = new System.Drawing.Point(328, 57);
             this.txtDescMax.Name = "txtDescMax";
             this.txtDescMax.Size = new System.Drawing.Size(65, 20);
             this.txtDescMax.TabIndex = 3;
@@ -90,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(260, 42);
+            this.label1.Location = new System.Drawing.Point(325, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 53;
@@ -98,7 +98,7 @@
             // 
             // txtMargemLucro
             // 
-            this.txtMargemLucro.Location = new System.Drawing.Point(365, 58);
+            this.txtMargemLucro.Location = new System.Drawing.Point(436, 56);
             this.txtMargemLucro.Name = "txtMargemLucro";
             this.txtMargemLucro.Size = new System.Drawing.Size(64, 20);
             this.txtMargemLucro.TabIndex = 4;
@@ -106,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 42);
+            this.label2.Location = new System.Drawing.Point(433, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 55;
@@ -114,15 +114,15 @@
             // 
             // txtCodMarca
             // 
-            this.txtCodMarca.Location = new System.Drawing.Point(464, 58);
+            this.txtCodMarca.Location = new System.Drawing.Point(535, 56);
             this.txtCodMarca.Name = "txtCodMarca";
-            this.txtCodMarca.Size = new System.Drawing.Size(55, 20);
+            this.txtCodMarca.Size = new System.Drawing.Size(63, 20);
             this.txtCodMarca.TabIndex = 58;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(461, 42);
+            this.label3.Location = new System.Drawing.Point(532, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 57;
@@ -156,7 +156,7 @@
             // 
             // btnConsultaMarca
             // 
-            this.btnConsultaMarca.Location = new System.Drawing.Point(540, 56);
+            this.btnConsultaMarca.Location = new System.Drawing.Point(611, 54);
             this.btnConsultaMarca.Name = "btnConsultaMarca";
             this.btnConsultaMarca.Size = new System.Drawing.Size(98, 23);
             this.btnConsultaMarca.TabIndex = 5;

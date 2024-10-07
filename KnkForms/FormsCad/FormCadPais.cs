@@ -33,6 +33,7 @@ namespace KnkForms.Forms
             txtTipoPais.Clear();
             txtSigla.Clear();
             txtDdi.Clear();
+            boxNacional.Text = "";
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -46,6 +47,10 @@ namespace KnkForms.Forms
             txtTipoPais.Text=oPais.TipoPais;
             txtSigla.Text = Convert.ToString(oPais.Sigla);
             txtDdi.Text = Convert.ToString(oPais.DDI);
+            if (oPais.Nacional == 's')
+                boxNacional.Text = "Sim";
+            else if (oPais.Nacional == 'n')
+                boxNacional.Text = "Não";
             txtCodUser.Text = Convert.ToString(oPais.CodEmpresa);
             txtDataCad.Text= Convert.ToString(oPais.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oPais.DataModificacao);
@@ -59,6 +64,7 @@ namespace KnkForms.Forms
             txtTipoPais.Enabled = false;
             txtSigla.Enabled = false;
             txtDdi.Enabled = false;
+            boxNacional.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -73,6 +79,7 @@ namespace KnkForms.Forms
             txtTipoPais.Enabled = true;
             txtSigla.Enabled = true;
             txtDdi.Enabled = true;
+            boxNacional.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
@@ -87,6 +94,10 @@ namespace KnkForms.Forms
             oPais.TipoPais = txtTipoPais.Text;
             oPais.Sigla = Convert.ToChar(txtSigla.Text);
             oPais.DDI = Convert.ToInt32(txtDdi.Text);
+            if (boxNacional.Text == "Sim")
+                oPais.Nacional = 's';
+            else if (boxNacional.Text == "Não")
+                oPais.Nacional = 'n';
             oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

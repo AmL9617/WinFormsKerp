@@ -64,7 +64,7 @@
             this.txtGrupo.Location = new System.Drawing.Point(120, 58);
             this.txtGrupo.MaxLength = 30;
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(120, 20);
+            this.txtGrupo.Size = new System.Drawing.Size(197, 20);
             this.txtGrupo.TabIndex = 2;
             // 
             // lbl1

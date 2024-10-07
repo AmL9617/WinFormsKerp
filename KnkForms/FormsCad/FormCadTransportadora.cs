@@ -25,6 +25,8 @@ namespace KnkForms.Classes
         public override void LimpaTxt()
         {
             txtCod.Clear();
+            boxTransCli.Text = "";
+            boxFisJur.Text = "";
             txtNomeFantasia.Clear();
             chkAtivo.Checked = false;
             txtEndereco.Clear();
@@ -50,6 +52,11 @@ namespace KnkForms.Classes
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aTransportadora.Cod);
+            boxTransCli.Text = aTransportadora.TransportadoraCliente;
+            if (aTransportadora.FisicaJuridica == false)
+                boxFisJur.Text = "Fisica";
+            else if (aTransportadora.FisicaJuridica == true)
+                boxFisJur.Text = "Juridica";
             txtNomeFantasia.Text = aTransportadora.NomeFantasia;
             chkAtivo.Checked = aTransportadora.Ativo;
             txtEndereco.Text = aTransportadora.Endereco;
@@ -75,6 +82,8 @@ namespace KnkForms.Classes
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
+            boxTransCli.Enabled = false;
+            boxFisJur.Enabled = false;
             txtNomeFantasia.Enabled = false;
             chkAtivo.Enabled = false;
             txtEndereco.Enabled = false;
@@ -100,6 +109,8 @@ namespace KnkForms.Classes
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
+            boxTransCli.Enabled = true;
+            boxFisJur.Enabled = true;
             txtNomeFantasia.Enabled = true;
             chkAtivo.Enabled = true;
             txtEndereco.Enabled = true;
@@ -125,6 +136,11 @@ namespace KnkForms.Classes
         public override void Salvar()
         {
             aTransportadora.Cod = Convert.ToInt32(txtCod.Text);
+            aTransportadora.TransportadoraCliente = boxTransCli.Text;
+            if (boxFisJur.Text == "Fisica")
+                aTransportadora.FisicaJuridica = false;
+            else if (boxFisJur.Text == "Juridica")
+                aTransportadora.FisicaJuridica = true;
             aTransportadora.NomeFantasia = txtNomeFantasia.Text;
             aTransportadora.Ativo = chkAtivo.Checked;
             aTransportadora.Endereco = txtEndereco.Text;

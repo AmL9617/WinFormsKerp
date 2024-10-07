@@ -17,7 +17,7 @@ namespace KnkForms.Classes
         protected string cep;
         protected bool fisicaJuridica;
         protected bool ativo;
-        protected string consumidorRevenda;
+        protected bool consumidorRevenda;
         protected string inscricaoEstadual;
         protected string inscMunicipalSuframa;
         protected string cnpj;
@@ -70,7 +70,7 @@ namespace KnkForms.Classes
             cep = "";
             fisicaJuridica = false;
             ativo = false;
-            consumidorRevenda = "";
+            consumidorRevenda = false;
             inscricaoEstadual = "";
             inscMunicipalSuframa = "";
             cnpj = "";
@@ -165,7 +165,7 @@ namespace KnkForms.Classes
             set { ativo = value; }
         }
 
-        public string ConsumidorRevenda
+        public bool ConsumidorRevenda
         {
             get { return consumidorRevenda; }
             set { consumidorRevenda = value; }
