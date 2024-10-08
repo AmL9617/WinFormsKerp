@@ -16,6 +16,9 @@ namespace KnkForms.Classes
         public FormCadTransportadora()
         {
             InitializeComponent();
+            //Padronização das datas para dia/mês/ano
+            dataUltCompra.CustomFormat = "dd/MM/yyyy";
+            dataUltCompra.Format = DateTimePickerFormat.Custom;
         }
         public override void ConhecaObj(Object obj)
         {
