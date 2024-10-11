@@ -14,6 +14,8 @@ namespace KnkForms.Forms
     {
         Fornecedores oFornecedor;
         FormConContatos oFrmConContatos;
+        FormConCidades oFrmConCidades;
+        FormConRegioes oFrmConRegioes;
         public FormCadFornecedor()
         {
             InitializeComponent();
@@ -171,10 +173,30 @@ namespace KnkForms.Forms
         {
             oFrmConContatos = (FormConContatos)obj;
         }
+        public void setFrmConCidades(Object obj)
+        {
+            oFrmConCidades = (FormConCidades)obj;
+        }
+        public void setFrmConRegioes(Object obj)
+        {
+            oFrmConRegioes = (FormConRegioes)obj;
+        }
         private void btnPesquisarContato_Click(object sender, EventArgs e)
         {
             oFrmConContatos.ConhecaObj(oFornecedor.Contatos);
             oFrmConContatos.ShowDialog();
+        }
+
+        private void btnConsultaReg_Click(object sender, EventArgs e)
+        {
+            oFrmConRegioes.ConhecaObj(oFornecedor.Regioes);
+            oFrmConRegioes.ShowDialog();
+        }
+
+        private void btnConsultaCid_Click(object sender, EventArgs e)
+        {
+            oFrmConCidades.ConhecaObj(oFornecedor.Cidades);
+            oFrmConCidades.ShowDialog();
         }
     }
 }

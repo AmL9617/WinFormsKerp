@@ -84,3 +84,5 @@ C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Class
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Classes.FormConVendedores.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadContato.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConContatos.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadRamoAtivCliente.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConRamoAtivClientes.resources

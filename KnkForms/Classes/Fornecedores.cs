@@ -29,8 +29,12 @@ namespace KnkForms.Classes
 
         //Placeholder
         protected int codContatos;
+        protected int codCidades;
+        protected int codRegioes;
         //Agregação
         protected Contatos contatos;
+        protected Cidades cidades;
+        protected Regioes regioes;
         public Fornecedores()
         {
             industria = "";
@@ -170,6 +174,18 @@ namespace KnkForms.Classes
             get { return codContatos; }
             set { codContatos = value; }
         }
+
+        public int CodCidades
+        {
+            get { return codCidades; }
+            set { codCidades = value; }
+        }
+
+        protected int CodRegioes
+        {
+
+        }
+
         public Contatos Contatos
         {
             get { return contatos; }

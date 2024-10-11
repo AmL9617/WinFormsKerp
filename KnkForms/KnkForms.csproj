@@ -76,11 +76,23 @@
     <Compile Include="FormsCad\FormCadContato.Designer.cs">
       <DependentUpon>FormCadContato.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsCad\FormCadRamoAtivCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCad\FormCadRamoAtivCliente.Designer.cs">
+      <DependentUpon>FormCadRamoAtivCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsCon\FormConContatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormsCon\FormConContatos.Designer.cs">
       <DependentUpon>FormConContatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConRamoAtivClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConRamoAtivClientes.Designer.cs">
+      <DependentUpon>FormConRamoAtivClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsCon\FormConRegioes.cs">
       <SubType>Form</SubType>
@@ -367,6 +379,9 @@
     <EmbeddedResource Include="FormsCad\FormCadParcela.resx">
       <DependentUpon>FormCadParcela.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsCad\FormCadRamoAtivCliente.resx">
+      <DependentUpon>FormCadRamoAtivCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadRamoAtividade.resx">
       <DependentUpon>FormCadRamoAtividade.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConParcelas.resx">
       <DependentUpon>FormConParcelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConRamoAtivClientes.resx">
+      <DependentUpon>FormConRamoAtivClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConRamoAtividades.resx">
       <DependentUpon>FormConRamoAtividades.cs</DependentUpon>

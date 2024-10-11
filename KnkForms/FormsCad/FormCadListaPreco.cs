@@ -30,6 +30,7 @@ namespace KnkForms.Forms
             txtLista.Clear();
             txtDescMax.Clear();
             txtMargemLucro.Clear();
+            txtPercCom.Clear();
             txtCodMarca.Clear();
             txtCodGrupo.Clear();
             chkTodas.Checked = false;
@@ -44,6 +45,7 @@ namespace KnkForms.Forms
             txtLista.Text = aListaPreco.Lista;
             txtDescMax.Text = Convert.ToString(aListaPreco.DescontoMaximo);
             txtMargemLucro.Text = Convert.ToString(aListaPreco.MargemLucro);
+            txtPercCom.Text = Convert.ToString(aListaPreco.PercCom);    
             txtCodMarca.Text = Convert.ToString(aListaPreco.CodMarca);
             txtCodGrupo.Text = Convert.ToString(aListaPreco.CodGrupo);
             txtCodUser.Text = Convert.ToString(aListaPreco.CodEmpresa);
@@ -58,6 +60,7 @@ namespace KnkForms.Forms
             txtLista.Enabled = false;
             txtDescMax.Enabled = false;
             txtMargemLucro.Enabled = false;
+            txtPercCom.Enabled = false;
             txtCodMarca.Enabled = false;
             txtCodGrupo.Enabled = false;
             txtCodUser.Enabled = false;
@@ -72,6 +75,7 @@ namespace KnkForms.Forms
             txtLista.Enabled = true;
             txtDescMax.Enabled = true;
             txtMargemLucro.Enabled = true;
+            txtPercCom.Enabled = true;
             txtCodMarca.Enabled = true;
             txtCodGrupo.Enabled = true;
             chkTodas.Enabled = true;
@@ -86,6 +90,7 @@ namespace KnkForms.Forms
             aListaPreco.Lista = txtLista.Text;
             aListaPreco.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
             aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
+            aListaPreco.PercCom = Convert.ToDouble(txtPercCom.Text);
             aListaPreco.CodMarca = Convert.ToInt32(txtCodMarca.Text);
             aListaPreco.CodGrupo = Convert.ToInt32(txtCodGrupo.Text);
             aListaPreco.CodEmpresa = Convert.ToInt32(txtCodUser.Text);

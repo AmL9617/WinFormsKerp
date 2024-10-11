@@ -8,25 +8,32 @@ namespace KnkForms.Classes
 {
     internal class RamoAtividadesClientes:RamoAtividades
     {
-        protected int idCliente;
+        protected int codClienteFornecedor;
         protected int prioridade;
 
+        protected Clientes clientes;
         public RamoAtividadesClientes()
         {
-            idCliente = 0;
+            codClienteFornecedor = 0;
             prioridade = 0;
+            clientes = new Clientes();
         }
 
-        public int IdCliente
+        public int CodClienteFornecedor
         {
-            get { return idCliente; }
-            set { idCliente = value; }
+            get { return codClienteFornecedor; }
+            set { codClienteFornecedor = value; }
         }
 
         public int Prioridade
         {
             get { return prioridade; }
             set { prioridade = value; }
+        }
+        public Clientes Clientes
+        {
+            get { return clientes; }
+            set { clientes = value; }
         }
     }
 }

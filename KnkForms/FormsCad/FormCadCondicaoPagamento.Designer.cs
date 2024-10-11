@@ -42,6 +42,8 @@
             this.txtCodParcela = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -67,7 +69,7 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(725, 27);
+            this.chkAtivo.Location = new System.Drawing.Point(738, 22);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 7;
@@ -96,7 +98,7 @@
             this.dataPrazo.Location = new System.Drawing.Point(35, 112);
             this.dataPrazo.Name = "dataPrazo";
             this.dataPrazo.Size = new System.Drawing.Size(85, 20);
-            this.dataPrazo.TabIndex = 6;
+            this.dataPrazo.TabIndex = 8;
             // 
             // label5
             // 
@@ -109,7 +111,8 @@
             // 
             // txtTaxaJuro
             // 
-            this.txtTaxaJuro.Location = new System.Drawing.Point(472, 58);
+            this.txtTaxaJuro.Location = new System.Drawing.Point(441, 58);
+            this.txtTaxaJuro.MaxLength = 8;
             this.txtTaxaJuro.Name = "txtTaxaJuro";
             this.txtTaxaJuro.Size = new System.Drawing.Size(59, 20);
             this.txtTaxaJuro.TabIndex = 4;
@@ -117,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(469, 42);
+            this.label1.Location = new System.Drawing.Point(438, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 56;
@@ -126,8 +129,9 @@
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(391, 58);
+            this.txtTipo.MaxLength = 1;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(65, 20);
+            this.txtTipo.Size = new System.Drawing.Size(33, 20);
             this.txtTipo.TabIndex = 3;
             // 
             // label2
@@ -141,15 +145,16 @@
             // 
             // txtOpDisp
             // 
-            this.txtOpDisp.Location = new System.Drawing.Point(564, 58);
+            this.txtOpDisp.Location = new System.Drawing.Point(533, 58);
+            this.txtOpDisp.MaxLength = 1;
             this.txtOpDisp.Name = "txtOpDisp";
-            this.txtOpDisp.Size = new System.Drawing.Size(129, 20);
+            this.txtOpDisp.Size = new System.Drawing.Size(47, 20);
             this.txtOpDisp.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 42);
+            this.label4.Location = new System.Drawing.Point(530, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 62;
@@ -160,7 +165,7 @@
             this.txtCodParcela.Location = new System.Drawing.Point(141, 116);
             this.txtCodParcela.Name = "txtCodParcela";
             this.txtCodParcela.Size = new System.Drawing.Size(63, 20);
-            this.txtCodParcela.TabIndex = 9;
+            this.txtCodParcela.TabIndex = 92;
             // 
             // label7
             // 
@@ -176,15 +181,34 @@
             this.btnConsulta.Location = new System.Drawing.Point(218, 113);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(71, 23);
-            this.btnConsulta.TabIndex = 8;
+            this.btnConsulta.TabIndex = 9;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(647, 58);
+            this.textBox1.MaxLength = 2;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(47, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(644, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 13);
+            this.label3.TabIndex = 66;
+            this.label3.Text = "Número de parcelas";
             // 
             // FormCadCondicaoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodParcela);
             this.Controls.Add(this.label7);
@@ -225,6 +249,8 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtCodParcela, 0);
             this.Controls.SetChildIndex(this.btnConsulta, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +272,7 @@
         private System.Windows.Forms.TextBox txtCodParcela;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

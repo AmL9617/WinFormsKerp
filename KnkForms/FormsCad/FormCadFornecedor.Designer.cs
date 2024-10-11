@@ -65,6 +65,12 @@
             this.txtIndustria = new System.Windows.Forms.TextBox();
             this.chkVerCliente = new System.Windows.Forms.CheckBox();
             this.btnPesquisarContato = new System.Windows.Forms.Button();
+            this.btnConsultaReg = new System.Windows.Forms.Button();
+            this.txtCodRegiao = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnConsultaCid = new System.Windows.Forms.Button();
+            this.txtCodCidade = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -87,7 +93,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(599, 707);
+            this.btnSalvar.Location = new System.Drawing.Point(643, 707);
             this.btnSalvar.TabIndex = 24;
             // 
             // txtCodUser
@@ -101,7 +107,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(694, 707);
+            this.btnSair.Location = new System.Drawing.Point(738, 707);
             this.btnSair.TabIndex = 25;
             // 
             // dataUltMov
@@ -117,7 +123,7 @@
             this.txtObservacao.MaxLength = 3000;
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(741, 293);
+            this.txtObservacao.Size = new System.Drawing.Size(785, 293);
             this.txtObservacao.TabIndex = 20;
             // 
             // label18
@@ -174,7 +180,7 @@
             // 
             // txtContato
             // 
-            this.txtContato.Location = new System.Drawing.Point(35, 264);
+            this.txtContato.Location = new System.Drawing.Point(123, 264);
             this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(614, 20);
@@ -183,7 +189,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 248);
+            this.label12.Location = new System.Drawing.Point(120, 248);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 13);
             this.label12.TabIndex = 143;
@@ -191,7 +197,7 @@
             // 
             // txtLimite
             // 
-            this.txtLimite.Location = new System.Drawing.Point(629, 211);
+            this.txtLimite.Location = new System.Drawing.Point(35, 264);
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(67, 20);
             this.txtLimite.TabIndex = 14;
@@ -199,7 +205,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(626, 195);
+            this.label13.Location = new System.Drawing.Point(32, 248);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 13);
             this.label13.TabIndex = 141;
@@ -207,7 +213,7 @@
             // 
             // txtTrade
             // 
-            this.txtTrade.Location = new System.Drawing.Point(403, 211);
+            this.txtTrade.Location = new System.Drawing.Point(564, 210);
             this.txtTrade.Name = "txtTrade";
             this.txtTrade.Size = new System.Drawing.Size(100, 20);
             this.txtTrade.TabIndex = 12;
@@ -215,7 +221,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(400, 195);
+            this.label3.Location = new System.Drawing.Point(561, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 139;
@@ -223,8 +229,8 @@
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(303, 211);
-            this.txtCep.MaxLength = 10;
+            this.txtCep.Location = new System.Drawing.Point(311, 211);
+            this.txtCep.MaxLength = 18;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(86, 20);
             this.txtCep.TabIndex = 11;
@@ -232,7 +238,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(300, 195);
+            this.label9.Location = new System.Drawing.Point(308, 195);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 13);
             this.label9.TabIndex = 137;
@@ -240,7 +246,7 @@
             // 
             // txtCodProd
             // 
-            this.txtCodProd.Location = new System.Drawing.Point(526, 211);
+            this.txtCodProd.Location = new System.Drawing.Point(687, 210);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(63, 20);
             this.txtCodProd.TabIndex = 13;
@@ -248,7 +254,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(523, 195);
+            this.label10.Location = new System.Drawing.Point(684, 194);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
             this.label10.TabIndex = 135;
@@ -417,7 +423,7 @@
             // 
             // btnPesquisarContato
             // 
-            this.btnPesquisarContato.Location = new System.Drawing.Point(655, 264);
+            this.btnPesquisarContato.Location = new System.Drawing.Point(742, 262);
             this.btnPesquisarContato.Name = "btnPesquisarContato";
             this.btnPesquisarContato.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarContato.TabIndex = 15;
@@ -425,10 +431,68 @@
             this.btnPesquisarContato.UseVisualStyleBackColor = true;
             this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
             // 
+            // btnConsultaReg
+            // 
+            this.btnConsultaReg.Location = new System.Drawing.Point(484, 208);
+            this.btnConsultaReg.Name = "btnConsultaReg";
+            this.btnConsultaReg.Size = new System.Drawing.Size(71, 23);
+            this.btnConsultaReg.TabIndex = 559;
+            this.btnConsultaReg.Text = "Consulta";
+            this.btnConsultaReg.UseVisualStyleBackColor = true;
+            this.btnConsultaReg.Click += new System.EventHandler(this.btnConsultaReg_Click);
+            // 
+            // txtCodRegiao
+            // 
+            this.txtCodRegiao.Location = new System.Drawing.Point(405, 211);
+            this.txtCodRegiao.Name = "txtCodRegiao";
+            this.txtCodRegiao.Size = new System.Drawing.Size(63, 20);
+            this.txtCodRegiao.TabIndex = 560;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(402, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 561;
+            this.label11.Text = "Código Região";
+            // 
+            // btnConsultaCid
+            // 
+            this.btnConsultaCid.Location = new System.Drawing.Point(766, 158);
+            this.btnConsultaCid.Name = "btnConsultaCid";
+            this.btnConsultaCid.Size = new System.Drawing.Size(71, 23);
+            this.btnConsultaCid.TabIndex = 556;
+            this.btnConsultaCid.Text = "Consulta";
+            this.btnConsultaCid.UseVisualStyleBackColor = true;
+            this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);
+            // 
+            // txtCodCidade
+            // 
+            this.txtCodCidade.Location = new System.Drawing.Point(687, 161);
+            this.txtCodCidade.Name = "txtCodCidade";
+            this.txtCodCidade.Size = new System.Drawing.Size(63, 20);
+            this.txtCodCidade.TabIndex = 557;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(684, 145);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 13);
+            this.label14.TabIndex = 558;
+            this.label14.Text = "Código Cidade";
+            // 
             // FormCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 741);
+            this.ClientSize = new System.Drawing.Size(849, 741);
+            this.Controls.Add(this.btnConsultaReg);
+            this.Controls.Add(this.txtCodRegiao);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnConsultaCid);
+            this.Controls.Add(this.txtCodCidade);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnPesquisarContato);
             this.Controls.Add(this.chkVerCliente);
             this.Controls.Add(this.txtIndustria);
@@ -468,16 +532,6 @@
             this.Controls.Add(this.lbl1);
             this.Name = "FormCadFornecedor";
             this.Text = "Form Fornecedor";
-            this.Controls.SetChildIndex(this.lblCodUser, 0);
-            this.Controls.SetChildIndex(this.txtCodUser, 0);
-            this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblCod, 0);
-            this.Controls.SetChildIndex(this.txtCod, 0);
-            this.Controls.SetChildIndex(this.lblDataCad, 0);
-            this.Controls.SetChildIndex(this.txtDataCad, 0);
-            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
-            this.Controls.SetChildIndex(this.txtDataAlt, 0);
-            this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -515,6 +569,22 @@
             this.Controls.SetChildIndex(this.txtIndustria, 0);
             this.Controls.SetChildIndex(this.chkVerCliente, 0);
             this.Controls.SetChildIndex(this.btnPesquisarContato, 0);
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
+            this.Controls.SetChildIndex(this.lblDataCad, 0);
+            this.Controls.SetChildIndex(this.txtDataCad, 0);
+            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
+            this.Controls.SetChildIndex(this.txtDataAlt, 0);
+            this.Controls.SetChildIndex(this.btnSalvar, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.txtCodCidade, 0);
+            this.Controls.SetChildIndex(this.btnConsultaCid, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.txtCodRegiao, 0);
+            this.Controls.SetChildIndex(this.btnConsultaReg, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +629,11 @@
         private System.Windows.Forms.TextBox txtIndustria;
         private System.Windows.Forms.CheckBox chkVerCliente;
         private System.Windows.Forms.Button btnPesquisarContato;
+        private System.Windows.Forms.Button btnConsultaReg;
+        private System.Windows.Forms.TextBox txtCodRegiao;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnConsultaCid;
+        private System.Windows.Forms.TextBox txtCodCidade;
+        private System.Windows.Forms.Label label14;
     }
 }

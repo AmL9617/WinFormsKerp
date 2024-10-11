@@ -41,6 +41,8 @@
             this.chkTodas = new System.Windows.Forms.CheckBox();
             this.btnConsultaMarca = new System.Windows.Forms.Button();
             this.btnConsultaGrupo = new System.Windows.Forms.Button();
+            this.txtPercCom = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -66,9 +68,9 @@
             // txtLista
             // 
             this.txtLista.Location = new System.Drawing.Point(114, 57);
-            this.txtLista.MaxLength = 30;
+            this.txtLista.MaxLength = 40;
             this.txtLista.Name = "txtLista";
-            this.txtLista.Size = new System.Drawing.Size(197, 20);
+            this.txtLista.Size = new System.Drawing.Size(250, 20);
             this.txtLista.TabIndex = 2;
             // 
             // lbl1
@@ -82,7 +84,7 @@
             // 
             // txtDescMax
             // 
-            this.txtDescMax.Location = new System.Drawing.Point(328, 57);
+            this.txtDescMax.Location = new System.Drawing.Point(395, 59);
             this.txtDescMax.Name = "txtDescMax";
             this.txtDescMax.Size = new System.Drawing.Size(65, 20);
             this.txtDescMax.TabIndex = 3;
@@ -90,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(325, 41);
+            this.label1.Location = new System.Drawing.Point(392, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 53;
@@ -98,7 +100,7 @@
             // 
             // txtMargemLucro
             // 
-            this.txtMargemLucro.Location = new System.Drawing.Point(436, 56);
+            this.txtMargemLucro.Location = new System.Drawing.Point(503, 58);
             this.txtMargemLucro.Name = "txtMargemLucro";
             this.txtMargemLucro.Size = new System.Drawing.Size(64, 20);
             this.txtMargemLucro.TabIndex = 4;
@@ -106,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(433, 40);
+            this.label2.Location = new System.Drawing.Point(500, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 55;
@@ -114,7 +116,7 @@
             // 
             // txtCodMarca
             // 
-            this.txtCodMarca.Location = new System.Drawing.Point(535, 56);
+            this.txtCodMarca.Location = new System.Drawing.Point(38, 119);
             this.txtCodMarca.Name = "txtCodMarca";
             this.txtCodMarca.Size = new System.Drawing.Size(63, 20);
             this.txtCodMarca.TabIndex = 58;
@@ -122,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(532, 40);
+            this.label3.Location = new System.Drawing.Point(35, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 57;
@@ -130,7 +132,7 @@
             // 
             // txtCodGrupo
             // 
-            this.txtCodGrupo.Location = new System.Drawing.Point(35, 123);
+            this.txtCodGrupo.Location = new System.Drawing.Point(235, 120);
             this.txtCodGrupo.Name = "txtCodGrupo";
             this.txtCodGrupo.Size = new System.Drawing.Size(63, 20);
             this.txtCodGrupo.TabIndex = 60;
@@ -138,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 107);
+            this.label4.Location = new System.Drawing.Point(232, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 59;
@@ -150,23 +152,23 @@
             this.chkTodas.Location = new System.Drawing.Point(732, 21);
             this.chkTodas.Name = "chkTodas";
             this.chkTodas.Size = new System.Drawing.Size(56, 17);
-            this.chkTodas.TabIndex = 6;
+            this.chkTodas.TabIndex = 5;
             this.chkTodas.Text = "Todas";
             this.chkTodas.UseVisualStyleBackColor = true;
             // 
             // btnConsultaMarca
             // 
-            this.btnConsultaMarca.Location = new System.Drawing.Point(611, 54);
+            this.btnConsultaMarca.Location = new System.Drawing.Point(114, 117);
             this.btnConsultaMarca.Name = "btnConsultaMarca";
             this.btnConsultaMarca.Size = new System.Drawing.Size(98, 23);
-            this.btnConsultaMarca.TabIndex = 5;
+            this.btnConsultaMarca.TabIndex = 6;
             this.btnConsultaMarca.Text = "Consulta Marca";
             this.btnConsultaMarca.UseVisualStyleBackColor = true;
             this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
             // 
             // btnConsultaGrupo
             // 
-            this.btnConsultaGrupo.Location = new System.Drawing.Point(114, 123);
+            this.btnConsultaGrupo.Location = new System.Drawing.Point(314, 120);
             this.btnConsultaGrupo.Name = "btnConsultaGrupo";
             this.btnConsultaGrupo.Size = new System.Drawing.Size(103, 23);
             this.btnConsultaGrupo.TabIndex = 7;
@@ -174,10 +176,29 @@
             this.btnConsultaGrupo.UseVisualStyleBackColor = true;
             this.btnConsultaGrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
             // 
+            // txtPercCom
+            // 
+            this.txtPercCom.Location = new System.Drawing.Point(611, 59);
+            this.txtPercCom.MaxLength = 8;
+            this.txtPercCom.Name = "txtPercCom";
+            this.txtPercCom.Size = new System.Drawing.Size(64, 20);
+            this.txtPercCom.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(608, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Perc. Comissão";
+            // 
             // FormCadListaPreco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtPercCom);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnConsultaGrupo);
             this.Controls.Add(this.btnConsultaMarca);
             this.Controls.Add(this.chkTodas);
@@ -216,6 +237,8 @@
             this.Controls.SetChildIndex(this.chkTodas, 0);
             this.Controls.SetChildIndex(this.btnConsultaMarca, 0);
             this.Controls.SetChildIndex(this.btnConsultaGrupo, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtPercCom, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +259,7 @@
         private System.Windows.Forms.CheckBox chkTodas;
         private System.Windows.Forms.Button btnConsultaMarca;
         private System.Windows.Forms.Button btnConsultaGrupo;
+        private System.Windows.Forms.TextBox txtPercCom;
+        private System.Windows.Forms.Label label5;
     }
 }

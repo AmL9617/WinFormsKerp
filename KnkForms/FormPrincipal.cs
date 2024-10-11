@@ -33,6 +33,7 @@ namespace KnkForms
         Paises oPais;
         Parcelas aParcela;
         RamoAtividades oRamoAtiv;
+        RamoAtividadesClientes oRamoAtivClientes;
         Regioes aRegiao;
         Transportadoras aTransportadora;
         Vendedores oVendedor;
@@ -57,6 +58,7 @@ namespace KnkForms
             oPais = new Paises();
             aParcela = new Parcelas();
             oRamoAtiv = new RamoAtividades();
+            oRamoAtivClientes = new RamoAtividadesClientes();
             aRegiao = new Regioes();
             aTransportadora = new Transportadoras();
             oVendedor = new Vendedores();
@@ -153,7 +155,10 @@ namespace KnkForms
 
             aInter.PecaRamosAtividade(oRamoAtiv);
         }
-
+        private void ramoDeAtividadesDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //aInter.PecaRamoAtividadeClientes(oRamoAtivClientes);
+        }
         private void cadRegioesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -172,5 +177,6 @@ namespace KnkForms
             aInter.PecaVendedores(oVendedor);
         }
 
+      
     }
 }

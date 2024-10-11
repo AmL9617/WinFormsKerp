@@ -11,6 +11,7 @@ namespace KnkForms.Classes
         protected string lista;
         protected double descontoMaximo;
         protected double margemLucro;
+        protected double percCom;
         protected bool todas;
 
         //Placeholder
@@ -26,6 +27,7 @@ namespace KnkForms.Classes
             lista = "";
             descontoMaximo = 0.0f;
             margemLucro = 0.0f;
+            percCom = 0.0f;
             todas = false;
             marcas = new Marcas();
             grupos = new Grupos();
@@ -49,6 +51,12 @@ namespace KnkForms.Classes
         {
             get { return margemLucro; }
             set { margemLucro = value; }
+        }
+
+        public double PercCom
+        {
+            get { return percCom; }
+            set { percCom = value; }
         }
 
         public bool Todas

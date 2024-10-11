@@ -339,5 +339,11 @@ namespace KnkForms.Forms
             oFrmConContatos.ConhecaObj(oCliente.Contatos);
             oFrmConContatos.ShowDialog();
         }
+
+        private void btnConsultaReg_Click(object sender, EventArgs e)
+        {
+            oFrmConRegioes.ConhecaObj(oCliente.Regioes);
+            oFrmConRegioes.ShowDialog();
+        }
     }
 }
