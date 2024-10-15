@@ -43,6 +43,7 @@
             this.btnConsulta.TabIndex = 65;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // txtCodCliForn
             // 

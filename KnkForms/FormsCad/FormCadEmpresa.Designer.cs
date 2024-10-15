@@ -36,6 +36,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnConsultaCid = new System.Windows.Forms.Button();
+            this.txtCodCidade = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -126,10 +137,116 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "CEP";
             // 
+            // btnConsultaCid
+            // 
+            this.btnConsultaCid.Location = new System.Drawing.Point(189, 219);
+            this.btnConsultaCid.Name = "btnConsultaCid";
+            this.btnConsultaCid.Size = new System.Drawing.Size(71, 23);
+            this.btnConsultaCid.TabIndex = 201;
+            this.btnConsultaCid.Text = "Consulta";
+            this.btnConsultaCid.UseVisualStyleBackColor = true;
+            // 
+            // txtCodCidade
+            // 
+            this.txtCodCidade.Location = new System.Drawing.Point(110, 222);
+            this.txtCodCidade.Name = "txtCodCidade";
+            this.txtCodCidade.Size = new System.Drawing.Size(63, 20);
+            this.txtCodCidade.TabIndex = 202;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(107, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 207;
+            this.label4.Text = "Código Cidade";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(376, 163);
+            this.txtBairro.MaxLength = 50;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(260, 20);
+            this.txtBairro.TabIndex = 200;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(373, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 206;
+            this.label6.Text = "Bairro";
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Location = new System.Drawing.Point(106, 163);
+            this.txtComplemento.MaxLength = 50;
+            this.txtComplemento.Multiline = true;
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(260, 20);
+            this.txtComplemento.TabIndex = 199;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(103, 147);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 205;
+            this.label7.Text = "Complemento";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(33, 163);
+            this.txtNumero.MaxLength = 6;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(52, 20);
+            this.txtNumero.TabIndex = 198;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 147);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 204;
+            this.label8.Text = "Número";
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(296, 115);
+            this.txtEndereco.MaxLength = 50;
+            this.txtEndereco.Multiline = true;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(260, 20);
+            this.txtEndereco.TabIndex = 197;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(293, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 203;
+            this.label5.Text = "Endereço";
+            // 
             // FormCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsultaCid);
+            this.Controls.Add(this.txtCodCidade);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCnpj);
@@ -158,6 +275,17 @@
             this.Controls.SetChildIndex(this.txtCnpj, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtCep, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtEndereco, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.txtNumero, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.txtComplemento, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.txtBairro, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.txtCodCidade, 0);
+            this.Controls.SetChildIndex(this.btnConsultaCid, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +301,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnConsultaCid;
+        private System.Windows.Forms.TextBox txtCodCidade;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -198,6 +198,7 @@
             // txtLimite
             // 
             this.txtLimite.Location = new System.Drawing.Point(35, 264);
+            this.txtLimite.MaxLength = 8;
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(67, 20);
             this.txtLimite.TabIndex = 14;
@@ -279,7 +280,7 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(420, 160);
+            this.txtComplemento.Location = new System.Drawing.Point(322, 156);
             this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Multiline = true;
             this.txtComplemento.Name = "txtComplemento";
@@ -289,7 +290,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(417, 144);
+            this.label7.Location = new System.Drawing.Point(319, 140);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 131;
@@ -297,16 +298,16 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(362, 160);
+            this.txtNumero.Location = new System.Drawing.Point(254, 156);
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(41, 20);
+            this.txtNumero.Size = new System.Drawing.Size(53, 20);
             this.txtNumero.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(359, 144);
+            this.label8.Location = new System.Drawing.Point(251, 140);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 129;
@@ -318,7 +319,7 @@
             this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(307, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(208, 16);
             this.txtEndereco.TabIndex = 7;
             // 
             // label4
@@ -443,7 +444,7 @@
             // 
             // txtCodRegiao
             // 
-            this.txtCodRegiao.Location = new System.Drawing.Point(405, 211);
+            this.txtCodRegiao.Location = new System.Drawing.Point(414, 210);
             this.txtCodRegiao.Name = "txtCodRegiao";
             this.txtCodRegiao.Size = new System.Drawing.Size(63, 20);
             this.txtCodRegiao.TabIndex = 560;
@@ -451,7 +452,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(402, 195);
+            this.label11.Location = new System.Drawing.Point(411, 194);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 13);
             this.label11.TabIndex = 561;
@@ -459,7 +460,7 @@
             // 
             // btnConsultaCid
             // 
-            this.btnConsultaCid.Location = new System.Drawing.Point(766, 158);
+            this.btnConsultaCid.Location = new System.Drawing.Point(679, 153);
             this.btnConsultaCid.Name = "btnConsultaCid";
             this.btnConsultaCid.Size = new System.Drawing.Size(71, 23);
             this.btnConsultaCid.TabIndex = 556;
@@ -469,7 +470,7 @@
             // 
             // txtCodCidade
             // 
-            this.txtCodCidade.Location = new System.Drawing.Point(687, 161);
+            this.txtCodCidade.Location = new System.Drawing.Point(600, 156);
             this.txtCodCidade.Name = "txtCodCidade";
             this.txtCodCidade.Size = new System.Drawing.Size(63, 20);
             this.txtCodCidade.TabIndex = 557;
@@ -477,7 +478,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(684, 145);
+            this.label14.Location = new System.Drawing.Point(597, 140);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 558;
@@ -486,7 +487,7 @@
             // FormCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(849, 741);
+            this.ClientSize = new System.Drawing.Size(849, 672);
             this.Controls.Add(this.btnConsultaReg);
             this.Controls.Add(this.txtCodRegiao);
             this.Controls.Add(this.label11);

@@ -210,6 +210,7 @@
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(36, 295);
+            this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(614, 20);
             this.txtContato.TabIndex = 106;
@@ -325,7 +326,8 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(316, 120);
+            this.txtNumero.Location = new System.Drawing.Point(312, 120);
+            this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(51, 20);
             this.txtNumero.TabIndex = 8;
@@ -333,7 +335,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(313, 104);
+            this.label8.Location = new System.Drawing.Point(309, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 91;

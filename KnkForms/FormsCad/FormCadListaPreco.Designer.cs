@@ -85,6 +85,7 @@
             // txtDescMax
             // 
             this.txtDescMax.Location = new System.Drawing.Point(395, 59);
+            this.txtDescMax.MaxLength = 8;
             this.txtDescMax.Name = "txtDescMax";
             this.txtDescMax.Size = new System.Drawing.Size(65, 20);
             this.txtDescMax.TabIndex = 3;
@@ -101,6 +102,7 @@
             // txtMargemLucro
             // 
             this.txtMargemLucro.Location = new System.Drawing.Point(503, 58);
+            this.txtMargemLucro.MaxLength = 8;
             this.txtMargemLucro.Name = "txtMargemLucro";
             this.txtMargemLucro.Size = new System.Drawing.Size(64, 20);
             this.txtMargemLucro.TabIndex = 4;

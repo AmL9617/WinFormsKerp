@@ -82,6 +82,7 @@
             // txtTipoPais
             // 
             this.txtTipoPais.Location = new System.Drawing.Point(389, 58);
+            this.txtTipoPais.MaxLength = 20;
             this.txtTipoPais.Name = "txtTipoPais";
             this.txtTipoPais.Size = new System.Drawing.Size(90, 20);
             this.txtTipoPais.TabIndex = 3;

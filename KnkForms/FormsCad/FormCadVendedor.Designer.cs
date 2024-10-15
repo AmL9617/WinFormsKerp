@@ -64,6 +64,7 @@
             // txtComissao
             // 
             this.txtComissao.Location = new System.Drawing.Point(498, 58);
+            this.txtComissao.MaxLength = 8;
             this.txtComissao.Name = "txtComissao";
             this.txtComissao.Size = new System.Drawing.Size(73, 20);
             this.txtComissao.TabIndex = 4;
@@ -90,8 +91,9 @@
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(402, 58);
+            this.txtTipo.MaxLength = 20;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(70, 20);
+            this.txtTipo.Size = new System.Drawing.Size(87, 20);
             this.txtTipo.TabIndex = 3;
             // 
             // label2

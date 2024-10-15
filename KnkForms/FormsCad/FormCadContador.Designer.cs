@@ -238,6 +238,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(299, 117);
+            this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(46, 20);
             this.txtNumero.TabIndex = 6;
@@ -272,7 +273,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 42);
+            this.label2.Location = new System.Drawing.Point(435, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 116;
@@ -289,9 +290,10 @@
             // 
             // txtCrc
             // 
-            this.txtCrc.Location = new System.Drawing.Point(429, 58);
+            this.txtCrc.Location = new System.Drawing.Point(438, 58);
+            this.txtCrc.MaxLength = 6;
             this.txtCrc.Name = "txtCrc";
-            this.txtCrc.Size = new System.Drawing.Size(100, 20);
+            this.txtCrc.Size = new System.Drawing.Size(80, 20);
             this.txtCrc.TabIndex = 3;
             // 
             // btnPesquisarContato

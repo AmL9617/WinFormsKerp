@@ -98,7 +98,7 @@ namespace KnkForms
             oFormCadPais = new FormCadPais();
             oFormCadParcela = new FormCadParcela();
             oFormCadRamoAtiv = new FormCadRamoAtividade();
-            oFormConRamoAtivClientes = new FormConRamoAtivClientes();
+            oFormCadRamoAtivCliente = new FormCadRamoAtivCliente();
             oFormCadRegiao = new FormCadRegiao();
             oFormCadTransportadora = new FormCadTransportadora();
             oFormCadVendedor = new FormCadVendedor();
@@ -235,13 +235,13 @@ namespace KnkForms
             oFormConRamoAtividades.ConhecaObj(obj);
             oFormConRamoAtividades.ShowDialog();
         }
-        /*
+        
         public void PecaRamoAtividadeClientes(Object obj)
         {
             oFormConRamoAtivClientes.ConhecaObj(obj);
             oFormConRamoAtivClientes.ShowDialog();
         }
-        */
+        
         public void PecaRegioes(Object obj)
         {
             oFormConRegioes.ConhecaObj(obj);

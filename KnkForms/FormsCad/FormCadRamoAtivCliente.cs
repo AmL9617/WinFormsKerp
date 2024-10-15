@@ -78,6 +78,7 @@ namespace KnkForms.FormsCad
         {
             oFrmConClientes = (FormConClientes)obj;
         }
+
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             oFrmConClientes.ConhecaObj(oRamoAtivClientes.Clientes);

@@ -81,8 +81,9 @@
             // txtNfce
             // 
             this.txtNfce.Location = new System.Drawing.Point(540, 58);
+            this.txtNfce.MaxLength = 9;
             this.txtNfce.Name = "txtNfce";
-            this.txtNfce.Size = new System.Drawing.Size(100, 20);
+            this.txtNfce.Size = new System.Drawing.Size(113, 20);
             this.txtNfce.TabIndex = 4;
             // 
             // label2

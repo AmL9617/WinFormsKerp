@@ -411,7 +411,7 @@
             // 
             // btnPesquisarTransportadora
             // 
-            this.btnPesquisarTransportadora.Location = new System.Drawing.Point(281, 28);
+            this.btnPesquisarTransportadora.Location = new System.Drawing.Point(328, 27);
             this.btnPesquisarTransportadora.Name = "btnPesquisarTransportadora";
             this.btnPesquisarTransportadora.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarTransportadora.TabIndex = 30;
@@ -440,8 +440,9 @@
             // txtTransp
             // 
             this.txtTransp.Location = new System.Drawing.Point(15, 30);
+            this.txtTransp.MaxLength = 100;
             this.txtTransp.Name = "txtTransp";
-            this.txtTransp.Size = new System.Drawing.Size(260, 20);
+            this.txtTransp.Size = new System.Drawing.Size(307, 20);
             this.txtTransp.TabIndex = 136;
             // 
             // label22
@@ -470,7 +471,7 @@
             // 
             // btnPesquisarRamoAtiv
             // 
-            this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(281, 25);
+            this.btnPesquisarRamoAtiv.Location = new System.Drawing.Point(218, 28);
             this.btnPesquisarRamoAtiv.Name = "btnPesquisarRamoAtiv";
             this.btnPesquisarRamoAtiv.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarRamoAtiv.TabIndex = 28;
@@ -498,8 +499,9 @@
             // txtIdRamoAtiv
             // 
             this.txtIdRamoAtiv.Location = new System.Drawing.Point(15, 28);
+            this.txtIdRamoAtiv.MaxLength = 30;
             this.txtIdRamoAtiv.Name = "txtIdRamoAtiv";
-            this.txtIdRamoAtiv.Size = new System.Drawing.Size(260, 20);
+            this.txtIdRamoAtiv.Size = new System.Drawing.Size(197, 20);
             this.txtIdRamoAtiv.TabIndex = 132;
             // 
             // label21
@@ -538,7 +540,7 @@
             // 
             // btnPesquisarVendedor
             // 
-            this.btnPesquisarVendedor.Location = new System.Drawing.Point(606, 72);
+            this.btnPesquisarVendedor.Location = new System.Drawing.Point(586, 72);
             this.btnPesquisarVendedor.Name = "btnPesquisarVendedor";
             this.btnPesquisarVendedor.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarVendedor.TabIndex = 25;
@@ -548,7 +550,7 @@
             // 
             // btnPesquisarRegiao
             // 
-            this.btnPesquisarRegiao.Location = new System.Drawing.Point(606, 32);
+            this.btnPesquisarRegiao.Location = new System.Drawing.Point(586, 32);
             this.btnPesquisarRegiao.Name = "btnPesquisarRegiao";
             this.btnPesquisarRegiao.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarRegiao.TabIndex = 23;
@@ -558,7 +560,7 @@
             // 
             // btnPesquisarCondPag
             // 
-            this.btnPesquisarCondPag.Location = new System.Drawing.Point(291, 72);
+            this.btnPesquisarCondPag.Location = new System.Drawing.Point(265, 71);
             this.btnPesquisarCondPag.Name = "btnPesquisarCondPag";
             this.btnPesquisarCondPag.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarCondPag.TabIndex = 24;
@@ -568,7 +570,7 @@
             // 
             // btnPesquisarListaPreco
             // 
-            this.btnPesquisarListaPreco.Location = new System.Drawing.Point(291, 29);
+            this.btnPesquisarListaPreco.Location = new System.Drawing.Point(265, 28);
             this.btnPesquisarListaPreco.Name = "btnPesquisarListaPreco";
             this.btnPesquisarListaPreco.Size = new System.Drawing.Size(18, 23);
             this.btnPesquisarListaPreco.TabIndex = 22;
@@ -579,6 +581,7 @@
             // txtPessoasAut
             // 
             this.txtPessoasAut.Location = new System.Drawing.Point(10, 154);
+            this.txtPessoasAut.MaxLength = 2500;
             this.txtPessoasAut.Multiline = true;
             this.txtPessoasAut.Name = "txtPessoasAut";
             this.txtPessoasAut.Size = new System.Drawing.Size(713, 109);
@@ -587,29 +590,33 @@
             // txtIdVend
             // 
             this.txtIdVend.Location = new System.Drawing.Point(330, 74);
+            this.txtIdVend.MaxLength = 40;
             this.txtIdVend.Name = "txtIdVend";
-            this.txtIdVend.Size = new System.Drawing.Size(270, 20);
+            this.txtIdVend.Size = new System.Drawing.Size(250, 20);
             this.txtIdVend.TabIndex = 134;
             // 
             // txtIdReg
             // 
             this.txtIdReg.Location = new System.Drawing.Point(330, 32);
+            this.txtIdReg.MaxLength = 40;
             this.txtIdReg.Name = "txtIdReg";
-            this.txtIdReg.Size = new System.Drawing.Size(270, 20);
+            this.txtIdReg.Size = new System.Drawing.Size(250, 20);
             this.txtIdReg.TabIndex = 132;
             // 
             // txtIdCondPag
             // 
             this.txtIdCondPag.Location = new System.Drawing.Point(9, 74);
+            this.txtIdCondPag.MaxLength = 40;
             this.txtIdCondPag.Name = "txtIdCondPag";
-            this.txtIdCondPag.Size = new System.Drawing.Size(276, 20);
+            this.txtIdCondPag.Size = new System.Drawing.Size(250, 20);
             this.txtIdCondPag.TabIndex = 130;
             // 
             // txtIdListPrec
             // 
             this.txtIdListPrec.Location = new System.Drawing.Point(9, 32);
+            this.txtIdListPrec.MaxLength = 40;
             this.txtIdListPrec.Name = "txtIdListPrec";
-            this.txtIdListPrec.Size = new System.Drawing.Size(276, 20);
+            this.txtIdListPrec.Size = new System.Drawing.Size(250, 20);
             this.txtIdListPrec.TabIndex = 128;
             // 
             // label20
@@ -688,8 +695,9 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(19, 78);
             this.textBox2.MaxLength = 500;
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(702, 20);
+            this.textBox2.Size = new System.Drawing.Size(702, 55);
             this.textBox2.TabIndex = 135;
             // 
             // label31
@@ -714,17 +722,17 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(26, 152);
+            this.listView1.Location = new System.Drawing.Point(19, 152);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(695, 117);
+            this.listView1.Size = new System.Drawing.Size(702, 117);
             this.listView1.TabIndex = 134;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // btnContato
             // 
-            this.btnContato.Location = new System.Drawing.Point(640, 122);
+            this.btnContato.Location = new System.Drawing.Point(664, 27);
             this.btnContato.Name = "btnContato";
-            this.btnContato.Size = new System.Drawing.Size(81, 24);
+            this.btnContato.Size = new System.Drawing.Size(63, 24);
             this.btnContato.TabIndex = 21;
             this.btnContato.Text = "Adicionar";
             this.btnContato.UseVisualStyleBackColor = true;
@@ -732,6 +740,7 @@
             // txtContato
             // 
             this.txtContato.Location = new System.Drawing.Point(20, 29);
+            this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(614, 20);
             this.txtContato.TabIndex = 20;

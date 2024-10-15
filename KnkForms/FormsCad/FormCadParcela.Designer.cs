@@ -53,6 +53,7 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(249, 58);
+            this.txtValor.MaxLength = 8;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(68, 20);
             this.txtValor.TabIndex = 3;
@@ -69,6 +70,7 @@
             // txtQtd
             // 
             this.txtQtd.Location = new System.Drawing.Point(118, 58);
+            this.txtQtd.MaxLength = 8;
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(90, 20);
             this.txtQtd.TabIndex = 2;

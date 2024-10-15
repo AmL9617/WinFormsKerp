@@ -183,13 +183,24 @@ namespace KnkForms.Classes
 
         protected int CodRegioes
         {
-
+            get { return codRegioes; }
+            set { codRegioes = value; }
         }
 
         public Contatos Contatos
         {
             get { return contatos; }
             set { contatos = value; }
+        }
+        public Cidades Cidades
+        {
+            get { return cidades; }
+            set { cidades = value; }
+        }
+        public Regioes Regioes
+        {
+            get { return regioes; }
+            set { regioes = value; }
         }
     }
 

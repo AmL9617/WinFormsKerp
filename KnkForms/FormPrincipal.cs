@@ -157,7 +157,7 @@ namespace KnkForms
         }
         private void ramoDeAtividadesDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //aInter.PecaRamoAtividadeClientes(oRamoAtivClientes);
+            aInter.PecaRamoAtividadeClientes(oRamoAtivClientes);
         }
         private void cadRegioesToolStripMenuItem_Click(object sender, EventArgs e)
         {

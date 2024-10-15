@@ -129,6 +129,7 @@
             // txtSalario
             // 
             this.txtSalario.Location = new System.Drawing.Point(489, 168);
+            this.txtSalario.MaxLength = 8;
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(81, 20);
             this.txtSalario.TabIndex = 12;
@@ -331,8 +332,9 @@
             // txtRg
             // 
             this.txtRg.Location = new System.Drawing.Point(181, 225);
+            this.txtRg.MaxLength = 8;
             this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(100, 20);
+            this.txtRg.Size = new System.Drawing.Size(98, 20);
             this.txtRg.TabIndex = 17;
             // 
             // label10
@@ -364,6 +366,7 @@
             // txtSexo
             // 
             this.txtSexo.Location = new System.Drawing.Point(141, 225);
+            this.txtSexo.MaxLength = 1;
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(32, 20);
             this.txtSexo.TabIndex = 16;
