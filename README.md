@@ -15,3 +15,7 @@ limite de caracteres - width
 Codigos - 63
 10 - 86
 3000 - 741/293
+
+Em condição de pagamento
+Tipo é p (prazo) e m (mensal); Operação (C Compras, V vendas, A ambos)
+
