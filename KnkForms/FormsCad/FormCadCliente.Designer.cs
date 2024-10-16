@@ -297,8 +297,9 @@
             // txtCodCidade
             // 
             this.txtCodCidade.Location = new System.Drawing.Point(247, 165);
+            this.txtCodCidade.MaxLength = 50;
             this.txtCodCidade.Name = "txtCodCidade";
-            this.txtCodCidade.Size = new System.Drawing.Size(63, 20);
+            this.txtCodCidade.Size = new System.Drawing.Size(260, 20);
             this.txtCodCidade.TabIndex = 100;
             // 
             // label1
@@ -306,9 +307,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 196;
-            this.label1.Text = "Código Cidade";
+            this.label1.Text = "Cidade";
             // 
             // tabPage6
             // 
@@ -933,11 +934,11 @@
             // 
             // btnConsultaCid
             // 
-            this.btnConsultaCid.Location = new System.Drawing.Point(326, 162);
+            this.btnConsultaCid.Location = new System.Drawing.Point(511, 163);
             this.btnConsultaCid.Name = "btnConsultaCid";
-            this.btnConsultaCid.Size = new System.Drawing.Size(71, 23);
+            this.btnConsultaCid.Size = new System.Drawing.Size(22, 23);
             this.btnConsultaCid.TabIndex = 10;
-            this.btnConsultaCid.Text = "Consulta";
+            this.btnConsultaCid.Text = "⌕";
             this.btnConsultaCid.UseVisualStyleBackColor = true;
             this.btnConsultaCid.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
@@ -960,29 +961,30 @@
             // 
             // btnConsultaReg
             // 
-            this.btnConsultaReg.Location = new System.Drawing.Point(493, 163);
+            this.btnConsultaReg.Location = new System.Drawing.Point(746, 164);
             this.btnConsultaReg.Name = "btnConsultaReg";
-            this.btnConsultaReg.Size = new System.Drawing.Size(71, 23);
+            this.btnConsultaReg.Size = new System.Drawing.Size(21, 23);
             this.btnConsultaReg.TabIndex = 199;
-            this.btnConsultaReg.Text = "Consulta";
+            this.btnConsultaReg.Text = "⌕";
             this.btnConsultaReg.UseVisualStyleBackColor = true;
             this.btnConsultaReg.Click += new System.EventHandler(this.btnConsultaReg_Click);
             // 
             // txtCodRegiao
             // 
-            this.txtCodRegiao.Location = new System.Drawing.Point(414, 166);
+            this.txtCodRegiao.Location = new System.Drawing.Point(547, 166);
+            this.txtCodRegiao.MaxLength = 30;
             this.txtCodRegiao.Name = "txtCodRegiao";
-            this.txtCodRegiao.Size = new System.Drawing.Size(63, 20);
+            this.txtCodRegiao.Size = new System.Drawing.Size(197, 20);
             this.txtCodRegiao.TabIndex = 200;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(411, 150);
+            this.label12.Location = new System.Drawing.Point(544, 150);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 201;
-            this.label12.Text = "Código Região";
+            this.label12.Text = "Região";
             // 
             // FormCadCliente
             // 

@@ -38,6 +38,8 @@ namespace KnkForms.Classes
             txtDataAlt.Clear();
             txtPercIcms.Clear();
             txtIcms.Clear();
+            txtPercIcms.Clear();
+            txtCodWeb.Clear();
         }
 
         public override void CarregaTxt()
@@ -52,6 +54,8 @@ namespace KnkForms.Classes
             txtDataAlt.Text = Convert.ToString(oEstado.DataModificacao);
             txtPercIcms.Text = Convert.ToString(oEstado.Per_icms);
             txtIcms.Text = Convert.ToString(oEstado.Icms);
+            txtPercIcms.Text = Convert.ToString(oEstado.PercRedST);
+            txtCodWeb.Text = Convert.ToString(oEstado.CodWeb);
         }
 
         public override void BloqueiaTxt()
@@ -66,6 +70,8 @@ namespace KnkForms.Classes
             txtDataAlt.Enabled = false;
             txtPercIcms.Enabled = false;
             txtIcms.Enabled = false;
+            txtPercIcms.Enabled = false;
+            txtCodWeb.Enabled = false;
         }
 
         public override void DesbloqueiaTxt()
@@ -80,6 +86,8 @@ namespace KnkForms.Classes
             txtDataAlt.Enabled = true;
             txtPercIcms.Enabled = true;
             txtIcms.Enabled = true;
+            txtPercIcms.Enabled=true;
+            txtCodWeb.Enabled = true;
         }
 
         public override void Salvar()
@@ -94,6 +102,8 @@ namespace KnkForms.Classes
             oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oEstado.Per_icms = Convert.ToDouble(txtPercIcms.Text) ;
             oEstado.Icms = Convert.ToInt32(txtIcms.Text);
+            oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
+            oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

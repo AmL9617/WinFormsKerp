@@ -37,11 +37,37 @@
             // 
             // txtDataCad
             // 
+            this.txtDataCad.Location = new System.Drawing.Point(130, 418);
             this.txtDataCad.TabIndex = 6;
+            // 
+            // lblDataCad
+            // 
+            this.lblDataCad.Location = new System.Drawing.Point(127, 402);
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.Location = new System.Drawing.Point(253, 418);
+            // 
+            // lblDataAlteracao
+            // 
+            this.lblDataAlteracao.Location = new System.Drawing.Point(250, 402);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(465, 414);
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Location = new System.Drawing.Point(18, 418);
             this.txtCodUser.TabIndex = 5;
+            // 
+            // lblCodUser
+            // 
+            this.lblCodUser.Location = new System.Drawing.Point(15, 402);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(560, 414);
             // 
             // txtRegiao
             // 
@@ -63,7 +89,7 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(738, 25);
+            this.chkAtivo.Location = new System.Drawing.Point(592, 38);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 4;
@@ -72,16 +98,17 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(330, 58);
-            this.txtDescricao.MaxLength = 30;
+            this.txtDescricao.Location = new System.Drawing.Point(35, 117);
+            this.txtDescricao.MaxLength = 200;
+            this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(197, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(525, 55);
             this.txtDescricao.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(327, 42);
+            this.label1.Location = new System.Drawing.Point(32, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 51;
@@ -90,7 +117,7 @@
             // FormCadRegiao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(667, 450);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkAtivo);

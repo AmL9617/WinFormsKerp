@@ -13,6 +13,8 @@ namespace KnkForms.Classes
         protected bool ativo;
         protected double per_icms;
         protected int icms;
+        protected double percRedST; //Percentual de Redução da Substituição Tributária 
+        protected int codWeb;
 
         //Placeholder
         protected int codPais;
@@ -28,16 +30,20 @@ namespace KnkForms.Classes
             codPais = 0;
             per_icms = 0;
             icms = 0;
+            percRedST = 0;
+            codWeb = 0;
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double per_icms, int icms, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double per_icms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
             estado = Estado;
             sigla = sigla;
             ativo = ativo;
             per_icms = per_icms;
             icms = icms;
+            percRedST = percRedST;
+            codWeb = codWeb;
             codPais = codPais;
             oPais = oPais;
         }
@@ -75,6 +81,16 @@ namespace KnkForms.Classes
         {
             get { return icms; }
             set { icms = value; }
+        }
+        public double PercRedST
+        {
+            get { return percRedST; }
+            set { percRedST = value; }
+        }
+        public int CodWeb
+        {
+            get { return codWeb; }
+            set { codWeb = value; }
         }
         public Paises Pais
         {

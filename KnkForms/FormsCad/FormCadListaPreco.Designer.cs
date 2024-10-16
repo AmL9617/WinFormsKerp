@@ -119,8 +119,9 @@
             // txtCodMarca
             // 
             this.txtCodMarca.Location = new System.Drawing.Point(38, 119);
+            this.txtCodMarca.MaxLength = 30;
             this.txtCodMarca.Name = "txtCodMarca";
-            this.txtCodMarca.Size = new System.Drawing.Size(63, 20);
+            this.txtCodMarca.Size = new System.Drawing.Size(197, 20);
             this.txtCodMarca.TabIndex = 58;
             // 
             // label3
@@ -128,25 +129,26 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 57;
-            this.label3.Text = "Código Marca";
+            this.label3.Text = "Marca";
             // 
             // txtCodGrupo
             // 
-            this.txtCodGrupo.Location = new System.Drawing.Point(235, 120);
+            this.txtCodGrupo.Location = new System.Drawing.Point(276, 119);
+            this.txtCodGrupo.MaxLength = 30;
             this.txtCodGrupo.Name = "txtCodGrupo";
-            this.txtCodGrupo.Size = new System.Drawing.Size(63, 20);
+            this.txtCodGrupo.Size = new System.Drawing.Size(197, 20);
             this.txtCodGrupo.TabIndex = 60;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 104);
+            this.label4.Location = new System.Drawing.Point(273, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 59;
-            this.label4.Text = "Código Grupo";
+            this.label4.Text = "Grupo";
             // 
             // chkTodas
             // 
@@ -160,21 +162,21 @@
             // 
             // btnConsultaMarca
             // 
-            this.btnConsultaMarca.Location = new System.Drawing.Point(114, 117);
+            this.btnConsultaMarca.Location = new System.Drawing.Point(241, 119);
             this.btnConsultaMarca.Name = "btnConsultaMarca";
-            this.btnConsultaMarca.Size = new System.Drawing.Size(98, 23);
+            this.btnConsultaMarca.Size = new System.Drawing.Size(22, 23);
             this.btnConsultaMarca.TabIndex = 6;
-            this.btnConsultaMarca.Text = "Consulta Marca";
+            this.btnConsultaMarca.Text = "⌕";
             this.btnConsultaMarca.UseVisualStyleBackColor = true;
             this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
             // 
             // btnConsultaGrupo
             // 
-            this.btnConsultaGrupo.Location = new System.Drawing.Point(314, 120);
+            this.btnConsultaGrupo.Location = new System.Drawing.Point(479, 117);
             this.btnConsultaGrupo.Name = "btnConsultaGrupo";
-            this.btnConsultaGrupo.Size = new System.Drawing.Size(103, 23);
+            this.btnConsultaGrupo.Size = new System.Drawing.Size(21, 23);
             this.btnConsultaGrupo.TabIndex = 7;
-            this.btnConsultaGrupo.Text = "Consulta Grupo";
+            this.btnConsultaGrupo.Text = "⌕";
             this.btnConsultaGrupo.UseVisualStyleBackColor = true;
             this.btnConsultaGrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
             // 

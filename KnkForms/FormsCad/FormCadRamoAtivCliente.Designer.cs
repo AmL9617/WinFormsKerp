@@ -37,19 +37,20 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(419, 55);
+            this.btnConsulta.Location = new System.Drawing.Point(655, 55);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
+            this.btnConsulta.Size = new System.Drawing.Size(24, 23);
             this.btnConsulta.TabIndex = 65;
-            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.Text = "⌕";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // txtCodCliForn
             // 
             this.txtCodCliForn.Location = new System.Drawing.Point(342, 58);
+            this.txtCodCliForn.MaxLength = 100;
             this.txtCodCliForn.Name = "txtCodCliForn";
-            this.txtCodCliForn.Size = new System.Drawing.Size(63, 20);
+            this.txtCodCliForn.Size = new System.Drawing.Size(307, 20);
             this.txtCodCliForn.TabIndex = 66;
             // 
             // label7
@@ -57,13 +58,13 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(339, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 13);
+            this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 67;
-            this.label7.Text = "Código Cliente/Fornecedor";
+            this.label7.Text = "Cliente/Fornecedor";
             // 
             // txtPrioridade
             // 
-            this.txtPrioridade.Location = new System.Drawing.Point(505, 57);
+            this.txtPrioridade.Location = new System.Drawing.Point(35, 119);
             this.txtPrioridade.MaxLength = 5;
             this.txtPrioridade.Name = "txtPrioridade";
             this.txtPrioridade.Size = new System.Drawing.Size(63, 20);
@@ -72,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(502, 41);
+            this.label2.Location = new System.Drawing.Point(32, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 69;

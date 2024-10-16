@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Net.Http;
 using System.Text;
@@ -15,6 +16,8 @@ namespace KnkForms.Forms
     public partial class FormCadPais : KnkForms.FormCadPai
     {
         Paises oPais;
+
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public FormCadPais()
         {
             InitializeComponent();
@@ -30,7 +33,6 @@ namespace KnkForms.Forms
         {
             txtCod.Clear();
             txtPais.Clear();
-            txtTipoPais.Clear();
             txtSigla.Clear();
             txtDdi.Clear();
             boxNacional.Text = "";
@@ -44,7 +46,6 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(oPais.Cod);
             txtPais.Text = oPais.Pais;
-            txtTipoPais.Text=oPais.TipoPais;
             txtSigla.Text = Convert.ToString(oPais.Sigla);
             txtDdi.Text = Convert.ToString(oPais.DDI);
             if (oPais.Nacional == 's')
@@ -61,7 +62,6 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = false;
             txtPais.Enabled = false;
-            txtTipoPais.Enabled = false;
             txtSigla.Enabled = false;
             txtDdi.Enabled = false;
             boxNacional.Enabled = false;
@@ -76,7 +76,6 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = true;
             txtPais.Enabled = true;
-            txtTipoPais.Enabled = true;
             txtSigla.Enabled = true;
             txtDdi.Enabled = true;
             boxNacional.Enabled = true;
@@ -91,7 +90,6 @@ namespace KnkForms.Forms
         {
             oPais.Cod = Convert.ToInt32(txtCod.Text);
             oPais.Pais = txtPais.Text;
-            oPais.TipoPais = txtTipoPais.Text;
             oPais.Sigla = Convert.ToChar(txtSigla.Text);
             oPais.DDI = Convert.ToInt32(txtDdi.Text);
             if (boxNacional.Text == "Sim")
@@ -102,6 +100,34 @@ namespace KnkForms.Forms
             oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oPais.Ativo = chkAtivo.Checked;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Pais (IdEmpresa, IdPais, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", oPais.CodEmpresa);
+                        command.Parameters.AddWithValue("@IdPais", oPais.Cod);
+                        command.Parameters.AddWithValue("@Pais", oPais.Pais);
+                        command.Parameters.AddWithValue("@Sigla", oPais.Sigla);
+                        command.Parameters.AddWithValue("@Ddi", oPais.DDI);
+                        command.Parameters.AddWithValue("@Nacional", oPais.Nacional);
+                        command.Parameters.AddWithValue("@DataCadastro", oPais.DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", oPais.DataModificacao);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

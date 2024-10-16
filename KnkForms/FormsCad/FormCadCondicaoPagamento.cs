@@ -17,10 +17,6 @@ namespace KnkForms.Forms
         public FormCadCondicaoPagamento()
         {
             InitializeComponent();
-
-            //Padronização das datas para dia/mês/ano
-            dataPrazo.CustomFormat = "dd/MM/yyyy";
-            dataPrazo.Format = DateTimePickerFormat.Custom;
         }
         public override void ConhecaObj(Object obj)
         {
@@ -34,7 +30,7 @@ namespace KnkForms.Forms
             txtTipo.Clear();
             txtTaxaJuro.Clear();
             txtOpDisp.Clear();
-            dataPrazo.Value = DateTime.Today;
+            txtDia.Clear();
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -47,7 +43,7 @@ namespace KnkForms.Forms
             txtCondPag.Text = aCondPag.CondPag;
             txtTipo.Text = aCondPag.Tipo;
             txtTaxaJuro.Text = Convert.ToString(aCondPag.TaxaJuro);
-            dataPrazo.Value = aCondPag.Prazo;
+            txtDia.Text = aCondPag.Dia;
             txtCodParcela.Text = Convert.ToString(aCondPag.CodParcela);
             txtCodUser.Text = Convert.ToString(aCondPag.CodEmpresa);
             txtDataCad.Text = Convert.ToString(aCondPag.DataCadastro);
@@ -66,7 +62,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
             chkAtivo.Enabled = false;
-            dataPrazo.Enabled = false;
+            txtDia.Enabled = false;
         }
 
         public override void DesbloqueiaTxt()
@@ -80,7 +76,7 @@ namespace KnkForms.Forms
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
             chkAtivo.Enabled = true;
-            dataPrazo.Enabled = true;
+            txtDia.Enabled = true;
         }
 
         public override void Salvar()
@@ -90,7 +86,7 @@ namespace KnkForms.Forms
             aCondPag.Tipo = txtTipo.Text;
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
             aCondPag.CodParcela = Convert.ToInt32(txtCodParcela.Text);
-            aCondPag.Prazo = dataPrazo.Value;
+            aCondPag.Dia = txtDia.Text;
             aCondPag.Ativo = chkAtivo.Checked;
             aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);

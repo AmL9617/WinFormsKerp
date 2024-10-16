@@ -62,8 +62,9 @@
             // txtCodEstado
             // 
             this.txtCodEstado.Location = new System.Drawing.Point(449, 58);
+            this.txtCodEstado.MaxLength = 50;
             this.txtCodEstado.Name = "txtCodEstado";
-            this.txtCodEstado.Size = new System.Drawing.Size(63, 20);
+            this.txtCodEstado.Size = new System.Drawing.Size(260, 20);
             this.txtCodEstado.TabIndex = 36;
             // 
             // label1
@@ -71,9 +72,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(446, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Código Estado";
+            this.label1.Text = "Estado";
             // 
             // chkAtivo
             // 
@@ -121,11 +122,11 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(523, 58);
+            this.btnConsulta.Location = new System.Drawing.Point(715, 58);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
+            this.btnConsulta.Size = new System.Drawing.Size(24, 23);
             this.btnConsulta.TabIndex = 4;
-            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.Text = "⌕";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 

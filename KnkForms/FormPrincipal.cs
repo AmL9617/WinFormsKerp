@@ -29,6 +29,7 @@ namespace KnkForms
         Funcionarios oFuncionario;
         Grupos oGrupo;
         ListaPrecos aListaPreco;
+        ListaCodST aListaCodST;
         Marcas aMarca;
         Paises oPais;
         Parcelas aParcela;
@@ -54,6 +55,7 @@ namespace KnkForms
             oFuncionario = new Funcionarios();
             oGrupo = new Grupos();
             aListaPreco = new ListaPrecos();
+            aListaCodST = new ListaCodST();
             aMarca = new Marcas();
             oPais = new Paises();
             aParcela = new Parcelas();
@@ -132,6 +134,10 @@ namespace KnkForms
             aInter.PecaListaPrecos(aListaPreco);
 
         }
+        private void listaSTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aInter.PecaListaCodST(aListaCodST);
+        }
 
         private void cadMarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -177,6 +183,6 @@ namespace KnkForms
             aInter.PecaVendedores(oVendedor);
         }
 
-      
+        
     }
 }

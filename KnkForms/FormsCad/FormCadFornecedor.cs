@@ -31,7 +31,7 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            txtIndustria.Clear();
+            boxIndustria.Text = "";
             boxFisJur.Text = "";
             txtRazaoSocial.Clear();
             txtNomeFantasia.Clear();
@@ -58,7 +58,10 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oFornecedor.Cod);
-            txtIndustria.Text = oFornecedor.Industria;
+            if (oFornecedor.Industria == "Não")
+                boxIndustria.Text = "Não";
+            else if (oFornecedor.Industria == "Sim")
+                boxIndustria.Text = "Sim";
             if (oFornecedor.FisicaJuridica == false)
                 boxFisJur.Text = "Fisica";
             else if (oFornecedor.FisicaJuridica == true)
@@ -88,7 +91,7 @@ namespace KnkForms.Forms
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
-            txtIndustria.Enabled = false;
+            boxIndustria.Enabled = false;
             boxFisJur.Enabled = false;
             txtRazaoSocial.Enabled = false;
             txtNomeFantasia.Enabled = false;
@@ -115,7 +118,7 @@ namespace KnkForms.Forms
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
-            txtIndustria.Enabled = true;
+            boxIndustria.Enabled = true;
             boxFisJur.Enabled = true;
             txtRazaoSocial.Enabled = true;
             txtNomeFantasia.Enabled = true;
@@ -142,7 +145,10 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
-            oFornecedor.Industria = txtIndustria.Text;
+            if (boxIndustria.Text == "Não")
+                oFornecedor.Industria = "Não";
+            else if (boxIndustria.Text == "Sim")
+                oFornecedor.Industria = "Sim";
             if (boxFisJur.Text == "Fisica")
                 oFornecedor.FisicaJuridica = false;
             else if (boxFisJur.Text == "Juridica")

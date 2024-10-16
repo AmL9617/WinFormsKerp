@@ -14,7 +14,7 @@ namespace KnkForms.Classes
         protected double taxaJuro;
         protected string operacaoDisponivel;
         protected int numeroParcelas;
-        protected DateTime prazo;
+        protected string dia;
 
         //Placeholder
         protected int codParcela;
@@ -30,7 +30,7 @@ namespace KnkForms.Classes
             taxaJuro = 0.0f;
             operacaoDisponivel = "";
             numeroParcelas = 0;
-            prazo = DateTime.MinValue;
+            dia = "";
             parcelas = new Parcelas();
             codParcela = 0;
         }
@@ -70,10 +70,10 @@ namespace KnkForms.Classes
             get { return numeroParcelas; }
             set { numeroParcelas = value; }
         }
-        public DateTime Prazo
+        public string Dia
         {
-            get { return prazo; }
-            set { prazo = value; }
+            get { return dia; }
+            set { dia = value; }
         }
         public int CodParcela
         {

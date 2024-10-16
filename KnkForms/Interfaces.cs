@@ -25,6 +25,7 @@ namespace KnkForms
         FormConFuncionarios oFormConFuncionarios;
         FormConGrupos oFormConGrupos;
         FormConListaPrecos oFormConListaPrecos;
+        FormConListaCodST oFormConListaCodST;
         FormConMarcas oFormConMarcas;
         FormConPaises oFormConPaises;
         FormConParcelas oFormConParcelas;
@@ -47,6 +48,7 @@ namespace KnkForms
         FormCadFuncionario oFormCadFuncionario;
         FormCadGrupo oFormCadGrupo;
         FormCadListaPreco oFormCadListaPreco;
+        FormCadListaCodST oFormCadListaCodST;
         FormCadMarca oFormCadMarca;
         FormCadPais oFormCadPais;
         FormCadParcela oFormCadParcela;
@@ -72,6 +74,7 @@ namespace KnkForms
             oFormConFuncionarios = new FormConFuncionarios();
             oFormConGrupos = new FormConGrupos();
             oFormConListaPrecos = new FormConListaPrecos();
+            oFormConListaCodST = new FormConListaCodST();
             oFormConMarcas = new FormConMarcas();
             oFormConPaises = new FormConPaises();
             oFormConParcelas = new FormConParcelas();
@@ -94,6 +97,7 @@ namespace KnkForms
             oFormCadFuncionario = new FormCadFuncionario();
             oFormCadGrupo = new FormCadGrupo();
             oFormCadListaPreco = new FormCadListaPreco();
+            oFormCadListaCodST = new FormCadListaCodST();
             oFormCadMarca = new FormCadMarca();
             oFormCadPais = new FormCadPais();
             oFormCadParcela = new FormCadParcela();
@@ -115,6 +119,7 @@ namespace KnkForms
             oFormConFuncionarios.SetFrmCadastro(oFormCadFuncionario);
             oFormConGrupos.SetFrmCadastro(oFormCadGrupo);
             oFormConListaPrecos.SetFrmCadastro(oFormCadListaPreco);
+            oFormConListaCodST.SetFrmCadastro(oFormCadListaCodST);
             oFormConMarcas.SetFrmCadastro(oFormCadMarca);
             oFormConPaises.SetFrmCadastro(oFormCadPais);
             oFormConParcelas.SetFrmCadastro(oFormCadParcela);
@@ -211,6 +216,11 @@ namespace KnkForms
         {
             oFormConListaPrecos.ConhecaObj(obj);
             oFormConListaPrecos.ShowDialog();
+        }
+        public void PecaListaCodST(Object obj)
+        {
+            oFormConListaCodST.ConhecaObj(obj);
+            oFormConListaCodST.ShowDialog();
         }
 
         public void PecaMarcas(Object obj)

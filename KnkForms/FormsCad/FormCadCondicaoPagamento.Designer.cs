@@ -31,7 +31,6 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtCondPag = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.dataPrazo = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTaxaJuro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,9 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodParcela = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnConsulta = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -93,21 +92,14 @@
             this.lbl1.TabIndex = 51;
             this.lbl1.Text = "Condição de Pagamento";
             // 
-            // dataPrazo
-            // 
-            this.dataPrazo.Location = new System.Drawing.Point(35, 112);
-            this.dataPrazo.Name = "dataPrazo";
-            this.dataPrazo.Size = new System.Drawing.Size(85, 20);
-            this.dataPrazo.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 93);
+            this.label5.Location = new System.Drawing.Point(29, 100);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(95, 13);
             this.label5.TabIndex = 58;
-            this.label5.Text = "Prazo ";
+            this.label5.Text = "Dia de Pagamento";
             // 
             // txtTaxaJuro
             // 
@@ -163,6 +155,7 @@
             // txtCodParcela
             // 
             this.txtCodParcela.Location = new System.Drawing.Point(141, 116);
+            this.txtCodParcela.MaxLength = 1;
             this.txtCodParcela.Name = "txtCodParcela";
             this.txtCodParcela.Size = new System.Drawing.Size(63, 20);
             this.txtCodParcela.TabIndex = 92;
@@ -172,19 +165,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(138, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.Size = new System.Drawing.Size(68, 13);
             this.label7.TabIndex = 64;
-            this.label7.Text = "Código Parcela";
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Location = new System.Drawing.Point(218, 113);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(71, 23);
-            this.btnConsulta.TabIndex = 9;
-            this.btnConsulta.Text = "Consulta";
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            this.label7.Text = "Porc Parcela";
             // 
             // textBox1
             // 
@@ -203,18 +186,25 @@
             this.label3.TabIndex = 66;
             this.label3.Text = "Número de parcelas";
             // 
+            // txtDia
+            // 
+            this.txtDia.Location = new System.Drawing.Point(32, 116);
+            this.txtDia.MaxLength = 10;
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(77, 20);
+            this.txtDia.TabIndex = 93;
+            // 
             // FormCadCondicaoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDia);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodParcela);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtOpDisp);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataPrazo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTaxaJuro);
             this.Controls.Add(this.label1);
@@ -243,14 +233,13 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtTaxaJuro, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.dataPrazo, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtOpDisp, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtCodParcela, 0);
-            this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txtDia, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +250,6 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtCondPag;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.DateTimePicker dataPrazo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTaxaJuro;
         private System.Windows.Forms.Label label1;
@@ -271,8 +259,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodParcela;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDia;
     }
 }
