@@ -1,10 +1,13 @@
 ﻿using KnkForms.Classes;
 using KnkForms.FormsCon;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,6 +19,7 @@ namespace KnkForms.Forms
         FormConContatos oFrmConContatos;
         FormConCidades oFrmConCidades;
         FormConRegioes oFrmConRegioes;
+
         public FormCadFornecedor()
         {
             InitializeComponent();
@@ -39,7 +43,9 @@ namespace KnkForms.Forms
             txtNumero.Clear();
             txtComplemento.Clear();
             txtBairro.Clear();
+            txtCodCidade.Clear();
             txtCep.Clear();
+            txtCodRegiao.Clear();
             txtTrade.Clear();
             txtCodProd.Clear();
             txtLimite.Clear();
@@ -71,8 +77,10 @@ namespace KnkForms.Forms
             txtEndereco.Text = oFornecedor.Endereco;
             txtNumero.Text = Convert.ToString(oFornecedor.Numero);
             txtComplemento.Text = oFornecedor.Complemento;
+            txtCodCidade.Text = Convert.ToString(oFornecedor.CodCidades);
             txtBairro.Text = oFornecedor.Bairro;
             txtCep.Text = oFornecedor.Cep;
+            txtCodRegiao.Text = Convert.ToString(oFornecedor.CodRegioes);
             txtTrade.Text = oFornecedor.Trade;
             txtCodProd.Text = Convert.ToString(oFornecedor.CodProdIgual);
             txtLimite.Text = Convert.ToString(oFornecedor.LimiteCredito);
@@ -80,7 +88,10 @@ namespace KnkForms.Forms
             txtInscEst.Text = oFornecedor.InscricaoEstadual;
             txtCnpj.Text = oFornecedor.CNPJ;
             dataUltMov.Value = oFornecedor.UltimoMovimento;
-            chkVerCliente.Checked = oFornecedor.VerEmClientes;
+            if(chkVerCliente.Checked == false) 
+                oFornecedor.VerEmClientes = 'f';
+            if (chkVerCliente.Checked == true)
+                oFornecedor.VerEmClientes = 'c';
             txtObservacao.Text = oFornecedor.Observacoes;
             chkAtivo.Checked = oFornecedor.Ativo;
             txtCodUser.Text = Convert.ToString(oFornecedor.CodEmpresa);
@@ -99,7 +110,9 @@ namespace KnkForms.Forms
             txtNumero.Enabled = false;
             txtComplemento.Enabled = false;
             txtBairro.Enabled = false;
+            txtCodCidade.Enabled = false;
             txtCep.Enabled = false;
+            txtCodRegiao.Enabled = false;
             txtTrade.Enabled = false;
             txtCodProd.Enabled = false;
             txtLimite.Enabled = false;
@@ -126,7 +139,9 @@ namespace KnkForms.Forms
             txtNumero.Enabled = true;
             txtComplemento.Enabled = true;
             txtBairro.Enabled = true;
+            txtCodCidade.Enabled = true;
             txtCep.Enabled = true;
+            txtCodRegiao.Enabled = true;
             txtTrade.Enabled = true;
             txtCodProd.Enabled = true;
             txtLimite.Enabled = true;
@@ -146,9 +161,9 @@ namespace KnkForms.Forms
         {
             oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
             if (boxIndustria.Text == "Não")
-                oFornecedor.Industria = "Não";
+                oFornecedor.Industria = "N";
             else if (boxIndustria.Text == "Sim")
-                oFornecedor.Industria = "Sim";
+                oFornecedor.Industria = "S";
             if (boxFisJur.Text == "Fisica")
                 oFornecedor.FisicaJuridica = false;
             else if (boxFisJur.Text == "Juridica")
@@ -156,23 +171,30 @@ namespace KnkForms.Forms
             oFornecedor.RazaoSocial = txtRazaoSocial.Text;
             oFornecedor.NomeFantasia = txtNomeFantasia.Text;
             oFornecedor.Endereco = txtEndereco.Text;
-            oFornecedor.Numero = Convert.ToInt32(txtNumero);
+            oFornecedor.Numero = Convert.ToInt32(txtNumero.Text);
             oFornecedor.Complemento = txtComplemento.Text;
             oFornecedor.Bairro = txtBairro.Text;
+            oFornecedor.CodCidades = Convert.ToInt32(txtCodCidade.Text);
             oFornecedor.Cep = txtCep.Text;
+            oFornecedor.CodRegioes = Convert.ToInt32(txtCodRegiao.Text); 
             oFornecedor.Trade = txtTrade.Text;
-            oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd);
-            oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite);
-            oFornecedor.CodContatos = Convert.ToInt32(txtContato);
+            oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd.Text);
+            oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite.Text);
+            oFornecedor.CodContatos = Convert.ToInt32(txtContato.Text);
             oFornecedor.InscricaoEstadual = txtInscEst.Text;
             oFornecedor.CNPJ = txtCnpj.Text;
             oFornecedor.UltimoMovimento = dataUltMov.Value;
-            oFornecedor.VerEmClientes = chkAtivo.Checked;
+            if (oFornecedor.VerEmClientes == 'f')
+                chkVerCliente.Checked = false;
+            if (oFornecedor.VerEmClientes == 'c')
+                chkVerCliente.Checked = true;
             oFornecedor.Observacoes = txtObservacao.Text;
             oFornecedor.Ativo = chkAtivo.Checked;
             oFornecedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFornecedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            oFornecedor.SalvarBD();
         }
 
         public void setFrmConContatos(Object obj)

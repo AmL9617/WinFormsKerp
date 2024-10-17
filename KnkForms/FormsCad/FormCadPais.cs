@@ -101,33 +101,7 @@ namespace KnkForms.Forms
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oPais.Ativo = chkAtivo.Checked;
 
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "INSERT INTO Pais (IdEmpresa, IdPais, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
-
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", oPais.CodEmpresa);
-                        command.Parameters.AddWithValue("@IdPais", oPais.Cod);
-                        command.Parameters.AddWithValue("@Pais", oPais.Pais);
-                        command.Parameters.AddWithValue("@Sigla", oPais.Sigla);
-                        command.Parameters.AddWithValue("@Ddi", oPais.DDI);
-                        command.Parameters.AddWithValue("@Nacional", oPais.Nacional);
-                        command.Parameters.AddWithValue("@DataCadastro", oPais.DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", oPais.DataModificacao);
-
-                        command.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
-            }
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

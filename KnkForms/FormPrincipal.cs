@@ -36,6 +36,7 @@ namespace KnkForms
         RamoAtividades oRamoAtiv;
         RamoAtividadesClientes oRamoAtivClientes;
         Regioes aRegiao;
+        Subgrupos oSubgrupo;
         Transportadoras aTransportadora;
         Vendedores oVendedor;
 
@@ -62,6 +63,7 @@ namespace KnkForms
             oRamoAtiv = new RamoAtividades();
             oRamoAtivClientes = new RamoAtividadesClientes();
             aRegiao = new Regioes();
+            oSubgrupo = new Subgrupos();
             aTransportadora = new Transportadoras();
             oVendedor = new Vendedores();
         }
@@ -170,7 +172,10 @@ namespace KnkForms
 
             aInter.PecaRegioes(aRegiao);
         }
-
+        private void subgruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aInter.PecaSubgrupos(oSubgrupo);
+        }
         private void cadTransportadorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

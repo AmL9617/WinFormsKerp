@@ -14,7 +14,7 @@ namespace KnkForms.Forms
     {
         ListaPrecos aListaPreco;
         FormConMarcas oFrmConMarcas;
-        FormConGrupos oFrmConGrupos;
+        FormConSubgrupos oFrmConSubgrupos;
         public FormCadListaPreco()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace KnkForms.Forms
             txtMargemLucro.Clear();
             txtPercCom.Clear();
             txtCodMarca.Clear();
-            txtCodGrupo.Clear();
+            txtCodSubgrupo.Clear();
             chkTodas.Checked = false;
             txtCodUser.Clear();
             txtDataCad.Clear();
@@ -47,7 +47,7 @@ namespace KnkForms.Forms
             txtMargemLucro.Text = Convert.ToString(aListaPreco.MargemLucro);
             txtPercCom.Text = Convert.ToString(aListaPreco.PercCom);    
             txtCodMarca.Text = Convert.ToString(aListaPreco.CodMarca);
-            txtCodGrupo.Text = Convert.ToString(aListaPreco.CodGrupo);
+            txtCodSubgrupo.Text = Convert.ToString(aListaPreco.CodSubgrupo);
             txtCodUser.Text = Convert.ToString(aListaPreco.CodEmpresa);
             txtDataCad.Text = Convert.ToString(aListaPreco.DataCadastro);
             txtDataAlt.Text = Convert.ToString(aListaPreco.DataModificacao);
@@ -62,7 +62,7 @@ namespace KnkForms.Forms
             txtMargemLucro.Enabled = false;
             txtPercCom.Enabled = false;
             txtCodMarca.Enabled = false;
-            txtCodGrupo.Enabled = false;
+            txtCodSubgrupo.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -77,7 +77,7 @@ namespace KnkForms.Forms
             txtMargemLucro.Enabled = true;
             txtPercCom.Enabled = true;
             txtCodMarca.Enabled = true;
-            txtCodGrupo.Enabled = true;
+            txtCodSubgrupo.Enabled = true;
             chkTodas.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
@@ -92,7 +92,7 @@ namespace KnkForms.Forms
             aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
             aListaPreco.PercCom = Convert.ToDouble(txtPercCom.Text);
             aListaPreco.CodMarca = Convert.ToInt32(txtCodMarca.Text);
-            aListaPreco.CodGrupo = Convert.ToInt32(txtCodGrupo.Text);
+            aListaPreco.CodSubgrupo = Convert.ToInt32(txtCodSubgrupo.Text);
             aListaPreco.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aListaPreco.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
@@ -101,9 +101,9 @@ namespace KnkForms.Forms
         {
             oFrmConMarcas = (FormConMarcas)obj;
         }
-        public void setFrmConGrupos(Object obj)
+        public void setFrmConSubgrupos(Object obj)
         {
-            oFrmConGrupos = (FormConGrupos)obj;
+            oFrmConSubgrupos = (FormConSubgrupos)obj;
         }
         private void btnConsultaMarca_Click(object sender, EventArgs e)
         {
@@ -113,8 +113,8 @@ namespace KnkForms.Forms
 
         private void btnConsultaGrupo_Click(object sender, EventArgs e)
         {
-            oFrmConGrupos.ConhecaObj(aListaPreco.Grupos);
-            oFrmConGrupos.ShowDialog();
+            oFrmConSubgrupos.ConhecaObj(aListaPreco.Subgrupos);
+            oFrmConSubgrupos.ShowDialog();
         }
     }
 }

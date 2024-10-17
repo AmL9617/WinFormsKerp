@@ -16,11 +16,11 @@ namespace KnkForms.Classes
 
         //Placeholder
         protected int codMarca;
-        protected int codGrupo;
+        protected int codSubgrupo;
 
         //Agregação
         protected Marcas marcas;
-        protected Grupos grupos;
+        protected Subgrupos subgrupos;
 
         public ListaPrecos()
         {
@@ -30,9 +30,9 @@ namespace KnkForms.Classes
             percCom = 0.0f;
             todas = false;
             marcas = new Marcas();
-            grupos = new Grupos();
+            subgrupos = new Subgrupos();
             codMarca = 0;
-            codGrupo = 0;
+            codSubgrupo = 0;
         }
 
         public string Lista
@@ -68,13 +68,13 @@ namespace KnkForms.Classes
         public int CodMarca
         {
             get { return codMarca; }
-            set { CodMarca = value; }
+            set { codMarca = value; }
         }
 
-        public int CodGrupo
+        public int CodSubgrupo
         {
-            get { return codGrupo; }
-            set { CodGrupo = value; }
+            get { return codSubgrupo; }
+            set { codSubgrupo = value; }
         }
 
         public Marcas Marcas
@@ -83,10 +83,10 @@ namespace KnkForms.Classes
             set { marcas = value; }
         }
 
-        public Grupos Grupos
+        public Subgrupos Subgrupos
         {
-            get { return grupos; }
-            set { grupos = value; }
+            get { return subgrupos; }
+            set { subgrupos = value; }
         }
     }
 

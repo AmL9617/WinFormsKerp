@@ -120,3 +120,5 @@ C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\bin\Debug\System.Runtime
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadListaCodST.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConListaCodST.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadSubgrupo.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConSubgrupos.resources

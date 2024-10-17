@@ -42,6 +42,7 @@
             this.cadFuncionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadListaDePrecosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaSTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadPaisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadParcelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,7 @@
             this.cadRegioesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadTransportadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaSTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subgruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.cadRamoDeAtividadesToolStripMenuItem,
             this.ramoDeAtividadesDeClientesToolStripMenuItem,
             this.cadRegioesToolStripMenuItem,
+            this.subgruposToolStripMenuItem,
             this.cadTransportadorasToolStripMenuItem,
             this.cadVendedoresToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
@@ -176,6 +178,13 @@
             this.cadListaDePrecosToolStripMenuItem.Text = "Lista de Preços";
             this.cadListaDePrecosToolStripMenuItem.Click += new System.EventHandler(this.cadListaDePrecosToolStripMenuItem_Click);
             // 
+            // listaSTToolStripMenuItem
+            // 
+            this.listaSTToolStripMenuItem.Name = "listaSTToolStripMenuItem";
+            this.listaSTToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.listaSTToolStripMenuItem.Text = "Lista Cod ST";
+            this.listaSTToolStripMenuItem.Click += new System.EventHandler(this.listaSTToolStripMenuItem_Click);
+            // 
             // cadMarcasToolStripMenuItem
             // 
             this.cadMarcasToolStripMenuItem.Name = "cadMarcasToolStripMenuItem";
@@ -232,12 +241,12 @@
             this.cadVendedoresToolStripMenuItem.Text = "Vendedores";
             this.cadVendedoresToolStripMenuItem.Click += new System.EventHandler(this.cadVendedoresToolStripMenuItem_Click);
             // 
-            // listaSTToolStripMenuItem
+            // subgruposToolStripMenuItem
             // 
-            this.listaSTToolStripMenuItem.Name = "listaSTToolStripMenuItem";
-            this.listaSTToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.listaSTToolStripMenuItem.Text = "Lista Cod ST";
-            this.listaSTToolStripMenuItem.Click += new System.EventHandler(this.listaSTToolStripMenuItem_Click);
+            this.subgruposToolStripMenuItem.Name = "subgruposToolStripMenuItem";
+            this.subgruposToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.subgruposToolStripMenuItem.Text = "Subgrupos";
+            this.subgruposToolStripMenuItem.Click += new System.EventHandler(this.subgruposToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -282,5 +291,6 @@
         private System.Windows.Forms.ToolStripMenuItem contatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ramoDeAtividadesDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaSTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subgruposToolStripMenuItem;
     }
 }

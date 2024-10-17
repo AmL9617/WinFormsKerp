@@ -32,6 +32,7 @@ namespace KnkForms
         FormConRamoAtividades oFormConRamoAtividades;
         FormConRamoAtivClientes oFormConRamoAtivClientes;
         FormConRegioes oFormConRegioes;
+        FormConSubgrupos oFormConSubgrupos;
         FormConTransportadoras oFormConTransportadoras;
         FormConVendedores oFormConVendedores;
 
@@ -55,6 +56,7 @@ namespace KnkForms
         FormCadRamoAtividade oFormCadRamoAtiv;
         FormCadRamoAtivCliente oFormCadRamoAtivCliente;
         FormCadRegiao oFormCadRegiao;
+        FormCadSubgrupo oFormCadSubgrupo;
         FormCadTransportadora oFormCadTransportadora;
         FormCadVendedor oFormCadVendedor;
        
@@ -81,6 +83,7 @@ namespace KnkForms
             oFormConRamoAtividades = new FormConRamoAtividades();
             oFormConRamoAtivClientes = new FormConRamoAtivClientes();
             oFormConRegioes = new FormConRegioes();
+            oFormConSubgrupos = new FormConSubgrupos();
             oFormConTransportadoras = new FormConTransportadoras();
             oFormConVendedores = new FormConVendedores();
 
@@ -104,6 +107,7 @@ namespace KnkForms
             oFormCadRamoAtiv = new FormCadRamoAtividade();
             oFormCadRamoAtivCliente = new FormCadRamoAtivCliente();
             oFormCadRegiao = new FormCadRegiao();
+            oFormCadSubgrupo = new FormCadSubgrupo();
             oFormCadTransportadora = new FormCadTransportadora();
             oFormCadVendedor = new FormCadVendedor();
 
@@ -126,6 +130,7 @@ namespace KnkForms
             oFormConRamoAtividades.SetFrmCadastro(oFormCadRamoAtiv);
             oFormConRamoAtivClientes.SetFrmCadastro(oFormCadRamoAtivCliente);
             oFormConRegioes.SetFrmCadastro(oFormCadRegiao);
+            oFormConSubgrupos.SetFrmCadastro(oFormCadSubgrupo);
             oFormConTransportadoras.SetFrmCadastro(oFormCadTransportadora);
             oFormConVendedores.SetFrmCadastro(oFormCadVendedor);
 
@@ -142,8 +147,9 @@ namespace KnkForms
             oFormCadEstado.setFrmConPaises(oFormConPaises);
             oFormCadFornecedor.setFrmConContatos(oFormConContatos);
             oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
-            oFormCadListaPreco.setFrmConGrupos(oFormConGrupos);
+            oFormCadListaPreco.setFrmConSubgrupos(oFormConSubgrupos);
             oFormCadRamoAtivCliente.setFrmConClientes(oFormConClientes);
+            oFormCadSubgrupo.setFrmConGrupos(oFormConGrupos);
             oFormCadTransportadora.setFrmConContatos(oFormConContatos);
         }
 
@@ -256,6 +262,11 @@ namespace KnkForms
         {
             oFormConRegioes.ConhecaObj(obj);
             oFormConRegioes.ShowDialog();
+        }
+        public void PecaSubgrupos(Object obj)
+        {
+            oFormConSubgrupos.ConhecaObj(obj);
+            oFormConSubgrupos.ShowDialog();
         }
 
         public void PecaTransportadoras(Object obj)

@@ -111,6 +111,7 @@
     <Compile Include="Classes\FormaPagamentos.cs" />
     <Compile Include="Classes\ListaCodST.cs" />
     <Compile Include="Classes\RamoAtividadesClientes.cs" />
+    <Compile Include="Classes\Subgrupos.cs" />
     <Compile Include="FormPai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +142,12 @@
     <Compile Include="FormsCad\FormCadRamoAtivCliente.Designer.cs">
       <DependentUpon>FormCadRamoAtivCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsCad\FormCadSubgrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCad\FormCadSubgrupo.Designer.cs">
+      <DependentUpon>FormCadSubgrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsCon\FormConContatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +171,12 @@
     </Compile>
     <Compile Include="FormsCon\FormConRegioes.Designer.cs">
       <DependentUpon>FormConRegioes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCon\FormConSubgrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCon\FormConSubgrupos.Designer.cs">
+      <DependentUpon>FormConSubgrupos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsCon\FormConTransportadoras.cs">
       <SubType>Form</SubType>
@@ -456,6 +469,9 @@
     <EmbeddedResource Include="FormsCad\FormCadRegiao.resx">
       <DependentUpon>FormCadRegiao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsCad\FormCadSubgrupo.resx">
+      <DependentUpon>FormCadSubgrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadTransportadora.resx">
       <DependentUpon>FormCadTransportadora.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +550,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConRegioes.resx">
       <DependentUpon>FormConRegioes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCon\FormConSubgrupos.resx">
+      <DependentUpon>FormConSubgrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConTransportadoras.resx">
       <DependentUpon>FormConTransportadoras.cs</DependentUpon>

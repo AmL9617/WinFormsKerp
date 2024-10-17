@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -15,6 +17,7 @@ namespace KnkForms.Classes
         protected bool ativo;
         protected char nacional;
 
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Paises()
         {
             pais = "";
@@ -58,6 +61,37 @@ namespace KnkForms.Classes
         {
             get { return nacional; }
             set { nacional = value; }
+        }
+
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Pais (IdEmpresa, IdPais, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdPais", Cod);
+                        command.Parameters.AddWithValue("@Pais", Pais);
+                        command.Parameters.AddWithValue("@Sigla", Sigla);
+                        command.Parameters.AddWithValue("@Ddi", DDI);
+                        command.Parameters.AddWithValue("@Nacional", Nacional);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 

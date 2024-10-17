@@ -28,13 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.CodPais = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pais = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sigla = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Nacional = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataMod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // FormConPais
+            // listVConsulta
+            // 
+            this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CodPais,
+            this.Pais,
+            this.Sigla,
+            this.Nacional,
+            this.codEmp,
+            this.DataCad,
+            this.dataMod,
+            this.Ativo});
+            // 
+            // CodPais
+            // 
+            this.CodPais.Text = "Código País";
+            // 
+            // Pais
+            // 
+            this.Pais.Text = "País";
+            // 
+            // Sigla
+            // 
+            this.Sigla.Text = "Sigla";
+            // 
+            // Nacional
+            // 
+            this.Nacional.Text = "É nacional?";
+            // 
+            // codEmp
+            // 
+            this.codEmp.Text = "Código Empresa";
+            // 
+            // DataCad
+            // 
+            this.DataCad.Text = "DataCadastro";
+            // 
+            // dataMod
+            // 
+            this.dataMod.Text = "Data Modificação";
+            // 
+            // Ativo
+            // 
+            this.Ativo.Text = "Ativo";
+            // 
+            // FormConPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormConPais";
+            this.Name = "FormConPaises";
             this.Text = "Form Países";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -42,5 +94,14 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader CodPais;
+        private System.Windows.Forms.ColumnHeader Pais;
+        private System.Windows.Forms.ColumnHeader Sigla;
+        private System.Windows.Forms.ColumnHeader Nacional;
+        private System.Windows.Forms.ColumnHeader codEmp;
+        private System.Windows.Forms.ColumnHeader DataCad;
+        private System.Windows.Forms.ColumnHeader dataMod;
+        private System.Windows.Forms.ColumnHeader Ativo;
     }
 }

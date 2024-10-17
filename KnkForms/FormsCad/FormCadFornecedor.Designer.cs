@@ -315,17 +315,17 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(356, 109);
+            this.txtEndereco.Location = new System.Drawing.Point(356, 105);
             this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(208, 16);
+            this.txtEndereco.Size = new System.Drawing.Size(208, 20);
             this.txtEndereco.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(353, 93);
+            this.label4.Location = new System.Drawing.Point(353, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 127;

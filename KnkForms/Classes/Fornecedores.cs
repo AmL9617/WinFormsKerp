@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -24,7 +26,7 @@ namespace KnkForms.Classes
         protected int codProdIgual;
         protected double limiteCredito;
         protected string observacoes;
-        protected bool verEmClientes;
+        protected char verEmClientes;
         protected DateTime ultimoMovimento;
 
         //Placeholder
@@ -35,6 +37,8 @@ namespace KnkForms.Classes
         protected Contatos contatos;
         protected Cidades cidades;
         protected Regioes regioes;
+
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Fornecedores()
         {
             industria = "";
@@ -53,11 +57,15 @@ namespace KnkForms.Classes
             codProdIgual = 0;
             limiteCredito = 0.0f;
             observacoes = "";
-            verEmClientes = false;
+            verEmClientes = '\0';
             ultimoMovimento = DateTime.MinValue;
 
             codContatos = 0;
             contatos = new Contatos();
+            codCidades = 0;
+            cidades = new Cidades();
+            codRegioes = 0;
+            regioes = new Regioes();
         }
 
         public string Industria
@@ -156,7 +164,7 @@ namespace KnkForms.Classes
             set { observacoes = value; }
         }
 
-        public bool VerEmClientes
+        public char VerEmClientes
         {
             get { return verEmClientes; }
             set { verEmClientes = value; }
@@ -181,7 +189,7 @@ namespace KnkForms.Classes
             set { codCidades = value; }
         }
 
-        protected int CodRegioes
+        public int CodRegioes
         {
             get { return codRegioes; }
             set { codRegioes = value; }
@@ -201,6 +209,49 @@ namespace KnkForms.Classes
         {
             get { return regioes; }
             set { regioes = value; }
+        }
+
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO FornCliente (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdCidadeEmp)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@RazaoSocial", RazaoSocial);
+                        command.Parameters.AddWithValue("@NomeFantasia", NomeFantasia);
+                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
+                        command.Parameters.AddWithValue("@CpfCnpj", CNPJ);
+                        command.Parameters.AddWithValue("@Tipo", VerEmClientes);
+                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
+                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
+                        command.Parameters.AddWithValue("@Logradouro", Endereco);
+                        command.Parameters.AddWithValue("@Numero", Numero);
+                        command.Parameters.AddWithValue("@Complemento", Complemento);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
+                        command.Parameters.AddWithValue("@Observacao", Observacoes);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
+                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 

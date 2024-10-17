@@ -14,6 +14,10 @@ namespace KnkForms.FormsCon
         {
             InitializeComponent();
         }
+        protected virtual void CarregaLV()
+        {
+
+        }
 
         protected virtual void Incluir()
         {

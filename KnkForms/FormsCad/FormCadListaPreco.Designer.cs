@@ -36,11 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodGrupo = new System.Windows.Forms.TextBox();
+            this.txtCodSubgrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkTodas = new System.Windows.Forms.CheckBox();
             this.btnConsultaMarca = new System.Windows.Forms.Button();
-            this.btnConsultaGrupo = new System.Windows.Forms.Button();
+            this.btnConsultaSubgrupo = new System.Windows.Forms.Button();
             this.txtPercCom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -133,22 +133,23 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "Marca";
             // 
-            // txtCodGrupo
+            // txtCodSubgrupo
             // 
-            this.txtCodGrupo.Location = new System.Drawing.Point(276, 119);
-            this.txtCodGrupo.MaxLength = 30;
-            this.txtCodGrupo.Name = "txtCodGrupo";
-            this.txtCodGrupo.Size = new System.Drawing.Size(197, 20);
-            this.txtCodGrupo.TabIndex = 60;
+            this.txtCodSubgrupo.Location = new System.Drawing.Point(276, 119);
+            this.txtCodSubgrupo.MaxLength = 30;
+            this.txtCodSubgrupo.Name = "txtCodSubgrupo";
+            this.txtCodSubgrupo.Size = new System.Drawing.Size(197, 20);
+            this.txtCodSubgrupo.TabIndex = 60;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(273, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 59;
-            this.label4.Text = "Grupo";
+            this.label4.Text = "Subgrupo";
             // 
             // chkTodas
             // 
@@ -170,15 +171,15 @@
             this.btnConsultaMarca.UseVisualStyleBackColor = true;
             this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
             // 
-            // btnConsultaGrupo
+            // btnConsultaSubgrupo
             // 
-            this.btnConsultaGrupo.Location = new System.Drawing.Point(479, 117);
-            this.btnConsultaGrupo.Name = "btnConsultaGrupo";
-            this.btnConsultaGrupo.Size = new System.Drawing.Size(21, 23);
-            this.btnConsultaGrupo.TabIndex = 7;
-            this.btnConsultaGrupo.Text = "⌕";
-            this.btnConsultaGrupo.UseVisualStyleBackColor = true;
-            this.btnConsultaGrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
+            this.btnConsultaSubgrupo.Location = new System.Drawing.Point(479, 117);
+            this.btnConsultaSubgrupo.Name = "btnConsultaSubgrupo";
+            this.btnConsultaSubgrupo.Size = new System.Drawing.Size(21, 23);
+            this.btnConsultaSubgrupo.TabIndex = 7;
+            this.btnConsultaSubgrupo.Text = "⌕";
+            this.btnConsultaSubgrupo.UseVisualStyleBackColor = true;
+            this.btnConsultaSubgrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
             // 
             // txtPercCom
             // 
@@ -203,10 +204,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtPercCom);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnConsultaGrupo);
+            this.Controls.Add(this.btnConsultaSubgrupo);
             this.Controls.Add(this.btnConsultaMarca);
             this.Controls.Add(this.chkTodas);
-            this.Controls.Add(this.txtCodGrupo);
+            this.Controls.Add(this.txtCodSubgrupo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCodMarca);
             this.Controls.Add(this.label3);
@@ -237,10 +238,10 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtCodMarca, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtCodGrupo, 0);
+            this.Controls.SetChildIndex(this.txtCodSubgrupo, 0);
             this.Controls.SetChildIndex(this.chkTodas, 0);
             this.Controls.SetChildIndex(this.btnConsultaMarca, 0);
-            this.Controls.SetChildIndex(this.btnConsultaGrupo, 0);
+            this.Controls.SetChildIndex(this.btnConsultaSubgrupo, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtPercCom, 0);
             this.ResumeLayout(false);
@@ -258,11 +259,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodGrupo;
+        private System.Windows.Forms.TextBox txtCodSubgrupo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkTodas;
         private System.Windows.Forms.Button btnConsultaMarca;
-        private System.Windows.Forms.Button btnConsultaGrupo;
+        private System.Windows.Forms.Button btnConsultaSubgrupo;
         private System.Windows.Forms.TextBox txtPercCom;
         private System.Windows.Forms.Label label5;
     }
