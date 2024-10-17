@@ -7,15 +7,23 @@ Design Cadastros: Form Singular
 
 <h1>TAMANHO DOS CAMPOS</h1>
 limite de caracteres - width
+
 100 - 307 
+
 50 - 260
+
 200 - 614
+
 18 - 115
+
 30 - 197
+
 Codigos - 63
+
 10 - 86
+
 3000 - 741/293
 
-Em condição de pagamento
-Tipo é p (prazo) e m (mensal); Operação (C Compras, V vendas, A ambos)
+<h1>Informações adicionais</h1>
+Em condição de pagamento: Tipo é p (prazo) e m (mensal); Operação (C Compras, V vendas, A ambos)
 
