@@ -35,7 +35,7 @@
             this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataMod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ddi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -44,15 +44,16 @@
             this.CodPais,
             this.Pais,
             this.Sigla,
+            this.ddi,
             this.Nacional,
             this.codEmp,
             this.DataCad,
-            this.dataMod,
-            this.Ativo});
+            this.dataMod});
             // 
             // CodPais
             // 
             this.CodPais.Text = "Código País";
+            this.CodPais.Width = 120;
             // 
             // Pais
             // 
@@ -65,22 +66,26 @@
             // Nacional
             // 
             this.Nacional.Text = "É nacional?";
+            this.Nacional.Width = 100;
             // 
             // codEmp
             // 
             this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 120;
             // 
             // DataCad
             // 
             this.DataCad.Text = "DataCadastro";
+            this.DataCad.Width = 100;
             // 
             // dataMod
             // 
             this.dataMod.Text = "Data Modificação";
+            this.dataMod.Width = 100;
             // 
-            // Ativo
+            // ddi
             // 
-            this.Ativo.Text = "Ativo";
+            this.ddi.Text = "DDI";
             // 
             // FormConPaises
             // 
@@ -102,6 +107,6 @@
         private System.Windows.Forms.ColumnHeader codEmp;
         private System.Windows.Forms.ColumnHeader DataCad;
         private System.Windows.Forms.ColumnHeader dataMod;
-        private System.Windows.Forms.ColumnHeader Ativo;
+        private System.Windows.Forms.ColumnHeader ddi;
     }
 }

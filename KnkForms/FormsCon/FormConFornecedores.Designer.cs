@@ -31,22 +31,22 @@
             this.codForn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RazaoSocial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nomefantasia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.InscEstadual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cnpj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codRegiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.complemento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bairro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cep = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.consRev = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.observacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.fisicaJuridica = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataModif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -55,98 +55,112 @@
             this.codForn,
             this.RazaoSocial,
             this.nomefantasia,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16});
+            this.InscEstadual,
+            this.cnpj,
+            this.tipo,
+            this.codCidade,
+            this.codRegiao,
+            this.endereco,
+            this.numero,
+            this.complemento,
+            this.bairro,
+            this.cep,
+            this.consRev,
+            this.observacao,
+            this.ativo,
+            this.fisicaJuridica,
+            this.dataCad,
+            this.dataModif});
             // 
             // codForn
             // 
             this.codForn.Text = "Código Fornecedor";
+            this.codForn.Width = 120;
             // 
             // RazaoSocial
             // 
             this.RazaoSocial.Text = "Razão Social";
+            this.RazaoSocial.Width = 100;
             // 
             // nomefantasia
             // 
             this.nomefantasia.Text = "Nome Fantasia";
+            this.nomefantasia.Width = 100;
             // 
-            // columnHeader1
+            // InscEstadual
             // 
-            this.columnHeader1.Text = "Inscrição Estadual";
+            this.InscEstadual.Text = "Inscrição Estadual";
+            this.InscEstadual.Width = 100;
             // 
-            // columnHeader2
+            // cnpj
             // 
-            this.columnHeader2.Text = "Cnpj";
+            this.cnpj.Text = "Cnpj";
             // 
-            // columnHeader3
+            // tipo
             // 
-            this.columnHeader3.Text = "Tipo";
+            this.tipo.Text = "Tipo";
             // 
-            // columnHeader4
+            // codCidade
             // 
-            this.columnHeader4.Text = "Id Cidade";
+            this.codCidade.Text = "Código Cidade";
+            this.codCidade.Width = 90;
             // 
-            // columnHeader5
+            // codRegiao
             // 
-            this.columnHeader5.Text = "Id Região";
+            this.codRegiao.Text = "Código Região";
+            this.codRegiao.Width = 85;
             // 
-            // columnHeader6
+            // endereco
             // 
-            this.columnHeader6.Text = "Endereço";
+            this.endereco.Text = "Endereço";
+            this.endereco.Width = 100;
             // 
-            // columnHeader7
+            // numero
             // 
-            this.columnHeader7.Text = "Número";
+            this.numero.Text = "Número";
             // 
-            // columnHeader8
+            // complemento
             // 
-            this.columnHeader8.Text = "Complemento";
+            this.complemento.Text = "Complemento";
+            this.complemento.Width = 100;
             // 
-            // columnHeader9
+            // bairro
             // 
-            this.columnHeader9.Text = "Bairro";
+            this.bairro.Text = "Bairro";
+            this.bairro.Width = 80;
             // 
-            // columnHeader10
+            // cep
             // 
-            this.columnHeader10.Text = "Cep";
+            this.cep.Text = "Cep";
             // 
-            // columnHeader11
+            // consRev
             // 
-            this.columnHeader11.Text = "Consumidor/Revenda";
+            this.consRev.Text = "Consumidor/Revenda";
+            this.consRev.Width = 130;
             // 
-            // columnHeader12
+            // observacao
             // 
-            this.columnHeader12.Text = "Observacao";
+            this.observacao.Text = "Observacao";
+            this.observacao.Width = 100;
             // 
-            // columnHeader13
+            // ativo
             // 
-            this.columnHeader13.Text = "Ativo";
+            this.ativo.Text = "Ativo";
             // 
-            // columnHeader14
+            // fisicaJuridica
             // 
-            this.columnHeader14.Text = "Fisica/Juridica";
+            this.fisicaJuridica.Text = "Fisica/Juridica";
+            this.fisicaJuridica.Width = 100;
             // 
-            // columnHeader15
+            // dataCad
             // 
-            this.columnHeader15.Text = "Data Cadastro";
+            this.dataCad.Text = "Data Cadastro";
+            this.dataCad.Width = 90;
             // 
-            // columnHeader16
+            // dataModif
             // 
-            this.columnHeader16.Text = "Data Modificação";
+            this.dataModif.Text = "Data Modificação";
+            this.dataModif.Width = 100;
             // 
             // FormConFornecedores
             // 
@@ -164,21 +178,21 @@
         private System.Windows.Forms.ColumnHeader codForn;
         private System.Windows.Forms.ColumnHeader RazaoSocial;
         private System.Windows.Forms.ColumnHeader nomefantasia;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader InscEstadual;
+        private System.Windows.Forms.ColumnHeader cnpj;
+        private System.Windows.Forms.ColumnHeader tipo;
+        private System.Windows.Forms.ColumnHeader codCidade;
+        private System.Windows.Forms.ColumnHeader codRegiao;
+        private System.Windows.Forms.ColumnHeader endereco;
+        private System.Windows.Forms.ColumnHeader numero;
+        private System.Windows.Forms.ColumnHeader complemento;
+        private System.Windows.Forms.ColumnHeader bairro;
+        private System.Windows.Forms.ColumnHeader cep;
+        private System.Windows.Forms.ColumnHeader consRev;
+        private System.Windows.Forms.ColumnHeader observacao;
+        private System.Windows.Forms.ColumnHeader ativo;
+        private System.Windows.Forms.ColumnHeader fisicaJuridica;
+        private System.Windows.Forms.ColumnHeader dataCad;
+        private System.Windows.Forms.ColumnHeader dataModif;
     }
 }

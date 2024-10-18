@@ -1,5 +1,6 @@
 ﻿using KnkForms.Forms;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadFornecedor oFormCadFornecedor;
         Fornecedores oFornecedor;
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, IdCidadeEmp, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
         public FormConFornecedores()
         {
             InitializeComponent();
@@ -30,9 +33,6 @@ namespace KnkForms.Classes
         }
         protected override void CarregaLV()
         {
-            string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-
-            string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, IdCidadeEmp, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
 
             listVConsulta.Items.Clear();
 
@@ -106,6 +106,63 @@ namespace KnkForms.Classes
             oFormCadFornecedor.ShowDialog();
             oFormCadFornecedor.DesbloqueiaTxt();
         }
+        protected override void Pesquisar()
+        {
+            listVConsulta.Items.Clear();
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (txtPesquisa.Text == Convert.ToString(reader["IdFornCliente"]) ||
+                                    txtPesquisa.Text == Convert.ToString(reader["NomeFantasia"]))
+                                {
+                                    ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
+
+                                    item.SubItems.Add(reader["RazaoSocial"].ToString());
+                                    item.SubItems.Add(reader["NomeFantasia"].ToString());
+                                    item.SubItems.Add(reader["InscricaoEstadual"].ToString());
+                                    item.SubItems.Add(reader["CpfCnpj"].ToString());
+                                    item.SubItems.Add(reader["Tipo"].ToString());
+                                    item.SubItems.Add(reader["IdCidade"].ToString());
+                                    item.SubItems.Add(reader["IdRegiao"].ToString());
+                                    item.SubItems.Add(reader["Logradouro"].ToString());
+                                    item.SubItems.Add(reader["Numero"].ToString());
+                                    item.SubItems.Add(reader["Complemento"].ToString());
+                                    item.SubItems.Add(reader["Bairro"].ToString());
+                                    item.SubItems.Add(reader["Cep"].ToString());
+                                    item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
+                                    item.SubItems.Add(reader["Observacao"].ToString());
+                                    item.SubItems.Add(reader["Ativo"].ToString());
+                                    item.SubItems.Add(reader["FisicaJuridica"].ToString());
+                                    item.SubItems.Add(reader["IdCidadeEmp"].ToString());
+                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+
+                                    listVConsulta.Items.Add(item);
+                                }
+                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
+                                {
+                                    CarregaLV();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
+            }
+        }
     }
 }
