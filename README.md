@@ -1,11 +1,12 @@
 <h1>WINDOWS FORMS KERP</h1>
+A aplicação windows form para o kerp, consumindo a API Swagger do Kerp.
 
 # Estrutura de nomeação
-Classes: Todos em plural exceto Pai
-Consulta e Cadastro: Todos em singular
-Todas as instâncias: o/a e o objeto no singular.
-Design Consultas: Form Plural
-Design Cadastros: Form Singular
+* Classes: Todos em plural exceto Pai
+* Consulta e Cadastro: Todos em singular
+* Todas as instâncias: o/a e o objeto no singular.
+* Design Consultas: Form Plural
+* Design Cadastros: Form Singular
 
 # Tamanho dos campos
 
