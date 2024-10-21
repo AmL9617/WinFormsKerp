@@ -52,7 +52,7 @@ namespace KnkForms.Classes
             txtCodUser.Text = Convert.ToString(oEstado.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oEstado.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oEstado.DataModificacao);
-            txtPercIcms.Text = Convert.ToString(oEstado.Per_icms);
+            txtPercIcms.Text = Convert.ToString(oEstado.PercIcms);
             txtIcms.Text = Convert.ToString(oEstado.Icms);
             txtPercIcms.Text = Convert.ToString(oEstado.PercRedST);
             txtCodWeb.Text = Convert.ToString(oEstado.CodWeb);
@@ -100,10 +100,12 @@ namespace KnkForms.Classes
             oEstado.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
-            oEstado.Per_icms = Convert.ToDouble(txtPercIcms.Text) ;
+            oEstado.PercIcms = Convert.ToDouble(txtPercIcms.Text) ;
             oEstado.Icms = Convert.ToInt32(txtIcms.Text);
             oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
             oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
+
+            oEstado.SalvarBD();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

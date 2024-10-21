@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -14,9 +15,12 @@ namespace KnkForms.FormsCon
     {
         FormCadCidade oFormCadCidade;
         Cidades aCidade;
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa FROM Cidade";
         public FormConCidades()
         {
             InitializeComponent();
+            CarregaLV();
         }
         public override void SetFrmCadastro(Object form)
         {
@@ -27,7 +31,44 @@ namespace KnkForms.FormsCon
         {
             aCidade = (Cidades)obj;
         }
+        protected override void CarregaLV()
+        {
 
+            listVConsulta.Items.Clear();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
+
+                                item.SubItems.Add(reader["IdEstado"].ToString());
+                                item.SubItems.Add(reader["Cidade"].ToString());
+                                item.SubItems.Add(reader["Ddd"].ToString());
+                                item.SubItems.Add(reader["Ativo"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+
+                                listVConsulta.Items.Add(item);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data in Cidades: " + ex.Message);
+                }
+            }
+        }
         protected override void Incluir()
         {
             oFormCadCidade.ConhecaObj(aCidade);

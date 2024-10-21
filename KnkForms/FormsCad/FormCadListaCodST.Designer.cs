@@ -35,13 +35,45 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.Location = new System.Drawing.Point(139, 418);
+            // 
+            // lblDataCad
+            // 
+            this.lblDataCad.Location = new System.Drawing.Point(136, 402);
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.Location = new System.Drawing.Point(262, 418);
+            // 
+            // lblDataAlteracao
+            // 
+            this.lblDataAlteracao.Location = new System.Drawing.Point(259, 402);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(474, 414);
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.Location = new System.Drawing.Point(27, 418);
+            // 
+            // lblCodUser
+            // 
+            this.lblCodUser.Location = new System.Drawing.Point(24, 402);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(569, 414);
+            // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(35, 108);
             this.txtDescricao.MaxLength = 150;
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(623, 43);
+            this.txtDescricao.Size = new System.Drawing.Size(584, 90);
             this.txtDescricao.TabIndex = 145;
             // 
             // txtTipo
@@ -73,7 +105,7 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(738, 12);
+            this.chkAtivo.Location = new System.Drawing.Point(596, 26);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 150;
@@ -83,7 +115,7 @@
             // FormCadListaCodST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(658, 450);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtTipo);

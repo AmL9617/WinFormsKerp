@@ -30,11 +30,9 @@ namespace KnkForms.Classes
         protected DateTime ultimoMovimento;
 
         //Placeholder
-        protected int codContatos;
         protected int codCidades;
         protected int codRegioes;
         //Agregação
-        protected Contatos contatos;
         protected Cidades cidades;
         protected Regioes regioes;
 
@@ -60,8 +58,6 @@ namespace KnkForms.Classes
             verEmClientes = '\0';
             ultimoMovimento = DateTime.MinValue;
 
-            codContatos = 0;
-            contatos = new Contatos();
             codCidades = 0;
             cidades = new Cidades();
             codRegioes = 0;
@@ -177,12 +173,6 @@ namespace KnkForms.Classes
         }
 
 
-        public int CodContatos
-        {
-            get { return codContatos; }
-            set { codContatos = value; }
-        }
-
         public int CodCidades
         {
             get { return codCidades; }
@@ -195,11 +185,6 @@ namespace KnkForms.Classes
             set { codRegioes = value; }
         }
 
-        public Contatos Contatos
-        {
-            get { return contatos; }
-            set { contatos = value; }
-        }
         public Cidades Cidades
         {
             get { return cidades; }

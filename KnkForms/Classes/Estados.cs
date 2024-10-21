@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -11,7 +13,7 @@ namespace KnkForms.Classes
         protected string estado;
         protected char sigla;
         protected bool ativo;
-        protected double per_icms;
+        protected double percIcms;
         protected int icms;
         protected double percRedST; //Percentual de Redução da Substituição Tributária 
         protected int codWeb;
@@ -22,25 +24,27 @@ namespace KnkForms.Classes
         //Agregação
         protected Paises oPais;
 
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+
         public Estados():base()
         {
             estado = "";
             sigla = '\0'; 
             ativo = false;
             codPais = 0;
-            per_icms = 0;
+            percIcms = 0;
             icms = 0;
             percRedST = 0;
             codWeb = 0;
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double per_icms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double percIcms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
             estado = Estado;
             sigla = sigla;
             ativo = ativo;
-            per_icms = per_icms;
+            percIcms = percIcms;
             icms = icms;
             percRedST = percRedST;
             codWeb = codWeb;
@@ -71,10 +75,10 @@ namespace KnkForms.Classes
             get { return codPais; }
             set { codPais = value; }
         }
-        public double Per_icms
+        public double PercIcms
         {
-            get { return per_icms; }
-            set { per_icms = value; }
+            get { return percIcms; }
+            set { percIcms = value; }
         }
 
         public int Icms
@@ -97,7 +101,38 @@ namespace KnkForms.Classes
             get { return oPais; }
             set { oPais = value; }
         }
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Estado (IdEmpresa, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb) VALUES (@IdEmpresa, @IdPais, @Estado, @Sigla, @PercIcms, @IcmsInt, @PerRedSt, @CodigoWeb)";
 
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdPais", CodPais);
+                        command.Parameters.AddWithValue("@Estado", Estado);
+                        command.Parameters.AddWithValue("@Sigla", Sigla);
+                        command.Parameters.AddWithValue("@PercIcms", PercIcms);
+                        command.Parameters.AddWithValue("@IcmsInt", Icms);
+                        command.Parameters.AddWithValue("@PerRedSt", PercRedST);
+                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
+                        //command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        //command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 
 }

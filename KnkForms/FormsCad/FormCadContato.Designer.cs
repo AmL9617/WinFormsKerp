@@ -34,6 +34,9 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtFornCliente = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnConsultaCid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -72,7 +75,7 @@
             // 
             // txtContato
             // 
-            this.txtContato.Location = new System.Drawing.Point(35, 114);
+            this.txtContato.Location = new System.Drawing.Point(35, 172);
             this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(614, 20);
@@ -81,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 98);
+            this.label1.Location = new System.Drawing.Point(32, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 55;
@@ -89,7 +92,7 @@
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(114, 58);
+            this.txtTipo.Location = new System.Drawing.Point(35, 117);
             this.txtTipo.MaxLength = 50;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(260, 20);
@@ -98,7 +101,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(111, 42);
+            this.lbl1.Location = new System.Drawing.Point(32, 101);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(83, 13);
             this.lbl1.TabIndex = 53;
@@ -106,7 +109,7 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.Location = new System.Drawing.Point(35, 175);
+            this.txtObservacao.Location = new System.Drawing.Point(35, 233);
             this.txtObservacao.MaxLength = 500;
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
@@ -116,16 +119,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 159);
+            this.label2.Location = new System.Drawing.Point(32, 217);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 57;
             this.label2.Text = "Observação";
             // 
+            // txtFornCliente
+            // 
+            this.txtFornCliente.Location = new System.Drawing.Point(122, 58);
+            this.txtFornCliente.MaxLength = 100;
+            this.txtFornCliente.Name = "txtFornCliente";
+            this.txtFornCliente.Size = new System.Drawing.Size(307, 20);
+            this.txtFornCliente.TabIndex = 58;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(119, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Fornecedor/Cliente";
+            // 
+            // btnConsultaCid
+            // 
+            this.btnConsultaCid.Location = new System.Drawing.Point(435, 58);
+            this.btnConsultaCid.Name = "btnConsultaCid";
+            this.btnConsultaCid.Size = new System.Drawing.Size(24, 23);
+            this.btnConsultaCid.TabIndex = 557;
+            this.btnConsultaCid.Text = "⌕";
+            this.btnConsultaCid.UseVisualStyleBackColor = true;
+            this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);
+            // 
             // FormCadContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(670, 450);
+            this.Controls.Add(this.btnConsultaCid);
+            this.Controls.Add(this.txtFornCliente);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtObservacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtContato);
@@ -150,6 +183,9 @@
             this.Controls.SetChildIndex(this.txtContato, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtObservacao, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.txtFornCliente, 0);
+            this.Controls.SetChildIndex(this.btnConsultaCid, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +199,8 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFornCliente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnConsultaCid;
     }
 }

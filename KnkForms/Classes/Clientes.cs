@@ -96,7 +96,6 @@ namespace KnkForms.Classes
             contadores = new Contadores();
             fornecedores = new Fornecedores();
             listaPrecos = new ListaPrecos();
-            contatos = new Contatos();
 
             codRamoAtividades = 0;
             codRegioes = 0;
@@ -108,7 +107,6 @@ namespace KnkForms.Classes
             codContadores = 0;
             codFornecedores = 0;
             codListaPrecos = 0;
-            codContatos = 0;
         }
 
         public string Cliente
@@ -312,11 +310,6 @@ namespace KnkForms.Classes
             set { listaPrecos = value; }
         }
 
-        public Contatos Contatos
-        {
-            get { return contatos; } 
-            set {  contatos = value; }
-        }
 
 
         public int CodRamoAtividades
@@ -377,11 +370,6 @@ namespace KnkForms.Classes
         {
             get { return codListaPrecos; }
             set { codListaPrecos = value; }
-        }
-        public int CodContatos
-        {
-            get { return codContatos; }
-            set { codContatos = value; }
         }
     }
 

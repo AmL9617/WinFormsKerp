@@ -13,6 +13,7 @@ namespace KnkForms.FormsCad
     public partial class FormCadContato : KnkForms.FormCadPai
     {
         Contatos oContato;
+        FormConFornecedores oFrmConFornecedores;
         public FormCadContato()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace KnkForms.FormsCad
         public override void LimpaTxt()
         {
             txtCod.Clear();
+            txtFornCliente.Clear();
             txtTipo.Clear();
             txtContato.Clear();
             txtObservacao.Clear();
@@ -37,6 +39,7 @@ namespace KnkForms.FormsCad
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oContato.Cod);
+            txtFornCliente.Text = Convert.ToString(oContato.CodFornCliente);
             txtTipo.Text = oContato.Tipo;
             txtContato.Text = oContato.Contato;
             txtObservacao.Text = oContato.Observacao;
@@ -48,6 +51,7 @@ namespace KnkForms.FormsCad
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
+            txtFornCliente.Enabled = false;
             txtTipo.Enabled = false;
             txtContato.Enabled = false;
             txtObservacao.Enabled = false;
@@ -59,6 +63,7 @@ namespace KnkForms.FormsCad
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
+            txtFornCliente.Enabled = true;
             txtTipo.Enabled = true;
             txtContato.Enabled = true;
             txtObservacao.Enabled = true;
@@ -70,13 +75,24 @@ namespace KnkForms.FormsCad
         public override void Salvar()
         {
             oContato.Cod = Convert.ToInt32(txtCod.Text);
+            oContato.CodFornCliente = Convert.ToInt32(txtFornCliente.Text);
             oContato.Tipo = txtTipo.Text;
             oContato.Contato = txtContato.Text;
             oContato.Observacao = txtObservacao.Text;
             oContato.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oContato.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
-        }
 
+            oContato.SalvarBD();
+        }
+        public void setFrmConFornecedores(Object obj)
+        {
+            oFrmConFornecedores = (FormConFornecedores)obj;
+        }
+        private void btnConsultaCid_Click(object sender, EventArgs e)
+        {
+            oFrmConFornecedores.ConhecaObj(oContato.Fornecedores);
+            oFrmConFornecedores.ShowDialog();
+        }
     }
 }

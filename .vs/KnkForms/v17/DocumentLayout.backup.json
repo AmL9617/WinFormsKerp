@@ -3,8 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\fornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\fornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/192.168.20.150_49172/kerp/Administrador/SqlTable/dbo.Contatos.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/192.168.20.150_49172/kerp/Administrador/SqlTable/dbo.FornCliente.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadcontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadcontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +41,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Fornecedores.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Fornecedores.cs",
-              "RelativeDocumentMoniker": "KnkForms\\Classes\\Fornecedores.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Fornecedores.cs",
-              "RelativeToolTip": "KnkForms\\Classes\\Fornecedores.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T13:03:36.418Z",
+              "Title": "dbo.Contatos [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/192.168.20.150_49172/kerp/Administrador/SqlTable/dbo.Contatos.sql",
+              "ToolTip": "dbo.Contatos [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-21T19:26:58.537Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.FornCliente [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/192.168.20.150_49172/kerp/Administrador/SqlTable/dbo.FornCliente.sql",
+              "ToolTip": "dbo.FornCliente [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-21T19:26:49.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCadEstado.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEstado.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadEstado.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadEstado.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadEstado.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:25:13.849Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCadCidade.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCidade.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadCidade.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadCidade.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadCidade.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:25:06.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormCadContato.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContato.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadContato.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadContato.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadContato.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:24:57.293Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormCadRegiao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadRegiao.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:24:53.925Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -36,8 +36,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtInscEst = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtContato = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtLimite = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTrade = new System.Windows.Forms.TextBox();
@@ -63,7 +61,6 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.chkVerCliente = new System.Windows.Forms.CheckBox();
-            this.btnPesquisarContato = new System.Windows.Forms.Button();
             this.btnConsultaReg = new System.Windows.Forms.Button();
             this.txtCodRegiao = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -112,14 +109,14 @@
             // 
             // dataUltMov
             // 
-            this.dataUltMov.Location = new System.Drawing.Point(384, 351);
+            this.dataUltMov.Location = new System.Drawing.Point(384, 310);
             this.dataUltMov.Name = "dataUltMov";
             this.dataUltMov.Size = new System.Drawing.Size(113, 20);
             this.dataUltMov.TabIndex = 18;
             // 
             // txtObservacao
             // 
-            this.txtObservacao.Location = new System.Drawing.Point(35, 403);
+            this.txtObservacao.Location = new System.Drawing.Point(32, 372);
             this.txtObservacao.MaxLength = 3000;
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
@@ -129,7 +126,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(31, 387);
+            this.label18.Location = new System.Drawing.Point(28, 356);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(70, 13);
             this.label18.TabIndex = 154;
@@ -138,7 +135,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(381, 335);
+            this.label19.Location = new System.Drawing.Point(381, 294);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(132, 13);
             this.label19.TabIndex = 153;
@@ -146,7 +143,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.Location = new System.Drawing.Point(251, 351);
+            this.txtCnpj.Location = new System.Drawing.Point(251, 310);
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(115, 20);
@@ -155,7 +152,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(248, 335);
+            this.label15.Location = new System.Drawing.Point(248, 294);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 13);
             this.label15.TabIndex = 149;
@@ -163,7 +160,7 @@
             // 
             // txtInscEst
             // 
-            this.txtInscEst.Location = new System.Drawing.Point(36, 351);
+            this.txtInscEst.Location = new System.Drawing.Point(36, 310);
             this.txtInscEst.MaxLength = 30;
             this.txtInscEst.Name = "txtInscEst";
             this.txtInscEst.Size = new System.Drawing.Size(197, 20);
@@ -172,28 +169,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(33, 335);
+            this.label16.Location = new System.Drawing.Point(33, 294);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 13);
             this.label16.TabIndex = 147;
             this.label16.Text = "Inscrição Estadual";
-            // 
-            // txtContato
-            // 
-            this.txtContato.Location = new System.Drawing.Point(36, 301);
-            this.txtContato.MaxLength = 200;
-            this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(614, 20);
-            this.txtContato.TabIndex = 555;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 285);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 13);
-            this.label12.TabIndex = 143;
-            this.label12.Text = "Contato";
             // 
             // txtLimite
             // 
@@ -407,22 +387,12 @@
             // chkVerCliente
             // 
             this.chkVerCliente.AutoSize = true;
-            this.chkVerCliente.Location = new System.Drawing.Point(514, 351);
+            this.chkVerCliente.Location = new System.Drawing.Point(514, 310);
             this.chkVerCliente.Name = "chkVerCliente";
             this.chkVerCliente.Size = new System.Drawing.Size(99, 17);
             this.chkVerCliente.TabIndex = 19;
             this.chkVerCliente.Text = "Ver em Clientes";
             this.chkVerCliente.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisarContato
-            // 
-            this.btnPesquisarContato.Location = new System.Drawing.Point(656, 298);
-            this.btnPesquisarContato.Name = "btnPesquisarContato";
-            this.btnPesquisarContato.Size = new System.Drawing.Size(18, 23);
-            this.btnPesquisarContato.TabIndex = 15;
-            this.btnPesquisarContato.Text = "⌕";
-            this.btnPesquisarContato.UseVisualStyleBackColor = true;
-            this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
             // 
             // btnConsultaReg
             // 
@@ -500,7 +470,6 @@
             this.Controls.Add(this.btnConsultaCid);
             this.Controls.Add(this.txtCodCidade);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.btnPesquisarContato);
             this.Controls.Add(this.chkVerCliente);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.dataUltMov);
@@ -511,8 +480,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtInscEst);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtContato);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtLimite);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtTrade);
@@ -561,8 +528,6 @@
             this.Controls.SetChildIndex(this.txtTrade, 0);
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.txtLimite, 0);
-            this.Controls.SetChildIndex(this.label12, 0);
-            this.Controls.SetChildIndex(this.txtContato, 0);
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.txtInscEst, 0);
             this.Controls.SetChildIndex(this.label15, 0);
@@ -573,7 +538,6 @@
             this.Controls.SetChildIndex(this.dataUltMov, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.chkVerCliente, 0);
-            this.Controls.SetChildIndex(this.btnPesquisarContato, 0);
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
@@ -606,8 +570,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtInscEst;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtContato;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtLimite;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtTrade;
@@ -633,7 +595,6 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.CheckBox chkVerCliente;
-        private System.Windows.Forms.Button btnPesquisarContato;
         private System.Windows.Forms.Button btnConsultaReg;
         private System.Windows.Forms.TextBox txtCodRegiao;
         private System.Windows.Forms.Label label11;

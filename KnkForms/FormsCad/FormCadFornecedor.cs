@@ -16,7 +16,6 @@ namespace KnkForms.Forms
     public partial class FormCadFornecedor : KnkForms.FormCadPai
     {
         Fornecedores oFornecedor;
-        FormConContatos oFrmConContatos;
         FormConCidades oFrmConCidades;
         FormConRegioes oFrmConRegioes;
 
@@ -49,7 +48,6 @@ namespace KnkForms.Forms
             txtTrade.Clear();
             txtCodProd.Clear();
             txtLimite.Clear();
-            txtContato.Clear();
             txtInscEst.Clear();
             txtCnpj.Clear();
             dataUltMov.Value = DateTime.Today;
@@ -84,7 +82,6 @@ namespace KnkForms.Forms
             txtTrade.Text = oFornecedor.Trade;
             txtCodProd.Text = Convert.ToString(oFornecedor.CodProdIgual);
             txtLimite.Text = Convert.ToString(oFornecedor.LimiteCredito);
-            txtContato.Text = Convert.ToString(oFornecedor.CodContatos);
             txtInscEst.Text = oFornecedor.InscricaoEstadual;
             txtCnpj.Text = oFornecedor.CNPJ;
             dataUltMov.Value = oFornecedor.UltimoMovimento;
@@ -116,7 +113,6 @@ namespace KnkForms.Forms
             txtTrade.Enabled = false;
             txtCodProd.Enabled = false;
             txtLimite.Enabled = false;
-            txtContato.Enabled = false;
             txtInscEst.Enabled = false;
             txtCnpj.Enabled = false;
             dataUltMov.Enabled = false;
@@ -145,7 +141,6 @@ namespace KnkForms.Forms
             txtTrade.Enabled = true;
             txtCodProd.Enabled = true;
             txtLimite.Enabled = true;
-            txtContato.Enabled = true;
             txtInscEst.Enabled = true;
             txtCnpj.Enabled = true;
             dataUltMov.Enabled = true;
@@ -180,7 +175,6 @@ namespace KnkForms.Forms
             oFornecedor.Trade = txtTrade.Text;
             oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd.Text);
             oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite.Text);
-            oFornecedor.CodContatos = Convert.ToInt32(txtContato.Text);
             oFornecedor.InscricaoEstadual = txtInscEst.Text;
             oFornecedor.CNPJ = txtCnpj.Text;
             oFornecedor.UltimoMovimento = dataUltMov.Value;
@@ -197,10 +191,6 @@ namespace KnkForms.Forms
             oFornecedor.SalvarBD();
         }
 
-        public void setFrmConContatos(Object obj)
-        {
-            oFrmConContatos = (FormConContatos)obj;
-        }
         public void setFrmConCidades(Object obj)
         {
             oFrmConCidades = (FormConCidades)obj;
@@ -209,12 +199,7 @@ namespace KnkForms.Forms
         {
             oFrmConRegioes = (FormConRegioes)obj;
         }
-        private void btnPesquisarContato_Click(object sender, EventArgs e)
-        {
-            oFrmConContatos.ConhecaObj(oFornecedor.Contatos);
-            oFrmConContatos.ShowDialog();
-        }
-
+       
         private void btnConsultaReg_Click(object sender, EventArgs e)
         {
             oFrmConRegioes.ConhecaObj(oFornecedor.Regioes);

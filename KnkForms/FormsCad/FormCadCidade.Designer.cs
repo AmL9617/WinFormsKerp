@@ -40,10 +40,12 @@
             // 
             // txtDataCad
             // 
+            this.txtDataCad.MaxLength = 10;
             this.txtDataCad.TabIndex = 7;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.MaxLength = 10;
             this.txtDataAlt.TabIndex = 8;
             // 
             // btnSalvar

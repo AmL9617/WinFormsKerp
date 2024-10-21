@@ -74,6 +74,8 @@ namespace KnkForms.Forms
             oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRegiao.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oRegiao.Descricao = txtDescricao.Text;
+
+            oRegiao.SalvarBD();
         }
     }
 }
