@@ -23,4 +23,4 @@ A aplicação windows form para o kerp, consumindo a API Swagger do Kerp.
 
 ## Informações adicionais
 Em condição de pagamento: Tipo é p (prazo) e m (mensal); Operação (C Compras, V vendas, A ambos)
-
+Indústria em fornecedor é armazenado no banco de dados no campo consumidor revenda
