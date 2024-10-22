@@ -29,76 +29,86 @@
         private void InitializeComponent()
         {
             this.codEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codPais = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sigla = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.percICMS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.icms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.percRedST = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codWeb = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataCadastro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataModificacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.codEstado,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader10,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.codPais,
+            this.estado,
+            this.sigla,
+            this.percICMS,
+            this.icms,
+            this.percRedST,
+            this.codWeb,
+            this.codEmp,
+            this.dataCadastro,
+            this.dataModificacao});
             // 
             // codEstado
             // 
             this.codEstado.Text = "Código Estado";
+            this.codEstado.Width = 100;
             // 
-            // columnHeader1
+            // codPais
             // 
-            this.columnHeader1.Text = "Código País";
+            this.codPais.Text = "Código País";
+            this.codPais.Width = 100;
             // 
-            // columnHeader2
+            // estado
             // 
-            this.columnHeader2.Text = "Estado";
+            this.estado.Text = "Estado";
+            this.estado.Width = 100;
             // 
-            // columnHeader3
+            // sigla
             // 
-            this.columnHeader3.Text = "Sigla";
+            this.sigla.Text = "Sigla";
+            this.sigla.Width = 50;
             // 
-            // columnHeader4
+            // percICMS
             // 
-            this.columnHeader4.Text = "Percentual ICMS";
+            this.percICMS.Text = "Percentual ICMS";
+            this.percICMS.Width = 100;
             // 
-            // columnHeader5
+            // icms
             // 
-            this.columnHeader5.Text = "ICMS";
+            this.icms.Text = "ICMS";
             // 
-            // columnHeader6
+            // percRedST
             // 
-            this.columnHeader6.Text = "Perc. Redução S.T.";
+            this.percRedST.Text = "Perc. Redução S.T.";
+            this.percRedST.Width = 100;
             // 
-            // columnHeader7
+            // codWeb
             // 
-            this.columnHeader7.Text = "Código Web";
+            this.codWeb.Text = "Código Web";
+            this.codWeb.Width = 80;
             // 
-            // columnHeader8
+            // dataCadastro
             // 
-            this.columnHeader8.Text = "Data de Cadastro";
+            this.dataCadastro.Text = "Data de Cadastro";
+            this.dataCadastro.Width = 100;
             // 
-            // columnHeader9
+            // dataModificacao
             // 
-            this.columnHeader9.Text = "Data de Modificacao";
+            this.dataModificacao.Text = "Data de Modificacao";
+            this.dataModificacao.Width = 100;
             // 
-            // columnHeader10
+            // codEmp
             // 
-            this.columnHeader10.Text = "Código Empresa";
+            this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 100;
             // 
             // FormConEstados
             // 
@@ -114,15 +124,15 @@
         #endregion
 
         private System.Windows.Forms.ColumnHeader codEstado;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader codPais;
+        private System.Windows.Forms.ColumnHeader estado;
+        private System.Windows.Forms.ColumnHeader sigla;
+        private System.Windows.Forms.ColumnHeader percICMS;
+        private System.Windows.Forms.ColumnHeader icms;
+        private System.Windows.Forms.ColumnHeader percRedST;
+        private System.Windows.Forms.ColumnHeader codWeb;
+        private System.Windows.Forms.ColumnHeader codEmp;
+        private System.Windows.Forms.ColumnHeader dataCadastro;
+        private System.Windows.Forms.ColumnHeader dataModificacao;
     }
 }

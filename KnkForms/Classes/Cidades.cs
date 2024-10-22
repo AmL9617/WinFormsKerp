@@ -67,7 +67,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Cidade (IdEmpresa, IdEstado, Cidade, Ddd, Ativo) VALUES (@IdEmpresa, @IdEstado, @Cidade, @Ddd, @Ativo)";
+                    string query = "INSERT INTO Cidade (IdEmpresa, IdEstado, Cidade, Ddd, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdEstado, @Cidade, @Ddd, @Ativo, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -76,8 +76,8 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Cidade", Cidade);
                         command.Parameters.AddWithValue("@Ddd", DDD);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
-                        //command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        //command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
                     }

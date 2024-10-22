@@ -304,7 +304,7 @@
             this.btnPesquisarContato.TabIndex = 13;
             this.btnPesquisarContato.Text = "⌕";
             this.btnPesquisarContato.UseVisualStyleBackColor = true;
-            this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
+            //this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
             // 
             // FormCadContador
             // 

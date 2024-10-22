@@ -109,9 +109,9 @@
             this.lblCodUser.AutoSize = true;
             this.lblCodUser.Location = new System.Drawing.Point(161, 402);
             this.lblCodUser.Name = "lblCodUser";
-            this.lblCodUser.Size = new System.Drawing.Size(79, 13);
+            this.lblCodUser.Size = new System.Drawing.Size(84, 13);
             this.lblCodUser.TabIndex = 10;
-            this.lblCodUser.Text = "Código Usuário";
+            this.lblCodUser.Text = "Código Empresa";
             // 
             // FormCadPai
             // 

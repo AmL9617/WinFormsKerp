@@ -13,7 +13,7 @@ namespace KnkForms.Forms
     public partial class FormCadContador : KnkForms.FormCadPai
     {
         Contadores oContador;
-        FormConContatos oFrmConContatos;
+        //FormConContatos oFrmConContatos;
         public FormCadContador()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace KnkForms.Forms
             txtTelefone.Text = oContador.Telefone;
             txtFax.Text = oContador.Fax;
             txtCelular.Text = oContador.Celular;
-            txtContato.Text = Convert.ToString(oContador.CodContatos);
+            //txtContato.Text = Convert.ToString(oContador.CodContatos);
             txtEmail.Text = oContador.Email;
             txtCodUser.Text = Convert.ToString(oContador.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oContador.DataCadastro);
@@ -122,13 +122,14 @@ namespace KnkForms.Forms
             oContador.Telefone = txtTelefone.Text;
             oContador.Fax = txtFax.Text;
             oContador.Celular = txtCelular.Text;
-            oContador.CodContatos = Convert.ToInt32(txtContato.Text);
+            //oContador.CodContatos = Convert.ToInt32(txtContato.Text);
             oContador.Email = txtEmail.Text;
 
             oContador.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oContador.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oContador.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
+        /*
         public void setFrmConContatos(Object obj)
         {
             oFrmConContatos = (FormConContatos)obj;
@@ -137,6 +138,6 @@ namespace KnkForms.Forms
         {
             oFrmConContatos.ConhecaObj(oContador.Contatos);
             oFrmConContatos.ShowDialog();
-        }
+        }*/
     }
 }

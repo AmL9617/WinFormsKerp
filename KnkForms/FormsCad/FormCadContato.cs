@@ -13,7 +13,7 @@ namespace KnkForms.FormsCad
     public partial class FormCadContato : KnkForms.FormCadPai
     {
         Contatos oContato;
-        FormConFornecedores oFrmConFornecedores;
+        FormConClientes oFrmConClientes;
         public FormCadContato()
         {
             InitializeComponent();
@@ -85,14 +85,14 @@ namespace KnkForms.FormsCad
 
             oContato.SalvarBD();
         }
-        public void setFrmConFornecedores(Object obj)
+        public void setFrmConClientes(Object obj)
         {
-            oFrmConFornecedores = (FormConFornecedores)obj;
+            oFrmConClientes = (FormConClientes)obj;
         }
         private void btnConsultaCid_Click(object sender, EventArgs e)
         {
-            oFrmConFornecedores.ConhecaObj(oContato.Fornecedores);
-            oFrmConFornecedores.ShowDialog();
+            oFrmConClientes.ConhecaObj(oContato.Clientes);
+            oFrmConClientes.ShowDialog();
         }
     }
 }

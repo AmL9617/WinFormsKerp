@@ -16,7 +16,7 @@ namespace KnkForms.FormsCon
         FormCadCidade oFormCadCidade;
         Cidades aCidade;
         string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa FROM Cidade";
+        string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa, DataCadastro, DataModificacao FROM Cidade";
         public FormConCidades()
         {
             InitializeComponent();
@@ -55,8 +55,8 @@ namespace KnkForms.FormsCon
                                 item.SubItems.Add(reader["Ddd"].ToString());
                                 item.SubItems.Add(reader["Ativo"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }

@@ -85,6 +85,8 @@ namespace KnkForms.Forms
             aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCidade.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             aCidade.Ativo = chkAtivo.Checked;
+
+            aCidade.SalvarBD();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

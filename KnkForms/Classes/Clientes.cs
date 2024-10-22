@@ -44,7 +44,6 @@ namespace KnkForms.Classes
         protected int codContadores;
         protected int codFornecedores;
         protected int codListaPrecos;
-        protected int codContatos;
 
         //Agregação
         protected RamoAtividades ramoAtividades;
@@ -57,7 +56,6 @@ namespace KnkForms.Classes
         protected Contadores contadores;
         protected Fornecedores fornecedores;
         protected ListaPrecos listaPrecos;
-        protected Contatos contatos;
 
         public Clientes()
         {

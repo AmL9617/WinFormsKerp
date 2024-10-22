@@ -21,11 +21,11 @@ namespace KnkForms.Classes
         protected string cnpj;
         protected string crc;
 
-        //Placeholder
+        /*Placeholder
         protected int codContatos;
         //Agregação
         protected Contatos contatos;
-
+        */
         public Contadores()
         {
             contador = "";
@@ -41,8 +41,8 @@ namespace KnkForms.Classes
             cnpj = "";
             crc = "";
 
-            codContatos = 0;
-            contatos = new Contatos();
+            //codContatos = 0;
+            //contatos = new Contatos();
         }
 
         public string Contador
@@ -118,7 +118,7 @@ namespace KnkForms.Classes
             set { crc = value; }
         }
 
-        public int CodContatos
+        /*public int CodContatos
         {
             get { return codContatos; }
             set { codContatos = value; }
@@ -127,7 +127,7 @@ namespace KnkForms.Classes
         {
             get { return contatos; }
             set { contatos = value; }
-        }
+        }*/
     }
 
 }

@@ -141,15 +141,15 @@ namespace KnkForms
             oFormCadCliente.setFrmConRegioes(oFormConRegioes);
             oFormCadCliente.setFrmConTransportadoras(oFormConTransportadoras);
             oFormCadCliente.setFrmConVendedores(oFormConVendedores);
-            oFormCadContato.setFrmConFornecedores(oFormConFornecedores);
+            oFormCadContato.setFrmConClientes(oFormConClientes);
             oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
-            oFormCadContador.setFrmConContatos(oFormConContatos);
+            //oFormCadContador.setFrmConContatos(oFormConContatos);
             oFormCadEstado.setFrmConPaises(oFormConPaises);
             oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
             oFormCadListaPreco.setFrmConSubgrupos(oFormConSubgrupos);
             oFormCadRamoAtivCliente.setFrmConClientes(oFormConClientes);
             oFormCadSubgrupo.setFrmConGrupos(oFormConGrupos);
-            oFormCadTransportadora.setFrmConContatos(oFormConContatos);
+            //oFormCadTransportadora.setFrmConContatos(oFormConContatos);
         }
 
         public void PecaCidades(Object obj)

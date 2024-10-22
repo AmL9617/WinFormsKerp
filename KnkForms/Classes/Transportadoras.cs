@@ -29,9 +29,9 @@ namespace KnkForms.Classes
         protected string cnpj;
 
         //Placeholder
-        protected int codContatos;
+        //protected int codContatos;
         //Agregação
-        protected Contatos contatos;
+        //protected Contatos contatos;
         public Transportadoras()
         {
             transportadoraCliente = "";
@@ -54,8 +54,8 @@ namespace KnkForms.Classes
             inscricaoEstadual = "";
             cnpj = "";
 
-            codContatos = 0;
-            contatos = new Contatos();
+            //codContatos = 0;
+            //contatos = new Contatos();
         }
 
         public string TransportadoraCliente
@@ -171,7 +171,7 @@ namespace KnkForms.Classes
             get { return cnpj; }
             set { cnpj = value; }
         }
-
+        /*
         public int CodContatos
         {
             get { return codContatos; }
@@ -181,7 +181,7 @@ namespace KnkForms.Classes
         {
             get { return contatos; }
             set { contatos = value; }
-        }
+        }*/
     }
 
 }

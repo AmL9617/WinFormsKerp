@@ -15,7 +15,7 @@ namespace KnkForms.Classes
         FormCadEstado oFormCadEstado;
         Estados oEstado;
         string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa FROM Estado";
+        string query = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao FROM Estado";
         public FormConEstados()
         {
             InitializeComponent();
@@ -57,8 +57,8 @@ namespace KnkForms.Classes
                                 item.SubItems.Add(reader["PerRedSt"].ToString());
                                 item.SubItems.Add(reader["CodigoWeb"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }

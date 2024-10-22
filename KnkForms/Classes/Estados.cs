@@ -11,7 +11,7 @@ namespace KnkForms.Classes
     internal class Estados : Pai
     {
         protected string estado;
-        protected char sigla;
+        protected string sigla;
         protected bool ativo;
         protected double percIcms;
         protected int icms;
@@ -29,7 +29,7 @@ namespace KnkForms.Classes
         public Estados():base()
         {
             estado = "";
-            sigla = '\0'; 
+            sigla = ""; 
             ativo = false;
             codPais = 0;
             percIcms = 0;
@@ -39,7 +39,7 @@ namespace KnkForms.Classes
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, char sigla, bool Ativo, int codPais, double percIcms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, string sigla, bool Ativo, int codPais, double percIcms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
             estado = Estado;
             sigla = sigla;
@@ -58,7 +58,7 @@ namespace KnkForms.Classes
             set { estado = value; }
         }
 
-        public char Sigla
+        public string Sigla
         {
             get { return sigla; }
             set { sigla = value; }
@@ -108,7 +108,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Estado (IdEmpresa, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb) VALUES (@IdEmpresa, @IdPais, @Estado, @Sigla, @PercIcms, @IcmsInt, @PerRedSt, @CodigoWeb)";
+                    string query = "INSERT INTO Estado (IdEmpresa, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Estado, @Sigla, @PercIcms, @IcmsInt, @PerRedSt, @CodigoWeb, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -120,8 +120,8 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@IcmsInt", Icms);
                         command.Parameters.AddWithValue("@PerRedSt", PercRedST);
                         command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
-                        //command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        //command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
                     }

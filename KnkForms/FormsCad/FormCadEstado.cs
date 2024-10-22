@@ -38,7 +38,7 @@ namespace KnkForms.Classes
             txtDataAlt.Clear();
             txtPercIcms.Clear();
             txtIcms.Clear();
-            txtPercIcms.Clear();
+            txtPercRedST.Clear();
             txtCodWeb.Clear();
         }
 
@@ -54,7 +54,7 @@ namespace KnkForms.Classes
             txtDataAlt.Text = Convert.ToString(oEstado.DataModificacao);
             txtPercIcms.Text = Convert.ToString(oEstado.PercIcms);
             txtIcms.Text = Convert.ToString(oEstado.Icms);
-            txtPercIcms.Text = Convert.ToString(oEstado.PercRedST);
+            txtPercRedST.Text = Convert.ToString(oEstado.PercRedST);
             txtCodWeb.Text = Convert.ToString(oEstado.CodWeb);
         }
 
@@ -68,7 +68,7 @@ namespace KnkForms.Classes
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
-            txtPercIcms.Enabled = false;
+            txtPercRedST.Enabled = false;
             txtIcms.Enabled = false;
             txtPercIcms.Enabled = false;
             txtCodWeb.Enabled = false;
@@ -86,7 +86,7 @@ namespace KnkForms.Classes
             txtDataAlt.Enabled = true;
             txtPercIcms.Enabled = true;
             txtIcms.Enabled = true;
-            txtPercIcms.Enabled=true;
+            txtPercRedST.Enabled=true;
             txtCodWeb.Enabled = true;
         }
 
@@ -94,7 +94,7 @@ namespace KnkForms.Classes
         {
             oEstado.Cod = Convert.ToInt32(txtCod.Text);
             oEstado.Estado = txtEstado.Text;
-            oEstado.Sigla = Convert.ToChar(txtSigla.Text);
+            oEstado.Sigla = Convert.ToString(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
             oEstado.Ativo = chkAtivo.Checked;
             oEstado.CodEmpresa = Convert.ToInt32(txtCodUser.Text);

@@ -28,47 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codContato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codFornCli = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.observacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
+            this.codContato,
+            this.codFornCli,
+            this.tipo,
+            this.contato,
+            this.observacao,
+            this.codEmp});
             // 
-            // columnHeader1
+            // codContato
             // 
-            this.columnHeader1.Text = "Código Contato";
+            this.codContato.Text = "Código Contato";
+            this.codContato.Width = 100;
             // 
-            // columnHeader2
+            // codFornCli
             // 
-            this.columnHeader2.Text = "Código Fornecedor/Cliente";
+            this.codFornCli.Text = "Código Fornecedor/Cliente";
+            this.codFornCli.Width = 100;
             // 
-            // columnHeader3
+            // tipo
             // 
-            this.columnHeader3.Text = "Tipo";
+            this.tipo.Text = "Tipo";
             // 
-            // columnHeader4
+            // contato
             // 
-            this.columnHeader4.Text = "Contato";
+            this.contato.Text = "Contato";
+            this.contato.Width = 150;
             // 
-            // columnHeader5
+            // observacao
             // 
-            this.columnHeader5.Text = "Observacao";
+            this.observacao.Text = "Observacao";
+            this.observacao.Width = 150;
             // 
-            // columnHeader6
+            // codEmp
             // 
-            this.columnHeader6.Text = "Código Empresa";
+            this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 100;
             // 
             // FormConContatos
             // 
@@ -83,11 +88,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader codContato;
+        private System.Windows.Forms.ColumnHeader codFornCli;
+        private System.Windows.Forms.ColumnHeader tipo;
+        private System.Windows.Forms.ColumnHeader contato;
+        private System.Windows.Forms.ColumnHeader observacao;
+        private System.Windows.Forms.ColumnHeader codEmp;
     }
 }

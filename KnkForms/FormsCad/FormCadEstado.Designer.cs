@@ -42,30 +42,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodWeb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPercRedST = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
             // 
-            this.txtDataCad.TabIndex = 9;
+            this.txtDataCad.TabIndex = 11;
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.TabIndex = 10;
+            this.txtDataAlt.TabIndex = 12;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtCodUser
             // 
-            this.txtCodUser.TabIndex = 8;
+            this.txtCodUser.TabIndex = 10;
             // 
             // btnSair
             // 
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 14;
             // 
             // txtSigla
             // 
@@ -107,7 +107,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(727, 28);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 7;
+            this.chkAtivo.TabIndex = 5;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -117,7 +117,7 @@
             this.txtCodPais.MaxLength = 50;
             this.txtCodPais.Name = "txtCodPais";
             this.txtCodPais.Size = new System.Drawing.Size(260, 20);
-            this.txtCodPais.TabIndex = 29;
+            this.txtCodPais.TabIndex = 4;
             // 
             // label1
             // 
@@ -144,7 +144,7 @@
             this.txtIcms.MaxLength = 8;
             this.txtIcms.Name = "txtIcms";
             this.txtIcms.Size = new System.Drawing.Size(62, 20);
-            this.txtIcms.TabIndex = 6;
+            this.txtIcms.TabIndex = 7;
             // 
             // label3
             // 
@@ -161,7 +161,7 @@
             this.txtPercIcms.MaxLength = 8;
             this.txtPercIcms.Name = "txtPercIcms";
             this.txtPercIcms.Size = new System.Drawing.Size(70, 20);
-            this.txtPercIcms.TabIndex = 5;
+            this.txtPercIcms.TabIndex = 6;
             // 
             // label4
             // 
@@ -178,7 +178,7 @@
             this.txtCodWeb.MaxLength = 100;
             this.txtCodWeb.Name = "txtCodWeb";
             this.txtCodWeb.Size = new System.Drawing.Size(307, 20);
-            this.txtCodWeb.TabIndex = 35;
+            this.txtCodWeb.TabIndex = 9;
             // 
             // label5
             // 
@@ -189,13 +189,13 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Código Web";
             // 
-            // textBox2
+            // txtPercRedST
             // 
-            this.textBox2.Location = new System.Drawing.Point(226, 117);
-            this.textBox2.MaxLength = 8;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(70, 20);
-            this.textBox2.TabIndex = 34;
+            this.txtPercRedST.Location = new System.Drawing.Point(226, 117);
+            this.txtPercRedST.MaxLength = 8;
+            this.txtPercRedST.Name = "txtPercRedST";
+            this.txtPercRedST.Size = new System.Drawing.Size(70, 20);
+            this.txtPercRedST.TabIndex = 34;
             // 
             // label6
             // 
@@ -212,7 +212,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtCodWeb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPercRedST);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtIcms);
             this.Controls.Add(this.label3);
@@ -251,7 +251,7 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtIcms, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtPercRedST, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtCodWeb, 0);
             this.ResumeLayout(false);
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodWeb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPercRedST;
         private System.Windows.Forms.Label label6;
     }
 }

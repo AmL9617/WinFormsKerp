@@ -15,7 +15,7 @@ namespace KnkForms.Classes
         protected string contato;
         protected string observacao;
 
-        protected Fornecedores fornecedores;
+        protected Clientes clientes;
 
         string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
@@ -25,7 +25,7 @@ namespace KnkForms.Classes
             tipo = "";
             contato = "";
             observacao = "";
-            fornecedores = new Fornecedores();
+            clientes = new Clientes();
         }
         public int CodFornCliente
         {
@@ -47,10 +47,10 @@ namespace KnkForms.Classes
             get{ return observacao; }
             set { observacao = value; }
         }
-        public Fornecedores Fornecedores
+        public Clientes Clientes
         {
-            get { return fornecedores; }
-            set { fornecedores = value; }
+            get { return clientes; }
+            set { clientes = value; }
         }
         public void SalvarBD()
         {
