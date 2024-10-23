@@ -32,11 +32,15 @@ namespace KnkForms.Classes
         //Placeholder
         protected int codCidades;
         protected int codRegioes;
+        protected int codListaPrecos;
+        protected int codCondPag;
         //Agregação
         protected Cidades cidades;
         protected Regioes regioes;
+        protected ListaPrecos listaPrecos;
+        protected CondicaoPagamentos condicaoPagamentos;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
         public Fornecedores()
         {
             industria = "";
@@ -62,6 +66,10 @@ namespace KnkForms.Classes
             cidades = new Cidades();
             codRegioes = 0;
             regioes = new Regioes();
+            codListaPrecos = 0;
+            listaPrecos = new ListaPrecos();
+            codCondPag = 0;
+            condicaoPagamentos = new CondicaoPagamentos();
         }
 
         public string Industria
@@ -184,7 +192,16 @@ namespace KnkForms.Classes
             get { return codRegioes; }
             set { codRegioes = value; }
         }
-
+        public int CodListaPrecos
+        {
+            get { return codListaPrecos; }
+            set { codListaPrecos = value; }
+        }
+        public int CodCondPag
+        {
+            get { return codCondPag; }
+            set { codCondPag = value; }
+        }
         public Cidades Cidades
         {
             get { return cidades; }
@@ -195,7 +212,16 @@ namespace KnkForms.Classes
             get { return regioes; }
             set { regioes = value; }
         }
-
+        public ListaPrecos ListaPrecos
+        {
+            get { return listaPrecos; }
+            set { listaPrecos = value; }
+        }
+        public CondicaoPagamentos CondicaoPagamentos
+        {
+            get { return condicaoPagamentos; }
+            set { condicaoPagamentos = value; }
+        }
         public void SalvarBD()
         {
             try
@@ -203,7 +229,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO FornCliente (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdCidadeEmp)";
+                    string query = "INSERT INTO FornClientes (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdLista, IdListaEmp, IdCondPag, IdCondPagEmp, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdLista, @IdListaEmp, @IdCondPag, @IdCondPagEmp, @IdCidadeEmp)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -224,6 +250,10 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Observacao", Observacoes);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
+                        command.Parameters.AddWithValue("@IdLista", CodListaPrecos);
+                        command.Parameters.AddWithValue("@IdListaEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdCondPag", CodCondPag);
+                        command.Parameters.AddWithValue("@IdCondPagEmp", CodEmpresa);
                         command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);

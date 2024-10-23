@@ -47,6 +47,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnConsultaReg = new System.Windows.Forms.Button();
+            this.txtCodRegiao = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -145,6 +148,7 @@
             this.btnConsultaCid.TabIndex = 201;
             this.btnConsultaCid.Text = "⌕";
             this.btnConsultaCid.UseVisualStyleBackColor = true;
+            this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);
             // 
             // txtCodCidade
             // 
@@ -233,10 +237,40 @@
             this.label5.TabIndex = 203;
             this.label5.Text = "Endereço";
             // 
+            // btnConsultaReg
+            // 
+            this.btnConsultaReg.Location = new System.Drawing.Point(609, 220);
+            this.btnConsultaReg.Name = "btnConsultaReg";
+            this.btnConsultaReg.Size = new System.Drawing.Size(22, 23);
+            this.btnConsultaReg.TabIndex = 208;
+            this.btnConsultaReg.Text = "⌕";
+            this.btnConsultaReg.UseVisualStyleBackColor = true;
+            this.btnConsultaReg.Click += new System.EventHandler(this.btnConsultaReg_Click);
+            // 
+            // txtCodRegiao
+            // 
+            this.txtCodRegiao.Location = new System.Drawing.Point(343, 220);
+            this.txtCodRegiao.MaxLength = 50;
+            this.txtCodRegiao.Name = "txtCodRegiao";
+            this.txtCodRegiao.Size = new System.Drawing.Size(260, 20);
+            this.txtCodRegiao.TabIndex = 209;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(340, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 210;
+            this.label9.Text = "Região";
+            // 
             // FormCadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsultaReg);
+            this.Controls.Add(this.txtCodRegiao);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnConsultaCid);
             this.Controls.Add(this.txtCodCidade);
             this.Controls.Add(this.label4);
@@ -287,6 +321,9 @@
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtCodCidade, 0);
             this.Controls.SetChildIndex(this.btnConsultaCid, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.txtCodRegiao, 0);
+            this.Controls.SetChildIndex(this.btnConsultaReg, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +350,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnConsultaReg;
+        private System.Windows.Forms.TextBox txtCodRegiao;
+        private System.Windows.Forms.Label label9;
     }
 }

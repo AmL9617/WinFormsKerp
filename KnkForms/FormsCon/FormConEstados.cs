@@ -14,8 +14,8 @@ namespace KnkForms.Classes
     {
         FormCadEstado oFormCadEstado;
         Estados oEstado;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao FROM Estado";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string query = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao FROM Estados";
         public FormConEstados()
         {
             InitializeComponent();

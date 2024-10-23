@@ -14,11 +14,12 @@ namespace KnkForms.Classes
     {
         FormCadRegiao oFormCadRegiao;
         Regioes aRegiao;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao FROM Regiao";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string query = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao FROM Regioes";
         public FormConRegioes()
         {
             InitializeComponent();
+            CarregaLV();
         }
         public override void SetFrmCadastro(Object form)
         {
@@ -29,7 +30,7 @@ namespace KnkForms.Classes
         {
             aRegiao = (Regioes)obj;
         }
-        protected override void CarregaLV()
+        public void CarregaLV()
         {
 
             listVConsulta.Items.Clear();

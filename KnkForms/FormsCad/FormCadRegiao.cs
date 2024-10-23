@@ -12,6 +12,7 @@ namespace KnkForms.Forms
     public partial class FormCadRegiao : KnkForms.FormCadPai
     {
         Regioes oRegiao;
+        FormConRegioes oFormConRegioes;
         public FormCadRegiao()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace KnkForms.Forms
             oRegiao.Descricao = txtDescricao.Text;
 
             oRegiao.SalvarBD();
+            oFormConRegioes.CarregaLV();
         }
     }
 }

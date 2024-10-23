@@ -18,8 +18,8 @@ namespace KnkForms.FormsCon
         FormCadPais oFormCadPais;
         Paises oPais;
         
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdPais, Pais, Sigla, DDI, Nacional, IdEmpresa, DataCadastro, DataModificacao FROM Pais";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string query = "SELECT IdPais, Pais, Sigla, DDI, Nacional, IdEmpresa, DataCadastro, DataModificacao FROM Paises";
             
         public FormConPaises()
         {

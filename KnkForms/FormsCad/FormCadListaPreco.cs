@@ -96,6 +96,8 @@ namespace KnkForms.Forms
             aListaPreco.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aListaPreco.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            aListaPreco.SalvarBD();
         }
         public void setFrmConMarcas(Object obj)
         {

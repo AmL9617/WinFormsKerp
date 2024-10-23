@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -21,7 +23,8 @@ namespace KnkForms.Classes
         //Agregação
         protected Marcas marcas;
         protected Subgrupos subgrupos;
-
+        
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
         public ListaPrecos()
         {
             lista = "";
@@ -87,6 +90,35 @@ namespace KnkForms.Classes
         {
             get { return subgrupos; }
             set { subgrupos = value; }
+        }
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Listas (IdEmpresa, Lista, DescMax, MargemLucro, PerComissao, DataModificacao) VALUES (@IdEmpresa, @Lista, @DescMax, @MargemLucro, @PerComissao, @DataModificacao)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@Lista", Lista);
+                        command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
+                        command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
+                        command.Parameters.AddWithValue("@PerComissao", PercCom);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 

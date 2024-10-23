@@ -17,7 +17,6 @@ namespace KnkForms.Forms
     {
         Paises oPais;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public FormCadPais()
         {
             InitializeComponent();
@@ -46,7 +45,7 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(oPais.Cod);
             txtPais.Text = oPais.Pais;
-            txtSigla.Text = Convert.ToString(oPais.Sigla);
+            txtSigla.Text = oPais.Sigla;
             txtDdi.Text = Convert.ToString(oPais.DDI);
             if (oPais.Nacional == 's')
                 boxNacional.Text = "Sim";
@@ -90,7 +89,7 @@ namespace KnkForms.Forms
         {
             oPais.Cod = Convert.ToInt32(txtCod.Text);
             oPais.Pais = txtPais.Text;
-            oPais.Sigla = Convert.ToChar(txtSigla.Text);
+            oPais.Sigla = txtSigla.Text;
             oPais.DDI = Convert.ToInt32(txtDdi.Text);
             if (boxNacional.Text == "Sim")
                 oPais.Nacional = 's';
@@ -101,7 +100,7 @@ namespace KnkForms.Forms
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oPais.Ativo = chkAtivo.Checked;
 
-            
+            oPais.SalvarBD();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

@@ -12,17 +12,17 @@ namespace KnkForms.Classes
     {
         protected string pais;
         protected string tipoPais;
-        protected char sigla;
+        protected string sigla;
         protected int ddi;
         protected bool ativo;
         protected char nacional;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
         public Paises()
         {
             pais = "";
             tipoPais = "";
-            sigla = '\0'; 
+            sigla = ""; 
             ddi = 0;
             ativo = false;
             nacional = '\0';
@@ -40,7 +40,7 @@ namespace KnkForms.Classes
             set { tipoPais = value; }
         }
 
-        public char Sigla
+        public string Sigla
         {
             get { return sigla; }
             set { sigla = value; }
@@ -70,12 +70,11 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Pais (IdEmpresa, IdPais, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
+                    string query = "INSERT INTO Paises (IdEmpresa, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdPais", Cod);
                         command.Parameters.AddWithValue("@Pais", Pais);
                         command.Parameters.AddWithValue("@Sigla", Sigla);
                         command.Parameters.AddWithValue("@Ddi", DDI);

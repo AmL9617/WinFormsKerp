@@ -144,7 +144,13 @@ namespace KnkForms
             oFormCadContato.setFrmConClientes(oFormConClientes);
             oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
             //oFormCadContador.setFrmConContatos(oFormConContatos);
+            oFormCadEmpresa.setFrmConCidades(oFormConCidades);
+            oFormCadEmpresa.setFrmConRegioes(oFormConRegioes);
             oFormCadEstado.setFrmConPaises(oFormConPaises);
+            oFormCadFornecedor.setFrmConCidades(oFormConCidades);
+            oFormCadFornecedor.setFrmConRegioes(oFormConRegioes);
+            oFormCadFornecedor.setFrmConListaPrecos(oFormConListaPrecos);
+            oFormCadFornecedor.setFrmConCondPagamentos(oFormConCondPag);
             oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
             oFormCadListaPreco.setFrmConSubgrupos(oFormConSubgrupos);
             oFormCadRamoAtivCliente.setFrmConClientes(oFormConClientes);

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -21,6 +23,8 @@ namespace KnkForms.Classes
 
         //Agregação
         protected Parcelas parcelas;
+
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
 
         public CondicaoPagamentos()
         {
@@ -84,6 +88,40 @@ namespace KnkForms.Classes
         {
             get { return parcelas; }
             set { parcelas = value; }
+        }
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO CondPagamentos (IdEmpresa, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, DataCadastro, DataAlteracao) VALUES (@IdEmpresa, @CondicaoPagamento, @TaxaJuros, @NumeroParcelas, @Tipo, @Dia, @Operacao, @Ativo, @PorParcela, @DataCadastro, @DataAlteracao)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
+                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro);
+                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas);
+                        command.Parameters.AddWithValue("@Tipo", Tipo);
+                        command.Parameters.AddWithValue("@Dia", Dia);
+                        command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@PorParcela", CodParcela);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataAlteracao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 

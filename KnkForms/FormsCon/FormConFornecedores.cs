@@ -15,8 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadFornecedor oFormCadFornecedor;
         Fornecedores oFornecedor;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, IdCidadeEmp, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, IdCidadeEmp, IdEmpresa, DataCadastro, DataModificacao FROM FornClientes";
         public FormConFornecedores()
         {
             InitializeComponent();

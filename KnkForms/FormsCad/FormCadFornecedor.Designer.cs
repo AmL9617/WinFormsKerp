@@ -68,6 +68,12 @@
             this.txtCodCidade = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.boxIndustria = new System.Windows.Forms.ComboBox();
+            this.btnConsultaLista = new System.Windows.Forms.Button();
+            this.txtLista = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCondPag = new System.Windows.Forms.Button();
+            this.txtCondPag = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -459,10 +465,70 @@
             this.boxIndustria.Size = new System.Drawing.Size(95, 21);
             this.boxIndustria.TabIndex = 562;
             // 
+            // btnConsultaLista
+            // 
+            this.btnConsultaLista.Location = new System.Drawing.Point(544, 254);
+            this.btnConsultaLista.Name = "btnConsultaLista";
+            this.btnConsultaLista.Size = new System.Drawing.Size(23, 23);
+            this.btnConsultaLista.TabIndex = 563;
+            this.btnConsultaLista.Text = "⌕";
+            this.btnConsultaLista.UseVisualStyleBackColor = true;
+            this.btnConsultaLista.Click += new System.EventHandler(this.btnConsultaLista_Click);
+            // 
+            // txtLista
+            // 
+            this.txtLista.Location = new System.Drawing.Point(341, 254);
+            this.txtLista.MaxLength = 30;
+            this.txtLista.Name = "txtLista";
+            this.txtLista.Size = new System.Drawing.Size(197, 20);
+            this.txtLista.TabIndex = 564;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(338, 238);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 565;
+            this.label12.Text = "Código Lista";
+            // 
+            // btnCondPag
+            // 
+            this.btnCondPag.Location = new System.Drawing.Point(753, 255);
+            this.btnCondPag.Name = "btnCondPag";
+            this.btnCondPag.Size = new System.Drawing.Size(23, 23);
+            this.btnCondPag.TabIndex = 566;
+            this.btnCondPag.Text = "⌕";
+            this.btnCondPag.UseVisualStyleBackColor = true;
+            this.btnCondPag.Click += new System.EventHandler(this.btnCondPag_Click);
+            // 
+            // txtCondPag
+            // 
+            this.txtCondPag.Location = new System.Drawing.Point(575, 255);
+            this.txtCondPag.MaxLength = 30;
+            this.txtCondPag.Name = "txtCondPag";
+            this.txtCondPag.Size = new System.Drawing.Size(172, 20);
+            this.txtCondPag.TabIndex = 567;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(572, 239);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(145, 13);
+            this.label17.TabIndex = 568;
+            this.label17.Text = "Código Condição Pagamento";
+            // 
             // FormCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(792, 740);
+            this.Controls.Add(this.btnCondPag);
+            this.Controls.Add(this.txtCondPag);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.btnConsultaLista);
+            this.Controls.Add(this.txtLista);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.boxIndustria);
             this.Controls.Add(this.btnConsultaReg);
             this.Controls.Add(this.txtCodRegiao);
@@ -555,6 +621,12 @@
             this.Controls.SetChildIndex(this.txtCodRegiao, 0);
             this.Controls.SetChildIndex(this.btnConsultaReg, 0);
             this.Controls.SetChildIndex(this.boxIndustria, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.txtLista, 0);
+            this.Controls.SetChildIndex(this.btnConsultaLista, 0);
+            this.Controls.SetChildIndex(this.label17, 0);
+            this.Controls.SetChildIndex(this.txtCondPag, 0);
+            this.Controls.SetChildIndex(this.btnCondPag, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,5 +674,11 @@
         private System.Windows.Forms.TextBox txtCodCidade;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox boxIndustria;
+        private System.Windows.Forms.Button btnConsultaLista;
+        private System.Windows.Forms.TextBox txtLista;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnCondPag;
+        private System.Windows.Forms.TextBox txtCondPag;
+        private System.Windows.Forms.Label label17;
     }
 }

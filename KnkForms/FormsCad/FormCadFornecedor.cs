@@ -18,7 +18,8 @@ namespace KnkForms.Forms
         Fornecedores oFornecedor;
         FormConCidades oFrmConCidades;
         FormConRegioes oFrmConRegioes;
-
+        FormConListaPrecos oFrmConListaPrecos;
+        FormConCondicaoPagamentos oFrmCondicaoPagamentos;
         public FormCadFornecedor()
         {
             InitializeComponent();
@@ -45,6 +46,8 @@ namespace KnkForms.Forms
             txtCodCidade.Clear();
             txtCep.Clear();
             txtCodRegiao.Clear();
+            txtLista.Clear();
+            txtCondPag.Clear();
             txtTrade.Clear();
             txtCodProd.Clear();
             txtLimite.Clear();
@@ -79,6 +82,8 @@ namespace KnkForms.Forms
             txtBairro.Text = oFornecedor.Bairro;
             txtCep.Text = oFornecedor.Cep;
             txtCodRegiao.Text = Convert.ToString(oFornecedor.CodRegioes);
+            txtLista.Text = Convert.ToString(oFornecedor.CodListaPrecos);
+            txtCondPag.Text = Convert.ToString(oFornecedor.CodCondPag);
             txtTrade.Text = oFornecedor.Trade;
             txtCodProd.Text = Convert.ToString(oFornecedor.CodProdIgual);
             txtLimite.Text = Convert.ToString(oFornecedor.LimiteCredito);
@@ -110,6 +115,8 @@ namespace KnkForms.Forms
             txtCodCidade.Enabled = false;
             txtCep.Enabled = false;
             txtCodRegiao.Enabled = false;
+            txtLista.Enabled = false;
+            txtCondPag.Enabled = false;
             txtTrade.Enabled = false;
             txtCodProd.Enabled = false;
             txtLimite.Enabled = false;
@@ -138,6 +145,8 @@ namespace KnkForms.Forms
             txtCodCidade.Enabled = true;
             txtCep.Enabled = true;
             txtCodRegiao.Enabled = true;
+            txtLista.Enabled = true;
+            txtCondPag.Enabled = true;
             txtTrade.Enabled = true;
             txtCodProd.Enabled = true;
             txtLimite.Enabled = true;
@@ -171,7 +180,9 @@ namespace KnkForms.Forms
             oFornecedor.Bairro = txtBairro.Text;
             oFornecedor.CodCidades = Convert.ToInt32(txtCodCidade.Text);
             oFornecedor.Cep = txtCep.Text;
-            oFornecedor.CodRegioes = Convert.ToInt32(txtCodRegiao.Text); 
+            oFornecedor.CodRegioes = Convert.ToInt32(txtCodRegiao.Text);
+            oFornecedor.CodListaPrecos = Convert.ToInt32(txtLista.Text);
+            oFornecedor.CodCondPag = Convert.ToInt32(txtCondPag.Text);
             oFornecedor.Trade = txtTrade.Text;
             oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd.Text);
             oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite.Text);
@@ -199,6 +210,14 @@ namespace KnkForms.Forms
         {
             oFrmConRegioes = (FormConRegioes)obj;
         }
+        public void setFrmConListaPrecos(Object obj)
+        {
+            oFrmConListaPrecos = (FormConListaPrecos)obj;
+        }
+        public void setFrmConCondPagamentos(Object obj)
+        {
+            oFrmCondicaoPagamentos = (FormConCondicaoPagamentos)obj;
+        }
        
         private void btnConsultaReg_Click(object sender, EventArgs e)
         {
@@ -210,6 +229,18 @@ namespace KnkForms.Forms
         {
             oFrmConCidades.ConhecaObj(oFornecedor.Cidades);
             oFrmConCidades.ShowDialog();
+        }
+
+        private void btnConsultaLista_Click(object sender, EventArgs e)
+        {
+            oFrmConListaPrecos.ConhecaObj(oFornecedor.ListaPrecos);
+            oFrmConListaPrecos.ShowDialog();
+        }
+
+        private void btnCondPag_Click(object sender, EventArgs e)
+        {
+            oFrmCondicaoPagamentos.ConhecaObj(oFornecedor.CondicaoPagamentos);
+            oFrmCondicaoPagamentos.ShowDialog();
         }
     }
 }

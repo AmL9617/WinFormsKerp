@@ -28,13 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.codCondPag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.condPag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taxaJuros = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.numParcelas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.operacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.porParcela = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // FormConCondicaoPagamento
+            // listVConsulta
+            // 
+            this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.codCondPag,
+            this.condPag,
+            this.taxaJuros,
+            this.numParcelas,
+            this.tipo,
+            this.dia,
+            this.operacao,
+            this.Ativo,
+            this.porParcela});
+            // 
+            // codCondPag
+            // 
+            this.codCondPag.Text = "Código Cond. Pag.";
+            this.codCondPag.Width = 110;
+            // 
+            // condPag
+            // 
+            this.condPag.Text = "Condição de Pagamento";
+            this.condPag.Width = 150;
+            // 
+            // taxaJuros
+            // 
+            this.taxaJuros.Text = "Taxa de Juros";
+            this.taxaJuros.Width = 100;
+            // 
+            // numParcelas
+            // 
+            this.numParcelas.Text = "Número de Parcelas";
+            this.numParcelas.Width = 120;
+            // 
+            // tipo
+            // 
+            this.tipo.Text = "Tipo";
+            // 
+            // dia
+            // 
+            this.dia.Text = "Dia";
+            // 
+            // operacao
+            // 
+            this.operacao.Text = "Operação Disp.";
+            this.operacao.Width = 120;
+            // 
+            // Ativo
+            // 
+            this.Ativo.Text = "Ativo";
+            // 
+            // porParcela
+            // 
+            this.porParcela.Text = "Código Parcela";
+            this.porParcela.Width = 100;
+            // 
+            // FormConCondicaoPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormConCondicaoPagamento";
+            this.Name = "FormConCondicaoPagamentos";
             this.Text = "Form Condição de Pagamentos";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -42,5 +106,15 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader codCondPag;
+        private System.Windows.Forms.ColumnHeader condPag;
+        private System.Windows.Forms.ColumnHeader taxaJuros;
+        private System.Windows.Forms.ColumnHeader numParcelas;
+        private System.Windows.Forms.ColumnHeader tipo;
+        private System.Windows.Forms.ColumnHeader dia;
+        private System.Windows.Forms.ColumnHeader operacao;
+        private System.Windows.Forms.ColumnHeader Ativo;
+        private System.Windows.Forms.ColumnHeader porParcela;
     }
 }

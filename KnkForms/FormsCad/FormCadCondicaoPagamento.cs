@@ -85,12 +85,15 @@ namespace KnkForms.Forms
             aCondPag.CondPag = txtCondPag.Text;
             aCondPag.Tipo = txtTipo.Text;
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
+            aCondPag.OperacaoDisponivel = txtOpDisp.Text;
             aCondPag.CodParcela = Convert.ToInt32(txtCodParcela.Text);
             aCondPag.Dia = txtDia.Text;
             aCondPag.Ativo = chkAtivo.Checked;
             aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCondPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            aCondPag.SalvarBD();
         }
         public void setFrmConParcelas(Object obj)
         {

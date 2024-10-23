@@ -28,59 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ddd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataCadastro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataModificacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.codCidade,
+            this.codEstado,
+            this.cidade,
+            this.ddd,
+            this.ativo,
+            this.codEmpresa,
+            this.dataCadastro,
+            this.dataModificacao});
             // 
-            // columnHeader1
+            // codCidade
             // 
-            this.columnHeader1.Text = "Código Cidade";
+            this.codCidade.Text = "Código Cidade";
+            this.codCidade.Width = 100;
             // 
-            // columnHeader2
+            // codEstado
             // 
-            this.columnHeader2.Text = "Código Estado";
+            this.codEstado.Text = "Código Estado";
+            this.codEstado.Width = 100;
             // 
-            // columnHeader3
+            // cidade
             // 
-            this.columnHeader3.Text = "Cidade";
+            this.cidade.Text = "Cidade";
+            this.cidade.Width = 150;
             // 
-            // columnHeader4
+            // ddd
             // 
-            this.columnHeader4.Text = "DDD";
+            this.ddd.Text = "DDD";
             // 
-            // columnHeader5
+            // ativo
             // 
-            this.columnHeader5.Text = "Ativo";
+            this.ativo.Text = "Ativo";
             // 
-            // columnHeader6
+            // codEmpresa
             // 
-            this.columnHeader6.Text = "Código Empresa";
+            this.codEmpresa.Text = "Código Empresa";
+            this.codEmpresa.Width = 100;
             // 
-            // columnHeader7
+            // dataCadastro
             // 
-            this.columnHeader7.Text = "Data de Cadastro";
+            this.dataCadastro.Text = "Data de Cadastro";
+            this.dataCadastro.Width = 100;
             // 
-            // columnHeader8
+            // dataModificacao
             // 
-            this.columnHeader8.Text = "Data de Modificacao";
+            this.dataModificacao.Text = "Data de Modificacao";
+            this.dataModificacao.Width = 100;
             // 
             // FormConCidades
             // 
@@ -95,13 +101,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader codCidade;
+        private System.Windows.Forms.ColumnHeader codEstado;
+        private System.Windows.Forms.ColumnHeader cidade;
+        private System.Windows.Forms.ColumnHeader ddd;
+        private System.Windows.Forms.ColumnHeader ativo;
+        private System.Windows.Forms.ColumnHeader codEmpresa;
+        private System.Windows.Forms.ColumnHeader dataCadastro;
+        private System.Windows.Forms.ColumnHeader dataModificacao;
     }
 }

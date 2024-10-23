@@ -122,3 +122,5 @@ C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.Forms
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConListaCodST.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCad.FormCadSubgrupo.resources
 C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\obj\Debug\KnkForms.FormsCon.FormConSubgrupos.resources
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\bin\Debug\Database1.mdf
+C:\Users\usuario\Documents\GitHub\WinFormsKerp\KnkForms\bin\Debug\Database1_log.ldf

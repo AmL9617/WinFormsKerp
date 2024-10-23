@@ -28,13 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.codLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Lista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.margemLucro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.perComissão = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // FormConListaPreco
+            // listVConsulta
+            // 
+            this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.codLista,
+            this.Lista,
+            this.descMax,
+            this.margemLucro,
+            this.perComissão,
+            this.codEmp});
+            // 
+            // codLista
+            // 
+            this.codLista.Text = "Código Lista";
+            this.codLista.Width = 100;
+            // 
+            // Lista
+            // 
+            this.Lista.Text = "Lista de Preços";
+            this.Lista.Width = 100;
+            // 
+            // descMax
+            // 
+            this.descMax.Text = "Desconto Máximo";
+            this.descMax.Width = 100;
+            // 
+            // margemLucro
+            // 
+            this.margemLucro.Text = "Margem do Lucro";
+            this.margemLucro.Width = 100;
+            // 
+            // perComissão
+            // 
+            this.perComissão.Text = "Per. de Comissão";
+            this.perComissão.Width = 100;
+            // 
+            // codEmp
+            // 
+            this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 100;
+            // 
+            // FormConListaPrecos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormConListaPreco";
+            this.Name = "FormConListaPrecos";
             this.Text = "Form Lista de Preços";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -42,5 +88,12 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader codLista;
+        private System.Windows.Forms.ColumnHeader Lista;
+        private System.Windows.Forms.ColumnHeader descMax;
+        private System.Windows.Forms.ColumnHeader margemLucro;
+        private System.Windows.Forms.ColumnHeader perComissão;
+        private System.Windows.Forms.ColumnHeader codEmp;
     }
 }

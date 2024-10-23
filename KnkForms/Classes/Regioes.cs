@@ -14,7 +14,7 @@ namespace KnkForms.Classes
         protected bool ativo;
         protected string descricao;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
 
         public Regioes()
         {
@@ -46,7 +46,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Regiao (IdEmpresa, Regiao, Descricao, IdUsuario, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Regiao, @Descricao, @IdUsuario, @Ativo, @DataCadastro, @DataModificacao)";
+                    string query = "INSERT INTO Regioes (IdEmpresa, Regiao, Descricao, IdUsuario, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Regiao, @Descricao, @IdUsuario, @Ativo, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -59,6 +59,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
+                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }
