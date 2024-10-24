@@ -12,6 +12,7 @@ namespace KnkForms.Classes
     public partial class FormCadTransportadora : KnkForms.FormCadPai
     {
         Transportadoras aTransportadora;
+        FormConRegioes oFrmConRegioes;
         //FormConContatos oFrmConContatos;
         public FormCadTransportadora()
         {
@@ -165,15 +166,25 @@ namespace KnkForms.Classes
             aTransportadora.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aTransportadora.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
-        /*
-        public void setFrmConContatos(Object obj)
+        public void setFrmConRegioes(Object obj)
         {
-            oFrmConContatos = (FormConContatos)obj;
+            oFrmConRegioes = (FormConRegioes)obj;
         }
-        private void btnPesquisarContato_Click(object sender, EventArgs e)
+
+        private void btnConsultaReg_Click(object sender, EventArgs e)
         {
-            oFrmConContatos.ConhecaObj(aTransportadora.Contatos);
-            oFrmConContatos.ShowDialog();
-        }*/
+            oFrmConRegioes.ConhecaObj(aTransportadora.Regioes);
+            oFrmConRegioes.ShowDialog();
+        }
+        /*
+public void setFrmConContatos(Object obj)
+{
+   oFrmConContatos = (FormConContatos)obj;
+}
+private void btnPesquisarContato_Click(object sender, EventArgs e)
+{
+   oFrmConContatos.ConhecaObj(aTransportadora.Contatos);
+   oFrmConContatos.ShowDialog();
+}*/
     }
 }

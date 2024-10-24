@@ -12,6 +12,7 @@ namespace KnkForms.Forms
     public partial class FormCadFuncionario : KnkForms.FormCadPai
     {
         Funcionarios oFuncionario;
+        FormConRegioes oFrmConRegioes;
         public FormCadFuncionario()
         {
             InitializeComponent();
@@ -159,6 +160,17 @@ namespace KnkForms.Forms
             oFuncionario.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oFuncionario.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFuncionario.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+        }
+
+        public void setFrmConRegioes(Object obj)
+        {
+            oFrmConRegioes = (FormConRegioes)obj;
+        }
+
+        private void btnConsultaReg_Click(object sender, EventArgs e)
+        {
+            oFrmConRegioes.ConhecaObj(oFuncionario.Regioes);
+            oFrmConRegioes.ShowDialog();
         }
     }
 }

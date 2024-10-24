@@ -88,6 +88,7 @@ namespace KnkForms.Classes
             oFormCadFornecedor.ConhecaObj(oFornecedor);
             oFormCadFornecedor.LimpaTxt();
             oFormCadFornecedor.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Alterar()
@@ -95,6 +96,7 @@ namespace KnkForms.Classes
             oFormCadFornecedor.LimpaTxt();
             oFormCadFornecedor.CarregaTxt();
             oFormCadFornecedor.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Excluir()
@@ -105,6 +107,7 @@ namespace KnkForms.Classes
             oFormCadFornecedor.BloqueiaTxt();
             oFormCadFornecedor.ShowDialog();
             oFormCadFornecedor.DesbloqueiaTxt();
+            CarregaLV();
         }
         protected override void Pesquisar()
         {

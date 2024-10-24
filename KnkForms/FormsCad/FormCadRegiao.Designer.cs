@@ -37,20 +37,20 @@
             // 
             // txtDataCad
             // 
-            this.txtDataCad.Location = new System.Drawing.Point(130, 418);
+            this.txtDataCad.Location = new System.Drawing.Point(162, 414);
             this.txtDataCad.TabIndex = 6;
             // 
             // lblDataCad
             // 
-            this.lblDataCad.Location = new System.Drawing.Point(127, 402);
+            this.lblDataCad.Location = new System.Drawing.Point(159, 398);
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.Location = new System.Drawing.Point(253, 418);
+            this.txtDataAlt.Location = new System.Drawing.Point(285, 414);
             // 
             // lblDataAlteracao
             // 
-            this.lblDataAlteracao.Location = new System.Drawing.Point(250, 402);
+            this.lblDataAlteracao.Location = new System.Drawing.Point(282, 398);
             // 
             // btnSalvar
             // 
@@ -58,12 +58,12 @@
             // 
             // txtCodUser
             // 
-            this.txtCodUser.Location = new System.Drawing.Point(18, 418);
+            this.txtCodUser.Location = new System.Drawing.Point(50, 414);
             this.txtCodUser.TabIndex = 5;
             // 
             // lblCodUser
             // 
-            this.lblCodUser.Location = new System.Drawing.Point(15, 402);
+            this.lblCodUser.Location = new System.Drawing.Point(47, 398);
             // 
             // btnSair
             // 

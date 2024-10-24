@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +22,14 @@ namespace KnkForms.Classes
         protected string cnpj;
         protected string crc;
 
-        /*Placeholder
-        protected int codContatos;
+        //Placeholder
+        protected int codRegiao;
+        //protected int codContatos;
+
         //Agregação
-        protected Contatos contatos;
-        */
+        protected Regioes regioes;
+        //protected Contatos contatos;
+        
         public Contadores()
         {
             contador = "";
@@ -41,6 +45,8 @@ namespace KnkForms.Classes
             cnpj = "";
             crc = "";
 
+            codRegiao = 0;
+            regioes = new Regioes();
             //codContatos = 0;
             //contatos = new Contatos();
         }
@@ -118,6 +124,16 @@ namespace KnkForms.Classes
             set { crc = value; }
         }
 
+        public int CodRegiao
+        {
+            get { return codRegiao; }
+            set { codRegiao = value; }
+        }
+        public Regioes Regioes
+        {
+            get { return regioes; }
+            set { regioes = value; }
+        }
         /*public int CodContatos
         {
             get { return codContatos; }

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -27,6 +30,8 @@ namespace KnkForms.Classes
         protected string rg;
         protected string cpf;
 
+        protected int codRegiao;
+        protected Regioes regioes;
         public Funcionarios()
         {
             funcionario = "";
@@ -47,6 +52,9 @@ namespace KnkForms.Classes
             dataNascimento = DateTime.MinValue;
             rg = "";
             cpf = "";
+
+            codRegiao = 0;
+            regioes = new Regioes();
         }
 
         public string Funcionario
@@ -155,6 +163,16 @@ namespace KnkForms.Classes
         {
             get { return cpf; }
             set { cpf = value; }
+        }
+        public int CodRegiao
+        {
+            get { return codRegiao; }
+            set { codRegiao = value; }
+        }
+        public Regioes Regioes
+        {
+            get { return regioes; }
+            set { regioes = value; }
         }
     }
 

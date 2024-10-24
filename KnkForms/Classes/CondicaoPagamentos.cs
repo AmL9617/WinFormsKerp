@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -114,6 +115,39 @@ namespace KnkForms.Classes
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodRegiao)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Regioes SET IdEmpresa=@IdEmpresa, Regiao=@Regiao, Descricao=@Descricao, IdUsuario=@IdUsuario, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdRegiao = @IdRegiao";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
+                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro);
+                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas);
+                        command.Parameters.AddWithValue("@Tipo", Tipo);
+                        command.Parameters.AddWithValue("@Dia", Dia);
+                        command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@PorParcela", CodParcela);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataAlteracao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

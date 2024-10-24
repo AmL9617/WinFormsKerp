@@ -141,9 +141,10 @@ namespace KnkForms
             oFormCadCliente.setFrmConRegioes(oFormConRegioes);
             oFormCadCliente.setFrmConTransportadoras(oFormConTransportadoras);
             oFormCadCliente.setFrmConVendedores(oFormConVendedores);
-            oFormCadContato.setFrmConClientes(oFormConClientes);
             oFormCadCondPag.setFrmConParcelas(oFormConParcelas);
             //oFormCadContador.setFrmConContatos(oFormConContatos);
+            oFormCadContato.setFrmConClientes(oFormConClientes);
+            oFormCadContador.setFrmConRegioes(oFormConRegioes);
             oFormCadEmpresa.setFrmConCidades(oFormConCidades);
             oFormCadEmpresa.setFrmConRegioes(oFormConRegioes);
             oFormCadEstado.setFrmConPaises(oFormConPaises);
@@ -151,11 +152,13 @@ namespace KnkForms
             oFormCadFornecedor.setFrmConRegioes(oFormConRegioes);
             oFormCadFornecedor.setFrmConListaPrecos(oFormConListaPrecos);
             oFormCadFornecedor.setFrmConCondPagamentos(oFormConCondPag);
+            oFormCadFuncionario.setFrmConRegioes(oFormConRegioes);
             oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
             oFormCadListaPreco.setFrmConSubgrupos(oFormConSubgrupos);
             oFormCadRamoAtivCliente.setFrmConClientes(oFormConClientes);
             oFormCadSubgrupo.setFrmConGrupos(oFormConGrupos);
             //oFormCadTransportadora.setFrmConContatos(oFormConContatos);
+            oFormCadTransportadora.setFrmConRegioes(oFormConRegioes);
         }
 
         public void PecaCidades(Object obj)

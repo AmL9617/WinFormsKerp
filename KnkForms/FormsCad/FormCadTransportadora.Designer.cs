@@ -68,6 +68,9 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.btnPesquisarContato = new System.Windows.Forms.Button();
+            this.btnConsultaReg = new System.Windows.Forms.Button();
+            this.txtCodRegiao = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -226,7 +229,7 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(358, 248);
+            this.txtCelular.Location = new System.Drawing.Point(593, 248);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 14;
@@ -234,7 +237,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(355, 232);
+            this.label13.Location = new System.Drawing.Point(590, 232);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(39, 13);
             this.label13.TabIndex = 103;
@@ -242,7 +245,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(139, 248);
+            this.txtTelefone.Location = new System.Drawing.Point(374, 248);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
             this.txtTelefone.TabIndex = 12;
@@ -250,7 +253,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 232);
+            this.label3.Location = new System.Drawing.Point(371, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 101;
@@ -275,7 +278,7 @@
             // 
             // txtFax
             // 
-            this.txtFax.Location = new System.Drawing.Point(251, 248);
+            this.txtFax.Location = new System.Drawing.Point(486, 248);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(100, 20);
             this.txtFax.TabIndex = 13;
@@ -283,7 +286,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(248, 232);
+            this.label10.Location = new System.Drawing.Point(483, 232);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 13);
             this.label10.TabIndex = 97;
@@ -451,12 +454,41 @@
             this.btnPesquisarContato.TabIndex = 15;
             this.btnPesquisarContato.Text = "⌕";
             this.btnPesquisarContato.UseVisualStyleBackColor = true;
-            //this.btnPesquisarContato.Click += new System.EventHandler(this.btnPesquisarContato_Click);
+            // 
+            // btnConsultaReg
+            // 
+            this.btnConsultaReg.Location = new System.Drawing.Point(331, 248);
+            this.btnConsultaReg.Name = "btnConsultaReg";
+            this.btnConsultaReg.Size = new System.Drawing.Size(23, 23);
+            this.btnConsultaReg.TabIndex = 562;
+            this.btnConsultaReg.Text = "⌕";
+            this.btnConsultaReg.UseVisualStyleBackColor = true;
+            this.btnConsultaReg.Click += new System.EventHandler(this.btnConsultaReg_Click);
+            // 
+            // txtCodRegiao
+            // 
+            this.txtCodRegiao.Location = new System.Drawing.Point(128, 248);
+            this.txtCodRegiao.MaxLength = 30;
+            this.txtCodRegiao.Name = "txtCodRegiao";
+            this.txtCodRegiao.Size = new System.Drawing.Size(197, 20);
+            this.txtCodRegiao.TabIndex = 563;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(125, 232);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 564;
+            this.label17.Text = "Código Região";
             // 
             // FormCadTransportadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 635);
+            this.Controls.Add(this.btnConsultaReg);
+            this.Controls.Add(this.txtCodRegiao);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.btnPesquisarContato);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.dataUltCompra);
@@ -549,6 +581,9 @@
             this.Controls.SetChildIndex(this.dataUltCompra, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.btnPesquisarContato, 0);
+            this.Controls.SetChildIndex(this.label17, 0);
+            this.Controls.SetChildIndex(this.txtCodRegiao, 0);
+            this.Controls.SetChildIndex(this.btnConsultaReg, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,5 +631,8 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Button btnPesquisarContato;
+        private System.Windows.Forms.Button btnConsultaReg;
+        private System.Windows.Forms.TextBox txtCodRegiao;
+        private System.Windows.Forms.Label label17;
     }
 }

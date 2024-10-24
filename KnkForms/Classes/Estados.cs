@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace KnkForms.Classes
 {
@@ -125,6 +127,39 @@ namespace KnkForms.Classes
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodEstado)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Estados SET IdEmpresa=@IdEmpresa, IdPais=@IdPais, Estado=@Estado, Sigla=@Sigla, PercIcms=@PercIcms, IcmsInt=@IcmsInt, PerRedSt=@PerRedSt, CodigoWeb=@CodigoWeb, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdEstado = @IdEstado";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdPais", CodPais);
+                        command.Parameters.AddWithValue("@Estado", Estado);
+                        command.Parameters.AddWithValue("@Sigla", Sigla);
+                        command.Parameters.AddWithValue("@PercIcms", PercIcms);
+                        command.Parameters.AddWithValue("@IcmsInt", Icms);
+                        command.Parameters.AddWithValue("@PerRedSt", PercRedST);
+                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+                        command.Parameters.AddWithValue("@IdRegiao", CodEstado);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

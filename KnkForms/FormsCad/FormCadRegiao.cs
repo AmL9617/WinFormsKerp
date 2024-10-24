@@ -13,6 +13,7 @@ namespace KnkForms.Forms
     {
         Regioes oRegiao;
         FormConRegioes oFormConRegioes;
+        char SalvarAlterar = '\0';
         public FormCadRegiao()
         {
             InitializeComponent();
@@ -33,15 +34,18 @@ namespace KnkForms.Forms
             txtDescricao.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo6, string campo7, string campo8)
         {
-            txtCod.Text = Convert.ToString(oRegiao.Cod);
-            txtRegiao.Text = oRegiao.Regiao;
-            chkAtivo.Checked = oRegiao.Ativo;
-            txtCodUser.Text = Convert.ToString(oRegiao.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oRegiao.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oRegiao.DataModificacao);
-            txtDescricao.Text = oRegiao.Descricao;
+            txtCod.Text = campo1;
+            txtCod.Enabled = false;
+            txtRegiao.Text = campo2;
+            txtDescricao.Text = campo3;
+            if (campo4 == "0") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; } ;
+            txtCodUser.Text = campo6;
+            txtDataCad.Text = campo7;
+            txtDataAlt.Text = campo8;
+            SalvarAlterar = 'A';
+            
         }
 
         public override void BloqueiaTxt()
@@ -76,8 +80,14 @@ namespace KnkForms.Forms
             oRegiao.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oRegiao.Descricao = txtDescricao.Text;
 
-            oRegiao.SalvarBD();
-            oFormConRegioes.CarregaLV();
+            if (SalvarAlterar == 'A')
+                oRegiao.AlterarBD(oRegiao.Cod);
+            else
+                oRegiao.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
+
     }
 }

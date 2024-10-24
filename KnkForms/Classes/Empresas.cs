@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -131,6 +132,39 @@ namespace KnkForms.Classes
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodEmpresas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Empresas SET RazaoSocial=@RazaoSocial, NomeFantasia=@NomeFantasia, Cnpj=@Cnpj, Cep=@Cep, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro WHERE IdEmpresa = @IdEmpresa";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@RazaoSocial", RazaoSocial);
+                        command.Parameters.AddWithValue("@NomeFantasia", NomeFantasia);
+                        command.Parameters.AddWithValue("@Cnpj", Cnpj);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
+                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
+                        command.Parameters.AddWithValue("@Logradouro", Endereco);
+                        command.Parameters.AddWithValue("@Numero", Numero);
+                        command.Parameters.AddWithValue("@Complemento", Complemento);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@IdRegiao", CodEmpresas);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

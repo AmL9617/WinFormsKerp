@@ -79,6 +79,7 @@ namespace KnkForms.FormsCon
             oFormCadPais.ConhecaObj(oPais);
             oFormCadPais.LimpaTxt();
             oFormCadPais.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Alterar()
@@ -86,6 +87,7 @@ namespace KnkForms.FormsCon
             oFormCadPais.LimpaTxt();
             oFormCadPais.CarregaTxt();
             oFormCadPais.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Excluir()
@@ -96,6 +98,7 @@ namespace KnkForms.FormsCon
             oFormCadPais.BloqueiaTxt();
             oFormCadPais.ShowDialog();
             oFormCadPais.DesbloqueiaTxt();
+            CarregaLV();
         }
         protected override void Pesquisar()
         {

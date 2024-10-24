@@ -78,6 +78,7 @@ namespace KnkForms.FormsCon
             oFormCadContato.ConhecaObj(oContato);
             oFormCadContato.LimpaTxt();
             oFormCadContato.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Alterar()
@@ -85,6 +86,7 @@ namespace KnkForms.FormsCon
             oFormCadContato.LimpaTxt();
             oFormCadContato.CarregaTxt();
             oFormCadContato.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Excluir()
@@ -95,6 +97,52 @@ namespace KnkForms.FormsCon
             oFormCadContato.BloqueiaTxt();
             oFormCadContato.ShowDialog();
             oFormCadContato.DesbloqueiaTxt();
+            CarregaLV();
+        }
+        protected override void Pesquisar()
+        {
+            listVConsulta.Items.Clear();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (txtPesquisa.Text == Convert.ToString(reader["IdContato"]) ||
+                                    txtPesquisa.Text == Convert.ToString(reader["Contato"]))
+                                {
+                                    ListViewItem item = new ListViewItem(reader["IdContato"].ToString());
+
+                                    item.SubItems.Add(reader["IdFornCliente"].ToString());
+                                    item.SubItems.Add(reader["Tipo"].ToString());
+                                    item.SubItems.Add(reader["Contato"].ToString());
+                                    item.SubItems.Add(reader["Observacao"].ToString());
+                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                    //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                    //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+
+                                    listVConsulta.Items.Add(item);
+                                }
+                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
+                                {
+                                    CarregaLV();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
+            }
         }
     }
 }

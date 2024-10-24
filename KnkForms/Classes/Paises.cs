@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,6 +84,36 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodPaises)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Paises SET IdEmpresa=@IdEmpresa, Pais=@Pais, Sigla=@Sigla, Ddi=@Ddi, Nacional=@Nacional, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdPaises = @IdPaises";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@Pais", Pais);
+                        command.Parameters.AddWithValue("@Sigla", Sigla);
+                        command.Parameters.AddWithValue("@Ddi", DDI);
+                        command.Parameters.AddWithValue("@Nacional", Nacional);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+                        command.Parameters.AddWithValue("@IdPais", CodPaises);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

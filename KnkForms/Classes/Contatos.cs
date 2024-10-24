@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +71,34 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Observacao", Observacao);
                         
                         command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodContato)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Contatos SET IdEmpresa=@IdEmpresa, IdFornCliente=@IdFornCliente, Tipo=@Tipo, Contato=@Contato, Observacao=@Observacao WHERE IdContato = @IdContato";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
+                        command.Parameters.AddWithValue("@Tipo", Tipo);
+                        command.Parameters.AddWithValue("@Contato", Contato);
+                        command.Parameters.AddWithValue("@Observacao", Observacao);
+                        command.Parameters.AddWithValue("@IdContato", CodContato);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\condicaopagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\condicaopagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscon\\formconpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconpai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscon\\formconcidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconcidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscon\\formconcondicaopagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconcondicaopagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\classes\\listaprecos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\listaprecos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|c:\\users\\usuario\\documents\\github\\winformskerp\\knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscad\\formcadregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\knkforms\\classes\\regioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\classes\\regioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2A737FC-2360-4781-82C0-489496581ECE}|KnkForms\\KnkForms.csproj|solutionrelative:knkforms\\formscon\\formconregioes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 453,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,80 +42,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormConCidades.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConCidades.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConCidades.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConCidades.cs",
-              "RelativeToolTip": "KnkForms\\FormsCon\\FormConCidades.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCEAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CondicaoPagamentos.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\CondicaoPagamentos.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\CondicaoPagamentos.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\CondicaoPagamentos.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\CondicaoPagamentos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:29:07.476Z",
+              "WhenOpened": "2024-10-24T19:30:18.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormConPai.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConPai.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConPai.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConPai.cs",
-              "RelativeToolTip": "KnkForms\\FormsCon\\FormConPai.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Title": "ListaPrecos.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\ListaPrecos.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\ListaPrecos.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\ListaPrecos.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\ListaPrecos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:28:28.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormConRegioes.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConRegioes.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs",
-              "RelativeToolTip": "KnkForms\\FormsCon\\FormConRegioes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:27:59.206Z",
+              "WhenOpened": "2024-10-24T19:30:18.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormConCondicaoPagamentos.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConCondicaoPagamentos.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConCondicaoPagamentos.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConCondicaoPagamentos.cs",
-              "RelativeToolTip": "KnkForms\\FormsCon\\FormConCondicaoPagamentos.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwCMAAAAgAAAAAAAAAA==",
+              "Title": "Regioes.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Regioes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\Classes\\Regioes.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Classes\\Regioes.cs",
+              "RelativeToolTip": "KnkForms\\Classes\\Regioes.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwFsAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:29:05.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T18:12:37.229Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FormCadRegiao.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs",
               "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadRegiao.cs",
               "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs",
               "RelativeToolTip": "KnkForms\\FormsCad\\FormCadRegiao.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAE8AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswFcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:26:44.601Z",
+              "WhenOpened": "2024-10-24T14:38:08.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormCadRegiao.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs",
-              "RelativeDocumentMoniker": "KnkForms\\FormsCad\\FormCadRegiao.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
-              "RelativeToolTip": "KnkForms\\FormsCad\\FormCadRegiao.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "FormConRegioes.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConRegioes.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs",
+              "RelativeToolTip": "KnkForms\\FormsCon\\FormConRegioes.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAADcAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:26:43.039Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-24T14:35:13.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormConRegioes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs",
+              "RelativeDocumentMoniker": "KnkForms\\FormsCon\\FormConRegioes.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\FormsCon\\FormConRegioes.cs [Design]",
+              "RelativeToolTip": "KnkForms\\FormsCon\\FormConRegioes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:35:11.563Z"
             }
           ]
         }

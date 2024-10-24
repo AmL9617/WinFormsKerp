@@ -13,6 +13,7 @@ namespace KnkForms.Forms
     public partial class FormCadContador : KnkForms.FormCadPai
     {
         Contadores oContador;
+        FormConRegioes oFrmConRegioes;
         //FormConContatos oFrmConContatos;
         public FormCadContador()
         {
@@ -129,15 +130,25 @@ namespace KnkForms.Forms
             oContador.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oContador.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
-        /*
-        public void setFrmConContatos(Object obj)
+        public void setFrmConRegioes(Object obj)
         {
-            oFrmConContatos = (FormConContatos)obj;
+            oFrmConRegioes = (FormConRegioes)obj;
         }
-        private void btnPesquisarContato_Click(object sender, EventArgs e)
+
+        private void btnConsultaReg_Click(object sender, EventArgs e)
         {
-            oFrmConContatos.ConhecaObj(oContador.Contatos);
-            oFrmConContatos.ShowDialog();
-        }*/
+            oFrmConRegioes.ConhecaObj(oContador.Regioes);
+            oFrmConRegioes.ShowDialog();
+        }
+        /*
+public void setFrmConContatos(Object obj)
+{
+   oFrmConContatos = (FormConContatos)obj;
+}
+private void btnPesquisarContato_Click(object sender, EventArgs e)
+{
+   oFrmConContatos.ConhecaObj(oContador.Contatos);
+   oFrmConContatos.ShowDialog();
+}*/
     }
 }

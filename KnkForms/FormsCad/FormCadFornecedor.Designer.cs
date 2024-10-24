@@ -69,10 +69,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.boxIndustria = new System.Windows.Forms.ComboBox();
             this.btnConsultaLista = new System.Windows.Forms.Button();
-            this.txtLista = new System.Windows.Forms.TextBox();
+            this.txtCodLista = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCondPag = new System.Windows.Forms.Button();
-            this.txtCondPag = new System.Windows.Forms.TextBox();
+            this.txtCodCondPag = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -233,7 +233,7 @@
             // 
             // txtCodProd
             // 
-            this.txtCodProd.Location = new System.Drawing.Point(252, 254);
+            this.txtCodProd.Location = new System.Drawing.Point(247, 254);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(63, 20);
             this.txtCodProd.TabIndex = 13;
@@ -241,7 +241,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(249, 238);
+            this.label10.Location = new System.Drawing.Point(244, 238);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
             this.label10.TabIndex = 135;
@@ -467,7 +467,7 @@
             // 
             // btnConsultaLista
             // 
-            this.btnConsultaLista.Location = new System.Drawing.Point(544, 254);
+            this.btnConsultaLista.Location = new System.Drawing.Point(541, 253);
             this.btnConsultaLista.Name = "btnConsultaLista";
             this.btnConsultaLista.Size = new System.Drawing.Size(23, 23);
             this.btnConsultaLista.TabIndex = 563;
@@ -475,13 +475,13 @@
             this.btnConsultaLista.UseVisualStyleBackColor = true;
             this.btnConsultaLista.Click += new System.EventHandler(this.btnConsultaLista_Click);
             // 
-            // txtLista
+            // txtCodLista
             // 
-            this.txtLista.Location = new System.Drawing.Point(341, 254);
-            this.txtLista.MaxLength = 30;
-            this.txtLista.Name = "txtLista";
-            this.txtLista.Size = new System.Drawing.Size(197, 20);
-            this.txtLista.TabIndex = 564;
+            this.txtCodLista.Location = new System.Drawing.Point(341, 254);
+            this.txtCodLista.MaxLength = 30;
+            this.txtCodLista.Name = "txtCodLista";
+            this.txtCodLista.Size = new System.Drawing.Size(197, 20);
+            this.txtCodLista.TabIndex = 564;
             // 
             // label12
             // 
@@ -494,7 +494,7 @@
             // 
             // btnCondPag
             // 
-            this.btnCondPag.Location = new System.Drawing.Point(753, 255);
+            this.btnCondPag.Location = new System.Drawing.Point(753, 253);
             this.btnCondPag.Name = "btnCondPag";
             this.btnCondPag.Size = new System.Drawing.Size(23, 23);
             this.btnCondPag.TabIndex = 566;
@@ -502,18 +502,18 @@
             this.btnCondPag.UseVisualStyleBackColor = true;
             this.btnCondPag.Click += new System.EventHandler(this.btnCondPag_Click);
             // 
-            // txtCondPag
+            // txtCodCondPag
             // 
-            this.txtCondPag.Location = new System.Drawing.Point(575, 255);
-            this.txtCondPag.MaxLength = 30;
-            this.txtCondPag.Name = "txtCondPag";
-            this.txtCondPag.Size = new System.Drawing.Size(172, 20);
-            this.txtCondPag.TabIndex = 567;
+            this.txtCodCondPag.Location = new System.Drawing.Point(578, 255);
+            this.txtCodCondPag.MaxLength = 30;
+            this.txtCodCondPag.Name = "txtCodCondPag";
+            this.txtCodCondPag.Size = new System.Drawing.Size(172, 20);
+            this.txtCodCondPag.TabIndex = 567;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(572, 239);
+            this.label17.Location = new System.Drawing.Point(575, 239);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(145, 13);
             this.label17.TabIndex = 568;
@@ -524,10 +524,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(792, 740);
             this.Controls.Add(this.btnCondPag);
-            this.Controls.Add(this.txtCondPag);
+            this.Controls.Add(this.txtCodCondPag);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnConsultaLista);
-            this.Controls.Add(this.txtLista);
+            this.Controls.Add(this.txtCodLista);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.boxIndustria);
             this.Controls.Add(this.btnConsultaReg);
@@ -622,10 +622,10 @@
             this.Controls.SetChildIndex(this.btnConsultaReg, 0);
             this.Controls.SetChildIndex(this.boxIndustria, 0);
             this.Controls.SetChildIndex(this.label12, 0);
-            this.Controls.SetChildIndex(this.txtLista, 0);
+            this.Controls.SetChildIndex(this.txtCodLista, 0);
             this.Controls.SetChildIndex(this.btnConsultaLista, 0);
             this.Controls.SetChildIndex(this.label17, 0);
-            this.Controls.SetChildIndex(this.txtCondPag, 0);
+            this.Controls.SetChildIndex(this.txtCodCondPag, 0);
             this.Controls.SetChildIndex(this.btnCondPag, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -675,10 +675,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox boxIndustria;
         private System.Windows.Forms.Button btnConsultaLista;
-        private System.Windows.Forms.TextBox txtLista;
+        private System.Windows.Forms.TextBox txtCodLista;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCondPag;
-        private System.Windows.Forms.TextBox txtCondPag;
+        private System.Windows.Forms.TextBox txtCodCondPag;
         private System.Windows.Forms.Label label17;
     }
 }

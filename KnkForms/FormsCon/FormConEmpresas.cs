@@ -78,6 +78,7 @@ namespace KnkForms.Classes
             oFormCadEmpresa.ConhecaObj(aEmpresa);
             oFormCadEmpresa.LimpaTxt();
             oFormCadEmpresa.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Alterar()
@@ -85,6 +86,7 @@ namespace KnkForms.Classes
             oFormCadEmpresa.LimpaTxt();
             oFormCadEmpresa.CarregaTxt();
             oFormCadEmpresa.ShowDialog();
+            CarregaLV();
         }
 
         protected override void Excluir()
@@ -95,7 +97,55 @@ namespace KnkForms.Classes
             oFormCadEmpresa.BloqueiaTxt();
             oFormCadEmpresa.ShowDialog();
             oFormCadEmpresa.DesbloqueiaTxt();
+            CarregaLV();
         }
+        protected override void Pesquisar()
+        {
+            listVConsulta.Items.Clear();
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (txtPesquisa.Text == Convert.ToString(reader["IdEmpresa"]) ||
+                                    txtPesquisa.Text == Convert.ToString(reader["RazaoSocial"]))
+                                {
+                                    ListViewItem item = new ListViewItem(reader["IdEmpresa"].ToString());
+
+                                    item.SubItems.Add(reader["RazaoSocial"].ToString());
+                                    item.SubItems.Add(reader["NomeFantasia"].ToString());
+                                    item.SubItems.Add(reader["Cnpj"].ToString());
+                                    item.SubItems.Add(reader["IdCidade"].ToString());
+                                    item.SubItems.Add(reader["IdRegiao"].ToString());
+                                    item.SubItems.Add(reader["Logradouro"].ToString());
+                                    item.SubItems.Add(reader["Numero"].ToString());
+                                    item.SubItems.Add(reader["Complemento"].ToString());
+                                    item.SubItems.Add(reader["Bairro"].ToString());
+                                    item.SubItems.Add(reader["Cep"].ToString());
+
+                                    listVConsulta.Items.Add(item);
+                                }
+                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
+                                {
+                                    CarregaLV();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
+            }
+        }
     }
 }
