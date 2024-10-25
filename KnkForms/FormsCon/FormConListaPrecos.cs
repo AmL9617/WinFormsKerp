@@ -79,9 +79,22 @@ namespace KnkForms.FormsCon
 
         protected override void Alterar()
         {
-            oFormCadListaPreco.LimpaTxt();
-            oFormCadListaPreco.CarregaTxt();
-            oFormCadListaPreco.ShowDialog();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                string campo1 = selectedItem.SubItems[0].Text;
+                string campo2 = selectedItem.SubItems[1].Text;
+                string campo3 = selectedItem.SubItems[2].Text;
+                string campo4 = selectedItem.SubItems[3].Text;
+                string campo5 = selectedItem.SubItems[4].Text;
+                string campo6 = selectedItem.SubItems[5].Text;
+                
+                oFormCadListaPreco.ConhecaObj(aListaPreco);
+                oFormCadListaPreco.LimpaTxt();
+                oFormCadListaPreco.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6);
+                oFormCadListaPreco.ShowDialog();
+            }
             CarregaLV();
         }
 

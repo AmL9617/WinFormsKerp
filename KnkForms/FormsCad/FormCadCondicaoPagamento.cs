@@ -14,6 +14,7 @@ namespace KnkForms.Forms
     {
         CondicaoPagamentos aCondPag;
         FormConParcelas oFrmConParcela;
+        char SalvarAlterar = '\0';
         public FormCadCondicaoPagamento()
         {
             InitializeComponent();
@@ -37,18 +38,16 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
         {
-            txtCod.Text = Convert.ToString(aCondPag.Cod);
-            txtCondPag.Text = aCondPag.CondPag;
-            txtTipo.Text = aCondPag.Tipo;
-            txtTaxaJuro.Text = Convert.ToString(aCondPag.TaxaJuro);
-            txtDia.Text = aCondPag.Dia;
-            txtCodParcela.Text = Convert.ToString(aCondPag.CodParcela);
-            txtCodUser.Text = Convert.ToString(aCondPag.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aCondPag.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aCondPag.DataModificacao);
-            chkAtivo.Checked = aCondPag.Ativo;
+            txtCod.Text = campo1;
+            txtCondPag.Text = campo2;
+            txtTaxaJuro.Text = campo3;
+            txtCodParcela.Text = campo4;
+            txtTipo.Text = campo5;
+            txtDia.Text = campo6;
+            txtOpDisp.Text = campo7;
+            if (campo8 == "0") chkAtivo.Enabled = false; else chkAtivo.Enabled = true;        
         }
 
         public override void BloqueiaTxt()
@@ -93,7 +92,13 @@ namespace KnkForms.Forms
             aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCondPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
 
-            aCondPag.SalvarBD();
+            if (SalvarAlterar == 'A')
+                aCondPag.AlterarBD(aCondPag.Cod);
+            else
+                aCondPag.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
         public void setFrmConParcelas(Object obj)
         {

@@ -17,6 +17,7 @@ namespace KnkForms.Forms
     {
         Cidades aCidade;
         FormConEstados oFrmConEstados;
+        char SalvarAlterar = '\0';
         public FormCadCidade()
         {
             InitializeComponent();
@@ -39,16 +40,19 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
         {
-            txtCod.Text = Convert.ToString(aCidade.Cod);
-            txtCidade.Text = aCidade.Cidade;
-            txtDDD.Text = Convert.ToString(aCidade.DDD);
-            txtCodEstado.Text = Convert.ToString(aCidade.CodEstado);
-            txtCodUser.Text = Convert.ToString(aCidade.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aCidade.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aCidade.DataModificacao);
-            chkAtivo.Checked = aCidade.Ativo;
+            txtCod.Text = campo1;
+            txtCod.Enabled = false;
+            txtCodEstado.Text = campo2;
+            txtCidade.Text = campo3;
+            txtDDD.Text = campo4;
+            if (campo5 == "0") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; };
+            txtCodUser.Text = campo6;
+            txtDataCad.Text = campo7;
+            txtDataAlt.Text = campo8;
+            SalvarAlterar = 'A';
+
         }
 
         public override void BloqueiaTxt()
@@ -86,7 +90,14 @@ namespace KnkForms.Forms
             aCidade.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             aCidade.Ativo = chkAtivo.Checked;
 
-            aCidade.SalvarBD();
+            if (SalvarAlterar == 'A')
+                aCidade.AlterarBD(aCidade.Cod);
+            else
+                aCidade.SalvarBD();
+            
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

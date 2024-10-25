@@ -93,9 +93,35 @@ namespace KnkForms.Classes
 
         protected override void Alterar()
         {
-            oFormCadFornecedor.LimpaTxt();
-            oFormCadFornecedor.CarregaTxt();
-            oFormCadFornecedor.ShowDialog();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                string campo1 = selectedItem.SubItems[0].Text;
+                string campo2 = selectedItem.SubItems[1].Text;
+                string campo3 = selectedItem.SubItems[2].Text;
+                string campo4 = selectedItem.SubItems[3].Text;
+                string campo5 = selectedItem.SubItems[4].Text;
+                string campo6 = selectedItem.SubItems[5].Text;
+                string campo7 = selectedItem.SubItems[6].Text;
+                string campo8 = selectedItem.SubItems[7].Text;
+                string campo9 = selectedItem.SubItems[8].Text;
+                string campo10 = selectedItem.SubItems[9].Text;
+                string campo11 = selectedItem.SubItems[10].Text;
+                string campo12 = selectedItem.SubItems[11].Text;
+                string campo13 = selectedItem.SubItems[12].Text;
+                string campo14 = selectedItem.SubItems[13].Text;
+                string campo15 = selectedItem.SubItems[14].Text;
+                string campo16 = selectedItem.SubItems[15].Text;
+                string campo17 = selectedItem.SubItems[16].Text;
+                string campo18 = selectedItem.SubItems[17].Text;
+                string campo19 = selectedItem.SubItems[18].Text;
+
+                oFormCadFornecedor.ConhecaObj(oFornecedor);
+                oFormCadFornecedor.LimpaTxt();
+                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19);
+                oFormCadFornecedor.ShowDialog();
+            }
             CarregaLV();
         }
 

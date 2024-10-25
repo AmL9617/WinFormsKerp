@@ -15,6 +15,7 @@ namespace KnkForms.Forms
         ListaPrecos aListaPreco;
         FormConMarcas oFrmConMarcas;
         FormConSubgrupos oFrmConSubgrupos;
+        char SalvarAlterar = '\0';
         public FormCadListaPreco()
         {
             InitializeComponent();
@@ -39,19 +40,17 @@ namespace KnkForms.Forms
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
         {
-            txtCod.Text = Convert.ToString(aListaPreco.Cod);
-            txtLista.Text = aListaPreco.Lista;
-            txtDescMax.Text = Convert.ToString(aListaPreco.DescontoMaximo);
-            txtMargemLucro.Text = Convert.ToString(aListaPreco.MargemLucro);
-            txtPercCom.Text = Convert.ToString(aListaPreco.PercCom);    
-            txtCodMarca.Text = Convert.ToString(aListaPreco.CodMarca);
-            txtCodSubgrupo.Text = Convert.ToString(aListaPreco.CodSubgrupo);
-            txtCodUser.Text = Convert.ToString(aListaPreco.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aListaPreco.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aListaPreco.DataModificacao);
-            chkTodas.Checked = aListaPreco.Todas;
+            txtCod.Text = campo1;
+            txtCod.Enabled = false;
+            txtLista.Text = campo2;
+            txtDescMax.Text = campo3;
+            txtMargemLucro.Text = campo4;
+            txtPercCom.Text = campo5;
+            txtCodUser.Text = campo6;
+            SalvarAlterar = 'A';
+
         }
 
         public override void BloqueiaTxt()
@@ -97,7 +96,13 @@ namespace KnkForms.Forms
             aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aListaPreco.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
 
-            aListaPreco.SalvarBD();
+            if (SalvarAlterar == 'A')
+                aListaPreco.AlterarBD(aListaPreco.Cod);
+            else
+                aListaPreco.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
         public void setFrmConMarcas(Object obj)
         {

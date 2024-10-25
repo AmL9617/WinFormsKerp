@@ -14,6 +14,7 @@ namespace KnkForms.FormsCad
     {
         Contatos oContato;
         FormConClientes oFrmConClientes;
+        char SalvarAlterar = '\0';
         public FormCadContato()
         {
             InitializeComponent();
@@ -36,16 +37,14 @@ namespace KnkForms.FormsCad
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
         {
-            txtCod.Text = Convert.ToString(oContato.Cod);
-            txtFornCliente.Text = Convert.ToString(oContato.CodFornCliente);
-            txtTipo.Text = oContato.Tipo;
-            txtContato.Text = oContato.Contato;
-            txtObservacao.Text = oContato.Observacao;
-            txtCodUser.Text = Convert.ToString(oContato.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oContato.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oContato.DataModificacao);
+            txtCod.Text = campo1;
+            txtFornCliente.Text = campo2;
+            txtTipo.Text = campo3;
+            txtContato.Text = campo4;
+            txtObservacao.Text = campo5;
+            txtCodUser.Text = campo6;
         }
 
         public override void BloqueiaTxt()
@@ -83,7 +82,13 @@ namespace KnkForms.FormsCad
             oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oContato.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
 
-            oContato.SalvarBD();
+            if (SalvarAlterar == 'A')
+                oContato.AlterarBD(oContato.Cod);
+            else
+                oContato.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
         public void setFrmConClientes(Object obj)
         {

@@ -121,24 +121,23 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void AlterarBD(int CodRegiao)
+        public void AlterarBD(int CodLista)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Regioes SET IdEmpresa=@IdEmpresa, Regiao=@Regiao, Descricao=@Descricao, IdUsuario=@IdUsuario, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdRegiao = @IdRegiao";
+                    string query = "UPDATE Listas SET IdEmpresa=@IdEmpresa, Lista=@Lista, DescMax=@DescMax,, MargemLucro=@MargemLucro, PerComissao=@PerComissao, DataModificacao=@DataModificacao WHERE IdLista = @IdLista";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Regiao", Regiao);
-                        command.Parameters.AddWithValue("@Descricao", Descricao);
-                        command.Parameters.AddWithValue("@IdUsuario", CodEmpresa);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@Lista", Lista);
+                        command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
+                        command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
+                        command.Parameters.AddWithValue("@PerComissao", PercCom);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdRegiao", CodRegiao);
+                        command.Parameters.AddWithValue("@IdLista", CodLista);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);

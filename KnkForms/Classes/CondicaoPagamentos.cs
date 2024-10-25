@@ -124,14 +124,14 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void AlterarBD(int CodRegiao)
+        public void AlterarBD(int CodCondPag)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Regioes SET IdEmpresa=@IdEmpresa, Regiao=@Regiao, Descricao=@Descricao, IdUsuario=@IdUsuario, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdRegiao = @IdRegiao";
+                    string query = "UPDATE CondPagamentos SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -145,6 +145,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@PorParcela", CodParcela);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataAlteracao", DataModificacao);
+                        command.Parameters.AddWithValue("@IdCondicaoPagamento", CodCondPag);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);

@@ -16,6 +16,7 @@ namespace KnkForms.Classes
     {
         Estados oEstado;
         FormConPaises oFrmConPaises;
+        char SalvarAlterar = '\0';
         public FormCadEstado()
         {
             InitializeComponent();
@@ -42,20 +43,22 @@ namespace KnkForms.Classes
             txtCodWeb.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11)
         {
-            txtCod.Text = Convert.ToString(oEstado.Cod);
-            txtEstado.Text = oEstado.Estado;
-            txtSigla.Text = Convert.ToString(oEstado.Sigla);
-            txtCodPais.Text = Convert.ToString(oEstado.CodPais);
-            chkAtivo.Checked = oEstado.Ativo;
-            txtCodUser.Text = Convert.ToString(oEstado.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oEstado.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oEstado.DataModificacao);
-            txtPercIcms.Text = Convert.ToString(oEstado.PercIcms);
-            txtIcms.Text = Convert.ToString(oEstado.Icms);
-            txtPercRedST.Text = Convert.ToString(oEstado.PercRedST);
-            txtCodWeb.Text = Convert.ToString(oEstado.CodWeb);
+            txtCod.Text = campo1;
+            txtCod.Enabled = false;
+            txtCodPais.Text = campo2;
+            txtEstado.Text = campo3;
+            txtSigla.Text = campo4;
+            txtPercIcms.Text = campo5;
+            txtIcms.Text = campo6;
+            txtPercRedST.Text = campo7;
+            txtCodWeb.Text = campo8;
+            txtCodUser.Text = campo9;
+            txtDataCad.Text = campo10;
+            txtDataAlt.Text = campo11;
+            SalvarAlterar = 'A';
+
         }
 
         public override void BloqueiaTxt()
@@ -105,7 +108,13 @@ namespace KnkForms.Classes
             oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
             oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
 
-            oEstado.SalvarBD();
+            if (SalvarAlterar == 'A')
+                oEstado.AlterarBD(oEstado.Cod);
+            else
+                oEstado.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

@@ -84,9 +84,24 @@ namespace KnkForms.FormsCon
 
         protected override void Alterar()
         {
-            oFormCadPais.LimpaTxt();
-            oFormCadPais.CarregaTxt();
-            oFormCadPais.ShowDialog();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                string campo1 = selectedItem.SubItems[0].Text;
+                string campo2 = selectedItem.SubItems[1].Text;
+                string campo3 = selectedItem.SubItems[2].Text;
+                string campo4 = selectedItem.SubItems[3].Text;
+                string campo5 = selectedItem.SubItems[4].Text;
+                string campo6 = selectedItem.SubItems[5].Text;
+                string campo7 = selectedItem.SubItems[6].Text;
+                string campo8 = selectedItem.SubItems[7].Text;
+
+                oFormCadPais.ConhecaObj(oPais);
+                oFormCadPais.LimpaTxt();
+                oFormCadPais.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8);
+                oFormCadPais.ShowDialog();
+            }
             CarregaLV();
         }
 

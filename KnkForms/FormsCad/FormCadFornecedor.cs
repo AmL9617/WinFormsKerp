@@ -20,6 +20,7 @@ namespace KnkForms.Forms
         FormConRegioes oFrmConRegioes;
         FormConListaPrecos oFrmConListaPrecos;
         FormConCondicaoPagamentos oFrmCondicaoPagamentos;
+        char SalvarAlterar = '\0';
         public FormCadFornecedor()
         {
             InitializeComponent();
@@ -62,43 +63,27 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19)
         {
-            txtCod.Text = Convert.ToString(oFornecedor.Cod);
-            if (oFornecedor.Industria == "Não")
-                boxIndustria.Text = "Não";
-            else if (oFornecedor.Industria == "Sim")
-                boxIndustria.Text = "Sim";
-            if (oFornecedor.FisicaJuridica == false)
-                boxFisJur.Text = "Fisica";
-            else if (oFornecedor.FisicaJuridica == true)
-                boxFisJur.Text = "Juridica";
-            txtRazaoSocial.Text = oFornecedor.RazaoSocial;
-            txtNomeFantasia.Text = Convert.ToString(oFornecedor.NomeFantasia);
-            txtEndereco.Text = oFornecedor.Endereco;
-            txtNumero.Text = Convert.ToString(oFornecedor.Numero);
-            txtComplemento.Text = oFornecedor.Complemento;
-            txtCodCidade.Text = Convert.ToString(oFornecedor.CodCidades);
-            txtBairro.Text = oFornecedor.Bairro;
-            txtCep.Text = oFornecedor.Cep;
-            txtCodRegiao.Text = Convert.ToString(oFornecedor.CodRegioes);
-            txtCodLista.Text = Convert.ToString(oFornecedor.CodListaPrecos);
-            txtCodCondPag.Text = Convert.ToString(oFornecedor.CodCondPag);
-            txtTrade.Text = oFornecedor.Trade;
-            txtCodProd.Text = Convert.ToString(oFornecedor.CodProdIgual);
-            txtLimite.Text = Convert.ToString(oFornecedor.LimiteCredito);
-            txtInscEst.Text = oFornecedor.InscricaoEstadual;
-            txtCnpj.Text = oFornecedor.CNPJ;
-            dataUltMov.Value = oFornecedor.UltimoMovimento;
-            if(chkVerCliente.Checked == false) 
-                oFornecedor.VerEmClientes = 'f';
-            if (chkVerCliente.Checked == true)
-                oFornecedor.VerEmClientes = 'c';
-            txtObservacao.Text = oFornecedor.Observacoes;
-            chkAtivo.Checked = oFornecedor.Ativo;
-            txtCodUser.Text = Convert.ToString(oFornecedor.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oFornecedor.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oFornecedor.DataModificacao);
+            txtCod.Text = campo1;
+            txtRazaoSocial.Text = campo2;
+            txtNomeFantasia.Text = campo3;
+            txtInscEst.Text = campo4;
+            txtCnpj.Text = campo5;
+            txtCodCidade.Text = campo7;
+            txtCodRegiao.Text = campo8;
+            txtEndereco.Text = campo9;
+            txtNumero.Text = campo10;
+            txtComplemento.Text = campo11;
+            txtBairro.Text = campo12;
+            txtCep.Text = campo13;       
+            if (campo14 == "Não") boxIndustria.Text = "Não"; else boxIndustria.Text = "Sim";
+            txtObservacao.Text = campo15;
+            if(campo16 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
+            if (campo17 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
+            txtDataCad.Text = campo18;
+            txtDataAlt.Text = campo19;
+
         }
 
         public override void BloqueiaTxt()
@@ -199,7 +184,13 @@ namespace KnkForms.Forms
             oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFornecedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
 
-            oFornecedor.SalvarBD();
+            if (SalvarAlterar == 'A')
+                oFornecedor.AlterarBD(oFornecedor.Cod);
+            else
+                oFornecedor.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
 
         public void setFrmConCidades(Object obj)

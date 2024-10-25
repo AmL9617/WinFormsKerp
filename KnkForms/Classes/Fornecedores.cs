@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -260,6 +261,53 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodFornCli)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE FornClientes SET IdEmpresa=@IdEmpresa, RazaoSocial=@RazaoSocial, NomeFantasia=@NomeFantasia, InscricaoEstadual=@InscricaoEstadual, CpfCnpj=@CpfCnpj, Tipo=@Tipo, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro, Cep=@Cep, ConsumidorRevenda=@ConsumidorRevenda, Observacao=@Observacao, Ativo=@Ativo, FisicaJuridica=@FisicaJuridica, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdFornCliente = @IdFornCliente";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@RazaoSocial", RazaoSocial);
+                        command.Parameters.AddWithValue("@NomeFantasia", NomeFantasia);
+                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
+                        command.Parameters.AddWithValue("@CpfCnpj", CNPJ);
+                        command.Parameters.AddWithValue("@Tipo", VerEmClientes);
+                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
+                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
+                        command.Parameters.AddWithValue("@Logradouro", Endereco);
+                        command.Parameters.AddWithValue("@Numero", Numero);
+                        command.Parameters.AddWithValue("@Complemento", Complemento);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
+                        command.Parameters.AddWithValue("@Observacao", Observacoes);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
+                        command.Parameters.AddWithValue("@IdLista", CodListaPrecos);
+                        command.Parameters.AddWithValue("@IdListaEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdCondPag", CodCondPag);
+                        command.Parameters.AddWithValue("@IdCondPagEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCli);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
                     }
                 }
             }

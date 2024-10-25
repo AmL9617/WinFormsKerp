@@ -16,7 +16,7 @@ namespace KnkForms.Forms
     public partial class FormCadPais : KnkForms.FormCadPai
     {
         Paises oPais;
-
+        char SalvarAlterar = '\0';
         public FormCadPais()
         {
             InitializeComponent();
@@ -41,20 +41,19 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
         {
-            txtCod.Text = Convert.ToString(oPais.Cod);
-            txtPais.Text = oPais.Pais;
-            txtSigla.Text = oPais.Sigla;
-            txtDdi.Text = Convert.ToString(oPais.DDI);
-            if (oPais.Nacional == 's')
-                boxNacional.Text = "Sim";
-            else if (oPais.Nacional == 'n')
-                boxNacional.Text = "Não";
-            txtCodUser.Text = Convert.ToString(oPais.CodEmpresa);
-            txtDataCad.Text= Convert.ToString(oPais.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oPais.DataModificacao);
-            chkAtivo.Checked = oPais.Ativo;
+            txtCod.Text = campo1;
+            txtCod.Enabled = false;
+            txtPais.Text = campo2;
+            txtSigla.Text = campo3;
+            txtDdi.Text = campo4;
+            boxNacional.Text = campo5;
+            txtCodUser.Text = campo6;
+            txtDataCad.Text = campo7;
+            txtDataAlt.Text = campo8;
+            SalvarAlterar = 'A';
+            
         }
 
         public override void BloqueiaTxt()
@@ -100,7 +99,13 @@ namespace KnkForms.Forms
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oPais.Ativo = chkAtivo.Checked;
 
-            oPais.SalvarBD();
+            if (SalvarAlterar == 'A')
+                oPais.AlterarBD(oPais.Cod);
+            else
+                oPais.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

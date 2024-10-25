@@ -15,6 +15,7 @@ namespace KnkForms.Forms
         Empresas aEmpresa;
         FormConCidades oFrmConCidades;
         FormConRegioes oFrmConRegioes;
+        char SalvarAlterar = '\0';
         public FormCadEmpresa()
         {
             InitializeComponent();
@@ -42,22 +43,13 @@ namespace KnkForms.Forms
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5)
         {
-            txtCod.Text = Convert.ToString(aEmpresa.Cod);
-            txtRazaoSocial.Text = aEmpresa.RazaoSocial;
-            txtNomeFant.Text = aEmpresa.NomeFantasia;
-            txtCnpj.Text = aEmpresa.Cnpj;
-            txtCep.Text = aEmpresa.Cep;
-            txtCodCidade.Text = Convert.ToString(aEmpresa.CodCidades);
-            txtCodRegiao.Text = Convert.ToString(aEmpresa.CodRegioes);
-            txtEndereco.Text = aEmpresa.Endereco;
-            txtNumero.Text = Convert.ToString(aEmpresa.Numero);
-            txtComplemento.Text = aEmpresa.Complemento;
-            txtBairro.Text = aEmpresa.Bairro;
-            txtCodUser.Text = Convert.ToString(aEmpresa.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aEmpresa.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aEmpresa.DataModificacao);
+            txtCod.Text = campo1;
+            txtRazaoSocial.Text = campo2;
+            txtNomeFant.Text = campo3;
+            txtCnpj.Text = campo4;
+            txtCodCidade.Text = campo5;
         }
 
         public override void BloqueiaTxt()
@@ -113,7 +105,13 @@ namespace KnkForms.Forms
             aEmpresa.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aEmpresa.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
 
-            aEmpresa.SalvarBD();
+            if (SalvarAlterar == 'A')
+                aEmpresa.AlterarBD(aEmpresa.Cod);
+            else
+                aEmpresa.SalvarBD();
+            SalvarAlterar = '\0';
+            txtCod.Enabled = true;
+            Close();
         }
         public void setFrmConCidades(Object obj)
         {
