@@ -37,6 +37,9 @@
             this.operacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.porParcela = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataCadastro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataModificacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -50,7 +53,10 @@
             this.dia,
             this.operacao,
             this.Ativo,
-            this.porParcela});
+            this.porParcela,
+            this.codEmpresa,
+            this.dataCadastro,
+            this.dataModificacao});
             // 
             // codCondPag
             // 
@@ -94,6 +100,21 @@
             this.porParcela.Text = "Código Parcela";
             this.porParcela.Width = 100;
             // 
+            // dataCadastro
+            // 
+            this.dataCadastro.Text = "Data de Cadastro";
+            this.dataCadastro.Width = 100;
+            // 
+            // dataModificacao
+            // 
+            this.dataModificacao.Text = "Data de Modificação";
+            this.dataModificacao.Width = 100;
+            // 
+            // codEmpresa
+            // 
+            this.codEmpresa.Text = "Código Empresa";
+            this.codEmpresa.Width = 100;
+            // 
             // FormConCondicaoPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,5 +137,8 @@
         private System.Windows.Forms.ColumnHeader operacao;
         private System.Windows.Forms.ColumnHeader Ativo;
         private System.Windows.Forms.ColumnHeader porParcela;
+        private System.Windows.Forms.ColumnHeader dataCadastro;
+        private System.Windows.Forms.ColumnHeader dataModificacao;
+        private System.Windows.Forms.ColumnHeader codEmpresa;
     }
 }

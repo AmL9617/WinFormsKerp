@@ -50,6 +50,7 @@ namespace KnkForms.Forms
             txtNomeFant.Text = campo3;
             txtCnpj.Text = campo4;
             txtCodCidade.Text = campo5;
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()

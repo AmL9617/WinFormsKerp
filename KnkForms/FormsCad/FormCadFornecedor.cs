@@ -63,7 +63,7 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20)
         {
             txtCod.Text = campo1;
             txtRazaoSocial.Text = campo2;
@@ -81,9 +81,10 @@ namespace KnkForms.Forms
             txtObservacao.Text = campo15;
             if(campo16 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
             if (campo17 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
-            txtDataCad.Text = campo18;
-            txtDataAlt.Text = campo19;
-
+            txtCodUser.Text = campo18;
+            txtDataCad.Text = campo19;
+            txtDataAlt.Text = campo20;
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()

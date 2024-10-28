@@ -156,7 +156,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdRegiao", CodEstado);
+                        command.Parameters.AddWithValue("@IdEstado", CodEstado);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);

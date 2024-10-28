@@ -107,10 +107,5 @@ namespace KnkForms.Forms
             txtCod.Enabled = true;
             Close();
         }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            Salvar();
-        }
     }
 }

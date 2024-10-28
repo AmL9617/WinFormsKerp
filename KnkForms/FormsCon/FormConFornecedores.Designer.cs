@@ -47,6 +47,7 @@
             this.fisicaJuridica = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataModif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -69,6 +70,7 @@
             this.observacao,
             this.ativo,
             this.fisicaJuridica,
+            this.codEmpresa,
             this.dataCad,
             this.dataModif});
             // 
@@ -162,6 +164,11 @@
             this.dataModif.Text = "Data Modificação";
             this.dataModif.Width = 100;
             // 
+            // codEmpresa
+            // 
+            this.codEmpresa.Text = "Código Empresa";
+            this.codEmpresa.Width = 100;
+            // 
             // FormConFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,5 +201,6 @@
         private System.Windows.Forms.ColumnHeader fisicaJuridica;
         private System.Windows.Forms.ColumnHeader dataCad;
         private System.Windows.Forms.ColumnHeader dataModif;
+        private System.Windows.Forms.ColumnHeader codEmpresa;
     }
 }

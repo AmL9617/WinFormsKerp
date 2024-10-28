@@ -131,7 +131,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE CondPagamentos SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
+                    string query = "UPDATE CondPagamentos SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataAlteracao=@DataAlteracao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);

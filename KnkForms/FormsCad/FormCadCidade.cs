@@ -91,19 +91,18 @@ namespace KnkForms.Forms
             aCidade.Ativo = chkAtivo.Checked;
 
             if (SalvarAlterar == 'A')
+            {
                 aCidade.AlterarBD(aCidade.Cod);
+                SalvarAlterar = '\0';
+
+            }
             else
                 aCidade.SalvarBD();
             
-            SalvarAlterar = '\0';
             txtCod.Enabled = true;
             Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            Salvar();
-        }
         public void setFrmConEstados(Object obj)
         {
             oFrmConEstados = (FormConEstados)obj;

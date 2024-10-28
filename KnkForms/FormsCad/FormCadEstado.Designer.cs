@@ -57,7 +57,6 @@
             // btnSalvar
             // 
             this.btnSalvar.TabIndex = 13;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtCodUser
             // 

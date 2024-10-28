@@ -66,7 +66,6 @@ namespace KnkForms.Classes
                                 item.SubItems.Add(reader["Observacao"].ToString());
                                 item.SubItems.Add(reader["Ativo"].ToString());
                                 item.SubItems.Add(reader["FisicaJuridica"].ToString());
-                                item.SubItems.Add(reader["IdCidadeEmp"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
                                 item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
                                 item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
@@ -116,10 +115,11 @@ namespace KnkForms.Classes
                 string campo17 = selectedItem.SubItems[16].Text;
                 string campo18 = selectedItem.SubItems[17].Text;
                 string campo19 = selectedItem.SubItems[18].Text;
+                string campo20 = selectedItem.SubItems[19].Text;
 
                 oFormCadFornecedor.ConhecaObj(oFornecedor);
                 oFormCadFornecedor.LimpaTxt();
-                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19);
+                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19, campo20);
                 oFormCadFornecedor.ShowDialog();
             }
             CarregaLV();
@@ -172,7 +172,6 @@ namespace KnkForms.Classes
                                     item.SubItems.Add(reader["Observacao"].ToString());
                                     item.SubItems.Add(reader["Ativo"].ToString());
                                     item.SubItems.Add(reader["FisicaJuridica"].ToString());
-                                    item.SubItems.Add(reader["IdCidadeEmp"].ToString());
                                     item.SubItems.Add(reader["IdEmpresa"].ToString());
                                     item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
                                     item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));

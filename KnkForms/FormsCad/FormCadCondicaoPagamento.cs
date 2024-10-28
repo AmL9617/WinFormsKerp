@@ -31,23 +31,30 @@ namespace KnkForms.Forms
             txtTipo.Clear();
             txtTaxaJuro.Clear();
             txtOpDisp.Clear();
+            txtNumParc.Clear();
             txtDia.Clear();
+            txtCodParcela.Clear();
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12)
         {
             txtCod.Text = campo1;
             txtCondPag.Text = campo2;
             txtTaxaJuro.Text = campo3;
-            txtCodParcela.Text = campo4;
+            txtNumParc.Text = campo4;
             txtTipo.Text = campo5;
             txtDia.Text = campo6;
             txtOpDisp.Text = campo7;
-            if (campo8 == "0") chkAtivo.Enabled = false; else chkAtivo.Enabled = true;        
+            if (campo8 == "0") chkAtivo.Enabled = false; else chkAtivo.Enabled = true;
+            txtCodParcela.Text = campo9;
+            txtCodUser.Text = campo10;
+            txtDataCad.Text = campo11;
+            txtDataAlt.Text = campo12;
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()
@@ -56,6 +63,8 @@ namespace KnkForms.Forms
             txtCondPag.Enabled = false;
             txtTipo.Enabled = false;
             txtTaxaJuro.Enabled = false;
+            txtOpDisp.Enabled = false;
+            txtNumParc.Enabled = false;
             txtCodParcela.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
@@ -70,6 +79,8 @@ namespace KnkForms.Forms
             txtCondPag.Enabled = true;
             txtTipo.Enabled = true;
             txtTaxaJuro.Enabled = true;
+            txtOpDisp.Enabled = true;
+            txtNumParc.Enabled = true;
             txtCodParcela.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
@@ -85,6 +96,7 @@ namespace KnkForms.Forms
             aCondPag.Tipo = txtTipo.Text;
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
             aCondPag.OperacaoDisponivel = txtOpDisp.Text;
+            aCondPag.NumeroParcelas = Convert.ToInt32(txtNumParc.Text);
             aCondPag.CodParcela = Convert.ToInt32(txtCodParcela.Text);
             aCondPag.Dia = txtDia.Text;
             aCondPag.Ativo = chkAtivo.Checked;

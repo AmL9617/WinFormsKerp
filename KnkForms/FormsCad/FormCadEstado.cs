@@ -117,11 +117,6 @@ namespace KnkForms.Classes
             Close();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            Salvar();
-        }
-
         public void setFrmConPaises(Object obj)
         {
             oFrmConPaises = (FormConPaises)obj;

@@ -97,10 +97,14 @@ namespace KnkForms.Classes
                 string campo6 = selectedItem.SubItems[5].Text;
                 string campo7 = selectedItem.SubItems[6].Text;
                 string campo8 = selectedItem.SubItems[7].Text;
+                string campo9 = selectedItem.SubItems[8].Text;
+                string campo10 = selectedItem.SubItems[9].Text;
+                string campo11 = selectedItem.SubItems[10].Text;
+                string campo12 = selectedItem.SubItems[11].Text;    
 
                 oFormCadCondicaoPagamento.ConhecaObj(aCondicaoPagamento);
                 oFormCadCondicaoPagamento.LimpaTxt();
-                oFormCadCondicaoPagamento.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8);
+                oFormCadCondicaoPagamento.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12);
                 oFormCadCondicaoPagamento.ShowDialog();
             }
             CarregaLV();

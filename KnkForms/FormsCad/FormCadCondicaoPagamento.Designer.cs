@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodParcela = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumParc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -169,13 +169,13 @@
             this.label7.TabIndex = 64;
             this.label7.Text = "Porc Parcela";
             // 
-            // textBox1
+            // txtNumParc
             // 
-            this.textBox1.Location = new System.Drawing.Point(647, 58);
-            this.textBox1.MaxLength = 2;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNumParc.Location = new System.Drawing.Point(647, 58);
+            this.txtNumParc.MaxLength = 2;
+            this.txtNumParc.Name = "txtNumParc";
+            this.txtNumParc.Size = new System.Drawing.Size(47, 20);
+            this.txtNumParc.TabIndex = 6;
             // 
             // label3
             // 
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtDia);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNumParc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCodParcela);
             this.Controls.Add(this.label7);
@@ -238,7 +238,7 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtCodParcela, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txtNumParc, 0);
             this.Controls.SetChildIndex(this.txtDia, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,7 +259,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodParcela;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumParc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDia;
     }
