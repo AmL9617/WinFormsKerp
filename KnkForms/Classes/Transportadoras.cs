@@ -9,8 +9,8 @@ namespace KnkForms.Classes
     internal class Transportadoras : Pai
     {
         protected string transportadoraCliente;
-        protected bool fisicaJuridica;
-        protected bool ativo;
+        protected char fisicaJuridica;
+        protected char ativo;
         protected string razaoSocial;
         protected string nomeFantasia;
         protected string endereco;
@@ -38,8 +38,8 @@ namespace KnkForms.Classes
         public Transportadoras()
         {
             transportadoraCliente = "";
-            fisicaJuridica = false;
-            ativo = false;
+            fisicaJuridica = '\0';
+            ativo = '\0';
             razaoSocial = "";
             nomeFantasia = "";
             endereco = "";
@@ -69,13 +69,13 @@ namespace KnkForms.Classes
             set { transportadoraCliente = value; }
         }
 
-        public bool FisicaJuridica
+        public char FisicaJuridica
         {
             get { return fisicaJuridica; }
             set { fisicaJuridica = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

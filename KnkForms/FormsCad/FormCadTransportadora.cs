@@ -57,12 +57,12 @@ namespace KnkForms.Classes
         {
             txtCod.Text = Convert.ToString(aTransportadora.Cod);
             boxTransCli.Text = aTransportadora.TransportadoraCliente;
-            if (aTransportadora.FisicaJuridica == false)
+            if (aTransportadora.FisicaJuridica == 'F')
                 boxFisJur.Text = "Fisica";
-            else if (aTransportadora.FisicaJuridica == true)
+            else if (aTransportadora.FisicaJuridica == 'J')
                 boxFisJur.Text = "Juridica";
             txtNomeFantasia.Text = aTransportadora.NomeFantasia;
-            chkAtivo.Checked = aTransportadora.Ativo;
+            if (chkAtivo.Checked == true) { aTransportadora.Ativo = 'S'; } else { aTransportadora.Ativo = 'N'; };
             txtEndereco.Text = aTransportadora.Endereco;
             txtNumero.Text = Convert.ToString(aTransportadora.Numero);
             txtComplemento.Text = aTransportadora.Complemento;
@@ -142,11 +142,11 @@ namespace KnkForms.Classes
             aTransportadora.Cod = Convert.ToInt32(txtCod.Text);
             aTransportadora.TransportadoraCliente = boxTransCli.Text;
             if (boxFisJur.Text == "Fisica")
-                aTransportadora.FisicaJuridica = false;
+                aTransportadora.FisicaJuridica = 'F';
             else if (boxFisJur.Text == "Juridica")
-                aTransportadora.FisicaJuridica = true;
+                aTransportadora.FisicaJuridica = 'J';
             aTransportadora.NomeFantasia = txtNomeFantasia.Text;
-            aTransportadora.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { aTransportadora.Ativo = 'S'; } else { aTransportadora.Ativo = 'N'; };
             aTransportadora.Endereco = txtEndereco.Text;
             aTransportadora.Numero = Convert.ToInt32(txtNumero.Text);
             aTransportadora.Complemento = txtComplemento.Text;

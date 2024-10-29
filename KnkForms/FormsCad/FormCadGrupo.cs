@@ -35,7 +35,7 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(oGrupo.Cod);
             txtGrupo.Text = oGrupo.Grupo;
-            chkAtivo.Checked = oGrupo.Ativo;
+            if (chkAtivo.Checked == true) { oGrupo.Ativo = 'S'; } else { oGrupo.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(oGrupo.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oGrupo.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oGrupo.DataModificacao);
@@ -65,7 +65,7 @@ namespace KnkForms.Forms
         {
             oGrupo.Cod = Convert.ToInt32(txtCod.Text);
             oGrupo.Grupo = txtGrupo.Text;
-            oGrupo.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oGrupo.Ativo = 'S'; } else { oGrupo.Ativo = 'N'; };
             oGrupo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oGrupo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oGrupo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

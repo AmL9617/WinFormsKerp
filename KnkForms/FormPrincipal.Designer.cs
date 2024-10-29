@@ -35,7 +35,6 @@
             this.cadCondicaoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadContadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadFormaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,9 +48,9 @@
             this.cadRamoDeAtividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ramoDeAtividadesDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadRegioesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subgruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadTransportadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subgruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +72,6 @@
             this.cadCondicaoDePagamentoToolStripMenuItem,
             this.cadContadorToolStripMenuItem,
             this.contatosToolStripMenuItem,
-            this.cadEmpresaToolStripMenuItem,
             this.cadEstadosToolStripMenuItem,
             this.cadFormaDePagamentoToolStripMenuItem,
             this.cadFornecedoresToolStripMenuItem,
@@ -128,13 +126,6 @@
             this.contatosToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.contatosToolStripMenuItem.Text = "Contatos";
             this.contatosToolStripMenuItem.Click += new System.EventHandler(this.contatosToolStripMenuItem_Click);
-            // 
-            // cadEmpresaToolStripMenuItem
-            // 
-            this.cadEmpresaToolStripMenuItem.Name = "cadEmpresaToolStripMenuItem";
-            this.cadEmpresaToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.cadEmpresaToolStripMenuItem.Text = "Empresa";
-            this.cadEmpresaToolStripMenuItem.Click += new System.EventHandler(this.cadEmpresaToolStripMenuItem_Click);
             // 
             // cadEstadosToolStripMenuItem
             // 
@@ -227,6 +218,13 @@
             this.cadRegioesToolStripMenuItem.Text = "Regiões";
             this.cadRegioesToolStripMenuItem.Click += new System.EventHandler(this.cadRegioesToolStripMenuItem_Click);
             // 
+            // subgruposToolStripMenuItem
+            // 
+            this.subgruposToolStripMenuItem.Name = "subgruposToolStripMenuItem";
+            this.subgruposToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.subgruposToolStripMenuItem.Text = "Subgrupos";
+            this.subgruposToolStripMenuItem.Click += new System.EventHandler(this.subgruposToolStripMenuItem_Click);
+            // 
             // cadTransportadorasToolStripMenuItem
             // 
             this.cadTransportadorasToolStripMenuItem.Name = "cadTransportadorasToolStripMenuItem";
@@ -240,13 +238,6 @@
             this.cadVendedoresToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.cadVendedoresToolStripMenuItem.Text = "Vendedores";
             this.cadVendedoresToolStripMenuItem.Click += new System.EventHandler(this.cadVendedoresToolStripMenuItem_Click);
-            // 
-            // subgruposToolStripMenuItem
-            // 
-            this.subgruposToolStripMenuItem.Name = "subgruposToolStripMenuItem";
-            this.subgruposToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.subgruposToolStripMenuItem.Text = "Subgrupos";
-            this.subgruposToolStripMenuItem.Click += new System.EventHandler(this.subgruposToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -274,7 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadCondicaoDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadContadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadEstadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadFormaDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadFornecedoresToolStripMenuItem;

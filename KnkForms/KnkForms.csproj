@@ -121,7 +121,6 @@
     <Compile Include="Classes\CondicaoPagamentos.cs" />
     <Compile Include="Classes\Contadores.cs" />
     <Compile Include="Classes\Contatos.cs" />
-    <Compile Include="Classes\Empresas.cs" />
     <Compile Include="Classes\Estados.cs" />
     <Compile Include="Classes\FormaPagamentos.cs" />
     <Compile Include="Classes\ListaCodST.cs" />
@@ -217,12 +216,6 @@
     <Compile Include="FormsCon\FormConContadores.Designer.cs">
       <DependentUpon>FormConContadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCon\FormConEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsCon\FormConEmpresas.Designer.cs">
-      <DependentUpon>FormConEmpresas.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormsCon\FormConEstados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,12 +263,6 @@
     </Compile>
     <Compile Include="FormsCad\FormCadContador.Designer.cs">
       <DependentUpon>FormCadContador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormsCad\FormCadEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsCad\FormCadEmpresa.Designer.cs">
-      <DependentUpon>FormCadEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsCad\FormCadFormaPagamento.cs">
       <SubType>Form</SubType>
@@ -448,9 +435,6 @@
     <EmbeddedResource Include="FormsCad\FormCadContato.resx">
       <DependentUpon>FormCadContato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCad\FormCadEmpresa.resx">
-      <DependentUpon>FormCadEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormsCad\FormCadFormaPagamento.resx">
       <DependentUpon>FormCadFormaPagamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,9 +504,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConContatos.resx">
       <DependentUpon>FormConContatos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormsCon\FormConEmpresas.resx">
-      <DependentUpon>FormConEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCon\FormConEstados.resx">
       <DependentUpon>FormConEstados.cs</DependentUpon>

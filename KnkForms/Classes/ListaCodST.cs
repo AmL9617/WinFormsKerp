@@ -11,13 +11,13 @@ namespace KnkForms.Classes
     {
         protected string tipo;
         protected string descricao;
-        protected bool ativo;
+        protected char ativo;
 
         public ListaCodST()
         {
             tipo = "";
             descricao = "";
-            ativo = true;
+            ativo = '\0';
         }
 
         public string Tipo
@@ -30,7 +30,7 @@ namespace KnkForms.Classes
             get { return descricao; } 
             set { descricao = value; } 
         }
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

@@ -9,7 +9,7 @@ namespace KnkForms.Classes
     internal class Vendedores : Pai
     {
         protected string vendedor;
-        protected bool ativo;
+        protected char ativo;
         protected string tipo;
         protected double comissao;
         protected DateTime comissaoPrazo;
@@ -18,7 +18,7 @@ namespace KnkForms.Classes
         public Vendedores()
         {
             vendedor = "";
-            ativo = false;
+            ativo = '\0';
             tipo = "";
             comissao = 0.0f;
             comissaoPrazo = DateTime.MinValue;
@@ -31,7 +31,7 @@ namespace KnkForms.Classes
             set { vendedor = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

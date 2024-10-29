@@ -63,12 +63,13 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20, string campo21, string campo22, string campo23, string campo24, string campo25)
         {
             txtCod.Text = campo1;
             txtRazaoSocial.Text = campo2;
             txtNomeFantasia.Text = campo3;
             txtInscEst.Text = campo4;
+            if (campo6 == "A") chkVerCliente.Checked = true; else chkVerCliente.Checked = false;
             txtCnpj.Text = campo5;
             txtCodCidade.Text = campo7;
             txtCodRegiao.Text = campo8;
@@ -77,13 +78,18 @@ namespace KnkForms.Forms
             txtComplemento.Text = campo11;
             txtBairro.Text = campo12;
             txtCep.Text = campo13;       
-            if (campo14 == "Não") boxIndustria.Text = "Não"; else boxIndustria.Text = "Sim";
-            txtObservacao.Text = campo15;
-            if(campo16 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
-            if (campo17 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
-            txtCodUser.Text = campo18;
-            txtDataCad.Text = campo19;
-            txtDataAlt.Text = campo20;
+            txtCodLista.Text = campo14;
+            txtCodCondPag.Text = campo15;
+            if (campo16 == "N") boxIndustria.Text = "Não"; else boxIndustria.Text = "S";
+            txtObservacao.Text = campo17;
+            txtTrade.Text = campo18;
+            txtCodProd.Text = campo19;
+            txtLimite.Text = campo20;
+            if(campo21 == "N") chkAtivo.Checked = false; else chkAtivo.Checked = true;
+            if (campo22 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
+            txtCodUser.Text = campo23;
+            txtDataCad.Text = campo24;
+            txtDataAlt.Text = campo25;
             SalvarAlterar = 'A';
         }
 
@@ -151,13 +157,13 @@ namespace KnkForms.Forms
         {
             oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
             if (boxIndustria.Text == "Não")
-                oFornecedor.Industria = "N";
+                oFornecedor.Industria = 'N';
             else if (boxIndustria.Text == "Sim")
-                oFornecedor.Industria = "S";
+                oFornecedor.Industria = 'S';
             if (boxFisJur.Text == "Fisica")
-                oFornecedor.FisicaJuridica = false;
+                oFornecedor.FisicaJuridica = 'F';
             else if (boxFisJur.Text == "Juridica")
-                oFornecedor.FisicaJuridica = true;
+                oFornecedor.FisicaJuridica = 'J';
             oFornecedor.RazaoSocial = txtRazaoSocial.Text;
             oFornecedor.NomeFantasia = txtNomeFantasia.Text;
             oFornecedor.Endereco = txtEndereco.Text;
@@ -170,17 +176,20 @@ namespace KnkForms.Forms
             oFornecedor.CodListaPrecos = Convert.ToInt32(txtCodLista.Text);
             oFornecedor.CodCondPag = Convert.ToInt32(txtCodCondPag.Text);
             oFornecedor.Trade = txtTrade.Text;
-            oFornecedor.CodProdIgual = Convert.ToInt32(txtCodProd.Text);
+            oFornecedor.CodProdIgual = txtCodProd.Text;
             oFornecedor.LimiteCredito = Convert.ToDouble(txtLimite.Text);
             oFornecedor.InscricaoEstadual = txtInscEst.Text;
             oFornecedor.CNPJ = txtCnpj.Text;
             oFornecedor.UltimoMovimento = dataUltMov.Value;
-            if (oFornecedor.VerEmClientes == 'f')
-                chkVerCliente.Checked = false;
-            if (oFornecedor.VerEmClientes == 'c')
-                chkVerCliente.Checked = true;
+            if (chkVerCliente.Checked == false)
+                oFornecedor.VerEmClientes = 'F';
+            if (chkVerCliente.Checked == true)
+                oFornecedor.VerEmClientes = 'A';
             oFornecedor.Observacoes = txtObservacao.Text;
-            oFornecedor.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == false)
+                oFornecedor.Ativo = 'N';
+            if (chkAtivo.Checked == true)
+                oFornecedor.Ativo = 'S';
             oFornecedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFornecedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

@@ -88,7 +88,7 @@ namespace KnkForms.Forms
             aCidade.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCidade.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
-            aCidade.Ativo = chkAtivo.Checked;
+            if (aCidade.Ativo == 'S') { chkAtivo.Checked = true; } else { chkAtivo.Enabled = false; };
 
             if (SalvarAlterar == 'A')
             {

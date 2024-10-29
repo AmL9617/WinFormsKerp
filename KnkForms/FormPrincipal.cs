@@ -22,7 +22,6 @@ namespace KnkForms
         CondicaoPagamentos aCondPag;
         Contadores oContador;
         Contatos oContato;
-        Empresas aEmpresa;
         Estados oEstado;
         FormaPagamentos aFormaPag;
         Fornecedores oFornecedor;
@@ -49,7 +48,6 @@ namespace KnkForms
             aCondPag = new CondicaoPagamentos();
             oContador = new Contadores();
             oContato = new Contatos();
-            aEmpresa = new Empresas();
             oEstado = new Estados();
             aFormaPag = new FormaPagamentos();
             oFornecedor = new Fornecedores();
@@ -95,12 +93,6 @@ namespace KnkForms
         {
             aInter.PecaContatos(oContato);
         }
-        private void cadEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            aInter.PecaEmpresas(aEmpresa);
-        }
-
         private void cadEstadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

@@ -74,7 +74,7 @@ namespace KnkForms.Forms
         {
             oRegiao.Cod = Convert.ToInt32(txtCod.Text);
             oRegiao.Regiao = txtRegiao.Text;
-            oRegiao.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oRegiao.Ativo = 'S'; } else { oRegiao.Ativo = 'N'; };
             oRegiao.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRegiao.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

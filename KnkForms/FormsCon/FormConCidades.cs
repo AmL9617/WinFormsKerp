@@ -15,8 +15,8 @@ namespace KnkForms.FormsCon
     {
         FormCadCidade oFormCadCidade;
         Cidades aCidade;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
-        string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa, DataCadastro, DataModificacao FROM Cidades";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa, DataCadastro, DataModificacao FROM Cidade";
         public FormConCidades()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in Cidades: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Cidades: " + ex.Message);
                 }
             }
         }
@@ -151,7 +151,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Cidade: " + ex.Message);
                 }
             }
         }

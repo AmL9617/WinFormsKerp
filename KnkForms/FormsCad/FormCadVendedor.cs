@@ -44,7 +44,7 @@ namespace KnkForms.Classes
             txtVendedor.Text = oVendedor.Vendedor;
             txtTipo.Text = oVendedor.Tipo;
             txtComissao.Text = Convert.ToString(oVendedor.Comissao);
-            chkAtivo.Checked = oVendedor.Ativo;
+            if (oVendedor.Ativo == 'S') { chkAtivo.Checked = true; } else { chkAtivo.Checked = false; };
             dataComissao.Value = oVendedor.ComissaoPrazo;
             txtObservacao.Text = Convert.ToString(oVendedor.Observacao);
             txtCodUser.Text = Convert.ToString(oVendedor.CodEmpresa);
@@ -87,7 +87,7 @@ namespace KnkForms.Classes
             oVendedor.Tipo = txtTipo.Text;
             oVendedor.Comissao = Convert.ToDouble(txtComissao.Text);
             oVendedor.ComissaoPrazo = dataComissao.Value;
-            oVendedor.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oVendedor.Ativo = 'S'; } else { oVendedor.Ativo = 'N'; };
             oVendedor.Observacao = txtObservacao.Text;
             oVendedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oVendedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);

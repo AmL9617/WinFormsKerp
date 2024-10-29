@@ -99,7 +99,7 @@ namespace KnkForms.Classes
             oEstado.Estado = txtEstado.Text;
             oEstado.Sigla = Convert.ToString(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
-            oEstado.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oEstado.Ativo = 'S'; } else { oEstado.Ativo = 'N'; };
             oEstado.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

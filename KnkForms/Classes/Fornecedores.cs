@@ -11,9 +11,9 @@ namespace KnkForms.Classes
 {
     internal class Fornecedores : Pai
     {
-        protected string industria;
-        protected bool fisicaJuridica;
-        protected bool ativo;
+        protected char industria;
+        protected char fisicaJuridica;
+        protected char ativo;
         protected string razaoSocial;
         protected string nomeFantasia;
         protected string endereco;
@@ -24,7 +24,7 @@ namespace KnkForms.Classes
         protected string cnpj;
         protected string inscricaoEstadual;
         protected string trade;
-        protected int codProdIgual;
+        protected string codProdIgual;
         protected double limiteCredito;
         protected string observacoes;
         protected char verEmClientes;
@@ -41,12 +41,12 @@ namespace KnkForms.Classes
         protected ListaPrecos listaPrecos;
         protected CondicaoPagamentos condicaoPagamentos;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Fornecedores()
         {
-            industria = "";
-            fisicaJuridica = false;
-            ativo = false;
+            industria = '\0';
+            fisicaJuridica = '\0';
+            ativo = '\0';
             razaoSocial = "";
             nomeFantasia = "";
             endereco = "";
@@ -57,7 +57,7 @@ namespace KnkForms.Classes
             cnpj = "";
             inscricaoEstadual = "";
             trade = "";
-            codProdIgual = 0;
+            codProdIgual = "";
             limiteCredito = 0.0f;
             observacoes = "";
             verEmClientes = '\0';
@@ -73,19 +73,19 @@ namespace KnkForms.Classes
             condicaoPagamentos = new CondicaoPagamentos();
         }
 
-        public string Industria
+        public char Industria
         {
             get { return industria; }
             set { industria = value; }
         }
 
-        public bool FisicaJuridica
+        public char FisicaJuridica
         {
             get { return fisicaJuridica; }
             set { fisicaJuridica = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -151,7 +151,7 @@ namespace KnkForms.Classes
             set { trade = value; }
         }
 
-        public int CodProdIgual
+        public string CodProdIgual
         {
             get { return codProdIgual; }
             set { codProdIgual = value; }
@@ -231,7 +231,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO FornClientes (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdLista, IdListaEmp, IdCondPag, IdCondPagEmp, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdLista, @IdListaEmp, @IdCondPag, @IdCondPagEmp, @IdCidadeEmp)";
+                    string query = "INSERT INTO FornCliente (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdLista, IdListaEmp, IdCondPag, IdCondPagEmp, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Trade, @CodProdIgual, @LimiteCredito, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdLista, @IdListaEmp, @IdCondPag, @IdCondPagEmp, @IdCidadeEmp)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -250,6 +250,9 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Cep", Cep);
                         command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
                         command.Parameters.AddWithValue("@Observacao", Observacoes);
+                        command.Parameters.AddWithValue("@Trade", Trade);
+                        command.Parameters.AddWithValue("@CodProdIgual", CodProdIgual);
+                        command.Parameters.AddWithValue("@LimiteCredito", LimiteCredito);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
                         command.Parameters.AddWithValue("@IdLista", CodListaPrecos);
@@ -277,7 +280,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE FornClientes SET IdEmpresa=@IdEmpresa, RazaoSocial=@RazaoSocial, NomeFantasia=@NomeFantasia, InscricaoEstadual=@InscricaoEstadual, CpfCnpj=@CpfCnpj, Tipo=@Tipo, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro, Cep=@Cep, ConsumidorRevenda=@ConsumidorRevenda, Observacao=@Observacao, Ativo=@Ativo, FisicaJuridica=@FisicaJuridica, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdFornCliente = @IdFornCliente";
+                    string query = "UPDATE FornCliente SET IdEmpresa=@IdEmpresa, RazaoSocial=@RazaoSocial, NomeFantasia=@NomeFantasia, InscricaoEstadual=@InscricaoEstadual, CpfCnpj=@CpfCnpj, Tipo=@Tipo, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro, Cep=@Cep, ConsumidorRevenda=@ConsumidorRevenda, Observacao=@Observacao, Trade=@Trade, CodProdIgual=@CodProdIgual, LimiteCredito=@LimiteCredito, Ativo=@Ativo, FisicaJuridica=@FisicaJuridica, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdFornCliente = @IdFornCliente";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -295,6 +298,9 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Cep", Cep);
                         command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
                         command.Parameters.AddWithValue("@Observacao", Observacoes);
+                        command.Parameters.AddWithValue("@Trade", Trade);
+                        command.Parameters.AddWithValue("@CodProdIgual", CodProdIgual);
+                        command.Parameters.AddWithValue("@LimiteCredito", LimiteCredito);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
                         command.Parameters.AddWithValue("@IdLista", CodListaPrecos);

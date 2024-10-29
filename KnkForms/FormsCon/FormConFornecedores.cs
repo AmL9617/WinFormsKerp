@@ -15,8 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadFornecedor oFormCadFornecedor;
         Fornecedores oFornecedor;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
-        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Ativo, FisicaJuridica, IdCidadeEmp, IdEmpresa, DataCadastro, DataModificacao FROM FornClientes";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, IdLista, IdCondPag, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
         public FormConFornecedores()
         {
             InitializeComponent();
@@ -62,8 +62,13 @@ namespace KnkForms.Classes
                                 item.SubItems.Add(reader["Complemento"].ToString());
                                 item.SubItems.Add(reader["Bairro"].ToString());
                                 item.SubItems.Add(reader["Cep"].ToString());
+                                item.SubItems.Add(reader["IdLista"].ToString());
+                                item.SubItems.Add(reader["IdCondPag"].ToString());
                                 item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
                                 item.SubItems.Add(reader["Observacao"].ToString());
+                                item.SubItems.Add(reader["Trade"].ToString());
+                                item.SubItems.Add(reader["CodProdIgual"].ToString());
+                                item.SubItems.Add(reader["LimiteCredito"].ToString());
                                 item.SubItems.Add(reader["Ativo"].ToString());
                                 item.SubItems.Add(reader["FisicaJuridica"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
@@ -77,7 +82,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Fornecedores: " + ex.Message);
                 }
             }
         }
@@ -116,10 +121,15 @@ namespace KnkForms.Classes
                 string campo18 = selectedItem.SubItems[17].Text;
                 string campo19 = selectedItem.SubItems[18].Text;
                 string campo20 = selectedItem.SubItems[19].Text;
+                string campo21 = selectedItem.SubItems[20].Text;
+                string campo22 = selectedItem.SubItems[21].Text;
+                string campo23 = selectedItem.SubItems[22].Text;
+                string campo24 = selectedItem.SubItems[23].Text;
+                string campo25 = selectedItem.SubItems[24].Text;
 
                 oFormCadFornecedor.ConhecaObj(oFornecedor);
                 oFormCadFornecedor.LimpaTxt();
-                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19, campo20);
+                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19, campo20, campo21, campo22, campo23, campo24, campo25);
                 oFormCadFornecedor.ShowDialog();
             }
             CarregaLV();
@@ -168,8 +178,13 @@ namespace KnkForms.Classes
                                     item.SubItems.Add(reader["Complemento"].ToString());
                                     item.SubItems.Add(reader["Bairro"].ToString());
                                     item.SubItems.Add(reader["Cep"].ToString());
+                                    item.SubItems.Add(reader["IdLista"].ToString());
+                                    item.SubItems.Add(reader["IdCondPag"].ToString());
                                     item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
                                     item.SubItems.Add(reader["Observacao"].ToString());
+                                    item.SubItems.Add(reader["Trade"].ToString());
+                                    item.SubItems.Add(reader["CodProdIgual"].ToString());
+                                    item.SubItems.Add(reader["LimiteCredito"].ToString());
                                     item.SubItems.Add(reader["Ativo"].ToString());
                                     item.SubItems.Add(reader["FisicaJuridica"].ToString());
                                     item.SubItems.Add(reader["IdEmpresa"].ToString());
@@ -188,7 +203,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Fornecedores: " + ex.Message);
                 }
             }
         }

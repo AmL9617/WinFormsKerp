@@ -37,7 +37,7 @@ namespace KnkForms.FormsCad
             txtCod.Text = Convert.ToString(aListaCodST.Cod);
             txtTipo.Text = aListaCodST.Tipo;
             txtDescricao.Text = aListaCodST.Descricao;
-            chkAtivo.Checked = aListaCodST.Ativo;
+            if (chkAtivo.Checked == true) { aListaCodST.Ativo = 'S'; } else { aListaCodST.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(aListaCodST.CodEmpresa);
             txtDataCad.Text = Convert.ToString(aListaCodST.DataCadastro);
             txtDataAlt.Text = Convert.ToString(aListaCodST.DataModificacao);
@@ -70,7 +70,7 @@ namespace KnkForms.FormsCad
             aListaCodST.Cod = Convert.ToInt32(txtCod.Text);
             aListaCodST.Tipo = txtTipo.Text;
             aListaCodST.Descricao = txtDescricao.Text;
-            aListaCodST.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { aListaCodST.Ativo = 'S'; } else { aListaCodST.Ativo = 'N'; };
             aListaCodST.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aListaCodST.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

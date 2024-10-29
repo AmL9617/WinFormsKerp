@@ -15,17 +15,17 @@ namespace KnkForms.Classes
         protected string tipoPais;
         protected string sigla;
         protected int ddi;
-        protected bool ativo;
+        protected char ativo;
         protected char nacional;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Paises()
         {
             pais = "";
             tipoPais = "";
             sigla = ""; 
             ddi = 0;
-            ativo = false;
+            ativo = '\0';
             nacional = '\0';
         }
 
@@ -53,7 +53,7 @@ namespace KnkForms.Classes
             set { ddi = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -71,7 +71,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Paises (IdEmpresa, Pais, Sigla, Ddi, Nacional, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Pais, @Sigla, @Ddi, @Nacional, @DataCadastro, @DataModificacao)";
+                    string query = "INSERT INTO Pais (IdEmpresa, Pais, Sigla, Ddi, Nacional, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Pais, @Sigla, @Ddi, @Nacional, @Ativo, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -80,6 +80,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Sigla", Sigla);
                         command.Parameters.AddWithValue("@Ddi", DDI);
                         command.Parameters.AddWithValue("@Nacional", Nacional);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
@@ -100,7 +101,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Paises SET IdEmpresa=@IdEmpresa, Pais=@Pais, Sigla=@Sigla, Ddi=@Ddi, Nacional=@Nacional, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdPais = @IdPais";
+                    string query = "UPDATE Pais SET IdEmpresa=@IdEmpresa, Pais=@Pais, Sigla=@Sigla, Ddi=@Ddi, Nacional=@Nacional, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdPais = @IdPais";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -108,6 +109,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Sigla", Sigla);
                         command.Parameters.AddWithValue("@Ddi", DDI);
                         command.Parameters.AddWithValue("@Nacional", Nacional);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
                         command.Parameters.AddWithValue("@IdPais", CodPaises);

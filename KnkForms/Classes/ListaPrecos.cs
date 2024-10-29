@@ -15,7 +15,7 @@ namespace KnkForms.Classes
         protected double descontoMaximo;
         protected double margemLucro;
         protected double percCom;
-        protected bool todas;
+        protected char todas;
 
         //Placeholder
         protected int codMarca;
@@ -25,14 +25,14 @@ namespace KnkForms.Classes
         protected Marcas marcas;
         protected Subgrupos subgrupos;
         
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public ListaPrecos()
         {
             lista = "";
             descontoMaximo = 0.0f;
             margemLucro = 0.0f;
             percCom = 0.0f;
-            todas = false;
+            todas = '\0';
             marcas = new Marcas();
             subgrupos = new Subgrupos();
             codMarca = 0;
@@ -63,7 +63,7 @@ namespace KnkForms.Classes
             set { percCom = value; }
         }
 
-        public bool Todas
+        public char Todas
         {
             get { return todas; }
             set { todas = value; }
@@ -99,7 +99,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Listas (IdEmpresa, Lista, DescMax, MargemLucro, PerComissao, DataModificacao) VALUES (@IdEmpresa, @Lista, @DescMax, @MargemLucro, @PerComissao, @DataModificacao)";
+                    string query = "INSERT INTO Lista (IdEmpresa, Lista, DescMax, MargemLucro, PerComissao, Todas, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Lista, @DescMax, @MargemLucro, @PerComissao, @Todas, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -108,6 +108,8 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
                         command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
                         command.Parameters.AddWithValue("@PerComissao", PercCom);
+                        command.Parameters.AddWithValue("@Todas", Todas);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
@@ -128,7 +130,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Listas SET IdEmpresa=@IdEmpresa, Lista=@Lista, DescMax=@DescMax, MargemLucro=@MargemLucro, PerComissao=@PerComissao, DataModificacao=@DataModificacao WHERE IdLista = @IdLista";
+                    string query = "UPDATE Lista SET IdEmpresa=@IdEmpresa, Lista=@Lista, DescMax=@DescMax, MargemLucro=@MargemLucro, PerComissao=@PerComissao, Todas=@Todas, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdLista = @IdLista";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -136,6 +138,8 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
                         command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
                         command.Parameters.AddWithValue("@PerComissao", PercCom);
+                        command.Parameters.AddWithValue("@Todas", Todas);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro.ToString());
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
                         command.Parameters.AddWithValue("@IdLista", CodLista);
 

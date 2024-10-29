@@ -41,7 +41,7 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9)
         {
             txtCod.Text = campo1;
             txtCod.Enabled = false;
@@ -49,9 +49,10 @@ namespace KnkForms.Forms
             txtSigla.Text = campo3;
             txtDdi.Text = campo4;
             boxNacional.Text = campo5;
-            txtCodUser.Text = campo6;
-            txtDataCad.Text = campo7;
-            txtDataAlt.Text = campo8;
+            if (campo6 == "true") chkAtivo.Enabled = true; else { chkAtivo.Enabled = false; }
+            txtCodUser.Text = campo7;
+            txtDataCad.Text = campo8;
+            txtDataAlt.Text = campo9;
             SalvarAlterar = 'A';
             
         }
@@ -97,7 +98,7 @@ namespace KnkForms.Forms
             oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
-            oPais.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oPais.Ativo = 'S'; } else { oPais.Ativo = 'N'; };
 
             if (SalvarAlterar == 'A')
                 oPais.AlterarBD(oPais.Cod);

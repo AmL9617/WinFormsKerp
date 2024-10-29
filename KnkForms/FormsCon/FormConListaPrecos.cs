@@ -16,8 +16,8 @@ namespace KnkForms.FormsCon
         FormCadListaPreco oFormCadListaPreco;
         ListaPrecos aListaPreco;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
-        string query = "SELECT IdLista, Lista, DescMax, MargemLucro, PerComissao, IdEmpresa, DataModificacao FROM Listas";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdLista, Lista, DescMax, MargemLucro, PerComissao, Todas, IdEmpresa, DataCadastro, DataModificacao FROM Lista";
 
         public FormConListaPrecos()
         {
@@ -55,7 +55,9 @@ namespace KnkForms.FormsCon
                                 item.SubItems.Add(reader["DescMax"].ToString());
                                 item.SubItems.Add(reader["MargemLucro"].ToString());
                                 item.SubItems.Add(reader["PerComissao"].ToString());
+                                item.SubItems.Add(reader["Todas"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString());
                                 item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
@@ -65,7 +67,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in ListaPreço: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de ListaPreço: " + ex.Message);
                 }
             }
         }
@@ -89,10 +91,13 @@ namespace KnkForms.FormsCon
                 string campo4 = selectedItem.SubItems[3].Text;
                 string campo5 = selectedItem.SubItems[4].Text;
                 string campo6 = selectedItem.SubItems[5].Text;
-                
+                string campo7 = selectedItem.SubItems[6].Text;  
+                string campo8 = selectedItem.SubItems[7].Text;
+                string campo9 = selectedItem.SubItems[8].Text;
+
                 oFormCadListaPreco.ConhecaObj(aListaPreco);
                 oFormCadListaPreco.LimpaTxt();
-                oFormCadListaPreco.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6);
+                oFormCadListaPreco.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9);
                 oFormCadListaPreco.ShowDialog();
             }
             CarregaLV();
@@ -150,7 +155,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in ListaPreços: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de ListaPreços: " + ex.Message);
                 }
             }
         }

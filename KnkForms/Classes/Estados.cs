@@ -14,7 +14,7 @@ namespace KnkForms.Classes
     {
         protected string estado;
         protected string sigla;
-        protected bool ativo;
+        protected char ativo;
         protected double percIcms;
         protected int icms;
         protected double percRedST; //Percentual de Redução da Substituição Tributária 
@@ -26,13 +26,13 @@ namespace KnkForms.Classes
         //Agregação
         protected Paises oPais;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
         public Estados():base()
         {
             estado = "";
             sigla = ""; 
-            ativo = false;
+            ativo = '\0';
             codPais = 0;
             percIcms = 0;
             icms = 0;
@@ -41,7 +41,7 @@ namespace KnkForms.Classes
             oPais = new Paises();
         }
 
-        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, string sigla, bool Ativo, int codPais, double percIcms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
+        public Estados(int cod, int codEmpresa, DateTime dataCadastro, DateTime dataModificacao, string estado, string sigla, char Ativo, int codPais, double percIcms, int icms, double percRedST, int codWeb, Paises oPais) : base(cod, codEmpresa, dataCadastro, dataModificacao)
         {
             estado = Estado;
             sigla = sigla;
@@ -66,7 +66,7 @@ namespace KnkForms.Classes
             set { sigla = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -110,7 +110,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Estados (IdEmpresa, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Estado, @Sigla, @PercIcms, @IcmsInt, @PerRedSt, @CodigoWeb, @DataCadastro, @DataModificacao)";
+                    string query = "INSERT INTO Estado (IdEmpresa, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdPais, @Estado, @Sigla, @PercIcms, @IcmsInt, @PerRedSt, @CodigoWeb, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -143,7 +143,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Estados SET IdEmpresa=@IdEmpresa, IdPais=@IdPais, Estado=@Estado, Sigla=@Sigla, PercIcms=@PercIcms, IcmsInt=@IcmsInt, PerRedSt=@PerRedSt, CodigoWeb=@CodigoWeb, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdEstado = @IdEstado";
+                    string query = "UPDATE Estado SET IdEmpresa=@IdEmpresa, IdPais=@IdPais, Estado=@Estado, Sigla=@Sigla, PercIcms=@PercIcms, IcmsInt=@IcmsInt, PerRedSt=@PerRedSt, CodigoWeb=@CodigoWeb, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdEstado = @IdEstado";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);

@@ -39,7 +39,7 @@ namespace KnkForms.FormsCad
             txtCod.Text = Convert.ToString(oSubgrupo.Cod);
             txtGrupo.Text = Convert.ToString(oSubgrupo.Grupos.Cod);
             txtSubgrupo.Text = oSubgrupo.Subgrupo;
-            chkAtivo.Checked = oSubgrupo.Ativo;
+            if (chkAtivo.Checked == true) { oSubgrupo.Ativo = 'S'; } else { oSubgrupo.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(oSubgrupo.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oSubgrupo.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oSubgrupo.DataModificacao);
@@ -72,7 +72,7 @@ namespace KnkForms.FormsCad
             oSubgrupo.Cod = Convert.ToInt32(txtCod.Text);
             oSubgrupo.Grupos.Cod = Convert.ToInt32(txtGrupo.Text);
             oSubgrupo.Subgrupo = txtSubgrupo.Text;
-            oSubgrupo.Ativo = chkAtivo.Checked; 
+            if (chkAtivo.Checked == true) { oSubgrupo.Ativo = 'S'; } else { oSubgrupo.Ativo = 'N'; };
             oSubgrupo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oSubgrupo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oSubgrupo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

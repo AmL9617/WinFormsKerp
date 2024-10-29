@@ -14,20 +14,20 @@ namespace KnkForms.Classes
     {
         protected string cidade;
         protected int ddd;
-        protected bool ativo;
+        protected char ativo;
 
         //Placeholder
         protected int codEstado;
         //Agregação
         protected Estados estado;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
        
         public Cidades()
         {
             cidade = "";
             ddd = 0;
-            ativo = false;
+            ativo = '\0';
             estado = new Estados();
             codEstado = 0; 
         }
@@ -44,7 +44,7 @@ namespace KnkForms.Classes
             set { ddd = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -68,7 +68,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Cidades (IdEmpresa, IdEstado, Cidade, Ddd, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdEstado, @Cidade, @Ddd, @Ativo, @DataCadastro, @DataModificacao)";
+                    string query = "INSERT INTO Cidade (IdEmpresa, IdEstado, Cidade, Ddd, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdEstado, @Cidade, @Ddd, @Ativo, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -98,7 +98,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE Cidades SET IdEmpresa=@IdEmpresa, IdEstado=@IdEstado, Cidade=@Cidade, Ddd=@Ddd, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCidade = @IdCidade";
+                    string query = "UPDATE Cidade SET IdEmpresa=@IdEmpresa, IdEstado=@IdEstado, Cidade=@Cidade, Ddd=@Ddd, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCidade = @IdCidade";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);

@@ -32,7 +32,7 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(aMarca.Cod);
             txtMarca.Text = aMarca.Marca;
-            chkAtivo.Checked = aMarca.Ativo;
+            if (chkAtivo.Checked == true) { aMarca.Ativo = 'S'; } else { aMarca.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(aMarca.CodEmpresa);
             txtDataCad.Text = Convert.ToString(aMarca.DataCadastro);
             txtDataAlt.Text = Convert.ToString(aMarca.DataModificacao);
@@ -62,7 +62,7 @@ namespace KnkForms.Forms
         {
             aMarca.Cod = Convert.ToInt32(txtCod.Text);
             aMarca.Marca = txtMarca.Text;
-            aMarca.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { aMarca.Ativo = 'S'; } else { aMarca.Ativo = 'N'; };
             aMarca.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aMarca.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aMarca.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

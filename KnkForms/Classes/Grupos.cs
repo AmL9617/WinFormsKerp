@@ -9,12 +9,12 @@ namespace KnkForms.Classes
     internal class Grupos : Pai
     {
         protected string grupo;
-        protected bool ativo;
+        protected char ativo;
 
         public Grupos()
         {
             grupo = "";
-            ativo = false;
+            ativo = '\0';
         }
 
         public string Grupo
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
             set { grupo = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

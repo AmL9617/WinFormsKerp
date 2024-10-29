@@ -9,13 +9,13 @@ namespace KnkForms.Classes
     internal class Subgrupos:Grupos
     {
         protected string subgrupo;
-        protected bool ativo;
+        protected char ativo;
         protected Grupos grupos;
 
         public Subgrupos()
         {
             grupo = "";
-            ativo = false;
+            ativo = '\0';
             grupos = new Grupos();
         }
 
@@ -25,7 +25,7 @@ namespace KnkForms.Classes
             set { subgrupo = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

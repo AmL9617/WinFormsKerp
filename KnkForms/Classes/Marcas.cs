@@ -9,12 +9,12 @@ namespace KnkForms.Classes
     internal class Marcas : Pai
     {
         protected string marca;
-        protected bool ativo;
+        protected char ativo;
 
         public Marcas()
         {
             marca = "";
-            ativo = false;
+            ativo = '\0';
         }
 
         public string Marca
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
             set { marca = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

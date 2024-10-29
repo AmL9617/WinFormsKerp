@@ -48,6 +48,11 @@
             this.dataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataModif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codEmpresa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.trade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codProdIgual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.limiteCredito = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codCondPag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -66,8 +71,13 @@
             this.complemento,
             this.bairro,
             this.cep,
+            this.codLista,
+            this.codCondPag,
             this.consRev,
             this.observacao,
+            this.trade,
+            this.codProdIgual,
+            this.limiteCredito,
             this.ativo,
             this.fisicaJuridica,
             this.codEmpresa,
@@ -169,6 +179,30 @@
             this.codEmpresa.Text = "Código Empresa";
             this.codEmpresa.Width = 100;
             // 
+            // trade
+            // 
+            this.trade.Text = "Trade";
+            // 
+            // codProdIgual
+            // 
+            this.codProdIgual.Text = "Cod. Prod. Igual";
+            this.codProdIgual.Width = 100;
+            // 
+            // limiteCredito
+            // 
+            this.limiteCredito.Text = "Limite do Crédito";
+            this.limiteCredito.Width = 100;
+            // 
+            // codLista
+            // 
+            this.codLista.Text = "Código Lista";
+            this.codLista.Width = 100;
+            // 
+            // codCondPag
+            // 
+            this.codCondPag.Text = "Código Cond. Pag.";
+            this.codCondPag.Width = 100;
+            // 
             // FormConFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,5 +236,10 @@
         private System.Windows.Forms.ColumnHeader dataCad;
         private System.Windows.Forms.ColumnHeader dataModif;
         private System.Windows.Forms.ColumnHeader codEmpresa;
+        private System.Windows.Forms.ColumnHeader trade;
+        private System.Windows.Forms.ColumnHeader codProdIgual;
+        private System.Windows.Forms.ColumnHeader limiteCredito;
+        private System.Windows.Forms.ColumnHeader codLista;
+        private System.Windows.Forms.ColumnHeader codCondPag;
     }
 }

@@ -17,7 +17,7 @@ namespace KnkForms.FormsCon
     {
         FormCadContato oFormCadContato;
         Contatos oContato;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdContato, IdFornCliente, Tipo, Contato, Observacao, IdEmpresa FROM Contatos";
 
         public FormConContatos()
@@ -69,7 +69,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in Estados: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Contatos: " + ex.Message);
                 }
             }
         }
@@ -153,7 +153,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Contatos: " + ex.Message);
                 }
             }
         }

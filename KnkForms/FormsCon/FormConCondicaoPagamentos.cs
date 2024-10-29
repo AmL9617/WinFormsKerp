@@ -15,8 +15,8 @@ namespace KnkForms.Classes
         FormCadCondicaoPagamento oFormCadCondicaoPagamento;
         CondicaoPagamentos aCondicaoPagamento;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
-        string query = "SELECT IdCondicaoPagamento, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, IdEmpresa, DataCadastro, DataAlteracao FROM CondPagamentos";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdCondicaoPagamento, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, IdEmpresa, DataCadastro, DataModificacao FROM CondicaoPagamento";
 
         public FormConCondicaoPagamentos()
         {
@@ -61,7 +61,7 @@ namespace KnkForms.Classes
                                 item.SubItems.Add(reader["PorParcela"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
                                 item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataAlteracao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
@@ -70,7 +70,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in CondPag: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de CondicaoPagamento: " + ex.Message);
                 }
             }
         }
@@ -151,7 +151,7 @@ namespace KnkForms.Classes
                                     item.SubItems.Add(reader["PorParcela"].ToString());
                                     item.SubItems.Add(reader["IdEmpresa"].ToString());
                                     item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataAlteracao"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
                                     listVConsulta.Items.Add(item);
                                 }
@@ -165,7 +165,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de CondicaoPagamento: " + ex.Message);
                 }
             }
         }

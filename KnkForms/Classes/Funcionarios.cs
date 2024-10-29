@@ -12,7 +12,7 @@ namespace KnkForms.Classes
     internal class Funcionarios : Pai
     {
         protected string funcionario;
-        protected bool ativo;
+        protected char ativo;
         protected string endereco;
         protected int numero;
         protected string complemento;
@@ -35,7 +35,7 @@ namespace KnkForms.Classes
         public Funcionarios()
         {
             funcionario = "";
-            ativo = false;
+            ativo = '\0';
             endereco = "";
             numero = 0;
             complemento = "";
@@ -63,7 +63,7 @@ namespace KnkForms.Classes
             set { funcionario = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }

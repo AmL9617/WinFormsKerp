@@ -13,7 +13,6 @@ namespace KnkForms.Forms
     public partial class FormCadCondicaoPagamento : KnkForms.FormCadPai
     {
         CondicaoPagamentos aCondPag;
-        FormConParcelas oFrmConParcela;
         char SalvarAlterar = '\0';
         public FormCadCondicaoPagamento()
         {
@@ -33,7 +32,7 @@ namespace KnkForms.Forms
             txtOpDisp.Clear();
             txtNumParc.Clear();
             txtDia.Clear();
-            txtCodParcela.Clear();
+            txtPorParcela.Clear();
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -49,8 +48,8 @@ namespace KnkForms.Forms
             txtTipo.Text = campo5;
             txtDia.Text = campo6;
             txtOpDisp.Text = campo7;
-            if (campo8 == "0") chkAtivo.Enabled = false; else chkAtivo.Enabled = true;
-            txtCodParcela.Text = campo9;
+            if (campo8 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
+            txtPorParcela.Text = campo9;
             txtCodUser.Text = campo10;
             txtDataCad.Text = campo11;
             txtDataAlt.Text = campo12;
@@ -65,7 +64,7 @@ namespace KnkForms.Forms
             txtTaxaJuro.Enabled = false;
             txtOpDisp.Enabled = false;
             txtNumParc.Enabled = false;
-            txtCodParcela.Enabled = false;
+            txtPorParcela.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -81,7 +80,7 @@ namespace KnkForms.Forms
             txtTaxaJuro.Enabled = true;
             txtOpDisp.Enabled = true;
             txtNumParc.Enabled = true;
-            txtCodParcela.Enabled = true;
+            txtPorParcela.Enabled = true;
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
@@ -97,9 +96,9 @@ namespace KnkForms.Forms
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
             aCondPag.OperacaoDisponivel = txtOpDisp.Text;
             aCondPag.NumeroParcelas = Convert.ToInt32(txtNumParc.Text);
-            aCondPag.CodParcela = Convert.ToInt32(txtCodParcela.Text);
+            aCondPag.PorParcela = Convert.ToInt32(txtPorParcela.Text);
             aCondPag.Dia = txtDia.Text;
-            aCondPag.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { aCondPag.Ativo = 'S'; } else { aCondPag.Ativo = 'N'; };
             aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aCondPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
@@ -111,15 +110,6 @@ namespace KnkForms.Forms
             SalvarAlterar = '\0';
             txtCod.Enabled = true;
             Close();
-        }
-        public void setFrmConParcelas(Object obj)
-        {
-            oFrmConParcela = (FormConParcelas)obj;
-        }
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-            oFrmConParcela.ConhecaObj(aCondPag.Parcelas);
-            oFrmConParcela.ShowDialog();
         }
     }
 }

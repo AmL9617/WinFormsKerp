@@ -12,32 +12,26 @@ namespace KnkForms.Classes
     internal class CondicaoPagamentos : Pai
     {
         protected string condPag;
-        protected bool ativo;
+        protected char ativo;
         protected string tipo;
         protected double taxaJuro;
         protected string operacaoDisponivel;
         protected int numeroParcelas;
         protected string dia;
+        protected double porParcela;
 
-        //Placeholder
-        protected int codParcela;
-
-        //Agregação
-        protected Parcelas parcelas;
-
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
         public CondicaoPagamentos()
         {
             condPag = "";
-            ativo = false;
+            ativo = '\0';
             tipo = "";
             taxaJuro = 0.0f;
             operacaoDisponivel = "";
             numeroParcelas = 0;
             dia = "";
-            parcelas = new Parcelas();
-            codParcela = 0;
+            porParcela = 0;
         }
 
         public string CondPag
@@ -46,7 +40,7 @@ namespace KnkForms.Classes
             set { condPag = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -80,15 +74,10 @@ namespace KnkForms.Classes
             get { return dia; }
             set { dia = value; }
         }
-        public int CodParcela
+        public double PorParcela
         {
-            get { return codParcela; }
-            set { codParcela = value; }
-        }
-        public Parcelas Parcelas
-        {
-            get { return parcelas; }
-            set { parcelas = value; }
+            get { return porParcela; }
+            set { porParcela = value; }
         }
         public void SalvarBD()
         {
@@ -97,7 +86,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO CondPagamentos (IdEmpresa, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, DataCadastro, DataAlteracao) VALUES (@IdEmpresa, @CondicaoPagamento, @TaxaJuros, @NumeroParcelas, @Tipo, @Dia, @Operacao, @Ativo, @PorParcela, @DataCadastro, @DataAlteracao)";
+                    string query = "INSERT INTO CondicaoPagamento (IdEmpresa, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @CondicaoPagamento, @TaxaJuros, @NumeroParcelas, @Tipo, @Dia, @Operacao, @Ativo, @PorParcela, @DataCadastro, @DataModificacao)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
@@ -109,9 +98,9 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Dia", Dia);
                         command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@PorParcela", CodParcela);
+                        command.Parameters.AddWithValue("@PorParcela", PorParcela);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataAlteracao", DataModificacao);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
@@ -131,7 +120,7 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE CondPagamentos SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataAlteracao=@DataAlteracao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
+                    string query = "UPDATE CondicaoPagamento SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -142,9 +131,9 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@Dia", Dia);
                         command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@PorParcela", CodParcela);
+                        command.Parameters.AddWithValue("@PorParcela", PorParcela);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataAlteracao", DataModificacao);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
                         command.Parameters.AddWithValue("@IdCondicaoPagamento", CodCondPag);
 
                         command.ExecuteNonQuery();

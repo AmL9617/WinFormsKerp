@@ -61,7 +61,7 @@ namespace KnkForms.Forms
             txtFuncionario.Text = oFuncionario.Funcionario;
             txtEndereco.Text = oFuncionario.Endereco;
             txtNumero.Text = Convert.ToString(oFuncionario.Numero);
-            chkAtivo.Checked = oFuncionario.Ativo;
+            if (chkAtivo.Checked == true) { oFuncionario.Ativo = 'S'; } else { oFuncionario.Ativo = 'N'; };
             txtComplemento.Text = oFuncionario.Complemento;
             txtBairro.Text = oFuncionario.Bairro;
             txtCep.Text = oFuncionario.Cep;
@@ -142,7 +142,7 @@ namespace KnkForms.Forms
             oFuncionario.Funcionario = txtFuncionario.Text;
             oFuncionario.Endereco = txtEndereco.Text;
             oFuncionario.Numero = Convert.ToInt32(txtNumero.Text);
-            oFuncionario.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oFuncionario.Ativo = 'S'; } else { oFuncionario.Ativo = 'N'; };
             oFuncionario.Complemento = txtComplemento.Text;
             oFuncionario.Bairro = txtBairro.Text;
             oFuncionario.Cep = txtCep.Text;

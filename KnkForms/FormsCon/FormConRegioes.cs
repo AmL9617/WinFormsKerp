@@ -15,8 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadRegiao oFormCadRegiao;
         Regioes aRegiao;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\Database1.mdf;Integrated Security=True";
-        string query = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao FROM Regioes";
+        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string query = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao FROM Regiao";
         public FormConRegioes()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data in Regioes: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Regioes: " + ex.Message);
                 }
             }
         }
@@ -150,7 +150,7 @@ namespace KnkForms.Classes
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading data: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Regiões: " + ex.Message);
                 }
             }
         }

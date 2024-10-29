@@ -40,7 +40,7 @@ namespace KnkForms.Forms
             txtDataAlt.Clear();
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9)
         {
             txtCod.Text = campo1;
             txtCod.Enabled = false;
@@ -48,7 +48,10 @@ namespace KnkForms.Forms
             txtDescMax.Text = campo3;
             txtMargemLucro.Text = campo4;
             txtPercCom.Text = campo5;
-            txtCodUser.Text = campo6;
+            if(campo6 == "true") chkTodas.Checked = true; else { chkTodas.Checked = false; }
+            txtCodUser.Text = campo7;
+            txtDataCad.Text = campo8;
+            txtDataAlt.Text = campo9;
             SalvarAlterar = 'A';
 
         }

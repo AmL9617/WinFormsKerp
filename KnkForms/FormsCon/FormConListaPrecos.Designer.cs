@@ -34,6 +34,9 @@
             this.margemLucro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.perComissão = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.todas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataModif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -44,7 +47,10 @@
             this.descMax,
             this.margemLucro,
             this.perComissão,
-            this.codEmp});
+            this.todas,
+            this.codEmp,
+            this.dataCad,
+            this.dataModif});
             // 
             // codLista
             // 
@@ -76,6 +82,20 @@
             this.codEmp.Text = "Código Empresa";
             this.codEmp.Width = 100;
             // 
+            // todas
+            // 
+            this.todas.Text = "Todas";
+            // 
+            // dataCad
+            // 
+            this.dataCad.Text = "Data Cadastro";
+            this.dataCad.Width = 100;
+            // 
+            // dataModif
+            // 
+            this.dataModif.Text = "Data Modificação";
+            this.dataModif.Width = 100;
+            // 
             // FormConListaPrecos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,5 +115,8 @@
         private System.Windows.Forms.ColumnHeader margemLucro;
         private System.Windows.Forms.ColumnHeader perComissão;
         private System.Windows.Forms.ColumnHeader codEmp;
+        private System.Windows.Forms.ColumnHeader todas;
+        private System.Windows.Forms.ColumnHeader dataCad;
+        private System.Windows.Forms.ColumnHeader dataModif;
     }
 }

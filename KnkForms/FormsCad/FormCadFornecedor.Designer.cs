@@ -184,7 +184,7 @@
             // txtLimite
             // 
             this.txtLimite.Location = new System.Drawing.Point(33, 255);
-            this.txtLimite.MaxLength = 8;
+            this.txtLimite.MaxLength = 9;
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(67, 20);
             this.txtLimite.TabIndex = 14;
@@ -201,8 +201,9 @@
             // txtTrade
             // 
             this.txtTrade.Location = new System.Drawing.Point(129, 254);
+            this.txtTrade.MaxLength = 1;
             this.txtTrade.Name = "txtTrade";
-            this.txtTrade.Size = new System.Drawing.Size(100, 20);
+            this.txtTrade.Size = new System.Drawing.Size(45, 20);
             this.txtTrade.TabIndex = 12;
             // 
             // label3
@@ -217,7 +218,7 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(308, 203);
-            this.txtCep.MaxLength = 18;
+            this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(86, 20);
             this.txtCep.TabIndex = 11;
@@ -233,7 +234,7 @@
             // 
             // txtCodProd
             // 
-            this.txtCodProd.Location = new System.Drawing.Point(247, 254);
+            this.txtCodProd.Location = new System.Drawing.Point(194, 255);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(63, 20);
             this.txtCodProd.TabIndex = 13;
@@ -241,7 +242,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(244, 238);
+            this.label10.Location = new System.Drawing.Point(191, 239);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
             this.label10.TabIndex = 135;
@@ -467,7 +468,7 @@
             // 
             // btnConsultaLista
             // 
-            this.btnConsultaLista.Location = new System.Drawing.Point(541, 253);
+            this.btnConsultaLista.Location = new System.Drawing.Point(499, 253);
             this.btnConsultaLista.Name = "btnConsultaLista";
             this.btnConsultaLista.Size = new System.Drawing.Size(23, 23);
             this.btnConsultaLista.TabIndex = 563;
@@ -477,7 +478,7 @@
             // 
             // txtCodLista
             // 
-            this.txtCodLista.Location = new System.Drawing.Point(341, 254);
+            this.txtCodLista.Location = new System.Drawing.Point(299, 254);
             this.txtCodLista.MaxLength = 30;
             this.txtCodLista.Name = "txtCodLista";
             this.txtCodLista.Size = new System.Drawing.Size(197, 20);
@@ -486,7 +487,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(338, 238);
+            this.label12.Location = new System.Drawing.Point(296, 238);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 13);
             this.label12.TabIndex = 565;
@@ -494,7 +495,7 @@
             // 
             // btnCondPag
             // 
-            this.btnCondPag.Location = new System.Drawing.Point(753, 253);
+            this.btnCondPag.Location = new System.Drawing.Point(714, 252);
             this.btnCondPag.Name = "btnCondPag";
             this.btnCondPag.Size = new System.Drawing.Size(23, 23);
             this.btnCondPag.TabIndex = 566;
@@ -504,7 +505,7 @@
             // 
             // txtCodCondPag
             // 
-            this.txtCodCondPag.Location = new System.Drawing.Point(578, 255);
+            this.txtCodCondPag.Location = new System.Drawing.Point(536, 255);
             this.txtCodCondPag.MaxLength = 30;
             this.txtCodCondPag.Name = "txtCodCondPag";
             this.txtCodCondPag.Size = new System.Drawing.Size(172, 20);
@@ -513,7 +514,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(575, 239);
+            this.label17.Location = new System.Drawing.Point(533, 239);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(145, 13);
             this.label17.TabIndex = 568;

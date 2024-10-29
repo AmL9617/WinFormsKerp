@@ -15,18 +15,18 @@ namespace KnkForms.Classes
         protected string complemento;
         protected string bairro;
         protected string cep;
-        protected bool fisicaJuridica;
-        protected bool ativo;
-        protected bool consumidorRevenda;
+        protected char fisicaJuridica;
+        protected char ativo;
+        protected char consumidorRevenda;
         protected string inscricaoEstadual;
         protected string inscMunicipalSuframa;
         protected string cnpj;
         protected string regimeTributarioDaEmpresa;
        
         protected DateTime dataFundacao;
-        protected bool regimeSemSt;
-        protected bool produtorRural;
-        protected bool verEmFornecedores;
+        protected char regimeSemSt;
+        protected char produtorRural;
+        protected char verEmFornecedores;
         protected string pessoasAutorizadas;
         protected string obsDiv;
         protected DateTime dataCad2;
@@ -66,9 +66,9 @@ namespace KnkForms.Classes
             complemento = "";
             bairro = "";
             cep = "";
-            fisicaJuridica = false;
-            ativo = false;
-            consumidorRevenda = false;
+            fisicaJuridica = '\0';
+            ativo = '\0';
+            consumidorRevenda = '\0';
             inscricaoEstadual = "";
             inscMunicipalSuframa = "";
             cnpj = "";
@@ -76,9 +76,9 @@ namespace KnkForms.Classes
             dataCad2 = DateTime.MinValue;
             dataUltAlt2 = DateTime.MinValue;
             dataFundacao = DateTime.MinValue;
-            regimeSemSt = false;
-            produtorRural = false;
-            verEmFornecedores = false;
+            regimeSemSt = '\0';
+            produtorRural = '\0';
+            verEmFornecedores = '\0';
             pessoasAutorizadas = "";
             obsDiv = "";
             ultimaCompra = DateTime.MinValue;
@@ -149,19 +149,19 @@ namespace KnkForms.Classes
             set { cep = value; }
         }
 
-        public bool FisicaJuridica
+        public char FisicaJuridica
         {
             get { return fisicaJuridica; }
             set { fisicaJuridica = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
         }
 
-        public bool ConsumidorRevenda
+        public char ConsumidorRevenda
         {
             get { return consumidorRevenda; }
             set { consumidorRevenda = value; }
@@ -209,19 +209,19 @@ namespace KnkForms.Classes
             set { dataFundacao = value; }
         }
 
-        public bool RegimeSemSt
+        public char RegimeSemSt
         {
             get { return regimeSemSt; }
             set { regimeSemSt = value; }
         }
 
-        public bool ProdutorRural
+        public char ProdutorRural
         {
             get { return produtorRural; }
             set { produtorRural = value; }
         }
 
-        public bool VerEmFornecedores
+        public char VerEmFornecedores
         {
             get { return verEmFornecedores; }
             set { verEmFornecedores = value; }

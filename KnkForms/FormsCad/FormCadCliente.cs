@@ -90,23 +90,23 @@ namespace KnkForms.Forms
             txtComplemento.Text = oCliente.Complemento;
             txtBairro.Text = oCliente.Bairro;
             txtCep.Text = oCliente.Cep;
-            if (oCliente.FisicaJuridica == false)
+            if (oCliente.FisicaJuridica == 'F')
                 boxFisJur.Text = "Fisica";
-            else if (oCliente.FisicaJuridica == true)
+            else if (oCliente.FisicaJuridica == 'J')
                 boxFisJur.Text = "Juridica";
             txtCodCidade.Text = Convert.ToString(oCliente.CodCidades);
-            chkAtivo.Checked = oCliente.Ativo;
+            if (chkAtivo.Checked == true) { oCliente.Ativo = 'S'; } else { oCliente.Ativo = 'N'; }
 
             txtCodUser.Text = Convert.ToString(oCliente.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oCliente.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oCliente.DataModificacao);
 
-            chkConsRev.Checked = oCliente.ConsumidorRevenda;
+            if (oCliente.ConsumidorRevenda == 'S') { chkConsRev.Checked = true; } else { chkConsRev.Checked = false; };
             txtInscEst.Text = oCliente.InscricaoEstadual;
             txtSuframa.Text = oCliente.InscMunicipalSuframa;
             txtCnpj.Text = oCliente.CNPJ;
-            chkReg.Checked = oCliente.RegimeSemSt;
-            chkProdRur.Checked = oCliente.ProdutorRural;
+            if (oCliente.RegimeSemSt == 'S') { chkReg.Checked = true; } else { chkReg.Checked = false; };
+            if (oCliente.ProdutorRural == 'S') { chkProdRur.Checked = true; } else { chkProdRur.Checked = false; };
             dataFundacao.Value = oCliente.DataFundacao;
 
             txtIdListPrec.Text = Convert.ToString(oCliente.CodListaPrecos);
@@ -114,7 +114,7 @@ namespace KnkForms.Forms
             txtIdReg.Text = Convert.ToString(oCliente.CodRegioes);
             txtIdVend.Text = Convert.ToString(oCliente.CodVendedores);
             txtPessoasAut.Text = Convert.ToString(oCliente.PessoasAutorizadas);
-            chkVerForn.Checked = oCliente.VerEmFornecedores;
+            if (oCliente.VerEmFornecedores == 'S') { chkVerForn.Checked = true; } else { chkVerForn.Checked = false; };
 
             txtIdRamoAtiv.Text = Convert.ToString(oCliente.CodRamoAtividades);
 
@@ -220,22 +220,23 @@ namespace KnkForms.Forms
             oCliente.Bairro = txtBairro.Text;
             oCliente.Cep = txtCep.Text;
             if (boxFisJur.Text == "Fisica")
-                oCliente.FisicaJuridica = false;
+                oCliente.FisicaJuridica = 'F';
             else if (boxFisJur.Text == "Juridica")
-                oCliente.FisicaJuridica = true;
+                oCliente.FisicaJuridica = 'J';
             oCliente.CodCidades = Convert.ToInt32(txtCodCidade.Text);
-            oCliente.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Enabled == true) { oCliente.Ativo = 'S'; } else { oCliente.Ativo = 'N'; };
+
 
             oCliente.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oCliente.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oCliente.DataModificacao = Convert.ToDateTime(txtDataAlt);
 
-            oCliente.ConsumidorRevenda = chkConsRev.Checked;
+            if (chkConsRev.Checked == true) { oCliente.ConsumidorRevenda = 'S'; } else { oCliente.ConsumidorRevenda = 'N'; };
             oCliente.InscricaoEstadual = txtInscEst.Text;
             oCliente.InscMunicipalSuframa = txtSuframa.Text;
             oCliente.CNPJ = txtCnpj.Text;
-            oCliente.RegimeSemSt = chkReg.Checked;
-            oCliente.ProdutorRural = chkProdRur.Checked;
+            if (chkReg.Checked == true) { oCliente.RegimeSemSt = 'S'; } else { oCliente.RegimeSemSt = 'N'; };
+            if (chkProdRur.Checked == true) { oCliente.ProdutorRural = 'S'; } else { oCliente.ProdutorRural = 'N'; };
             oCliente.DataFundacao = dataFundacao.Value; 
 
             oCliente.CodListaPrecos = Convert.ToInt32(txtIdListPrec.Text);
@@ -243,7 +244,7 @@ namespace KnkForms.Forms
             oCliente.CodRegioes = Convert.ToInt32(txtIdReg.Text);
             oCliente.CodVendedores = Convert.ToInt32(txtIdVend.Text);
             oCliente.PessoasAutorizadas = txtPessoasAut.Text;
-            oCliente.VerEmFornecedores = chkVerForn.Checked;
+            if (chkVerForn.Checked == true) { oCliente.VerEmFornecedores = 'S'; } else { oCliente.VerEmFornecedores = 'N'; };
 
             oCliente.CodRamoAtividades = Convert.ToInt32(txtIdRamoAtiv.Text);
 

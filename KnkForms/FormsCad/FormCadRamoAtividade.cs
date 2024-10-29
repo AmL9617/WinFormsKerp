@@ -35,7 +35,7 @@ namespace KnkForms.Forms
         {
             txtCod.Text = Convert.ToString(oRamo.Cod);
             txtNomeRamo.Text = oRamo.Ramo;
-            chkAtivo.Checked = oRamo.Ativo;
+            if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(oRamo.CodEmpresa);
             txtDataCad.Text = Convert.ToString(oRamo.DataCadastro);
             txtDataAlt.Text = Convert.ToString(oRamo.DataModificacao);
@@ -65,7 +65,7 @@ namespace KnkForms.Forms
         {
             oRamo.Cod = Convert.ToInt32(txtCod.Text);
             oRamo.Ramo = txtNomeRamo.Text;
-            oRamo.Ativo = chkAtivo.Checked;
+            if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; }; 
             oRamo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRamo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);

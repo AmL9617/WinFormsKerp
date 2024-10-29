@@ -9,12 +9,12 @@ namespace KnkForms.Classes
     internal class RamoAtividades : Pai
     {
         protected string ramo;
-        protected bool ativo;
+        protected char ativo;
 
         public RamoAtividades()
         {
             ramo = "";
-            ativo = false;
+            ativo = '\0';
         }
 
         public string Ramo
@@ -23,7 +23,7 @@ namespace KnkForms.Classes
             set { ramo = value; }
         }
 
-        public bool Ativo
+        public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
