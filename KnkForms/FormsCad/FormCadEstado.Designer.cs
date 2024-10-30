@@ -194,7 +194,7 @@
             this.txtPercRedST.MaxLength = 8;
             this.txtPercRedST.Name = "txtPercRedST";
             this.txtPercRedST.Size = new System.Drawing.Size(70, 20);
-            this.txtPercRedST.TabIndex = 34;
+            this.txtPercRedST.TabIndex = 8;
             // 
             // label6
             // 

@@ -79,7 +79,7 @@
             // txtDataCad
             // 
             this.txtDataCad.Location = new System.Drawing.Point(323, 711);
-            this.txtDataCad.TabIndex = 22;
+            this.txtDataCad.TabIndex = 25;
             // 
             // lblDataCad
             // 
@@ -88,7 +88,7 @@
             // txtDataAlt
             // 
             this.txtDataAlt.Location = new System.Drawing.Point(446, 711);
-            this.txtDataAlt.TabIndex = 23;
+            this.txtDataAlt.TabIndex = 26;
             // 
             // lblDataAlteracao
             // 
@@ -97,12 +97,12 @@
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(600, 707);
-            this.btnSalvar.TabIndex = 24;
+            this.btnSalvar.TabIndex = 27;
             // 
             // txtCodUser
             // 
             this.txtCodUser.Location = new System.Drawing.Point(211, 711);
-            this.txtCodUser.TabIndex = 21;
+            this.txtCodUser.TabIndex = 24;
             // 
             // lblCodUser
             // 
@@ -111,14 +111,14 @@
             // btnSair
             // 
             this.btnSair.Location = new System.Drawing.Point(695, 707);
-            this.btnSair.TabIndex = 25;
+            this.btnSair.TabIndex = 28;
             // 
             // dataUltMov
             // 
             this.dataUltMov.Location = new System.Drawing.Point(384, 310);
             this.dataUltMov.Name = "dataUltMov";
             this.dataUltMov.Size = new System.Drawing.Size(113, 20);
-            this.dataUltMov.TabIndex = 18;
+            this.dataUltMov.TabIndex = 21;
             // 
             // txtObservacao
             // 
@@ -127,7 +127,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(740, 280);
-            this.txtObservacao.TabIndex = 20;
+            this.txtObservacao.TabIndex = 23;
             // 
             // label18
             // 
@@ -153,7 +153,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(115, 20);
-            this.txtCnpj.TabIndex = 17;
+            this.txtCnpj.TabIndex = 20;
             // 
             // label15
             // 
@@ -170,7 +170,7 @@
             this.txtInscEst.MaxLength = 30;
             this.txtInscEst.Name = "txtInscEst";
             this.txtInscEst.Size = new System.Drawing.Size(197, 20);
-            this.txtInscEst.TabIndex = 16;
+            this.txtInscEst.TabIndex = 19;
             // 
             // label16
             // 
@@ -204,7 +204,7 @@
             this.txtTrade.MaxLength = 1;
             this.txtTrade.Name = "txtTrade";
             this.txtTrade.Size = new System.Drawing.Size(45, 20);
-            this.txtTrade.TabIndex = 12;
+            this.txtTrade.TabIndex = 15;
             // 
             // label3
             // 
@@ -221,7 +221,7 @@
             this.txtCep.MaxLength = 10;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(86, 20);
-            this.txtCep.TabIndex = 11;
+            this.txtCep.TabIndex = 12;
             // 
             // label9
             // 
@@ -235,9 +235,10 @@
             // txtCodProd
             // 
             this.txtCodProd.Location = new System.Drawing.Point(194, 255);
+            this.txtCodProd.MaxLength = 1;
             this.txtCodProd.Name = "txtCodProd";
-            this.txtCodProd.Size = new System.Drawing.Size(63, 20);
-            this.txtCodProd.TabIndex = 13;
+            this.txtCodProd.Size = new System.Drawing.Size(39, 20);
+            this.txtCodProd.TabIndex = 16;
             // 
             // label10
             // 
@@ -254,7 +255,7 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(260, 20);
-            this.txtBairro.TabIndex = 10;
+            this.txtBairro.TabIndex = 11;
             // 
             // label6
             // 
@@ -324,7 +325,7 @@
             this.txtNomeFantasia.MaxLength = 100;
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.Size = new System.Drawing.Size(307, 20);
-            this.txtNomeFantasia.TabIndex = 5;
+            this.txtNomeFantasia.TabIndex = 6;
             // 
             // label5
             // 
@@ -387,9 +388,10 @@
             this.chkAtivo.Location = new System.Drawing.Point(725, 24);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 6;
+            this.chkAtivo.TabIndex = 5;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // chkVerCliente
             // 
@@ -397,16 +399,17 @@
             this.chkVerCliente.Location = new System.Drawing.Point(514, 310);
             this.chkVerCliente.Name = "chkVerCliente";
             this.chkVerCliente.Size = new System.Drawing.Size(99, 17);
-            this.chkVerCliente.TabIndex = 19;
+            this.chkVerCliente.TabIndex = 22;
             this.chkVerCliente.Text = "Ver em Clientes";
             this.chkVerCliente.UseVisualStyleBackColor = true;
+            this.chkVerCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // btnConsultaReg
             // 
             this.btnConsultaReg.Location = new System.Drawing.Point(605, 203);
             this.btnConsultaReg.Name = "btnConsultaReg";
             this.btnConsultaReg.Size = new System.Drawing.Size(23, 23);
-            this.btnConsultaReg.TabIndex = 559;
+            this.btnConsultaReg.TabIndex = 13;
             this.btnConsultaReg.Text = "⌕";
             this.btnConsultaReg.UseVisualStyleBackColor = true;
             this.btnConsultaReg.Click += new System.EventHandler(this.btnConsultaReg_Click);
@@ -433,7 +436,7 @@
             this.btnConsultaCid.Location = new System.Drawing.Point(575, 153);
             this.btnConsultaCid.Name = "btnConsultaCid";
             this.btnConsultaCid.Size = new System.Drawing.Size(24, 23);
-            this.btnConsultaCid.TabIndex = 556;
+            this.btnConsultaCid.TabIndex = 10;
             this.btnConsultaCid.Text = "⌕";
             this.btnConsultaCid.UseVisualStyleBackColor = true;
             this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);
@@ -464,14 +467,14 @@
             this.boxIndustria.Location = new System.Drawing.Point(115, 58);
             this.boxIndustria.Name = "boxIndustria";
             this.boxIndustria.Size = new System.Drawing.Size(95, 21);
-            this.boxIndustria.TabIndex = 562;
+            this.boxIndustria.TabIndex = 2;
             // 
             // btnConsultaLista
             // 
             this.btnConsultaLista.Location = new System.Drawing.Point(499, 253);
             this.btnConsultaLista.Name = "btnConsultaLista";
             this.btnConsultaLista.Size = new System.Drawing.Size(23, 23);
-            this.btnConsultaLista.TabIndex = 563;
+            this.btnConsultaLista.TabIndex = 17;
             this.btnConsultaLista.Text = "⌕";
             this.btnConsultaLista.UseVisualStyleBackColor = true;
             this.btnConsultaLista.Click += new System.EventHandler(this.btnConsultaLista_Click);
@@ -498,7 +501,7 @@
             this.btnCondPag.Location = new System.Drawing.Point(714, 252);
             this.btnCondPag.Name = "btnCondPag";
             this.btnCondPag.Size = new System.Drawing.Size(23, 23);
-            this.btnCondPag.TabIndex = 566;
+            this.btnCondPag.TabIndex = 18;
             this.btnCondPag.Text = "⌕";
             this.btnCondPag.UseVisualStyleBackColor = true;
             this.btnCondPag.Click += new System.EventHandler(this.btnCondPag_Click);

@@ -255,7 +255,12 @@ namespace KnkForms.Forms
             oCliente.UltimaCompra = dataUltComp.Value;
             oCliente.ObsDiv = txtObsDiv.Text;
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
+        }
         public void setFrmConCidades(Object obj)
         {
             oFrmConCidades =(FormConCidades)obj;

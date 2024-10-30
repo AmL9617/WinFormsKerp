@@ -70,5 +70,12 @@ namespace KnkForms.Forms
             oGrupo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oGrupo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
         }
+
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
+        }
     }
 }

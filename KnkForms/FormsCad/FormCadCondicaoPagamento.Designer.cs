@@ -158,7 +158,7 @@
             this.txtPorParcela.MaxLength = 1;
             this.txtPorParcela.Name = "txtPorParcela";
             this.txtPorParcela.Size = new System.Drawing.Size(63, 20);
-            this.txtPorParcela.TabIndex = 92;
+            this.txtPorParcela.TabIndex = 9;
             // 
             // label7
             // 
@@ -192,7 +192,7 @@
             this.txtDia.MaxLength = 10;
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(77, 20);
-            this.txtDia.TabIndex = 93;
+            this.txtDia.TabIndex = 8;
             // 
             // FormCadCondicaoPagamento
             // 

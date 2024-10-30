@@ -41,37 +41,40 @@
             // 
             // txtDataCad
             // 
-            this.txtDataCad.Location = new System.Drawing.Point(137, 418);
-            this.txtDataCad.TabIndex = 6;
+            this.txtDataCad.Location = new System.Drawing.Point(153, 414);
+            this.txtDataCad.TabIndex = 7;
             // 
             // lblDataCad
             // 
-            this.lblDataCad.Location = new System.Drawing.Point(134, 402);
+            this.lblDataCad.Location = new System.Drawing.Point(150, 398);
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.Location = new System.Drawing.Point(260, 418);
+            this.txtDataAlt.Location = new System.Drawing.Point(276, 414);
+            this.txtDataAlt.TabIndex = 8;
             // 
             // lblDataAlteracao
             // 
-            this.lblDataAlteracao.Location = new System.Drawing.Point(257, 402);
+            this.lblDataAlteracao.Location = new System.Drawing.Point(273, 398);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(472, 414);
+            this.btnSalvar.Location = new System.Drawing.Point(472, 410);
+            this.btnSalvar.TabIndex = 9;
             // 
             // txtCodUser
             // 
-            this.txtCodUser.Location = new System.Drawing.Point(25, 418);
-            this.txtCodUser.TabIndex = 5;
+            this.txtCodUser.Location = new System.Drawing.Point(41, 414);
+            this.txtCodUser.TabIndex = 6;
             // 
             // lblCodUser
             // 
-            this.lblCodUser.Location = new System.Drawing.Point(22, 402);
+            this.lblCodUser.Location = new System.Drawing.Point(38, 398);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(567, 414);
+            this.btnSair.Location = new System.Drawing.Point(567, 410);
+            this.btnSair.TabIndex = 10;
             // 
             // txtContato
             // 
@@ -79,7 +82,7 @@
             this.txtContato.MaxLength = 200;
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(614, 20);
-            this.txtContato.TabIndex = 3;
+            this.txtContato.TabIndex = 4;
             // 
             // label1
             // 
@@ -96,7 +99,7 @@
             this.txtTipo.MaxLength = 50;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(260, 20);
-            this.txtTipo.TabIndex = 2;
+            this.txtTipo.TabIndex = 3;
             // 
             // lbl1
             // 
@@ -114,7 +117,7 @@
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(614, 95);
-            this.txtObservacao.TabIndex = 4;
+            this.txtObservacao.TabIndex = 5;
             // 
             // label2
             // 
@@ -147,7 +150,7 @@
             this.btnConsultaCid.Location = new System.Drawing.Point(435, 58);
             this.btnConsultaCid.Name = "btnConsultaCid";
             this.btnConsultaCid.Size = new System.Drawing.Size(24, 23);
-            this.btnConsultaCid.TabIndex = 557;
+            this.btnConsultaCid.TabIndex = 2;
             this.btnConsultaCid.Text = "⌕";
             this.btnConsultaCid.UseVisualStyleBackColor = true;
             this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);

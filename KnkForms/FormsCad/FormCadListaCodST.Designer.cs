@@ -38,6 +38,7 @@
             // txtDataCad
             // 
             this.txtDataCad.Location = new System.Drawing.Point(139, 418);
+            this.txtDataCad.TabIndex = 6;
             // 
             // lblDataCad
             // 
@@ -57,11 +58,12 @@
             // 
             // txtCodUser
             // 
-            this.txtCodUser.Location = new System.Drawing.Point(27, 418);
+            this.txtCodUser.Location = new System.Drawing.Point(39, 418);
+            this.txtCodUser.TabIndex = 5;
             // 
             // lblCodUser
             // 
-            this.lblCodUser.Location = new System.Drawing.Point(24, 402);
+            this.lblCodUser.Location = new System.Drawing.Point(36, 402);
             // 
             // btnSair
             // 
@@ -74,7 +76,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(584, 90);
-            this.txtDescricao.TabIndex = 145;
+            this.txtDescricao.TabIndex = 4;
             // 
             // txtTipo
             // 
@@ -82,7 +84,7 @@
             this.txtTipo.MaxLength = 1;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(25, 20);
-            this.txtTipo.TabIndex = 144;
+            this.txtTipo.TabIndex = 2;
             // 
             // label2
             // 
@@ -108,7 +110,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(596, 26);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 150;
+            this.chkAtivo.TabIndex = 3;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 

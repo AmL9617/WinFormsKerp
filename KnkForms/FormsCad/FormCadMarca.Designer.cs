@@ -33,26 +33,48 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.Location = new System.Drawing.Point(203, 414);
+            this.txtDataCad.MaxLength = 10;
+            // 
+            // lblDataCad
+            // 
+            this.lblDataCad.Location = new System.Drawing.Point(200, 398);
+            // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Location = new System.Drawing.Point(326, 414);
+            this.txtDataAlt.MaxLength = 10;
             this.txtDataAlt.TabIndex = 6;
+            // 
+            // lblDataAlteracao
+            // 
+            this.lblDataAlteracao.Location = new System.Drawing.Point(323, 398);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Location = new System.Drawing.Point(486, 414);
             this.btnSalvar.TabIndex = 7;
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Location = new System.Drawing.Point(91, 414);
             this.txtCodUser.TabIndex = 4;
+            // 
+            // lblCodUser
+            // 
+            this.lblCodUser.Location = new System.Drawing.Point(88, 398);
             // 
             // btnSair
             // 
+            this.btnSair.Location = new System.Drawing.Point(581, 414);
             this.btnSair.TabIndex = 8;
             // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(726, 58);
+            this.chkAtivo.Location = new System.Drawing.Point(581, 21);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 3;
@@ -79,7 +101,7 @@
             // FormCadMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(674, 450);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lbl1);

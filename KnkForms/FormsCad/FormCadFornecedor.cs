@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace KnkForms.Forms
 {
-    public partial class FormCadFornecedor : KnkForms.FormCadPai
+    public partial class FormCadFornecedor : KnkForms.FormCadPai/*, Interfaces.IConsultas*/
     {
         Fornecedores oFornecedor;
         FormConCidades oFrmConCidades;
@@ -28,6 +28,13 @@ namespace KnkForms.Forms
             dataUltMov.CustomFormat = "dd/MM/yyyy";
             dataUltMov.Format = DateTimePickerFormat.Custom;
         }
+
+        //TESTE
+        public void SetConsultaId(string id)
+        {
+            txtCodRegiao.Text = id;
+        }
+
         public override void ConhecaObj(Object obj)
         {
             oFornecedor = (Fornecedores)obj;
@@ -203,6 +210,17 @@ namespace KnkForms.Forms
             Close();
         }
 
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
+        }
+        public void SetId(string Id)
+        {
+            txtCodRegiao.Text = Id;
+        }
+
         public void setFrmConCidades(Object obj)
         {
             oFrmConCidades = (FormConCidades)obj;
@@ -222,7 +240,7 @@ namespace KnkForms.Forms
        
         private void btnConsultaReg_Click(object sender, EventArgs e)
         {
-            oFrmConRegioes.ConhecaObj(oFornecedor.Regioes);
+            oFrmConRegioes.ConhecaObj(oFornecedor.Regioes); 
             oFrmConRegioes.ShowDialog();
         }
 

@@ -96,7 +96,7 @@ namespace KnkForms.Forms
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
             aCondPag.OperacaoDisponivel = txtOpDisp.Text;
             aCondPag.NumeroParcelas = Convert.ToInt32(txtNumParc.Text);
-            aCondPag.PorParcela = Convert.ToInt32(txtPorParcela.Text);
+            aCondPag.PorParcela = txtPorParcela.Text;
             aCondPag.Dia = txtDia.Text;
             if (chkAtivo.Checked == true) { aCondPag.Ativo = 'S'; } else { aCondPag.Ativo = 'N'; };
             aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
@@ -110,6 +110,12 @@ namespace KnkForms.Forms
             SalvarAlterar = '\0';
             txtCod.Enabled = true;
             Close();
+        }
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
         }
     }
 }

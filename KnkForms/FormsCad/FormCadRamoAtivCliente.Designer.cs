@@ -40,7 +40,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(655, 55);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(24, 23);
-            this.btnConsulta.TabIndex = 65;
+            this.btnConsulta.TabIndex = 3;
             this.btnConsulta.Text = "⌕";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
@@ -68,7 +68,7 @@
             this.txtPrioridade.MaxLength = 5;
             this.txtPrioridade.Name = "txtPrioridade";
             this.txtPrioridade.Size = new System.Drawing.Size(63, 20);
-            this.txtPrioridade.TabIndex = 68;
+            this.txtPrioridade.TabIndex = 5;
             // 
             // label2
             // 

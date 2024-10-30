@@ -92,7 +92,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(592, 38);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 4;
+            this.chkAtivo.TabIndex = 3;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +103,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(525, 55);
-            this.txtDescricao.TabIndex = 3;
+            this.txtDescricao.TabIndex = 4;
             // 
             // label1
             // 

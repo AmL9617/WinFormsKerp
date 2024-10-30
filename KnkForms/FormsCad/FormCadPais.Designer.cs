@@ -41,23 +41,23 @@
             // 
             // txtDataCad
             // 
-            this.txtDataCad.TabIndex = 9;
+            this.txtDataCad.TabIndex = 8;
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.TabIndex = 10;
+            this.txtDataAlt.TabIndex = 9;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.TabIndex = 10;
             // 
             // txtCodUser
             // 
-            this.txtCodUser.TabIndex = 8;
+            this.txtCodUser.TabIndex = 7;
             // 
             // btnSair
             // 
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 11;
             // 
             // lblNomePais
             // 
@@ -78,16 +78,16 @@
             // 
             // txtSigla
             // 
-            this.txtSigla.Location = new System.Drawing.Point(389, 57);
+            this.txtSigla.Location = new System.Drawing.Point(394, 57);
             this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(42, 20);
-            this.txtSigla.TabIndex = 4;
+            this.txtSigla.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(386, 41);
+            this.label2.Location = new System.Drawing.Point(391, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 13;
@@ -95,16 +95,16 @@
             // 
             // txtDdi
             // 
-            this.txtDdi.Location = new System.Drawing.Point(453, 57);
+            this.txtDdi.Location = new System.Drawing.Point(458, 57);
             this.txtDdi.MaxLength = 3;
             this.txtDdi.Name = "txtDdi";
             this.txtDdi.Size = new System.Drawing.Size(35, 20);
-            this.txtDdi.TabIndex = 5;
+            this.txtDdi.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 41);
+            this.label3.Location = new System.Drawing.Point(455, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 15;
@@ -116,7 +116,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(727, 28);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 7;
+            this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -126,15 +126,15 @@
             this.boxNacional.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.boxNacional.Location = new System.Drawing.Point(512, 57);
+            this.boxNacional.Location = new System.Drawing.Point(517, 57);
             this.boxNacional.Name = "boxNacional";
             this.boxNacional.Size = new System.Drawing.Size(80, 21);
-            this.boxNacional.TabIndex = 6;
+            this.boxNacional.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(510, 41);
+            this.label4.Location = new System.Drawing.Point(515, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 13);
             this.label4.TabIndex = 20;

@@ -5,14 +5,32 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static KnkForms.Interfaces;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace KnkForms.FormsCon
 {
     public partial class FormConPai : FormPai
     {
-        public FormConPai()
+        //TESTE
+        private readonly IConsultas _consultas;
+        private readonly string _tipo;
+
+        public FormConPai(/*IConsultas consultas, string tipo*/)
         {
             InitializeComponent();
+            //_consultas = consultas;
+            //_tipo = tipo;
+        }
+        //TESTE
+        protected void listView_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                string selectedID = listVConsulta.SelectedItems[0].SubItems[0].Text;
+                _consultas.SetConsultaId(selectedID, _tipo);
+                this.Close();
+            }
         }
         protected virtual void CarregaLV()
         {

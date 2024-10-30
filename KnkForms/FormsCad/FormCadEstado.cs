@@ -104,7 +104,7 @@ namespace KnkForms.Classes
             oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oEstado.PercIcms = Convert.ToDouble(txtPercIcms.Text) ;
-            oEstado.Icms = Convert.ToInt32(txtIcms.Text);
+            oEstado.Icms = Convert.ToDouble(txtIcms.Text);
             oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
             oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
 
@@ -116,7 +116,12 @@ namespace KnkForms.Classes
             txtCod.Enabled = true;
             Close();
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
+        }
         public void setFrmConPaises(Object obj)
         {
             oFrmConPaises = (FormConPaises)obj;

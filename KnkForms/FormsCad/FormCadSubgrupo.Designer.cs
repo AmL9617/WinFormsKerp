@@ -36,13 +36,21 @@
             this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 6;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.TabIndex = 5;
+            // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
             this.chkAtivo.Location = new System.Drawing.Point(716, 27);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 53;
+            this.chkAtivo.TabIndex = 4;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -69,7 +77,7 @@
             this.txtSubgrupo.MaxLength = 30;
             this.txtSubgrupo.Name = "txtSubgrupo";
             this.txtSubgrupo.Size = new System.Drawing.Size(197, 20);
-            this.txtSubgrupo.TabIndex = 55;
+            this.txtSubgrupo.TabIndex = 3;
             // 
             // label1
             // 
@@ -85,7 +93,7 @@
             this.btnConsulta.Location = new System.Drawing.Point(314, 56);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(23, 23);
-            this.btnConsulta.TabIndex = 560;
+            this.btnConsulta.TabIndex = 2;
             this.btnConsulta.Text = "⌕";
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);

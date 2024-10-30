@@ -47,23 +47,23 @@
             // 
             // txtDataCad
             // 
-            this.txtDataCad.TabIndex = 9;
+            this.txtDataCad.TabIndex = 10;
             // 
             // txtDataAlt
             // 
-            this.txtDataAlt.TabIndex = 10;
+            this.txtDataAlt.TabIndex = 11;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.TabIndex = 12;
             // 
             // txtCodUser
             // 
-            this.txtCodUser.TabIndex = 8;
+            this.txtCodUser.TabIndex = 9;
             // 
             // btnSair
             // 
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 13;
             // 
             // txtLista
             // 
@@ -157,7 +157,7 @@
             this.chkTodas.Location = new System.Drawing.Point(732, 21);
             this.chkTodas.Name = "chkTodas";
             this.chkTodas.Size = new System.Drawing.Size(56, 17);
-            this.chkTodas.TabIndex = 5;
+            this.chkTodas.TabIndex = 6;
             this.chkTodas.Text = "Todas";
             this.chkTodas.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +166,7 @@
             this.btnConsultaMarca.Location = new System.Drawing.Point(241, 119);
             this.btnConsultaMarca.Name = "btnConsultaMarca";
             this.btnConsultaMarca.Size = new System.Drawing.Size(22, 23);
-            this.btnConsultaMarca.TabIndex = 6;
+            this.btnConsultaMarca.TabIndex = 7;
             this.btnConsultaMarca.Text = "⌕";
             this.btnConsultaMarca.UseVisualStyleBackColor = true;
             this.btnConsultaMarca.Click += new System.EventHandler(this.btnConsultaMarca_Click);
@@ -176,7 +176,7 @@
             this.btnConsultaSubgrupo.Location = new System.Drawing.Point(479, 117);
             this.btnConsultaSubgrupo.Name = "btnConsultaSubgrupo";
             this.btnConsultaSubgrupo.Size = new System.Drawing.Size(21, 23);
-            this.btnConsultaSubgrupo.TabIndex = 7;
+            this.btnConsultaSubgrupo.TabIndex = 8;
             this.btnConsultaSubgrupo.Text = "⌕";
             this.btnConsultaSubgrupo.UseVisualStyleBackColor = true;
             this.btnConsultaSubgrupo.Click += new System.EventHandler(this.btnConsultaGrupo_Click);
@@ -187,7 +187,7 @@
             this.txtPercCom.MaxLength = 8;
             this.txtPercCom.Name = "txtPercCom";
             this.txtPercCom.Size = new System.Drawing.Size(64, 20);
-            this.txtPercCom.TabIndex = 4;
+            this.txtPercCom.TabIndex = 5;
             // 
             // label5
             // 

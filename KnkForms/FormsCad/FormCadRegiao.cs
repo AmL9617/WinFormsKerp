@@ -88,6 +88,11 @@ namespace KnkForms.Forms
             txtCod.Enabled = true;
             Close();
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                c1.Checked = true;
+        }
     }
 }

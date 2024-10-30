@@ -34,20 +34,40 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.Location = new System.Drawing.Point(184, 330);
+            // 
+            // lblDataCad
+            // 
+            this.lblDataCad.Location = new System.Drawing.Point(181, 314);
+            // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Location = new System.Drawing.Point(307, 330);
             this.txtDataAlt.TabIndex = 6;
+            // 
+            // lblDataAlteracao
+            // 
+            this.lblDataAlteracao.Location = new System.Drawing.Point(304, 314);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Location = new System.Drawing.Point(519, 326);
             this.btnSalvar.TabIndex = 7;
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Location = new System.Drawing.Point(72, 330);
             this.txtCodUser.TabIndex = 4;
+            // 
+            // lblCodUser
+            // 
+            this.lblCodUser.Location = new System.Drawing.Point(69, 314);
             // 
             // btnSair
             // 
+            this.btnSair.Location = new System.Drawing.Point(614, 326);
             this.btnSair.TabIndex = 8;
             // 
             // txtValor
@@ -87,7 +107,7 @@
             // FormCadParcela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(717, 376);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtQtd);

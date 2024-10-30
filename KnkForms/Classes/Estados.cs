@@ -16,7 +16,7 @@ namespace KnkForms.Classes
         protected string sigla;
         protected char ativo;
         protected double percIcms;
-        protected int icms;
+        protected double icms;
         protected double percRedST; //Percentual de Redução da Substituição Tributária 
         protected int codWeb;
 
@@ -83,7 +83,7 @@ namespace KnkForms.Classes
             set { percIcms = value; }
         }
 
-        public int Icms
+        public double Icms
         {
             get { return icms; }
             set { icms = value; }

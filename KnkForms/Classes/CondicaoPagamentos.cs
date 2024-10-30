@@ -18,7 +18,7 @@ namespace KnkForms.Classes
         protected string operacaoDisponivel;
         protected int numeroParcelas;
         protected string dia;
-        protected double porParcela;
+        protected string porParcela;
 
         string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
@@ -31,7 +31,7 @@ namespace KnkForms.Classes
             operacaoDisponivel = "";
             numeroParcelas = 0;
             dia = "";
-            porParcela = 0;
+            porParcela = "";
         }
 
         public string CondPag
@@ -74,7 +74,7 @@ namespace KnkForms.Classes
             get { return dia; }
             set { dia = value; }
         }
-        public double PorParcela
+        public string PorParcela
         {
             get { return porParcela; }
             set { porParcela = value; }
