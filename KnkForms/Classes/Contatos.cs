@@ -108,5 +108,28 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void ExcluirBD(int CodContato)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Contatos WHERE IdContato = @IdContato";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdContato", CodContato);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

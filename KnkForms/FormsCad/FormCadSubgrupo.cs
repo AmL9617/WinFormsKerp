@@ -37,6 +37,7 @@ namespace KnkForms.FormsCad
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oSubgrupo.Cod);
+            txtCod.Enabled = false;
             txtGrupo.Text = Convert.ToString(oSubgrupo.Grupos.Cod);
             txtSubgrupo.Text = oSubgrupo.Subgrupo;
             if (chkAtivo.Checked == true) { oSubgrupo.Ativo = 'S'; } else { oSubgrupo.Ativo = 'N'; };
@@ -76,12 +77,14 @@ namespace KnkForms.FormsCad
             oSubgrupo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oSubgrupo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oSubgrupo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
         private void chkBox(object sender, KeyEventArgs e)
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
         public void setFrmConGrupos(Object obj)
         {

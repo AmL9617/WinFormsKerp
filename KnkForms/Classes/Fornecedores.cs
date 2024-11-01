@@ -323,6 +323,29 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void ExcluirBD(int CodFornCliente)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM FornCliente WHERE IdFornCliente = @IdFornCliente";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 
 }

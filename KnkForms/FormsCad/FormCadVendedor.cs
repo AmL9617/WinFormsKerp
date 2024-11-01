@@ -23,7 +23,12 @@ namespace KnkForms.Classes
         {
             oVendedor = (Vendedores)obj;
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
+        }
         public override void LimpaTxt()
         {
             txtCod.Clear();
@@ -41,6 +46,7 @@ namespace KnkForms.Classes
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oVendedor.Cod);
+            txtCod.Enabled = false;
             txtVendedor.Text = oVendedor.Vendedor;
             txtTipo.Text = oVendedor.Tipo;
             txtComissao.Text = Convert.ToString(oVendedor.Comissao);
@@ -92,6 +98,8 @@ namespace KnkForms.Classes
             oVendedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oVendedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oVendedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
     }
 }

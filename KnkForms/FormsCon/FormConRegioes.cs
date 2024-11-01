@@ -101,14 +101,17 @@ namespace KnkForms.Classes
 
         protected override void Excluir()
         {
-            oFormCadRegiao.LimpaTxt();
-            oFormCadRegiao.ConhecaObj(aRegiao);
-            oFormCadRegiao.CarregaTxt();
-            oFormCadRegiao.BloqueiaTxt();
-            oFormCadRegiao.ShowDialog();
-            oFormCadRegiao.DesbloqueiaTxt();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int campo1 = Convert.ToInt32(selectedItem.SubItems[0].Text);
+
+                aRegiao.ExcluirBD(campo1);
+            }
             CarregaLV();
         }
+
         protected override void Pesquisar()
         {
             listVConsulta.Items.Clear();

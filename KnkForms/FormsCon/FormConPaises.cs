@@ -109,12 +109,14 @@ namespace KnkForms.FormsCon
 
         protected override void Excluir()
         {
-            oFormCadPais.LimpaTxt();
-            oFormCadPais.ConhecaObj(oPais);
-            oFormCadPais.CarregaTxt();
-            oFormCadPais.BloqueiaTxt();
-            oFormCadPais.ShowDialog();
-            oFormCadPais.DesbloqueiaTxt();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int campo1 = Convert.ToInt32(selectedItem.SubItems[0].Text);
+
+                oPais.ExcluirBD(campo1);
+            }
             CarregaLV();
         }
         protected override void Pesquisar()

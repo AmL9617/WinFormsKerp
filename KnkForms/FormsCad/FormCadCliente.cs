@@ -84,6 +84,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oCliente.Cod);
+            txtCod.Enabled = false;
             txtCliente.Text = oCliente.Cliente;
             txtEndereco.Text = oCliente.Endereco; 
             txtNumero.Text = Convert.ToString(oCliente.Numero);
@@ -254,12 +255,14 @@ namespace KnkForms.Forms
             oCliente.DataUltAlt2 = dataUltAlt.Value;
             oCliente.UltimaCompra = dataUltComp.Value;
             oCliente.ObsDiv = txtObsDiv.Text;
+
+            txtCod.Enabled = true;
         }
         private void chkBox(object sender, KeyEventArgs e)
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
         public void setFrmConCidades(Object obj)
         {

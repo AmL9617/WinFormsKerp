@@ -119,6 +119,7 @@
             this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // boxNacional
             // 

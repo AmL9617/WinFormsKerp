@@ -40,6 +40,7 @@ namespace KnkForms.FormsCad
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
         {
             txtCod.Text = campo1;
+            txtCod.Enabled = false;
             txtFornCliente.Text = campo2;
             txtTipo.Text = campo3;
             txtContato.Text = campo4;
@@ -87,6 +88,7 @@ namespace KnkForms.FormsCad
             else
                 oContato.SalvarBD();
             SalvarAlterar = '\0';
+
             txtCod.Enabled = true;
             Close();
         }

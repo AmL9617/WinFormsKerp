@@ -35,6 +35,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aFormaPag.Cod);
+            txtCod.Enabled = false;
             txtFormaPagamento.Text = aFormaPag.FormaPag;
             txtOpDisp.Text = aFormaPag.OperacaoDisponivel;
             txtNfce.Text = aFormaPag.Nfce;
@@ -74,6 +75,8 @@ namespace KnkForms.Forms
             aFormaPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aFormaPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aFormaPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
     }
 }

@@ -121,6 +121,29 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void ExcluirBD(int CodCidade)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Cidade WHERE IdCidade = @IdCidade";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdCidade", CodCidade);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 
 }

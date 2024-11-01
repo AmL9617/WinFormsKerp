@@ -42,6 +42,7 @@ namespace KnkForms.Forms
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12)
         {
             txtCod.Text = campo1;
+            txtCod.Enabled = false;
             txtCondPag.Text = campo2;
             txtTaxaJuro.Text = campo3;
             txtNumParc.Text = campo4;
@@ -108,6 +109,7 @@ namespace KnkForms.Forms
             else
                 aCondPag.SalvarBD();
             SalvarAlterar = '\0';
+
             txtCod.Enabled = true;
             Close();
         }
@@ -115,7 +117,7 @@ namespace KnkForms.Forms
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
     }
 }

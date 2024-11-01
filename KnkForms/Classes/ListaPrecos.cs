@@ -154,6 +154,29 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void ExcluirBD(int CodLista)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Lista WHERE IdLista = @IdLista";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdLista", CodLista);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 
 }

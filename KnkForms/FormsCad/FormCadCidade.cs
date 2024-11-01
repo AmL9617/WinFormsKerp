@@ -106,7 +106,7 @@ namespace KnkForms.Forms
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
 
         public void setFrmConEstados(Object obj)

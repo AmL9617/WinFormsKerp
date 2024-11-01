@@ -20,7 +20,12 @@ namespace KnkForms.Forms
         {
             oRamo = (RamoAtividades)obj;
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
+        }
         public override void LimpaTxt()
         {
             txtCod.Clear();
@@ -34,6 +39,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oRamo.Cod);
+            txtCod.Enabled = false;
             txtNomeRamo.Text = oRamo.Ramo;
             if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; };
             txtCodUser.Text = Convert.ToString(oRamo.CodEmpresa);
@@ -69,6 +75,8 @@ namespace KnkForms.Forms
             oRamo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRamo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
     }
 }

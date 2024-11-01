@@ -48,6 +48,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oContador.Cod);
+            txtCod.Enabled = false;
             txtContador.Text = oContador.Contador;
             txtCrc.Text = oContador.Crc;
             txtCnpj.Text = oContador.Cnpj;
@@ -129,6 +130,8 @@ namespace KnkForms.Forms
             oContador.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oContador.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oContador.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
         public void setFrmConRegioes(Object obj)
         {

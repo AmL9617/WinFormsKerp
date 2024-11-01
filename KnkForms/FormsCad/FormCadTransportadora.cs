@@ -25,7 +25,12 @@ namespace KnkForms.Classes
         {
             aTransportadora = (Transportadoras)obj;
         }
-
+        private void chkBox(object sender, KeyEventArgs e)
+        {
+            CheckBox c1 = this.ActiveControl as CheckBox;
+            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
+        }
         public override void LimpaTxt()
         {
             txtCod.Clear();
@@ -56,6 +61,7 @@ namespace KnkForms.Classes
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(aTransportadora.Cod);
+            txtCod.Enabled = false;
             boxTransCli.Text = aTransportadora.TransportadoraCliente;
             if (aTransportadora.FisicaJuridica == 'F')
                 boxFisJur.Text = "Fisica";
@@ -165,6 +171,8 @@ namespace KnkForms.Classes
             aTransportadora.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             aTransportadora.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             aTransportadora.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
         public void setFrmConRegioes(Object obj)
         {

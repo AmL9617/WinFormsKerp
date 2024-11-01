@@ -137,12 +137,14 @@ namespace KnkForms.Classes
 
         protected override void Excluir()
         {
-            oFormCadFornecedor.LimpaTxt();
-            oFormCadFornecedor.ConhecaObj(oFornecedor);
-            oFormCadFornecedor.CarregaTxt();
-            oFormCadFornecedor.BloqueiaTxt();
-            oFormCadFornecedor.ShowDialog();
-            oFormCadFornecedor.DesbloqueiaTxt();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int campo1 = Convert.ToInt32(selectedItem.SubItems[0].Text);
+
+                oFornecedor.ExcluirBD(campo1);
+            }
             CarregaLV();
         }
         protected override void Pesquisar()

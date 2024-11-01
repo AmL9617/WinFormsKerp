@@ -53,6 +53,7 @@
             this.chkAtivo.TabIndex = 4;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // txtGrupo
             // 

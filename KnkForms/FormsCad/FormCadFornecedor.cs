@@ -73,6 +73,7 @@ namespace KnkForms.Forms
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20, string campo21, string campo22, string campo23, string campo24, string campo25)
         {
             txtCod.Text = campo1;
+            txtCod.Enabled = false;
             txtRazaoSocial.Text = campo2;
             txtNomeFantasia.Text = campo3;
             txtInscEst.Text = campo4;
@@ -206,6 +207,7 @@ namespace KnkForms.Forms
             else
                 oFornecedor.SalvarBD();
             SalvarAlterar = '\0';
+
             txtCod.Enabled = true;
             Close();
         }
@@ -214,7 +216,7 @@ namespace KnkForms.Forms
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
         public void SetId(string Id)
         {

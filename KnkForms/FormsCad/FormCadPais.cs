@@ -49,7 +49,7 @@ namespace KnkForms.Forms
             txtSigla.Text = campo3;
             txtDdi.Text = campo4;
             boxNacional.Text = campo5;
-            if (campo6 == "true") chkAtivo.Enabled = true; else { chkAtivo.Enabled = false; }
+            if (campo6 == "true") chkAtivo.Checked = true; else { chkAtivo.Checked = false; }
             txtCodUser.Text = campo7;
             txtDataCad.Text = campo8;
             txtDataAlt.Text = campo9;
@@ -105,6 +105,7 @@ namespace KnkForms.Forms
             else
                 oPais.SalvarBD();
             SalvarAlterar = '\0';
+
             txtCod.Enabled = true;
             Close();
         }
@@ -112,7 +113,7 @@ namespace KnkForms.Forms
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
     }
 }

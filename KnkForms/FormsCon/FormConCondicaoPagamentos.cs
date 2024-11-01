@@ -112,12 +112,14 @@ namespace KnkForms.Classes
 
         protected override void Excluir()
         {
-            oFormCadCondicaoPagamento.LimpaTxt();
-            oFormCadCondicaoPagamento.ConhecaObj(aCondicaoPagamento);
-            oFormCadCondicaoPagamento.CarregaTxt();
-            oFormCadCondicaoPagamento.BloqueiaTxt();
-            oFormCadCondicaoPagamento.ShowDialog();
-            oFormCadCondicaoPagamento.DesbloqueiaTxt();
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int campo1 = Convert.ToInt32(selectedItem.SubItems[0].Text);
+
+                aCondicaoPagamento.ExcluirBD(campo1);
+            }
             CarregaLV();
         }
         protected override void Pesquisar()

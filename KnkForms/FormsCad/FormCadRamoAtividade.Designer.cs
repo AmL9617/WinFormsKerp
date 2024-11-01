@@ -33,21 +33,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtDataCad
+            // 
+            this.txtDataCad.TabIndex = 8;
+            // 
             // txtDataAlt
             // 
-            this.txtDataAlt.TabIndex = 6;
+            this.txtDataAlt.TabIndex = 9;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.TabIndex = 10;
             // 
             // txtCodUser
             // 
-            this.txtCodUser.TabIndex = 4;
+            this.txtCodUser.TabIndex = 7;
             // 
             // btnSair
             // 
-            this.btnSair.TabIndex = 8;
+            this.btnSair.TabIndex = 11;
             // 
             // chkAtivo
             // 
@@ -55,9 +59,10 @@
             this.chkAtivo.Location = new System.Drawing.Point(726, 26);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 3;
+            this.chkAtivo.TabIndex = 4;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // txtNomeRamo
             // 
@@ -85,6 +90,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadRamoAtividade";
             this.Text = "Form Ramo de Atividades";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);

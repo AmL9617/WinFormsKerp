@@ -38,6 +38,7 @@ namespace KnkForms.FormsCad
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oRamoAtivClientes.Cod);
+            txtCod.Enabled = false;
             txtCodCliForn.Text = Convert.ToString(oRamoAtivClientes.CodClienteFornecedor);
             txtPrioridade.Text = Convert.ToString(oRamoAtivClientes.Prioridade);
             txtCodUser.Text = Convert.ToString(oRamoAtivClientes.CodEmpresa);
@@ -73,6 +74,8 @@ namespace KnkForms.FormsCad
             oRamoAtivClientes.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oRamoAtivClientes.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oRamoAtivClientes.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
         public void setFrmConClientes(Object obj)
         {

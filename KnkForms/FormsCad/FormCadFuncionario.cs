@@ -58,6 +58,7 @@ namespace KnkForms.Forms
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oFuncionario.Cod);
+            txtCod.Enabled = false;
             txtFuncionario.Text = oFuncionario.Funcionario;
             txtEndereco.Text = oFuncionario.Endereco;
             txtNumero.Text = Convert.ToString(oFuncionario.Numero);
@@ -160,12 +161,14 @@ namespace KnkForms.Forms
             oFuncionario.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
             oFuncionario.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
             oFuncionario.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+
+            txtCod.Enabled = true;
         }
         private void chkBox(object sender, KeyEventArgs e)
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                c1.Checked = true;
+                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
         public void setFrmConRegioes(Object obj)
         {

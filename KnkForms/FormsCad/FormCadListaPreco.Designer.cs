@@ -160,6 +160,7 @@
             this.chkTodas.TabIndex = 6;
             this.chkTodas.Text = "Todas";
             this.chkTodas.UseVisualStyleBackColor = true;
+            this.chkTodas.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // btnConsultaMarca
             // 
