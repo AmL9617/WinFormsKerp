@@ -122,40 +122,36 @@ namespace KnkForms.FormsCon
             {
                 try
                 {
-                    connection.Open();
+                    string queryPesquisa = "SELECT IdContato, IdFornCliente, Tipo, Contato, Observacao, IdEmpresa " +
+                                   "FROM Contato WHERE Contato LIKE @searchText OR IdContato LIKE @searchText";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdContato"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["Contato"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdContato"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdContato"].ToString());
 
-                                    item.SubItems.Add(reader["IdFornCliente"].ToString());
-                                    item.SubItems.Add(reader["Tipo"].ToString());
-                                    item.SubItems.Add(reader["Contato"].ToString());
-                                    item.SubItems.Add(reader["Observacao"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["IdFornCliente"].ToString());
+                                item.SubItems.Add(reader["Tipo"].ToString());
+                                item.SubItems.Add(reader["Contato"].ToString());
+                                item.SubItems.Add(reader["Observacao"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                //item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                //item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
+                                
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Contatos: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de Contatos: " + ex.Message);
                 }
             }
         }

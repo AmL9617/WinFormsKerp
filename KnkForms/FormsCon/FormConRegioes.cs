@@ -122,41 +122,38 @@ namespace KnkForms.Classes
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string queryPesquisa = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM Regiao WHERE Regiao LIKE @searchText OR IdRegiao LIKE @searchText";
+
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdRegiao"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["Regiao"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdRegiao"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdRegiao"].ToString());
+                                item.SubItems.Add(reader["Regiao"].ToString());
+                                item.SubItems.Add(reader["Descricao"].ToString());
+                                item.SubItems.Add(reader["Ativo"].ToString());
+                                item.SubItems.Add(reader["IdUsuario"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    item.SubItems.Add(reader["Regiao"].ToString());
-                                    item.SubItems.Add(reader["Descricao"].ToString());
-                                    item.SubItems.Add(reader["Ativo"].ToString());
-                                    item.SubItems.Add(reader["IdUsuario"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
-
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Regiões: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de Regiões: " + ex.Message);
                 }
             }
         }
+
         public void Consultas()
         {
             if (listVConsulta.SelectedItems.Count > 0)

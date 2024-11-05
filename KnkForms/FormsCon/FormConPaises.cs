@@ -129,39 +129,36 @@ namespace KnkForms.FormsCon
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string queryPesquisa = "SELECT IdPais, Pais, Sigla, DDI, Nacional, Ativo, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM Pais WHERE Pais LIKE @searchText OR IdPais LIKE @searchText";
+
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdPais"]) || 
-                                    txtPesquisa.Text == Convert.ToString(reader["Pais"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdPais"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdPais"].ToString());
 
-                                    item.SubItems.Add(reader["Pais"].ToString());
-                                    item.SubItems.Add(reader["Sigla"].ToString());
-                                    item.SubItems.Add(reader["DDI"].ToString());
-                                    item.SubItems.Add(Convert.ToChar(reader["Nacional"]) == 's' ? "Sim" : "Não");
-                                    item.SubItems.Add(reader["Ativo"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["Pais"].ToString());
+                                item.SubItems.Add(reader["Sigla"].ToString());
+                                item.SubItems.Add(reader["DDI"].ToString());
+                                item.SubItems.Add(Convert.ToChar(reader["Nacional"]) == 's' ? "Sim" : "Não");
+                                item.SubItems.Add(reader["Ativo"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrWhiteSpace(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de País: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de País: " + ex.Message);
                 }
             }
         }

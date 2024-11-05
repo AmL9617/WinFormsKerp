@@ -125,39 +125,34 @@ namespace KnkForms.FormsCon
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string queryPesquisa = "SELECT IdLista, Lista, DescMax, MargemLucro, PerComissao, Todas, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM Lista WHERE Lista LIKE @searchText OR IdLista LIKE @searchText";
+
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdLista"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["Lista"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdLista"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdLista"].ToString());
 
-                                    item.SubItems.Add(reader["Lista"].ToString());
-                                    item.SubItems.Add(reader["DescMax"].ToString());
-                                    item.SubItems.Add(reader["MargemLucro"].ToString());
-                                    item.SubItems.Add(reader["PerComissao"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["Lista"].ToString());
+                                item.SubItems.Add(reader["DescMax"].ToString());
+                                item.SubItems.Add(reader["MargemLucro"].ToString());
+                                item.SubItems.Add(reader["PerComissao"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de ListaPreços: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de ListaPreços: " + ex.Message);
                 }
             }
         }

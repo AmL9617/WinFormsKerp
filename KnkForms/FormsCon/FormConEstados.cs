@@ -128,41 +128,38 @@ namespace KnkForms.Classes
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string queryPesquisa = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM Estado WHERE Estado LIKE @searchText OR IdEstado LIKE @searchText";
+
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdEstado"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["Estado"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdEstado"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdEstado"].ToString());
 
-                                    item.SubItems.Add(reader["IdPais"].ToString());
-                                    item.SubItems.Add(reader["Estado"].ToString());
-                                    item.SubItems.Add(reader["Sigla"].ToString());
-                                    item.SubItems.Add(reader["PercIcms"].ToString());
-                                    item.SubItems.Add(reader["IcmsInt"].ToString());
-                                    item.SubItems.Add(reader["PerRedSt"].ToString());
-                                    item.SubItems.Add(reader["CodigoWeb"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["IdPais"].ToString());
+                                item.SubItems.Add(reader["Estado"].ToString());
+                                item.SubItems.Add(reader["Sigla"].ToString());
+                                item.SubItems.Add(reader["PercIcms"].ToString());
+                                item.SubItems.Add(reader["IcmsInt"].ToString());
+                                item.SubItems.Add(reader["PerRedSt"].ToString());
+                                item.SubItems.Add(reader["CodigoWeb"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Estados: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de Estados: " + ex.Message);
                 }
             }
         }

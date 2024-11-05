@@ -131,43 +131,40 @@ namespace KnkForms.Classes
                 try
                 {
                     connection.Open();
+                    string queryPesquisa = "SELECT IdCondicaoPagamento, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM CondicaoPagamento WHERE CondicaoPagamento LIKE @searchText OR IdCondicaoPagamento LIKE @searchText";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdCondicaoPagamento"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["CondicaoPagamento"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdCondicaoPagamento"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdCondicaoPagamento"].ToString());
 
-                                    item.SubItems.Add(reader["CondicaoPagamento"].ToString());
-                                    item.SubItems.Add(reader["TaxaJuros"].ToString());
-                                    item.SubItems.Add(reader["NumeroParcelas"].ToString());
-                                    item.SubItems.Add(reader["Tipo"].ToString());
-                                    item.SubItems.Add(reader["Dia"].ToString());
-                                    item.SubItems.Add(reader["Operacao"].ToString());
-                                    item.SubItems.Add(reader["Ativo"].ToString());
-                                    item.SubItems.Add(reader["PorParcela"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["CondicaoPagamento"].ToString());
+                                item.SubItems.Add(reader["TaxaJuros"].ToString());
+                                item.SubItems.Add(reader["NumeroParcelas"].ToString());
+                                item.SubItems.Add(reader["Tipo"].ToString());
+                                item.SubItems.Add(reader["Dia"].ToString());
+                                item.SubItems.Add(reader["Operacao"].ToString());
+                                item.SubItems.Add(reader["Ativo"].ToString());
+                                item.SubItems.Add(reader["PorParcela"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
+                            
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de CondicaoPagamento: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de CondicaoPagamento: " + ex.Message);
                 }
             }
         }

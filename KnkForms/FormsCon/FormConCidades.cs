@@ -122,38 +122,35 @@ namespace KnkForms.FormsCon
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    string queryPesquisa = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa, DataCadastro, DataModificacao " +
+                                   "FROM Cidade WHERE Cidade LIKE @searchText OR IdCidade LIKE @searchText";
+
+                    using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
+                        command.Parameters.AddWithValue("@searchText", "%" + txtPesquisa.Text + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                if (txtPesquisa.Text == Convert.ToString(reader["IdCidade"]) ||
-                                    txtPesquisa.Text == Convert.ToString(reader["Cidade"]))
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
+                                ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
 
-                                    item.SubItems.Add(reader["IdEstado"].ToString());
-                                    item.SubItems.Add(reader["Cidade"].ToString());
-                                    item.SubItems.Add(reader["Ddd"].ToString());
-                                    item.SubItems.Add(reader["Ativo"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(reader["IdEstado"].ToString());
+                                item.SubItems.Add(reader["Cidade"].ToString());
+                                item.SubItems.Add(reader["Ddd"].ToString());
+                                item.SubItems.Add(reader["Ativo"].ToString());
+                                item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
-                                else if (String.IsNullOrEmpty(txtPesquisa.Text))
-                                {
-                                    CarregaLV();
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Cidade: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de Cidade: " + ex.Message);
                 }
             }
         }
