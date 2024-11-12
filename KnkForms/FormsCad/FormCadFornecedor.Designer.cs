@@ -74,6 +74,10 @@
             this.btnCondPag = new System.Windows.Forms.Button();
             this.txtCodCondPag = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtNomeCidade = new System.Windows.Forms.TextBox();
+            this.txtNomeRegiao = new System.Windows.Forms.TextBox();
+            this.txtNomeLista = new System.Windows.Forms.TextBox();
+            this.txtNomeCondPag = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -416,6 +420,7 @@
             // 
             // txtCodRegiao
             // 
+            this.txtCodRegiao.Enabled = false;
             this.txtCodRegiao.Location = new System.Drawing.Point(402, 203);
             this.txtCodRegiao.MaxLength = 30;
             this.txtCodRegiao.Name = "txtCodRegiao";
@@ -443,6 +448,7 @@
             // 
             // txtCodCidade
             // 
+            this.txtCodCidade.Enabled = false;
             this.txtCodCidade.Location = new System.Drawing.Point(313, 153);
             this.txtCodCidade.MaxLength = 50;
             this.txtCodCidade.Name = "txtCodCidade";
@@ -481,6 +487,7 @@
             // 
             // txtCodLista
             // 
+            this.txtCodLista.Enabled = false;
             this.txtCodLista.Location = new System.Drawing.Point(299, 254);
             this.txtCodLista.MaxLength = 30;
             this.txtCodLista.Name = "txtCodLista";
@@ -508,6 +515,7 @@
             // 
             // txtCodCondPag
             // 
+            this.txtCodCondPag.Enabled = false;
             this.txtCodCondPag.Location = new System.Drawing.Point(536, 255);
             this.txtCodCondPag.MaxLength = 30;
             this.txtCodCondPag.Name = "txtCodCondPag";
@@ -523,10 +531,50 @@
             this.label17.TabIndex = 568;
             this.label17.Text = "Código Condição Pagamento";
             // 
+            // txtNomeCidade
+            // 
+            this.txtNomeCidade.Enabled = false;
+            this.txtNomeCidade.Location = new System.Drawing.Point(313, 153);
+            this.txtNomeCidade.MaxLength = 50;
+            this.txtNomeCidade.Name = "txtNomeCidade";
+            this.txtNomeCidade.Size = new System.Drawing.Size(260, 20);
+            this.txtNomeCidade.TabIndex = 569;
+            // 
+            // txtNomeRegiao
+            // 
+            this.txtNomeRegiao.Enabled = false;
+            this.txtNomeRegiao.Location = new System.Drawing.Point(402, 203);
+            this.txtNomeRegiao.MaxLength = 30;
+            this.txtNomeRegiao.Name = "txtNomeRegiao";
+            this.txtNomeRegiao.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeRegiao.TabIndex = 570;
+            // 
+            // txtNomeLista
+            // 
+            this.txtNomeLista.Enabled = false;
+            this.txtNomeLista.Location = new System.Drawing.Point(299, 254);
+            this.txtNomeLista.MaxLength = 30;
+            this.txtNomeLista.Name = "txtNomeLista";
+            this.txtNomeLista.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeLista.TabIndex = 571;
+            // 
+            // txtNomeCondPag
+            // 
+            this.txtNomeCondPag.Enabled = false;
+            this.txtNomeCondPag.Location = new System.Drawing.Point(536, 255);
+            this.txtNomeCondPag.MaxLength = 30;
+            this.txtNomeCondPag.Name = "txtNomeCondPag";
+            this.txtNomeCondPag.Size = new System.Drawing.Size(172, 20);
+            this.txtNomeCondPag.TabIndex = 572;
+            // 
             // FormCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(792, 740);
+            this.Controls.Add(this.txtNomeCondPag);
+            this.Controls.Add(this.txtNomeLista);
+            this.Controls.Add(this.txtNomeRegiao);
+            this.Controls.Add(this.txtNomeCidade);
             this.Controls.Add(this.btnCondPag);
             this.Controls.Add(this.txtCodCondPag);
             this.Controls.Add(this.label17);
@@ -631,6 +679,10 @@
             this.Controls.SetChildIndex(this.label17, 0);
             this.Controls.SetChildIndex(this.txtCodCondPag, 0);
             this.Controls.SetChildIndex(this.btnCondPag, 0);
+            this.Controls.SetChildIndex(this.txtNomeCidade, 0);
+            this.Controls.SetChildIndex(this.txtNomeRegiao, 0);
+            this.Controls.SetChildIndex(this.txtNomeLista, 0);
+            this.Controls.SetChildIndex(this.txtNomeCondPag, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,5 +736,9 @@
         private System.Windows.Forms.Button btnCondPag;
         private System.Windows.Forms.TextBox txtCodCondPag;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtNomeCidade;
+        private System.Windows.Forms.TextBox txtNomeRegiao;
+        private System.Windows.Forms.TextBox txtNomeLista;
+        private System.Windows.Forms.TextBox txtNomeCondPag;
     }
 }

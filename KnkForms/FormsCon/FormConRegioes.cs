@@ -154,21 +154,23 @@ namespace KnkForms.Classes
             }
         }
 
-        public void Consultas()
+        private void listV_DoubleClick(object sender, EventArgs e)
         {
             if (listVConsulta.SelectedItems.Count > 0)
             {
                 var selectedItem = listVConsulta.SelectedItems[0];
 
-                string campo1 = selectedItem.SubItems[0].Text;
-                string campo2 = selectedItem.SubItems[1].Text;
-                string campo3 = selectedItem.SubItems[2].Text;
-                string campo4 = selectedItem.SubItems[3].Text;
-                string campo6 = selectedItem.SubItems[5].Text;
-                string campo7 = selectedItem.SubItems[6].Text;
-                string campo8 = selectedItem.SubItems[7].Text;
+                int idRegiao = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeRegiao = (selectedItem.SubItems[2].Text);
+                string tipo = "Regiao";
 
-                
+                var cadFornecedor = this.Owner as FormCadFornecedor;
+                if (cadFornecedor != null)
+                {
+                    cadFornecedor.SetConsultas(idRegiao, nomeRegiao, tipo);
+                }
+
+                this.Close();
             }
         }
     }

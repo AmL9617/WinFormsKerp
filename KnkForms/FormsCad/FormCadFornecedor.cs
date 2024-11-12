@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace KnkForms.Forms
 {
-    public partial class FormCadFornecedor : KnkForms.FormCadPai/*, Interfaces.IConsultas*/
+    public partial class FormCadFornecedor : KnkForms.FormCadPai
     {
         Fornecedores oFornecedor;
         FormConCidades oFrmConCidades;
@@ -27,12 +27,6 @@ namespace KnkForms.Forms
             //Padronização das datas para dia/mês/ano
             dataUltMov.CustomFormat = "dd/MM/yyyy";
             dataUltMov.Format = DateTimePickerFormat.Custom;
-        }
-
-        //TESTE
-        public void SetConsultaId(string id)
-        {
-            txtCodRegiao.Text = id;
         }
 
         public override void ConhecaObj(Object obj)
@@ -218,10 +212,30 @@ namespace KnkForms.Forms
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
                 if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
-        public void SetId(string Id)
+        public void SetConsultas(int id, string nome, string tipo)
         {
-            txtCodRegiao.Text = Id;
+            if(tipo == "Cidade")
+            {
+                txtCodCidade.Text = Convert.ToString(id);
+                txtNomeCidade.Text = nome;
+            }
+            else if (tipo == "Regiao")
+            {
+                txtCodRegiao.Text = Convert.ToString(id);
+                txtNomeRegiao.Text = nome;
+            }
+            else if (tipo == "ListaPreco")
+            {
+                txtCodLista.Text = Convert.ToString(id);
+                txtNomeLista.Text = nome;
+            }
+            else if (tipo == "CondPag")
+            {
+                txtCodCondPag.Text = Convert.ToString(id);
+                txtNomeCondPag.Text = nome;
+            }
         }
+
 
         public void setFrmConCidades(Object obj)
         {
@@ -242,25 +256,29 @@ namespace KnkForms.Forms
        
         private void btnConsultaReg_Click(object sender, EventArgs e)
         {
-            oFrmConRegioes.ConhecaObj(oFornecedor.Regioes); 
+            oFrmConRegioes.ConhecaObj(oFornecedor.Regioes);
+            oFrmConRegioes.Owner = this;
             oFrmConRegioes.ShowDialog();
         }
 
         private void btnConsultaCid_Click(object sender, EventArgs e)
         {
             oFrmConCidades.ConhecaObj(oFornecedor.Cidades);
+            oFrmConCidades.Owner = this;
             oFrmConCidades.ShowDialog();
         }
 
         private void btnConsultaLista_Click(object sender, EventArgs e)
         {
             oFrmConListaPrecos.ConhecaObj(oFornecedor.ListaPrecos);
+            oFrmConListaPrecos.Owner = this;
             oFrmConListaPrecos.ShowDialog();
         }
 
         private void btnCondPag_Click(object sender, EventArgs e)
         {
             oFrmCondicaoPagamentos.ConhecaObj(oFornecedor.CondicaoPagamentos);
+            oFrmCondicaoPagamentos.Owner = this;
             oFrmCondicaoPagamentos.ShowDialog();
         }
     }

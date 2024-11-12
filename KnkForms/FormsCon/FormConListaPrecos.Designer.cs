@@ -51,6 +51,7 @@
             this.codEmp,
             this.dataCad,
             this.dataModif});
+            this.listVConsulta.DoubleClick += new System.EventHandler(this.listV_DoubleClick);
             // 
             // codLista
             // 

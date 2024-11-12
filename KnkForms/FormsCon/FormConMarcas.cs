@@ -51,6 +51,24 @@ namespace KnkForms.FormsCon
             oFormCadMarca.ShowDialog();
             oFormCadMarca.DesbloqueiaTxt();
         }
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
 
+                int idMarca = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeMarca = (selectedItem.SubItems[2].Text);
+                string tipo = "Marca";
+
+                var cadListaPreco = this.Owner as FormCadListaPreco;
+                if (cadListaPreco != null)
+                {
+                    cadListaPreco.SetConsulta(idMarca, nomeMarca, tipo);
+                }
+
+                this.Close();
+            }
+        }
     }
 }

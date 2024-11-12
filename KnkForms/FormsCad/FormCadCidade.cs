@@ -109,6 +109,12 @@ namespace KnkForms.Forms
                 if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
 
+        public void SetEstado(int idEstado, string nomeEstado)
+        {
+            txtCodEstado.Text = Convert.ToString(idEstado);
+            txtNomeEstado.Text = nomeEstado;
+        }
+       
         public void setFrmConEstados(Object obj)
         {
             oFrmConEstados = (FormConEstados)obj;
@@ -116,6 +122,7 @@ namespace KnkForms.Forms
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             oFrmConEstados.ConhecaObj(aCidade.Estado);
+            oFrmConEstados.Owner = this;
             oFrmConEstados.ShowDialog();
         }
     }

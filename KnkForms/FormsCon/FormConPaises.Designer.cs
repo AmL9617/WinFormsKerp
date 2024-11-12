@@ -51,6 +51,7 @@
             this.codEmp,
             this.DataCad,
             this.dataMod});
+            this.listVConsulta.DoubleClick += new System.EventHandler(this.listV_DoubleClick);
             // 
             // CodPais
             // 

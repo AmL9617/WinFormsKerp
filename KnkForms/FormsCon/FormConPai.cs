@@ -12,26 +12,12 @@ namespace KnkForms.FormsCon
 {
     public partial class FormConPai : FormPai
     {
-        //TESTE
-        private readonly IConsultas _consultas;
-        private readonly string _tipo;
-
-        public FormConPai(/*IConsultas consultas, string tipo*/)
+        
+        public FormConPai()
         {
             InitializeComponent();
-            //_consultas = consultas;
-            //_tipo = tipo;
         }
-        //TESTE
-        protected void listView_DoubleClick(object sender, EventArgs e)
-        {
-            if (listVConsulta.SelectedItems.Count > 0)
-            {
-                string selectedID = listVConsulta.SelectedItems[0].SubItems[0].Text;
-                _consultas.SetConsultaId(selectedID, _tipo);
-                this.Close();
-            }
-        }
+        
         protected virtual void CarregaLV()
         {
 

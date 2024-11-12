@@ -43,6 +43,8 @@
             this.btnConsultaSubgrupo = new System.Windows.Forms.Button();
             this.txtPercCom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtNomeMarca = new System.Windows.Forms.TextBox();
+            this.txtNomeSubgrupo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -118,6 +120,7 @@
             // 
             // txtCodMarca
             // 
+            this.txtCodMarca.Enabled = false;
             this.txtCodMarca.Location = new System.Drawing.Point(38, 119);
             this.txtCodMarca.MaxLength = 30;
             this.txtCodMarca.Name = "txtCodMarca";
@@ -135,6 +138,7 @@
             // 
             // txtCodSubgrupo
             // 
+            this.txtCodSubgrupo.Enabled = false;
             this.txtCodSubgrupo.Location = new System.Drawing.Point(276, 119);
             this.txtCodSubgrupo.MaxLength = 30;
             this.txtCodSubgrupo.Name = "txtCodSubgrupo";
@@ -199,10 +203,30 @@
             this.label5.TabIndex = 62;
             this.label5.Text = "Perc. Comissão";
             // 
+            // txtNomeMarca
+            // 
+            this.txtNomeMarca.Enabled = false;
+            this.txtNomeMarca.Location = new System.Drawing.Point(38, 119);
+            this.txtNomeMarca.MaxLength = 30;
+            this.txtNomeMarca.Name = "txtNomeMarca";
+            this.txtNomeMarca.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeMarca.TabIndex = 63;
+            // 
+            // txtNomeSubgrupo
+            // 
+            this.txtNomeSubgrupo.Enabled = false;
+            this.txtNomeSubgrupo.Location = new System.Drawing.Point(276, 119);
+            this.txtNomeSubgrupo.MaxLength = 30;
+            this.txtNomeSubgrupo.Name = "txtNomeSubgrupo";
+            this.txtNomeSubgrupo.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeSubgrupo.TabIndex = 64;
+            // 
             // FormCadListaPreco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNomeSubgrupo);
+            this.Controls.Add(this.txtNomeMarca);
             this.Controls.Add(this.txtPercCom);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnConsultaSubgrupo);
@@ -245,6 +269,8 @@
             this.Controls.SetChildIndex(this.btnConsultaSubgrupo, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtPercCom, 0);
+            this.Controls.SetChildIndex(this.txtNomeMarca, 0);
+            this.Controls.SetChildIndex(this.txtNomeSubgrupo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +293,7 @@
         private System.Windows.Forms.Button btnConsultaSubgrupo;
         private System.Windows.Forms.TextBox txtPercCom;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNomeMarca;
+        private System.Windows.Forms.TextBox txtNomeSubgrupo;
     }
 }

@@ -113,6 +113,20 @@ namespace KnkForms.Forms
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
                 if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
+        public void SetConsulta(int id, string nome, string tipo)
+        {
+            if(tipo == "Marca")
+            {
+                txtCodMarca.Text = Convert.ToString(id);
+                txtNomeMarca.Text = nome;
+            }
+            else if(tipo == "Subgrupo")
+            {
+                txtCodSubgrupo.Text = Convert.ToString(id);
+                txtNomeSubgrupo.Text = nome;
+            }
+        }
+
         public void setFrmConMarcas(Object obj)
         {
             oFrmConMarcas = (FormConMarcas)obj;

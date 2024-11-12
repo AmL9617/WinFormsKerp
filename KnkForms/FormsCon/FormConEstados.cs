@@ -163,5 +163,24 @@ namespace KnkForms.Classes
                 }
             }
         }
+
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int idEstado = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeEstado = (selectedItem.SubItems[2].Text);
+
+                var cadCidade = this.Owner as FormCadCidade;
+                if (cadCidade != null)
+                {
+                    cadCidade.SetEstado(idEstado, nomeEstado);
+                }
+
+                this.Close();
+            }
+        }
     }
 }

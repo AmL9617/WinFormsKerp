@@ -162,5 +162,23 @@ namespace KnkForms.FormsCon
                 }
             }
         }
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int idPais = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomePais = (selectedItem.SubItems[1].Text);
+
+                var cadEstado = this.Owner as FormCadEstado;
+                if (cadEstado != null)
+                {
+                    cadEstado.SetPais(idPais, nomePais);
+                }
+
+                this.Close();
+            }
+        }
     }
 }

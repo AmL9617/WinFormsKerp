@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtPercRedST = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtNomePais = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -113,6 +114,7 @@
             // 
             // txtCodPais
             // 
+            this.txtCodPais.Enabled = false;
             this.txtCodPais.Location = new System.Drawing.Point(462, 59);
             this.txtCodPais.MaxLength = 50;
             this.txtCodPais.Name = "txtCodPais";
@@ -206,10 +208,20 @@
             this.label6.TabIndex = 36;
             this.label6.Text = "Percentual Red. S. T.";
             // 
+            // txtNomePais
+            // 
+            this.txtNomePais.Enabled = false;
+            this.txtNomePais.Location = new System.Drawing.Point(462, 59);
+            this.txtNomePais.MaxLength = 50;
+            this.txtNomePais.Name = "txtNomePais";
+            this.txtNomePais.Size = new System.Drawing.Size(260, 20);
+            this.txtNomePais.TabIndex = 38;
+            // 
             // FormCadEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNomePais);
             this.Controls.Add(this.txtCodWeb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPercRedST);
@@ -254,6 +266,7 @@
             this.Controls.SetChildIndex(this.txtPercRedST, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtCodWeb, 0);
+            this.Controls.SetChildIndex(this.txtNomePais, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +290,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPercRedST;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNomePais;
     }
 }

@@ -36,6 +36,7 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblNomeCidade = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
+            this.txtNomeEstado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDataCad
@@ -62,6 +63,7 @@
             // 
             // txtCodEstado
             // 
+            this.txtCodEstado.Enabled = false;
             this.txtCodEstado.Location = new System.Drawing.Point(449, 58);
             this.txtCodEstado.MaxLength = 50;
             this.txtCodEstado.Name = "txtCodEstado";
@@ -132,10 +134,20 @@
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
+            // txtNomeEstado
+            // 
+            this.txtNomeEstado.Enabled = false;
+            this.txtNomeEstado.Location = new System.Drawing.Point(449, 58);
+            this.txtNomeEstado.MaxLength = 50;
+            this.txtNomeEstado.Name = "txtNomeEstado";
+            this.txtNomeEstado.Size = new System.Drawing.Size(260, 20);
+            this.txtNomeEstado.TabIndex = 37;
+            // 
             // FormCadCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNomeEstado);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodEstado);
             this.Controls.Add(this.label1);
@@ -164,6 +176,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtCodEstado, 0);
             this.Controls.SetChildIndex(this.btnConsulta, 0);
+            this.Controls.SetChildIndex(this.txtNomeEstado, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +192,6 @@
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblNomeCidade;
         private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.TextBox txtNomeEstado;
     }
 }

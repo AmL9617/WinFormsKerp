@@ -168,5 +168,24 @@ namespace KnkForms.Classes
                 }
             }
         }
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int idCondPag = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeCondPag = (selectedItem.SubItems[1].Text);
+                string tipo = "CondPag";
+
+                var cadFornecedor = this.Owner as FormCadFornecedor;
+                if (cadFornecedor != null)
+                {
+                    cadFornecedor.SetConsultas(idCondPag, nomeCondPag, tipo);
+                }
+
+                this.Close();
+            }
+        }
     }
 }

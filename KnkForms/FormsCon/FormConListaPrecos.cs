@@ -156,6 +156,25 @@ namespace KnkForms.FormsCon
                 }
             }
         }
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int idListaPreco = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeListaPreco = (selectedItem.SubItems[1].Text);
+                string tipo = "ListaPreco";
+
+                var cadFornecedor = this.Owner as FormCadFornecedor;
+                if (cadFornecedor != null)
+                {
+                    cadFornecedor.SetConsultas(idListaPreco, nomeListaPreco, tipo);
+                }
+
+                this.Close();
+            }
+        }
 
     }
 }

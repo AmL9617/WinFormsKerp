@@ -154,5 +154,24 @@ namespace KnkForms.FormsCon
                 }
             }
         }
+        private void listV_DoubleClick(object sender, EventArgs e)
+        {
+            if (listVConsulta.SelectedItems.Count > 0)
+            {
+                var selectedItem = listVConsulta.SelectedItems[0];
+
+                int idCidade = Convert.ToInt32(selectedItem.SubItems[0].Text);
+                string nomeCidade = (selectedItem.SubItems[2].Text);
+                string tipo = "Cidade";
+
+                var cadFornecedor = this.Owner as FormCadFornecedor;
+                if (cadFornecedor != null)
+                {
+                    cadFornecedor.SetConsultas(idCidade, nomeCidade, tipo);
+                }
+
+                this.Close();
+            }
+        }
     }
 }

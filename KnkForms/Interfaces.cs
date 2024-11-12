@@ -275,11 +275,5 @@ namespace KnkForms
             oFormConVendedores.ConhecaObj(obj);
             oFormConVendedores.ShowDialog();
         }
-
-        //TESTE
-        public interface IConsultas
-        {
-            void SetConsultaId(string id, string tipo);
-        }
     }
 }

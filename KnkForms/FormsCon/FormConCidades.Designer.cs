@@ -49,6 +49,7 @@
             this.codEmpresa,
             this.dataCadastro,
             this.dataModificacao});
+            this.listVConsulta.DoubleClick += new System.EventHandler(this.listV_DoubleClick);
             // 
             // codCidade
             // 

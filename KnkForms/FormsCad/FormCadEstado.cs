@@ -123,6 +123,11 @@ namespace KnkForms.Classes
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
                 if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
+        public void SetPais(int idPais, string nomePais)
+        {
+            txtCodPais.Text = Convert.ToString(idPais);
+            txtNomePais.Text = nomePais;
+        }
         public void setFrmConPaises(Object obj)
         {
             oFrmConPaises = (FormConPaises)obj;
@@ -131,7 +136,9 @@ namespace KnkForms.Classes
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             oFrmConPaises.ConhecaObj(oEstado.Pais);
+            oFrmConPaises.Owner = this;
             oFrmConPaises.ShowDialog();
         }
+        
     }
 }
