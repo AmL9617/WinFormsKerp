@@ -16,7 +16,8 @@ namespace KnkForms.FormsCon
         FormCadListaPreco oFormCadListaPreco;
         ListaPrecos aListaPreco;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdLista, Lista, DescMax, MargemLucro, PerComissao, Todas, IdEmpresa, DataCadastro, DataModificacao FROM Lista";
 
         public FormConListaPrecos()
@@ -171,7 +172,11 @@ namespace KnkForms.FormsCon
                 {
                     cadFornecedor.SetConsultas(idListaPreco, nomeListaPreco, tipo);
                 }
-
+                var cadCliente = this.Owner as FormCadCliente;
+                if (cadCliente != null)
+                {
+                    cadCliente.SetConsultas(idListaPreco, nomeListaPreco, tipo);
+                }
                 this.Close();
             }
         }

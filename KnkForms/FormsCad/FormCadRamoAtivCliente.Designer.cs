@@ -33,7 +33,24 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrioridade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtNomeCliForn = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
+            // txtDataCad
+            // 
+            this.txtDataCad.Enabled = false;
+            // 
+            // txtDataAlt
+            // 
+            this.txtDataAlt.Enabled = false;
+            // 
+            // txtCodUser
+            // 
+            this.txtCodUser.Enabled = false;
             // 
             // btnConsulta
             // 
@@ -47,6 +64,7 @@
             // 
             // txtCodCliForn
             // 
+            this.txtCodCliForn.Enabled = false;
             this.txtCodCliForn.Location = new System.Drawing.Point(342, 58);
             this.txtCodCliForn.MaxLength = 100;
             this.txtCodCliForn.Name = "txtCodCliForn";
@@ -79,10 +97,20 @@
             this.label2.TabIndex = 69;
             this.label2.Text = "Prioridade";
             // 
+            // txtNomeCliForn
+            // 
+            this.txtNomeCliForn.Enabled = false;
+            this.txtNomeCliForn.Location = new System.Drawing.Point(342, 58);
+            this.txtNomeCliForn.MaxLength = 100;
+            this.txtNomeCliForn.Name = "txtNomeCliForn";
+            this.txtNomeCliForn.Size = new System.Drawing.Size(307, 20);
+            this.txtNomeCliForn.TabIndex = 70;
+            // 
             // FormCadRamoAtivCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNomeCliForn);
             this.Controls.Add(this.txtPrioridade);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConsulta);
@@ -105,6 +133,7 @@
             this.Controls.SetChildIndex(this.btnConsulta, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtPrioridade, 0);
+            this.Controls.SetChildIndex(this.txtNomeCliForn, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +146,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrioridade;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNomeCliForn;
     }
 }

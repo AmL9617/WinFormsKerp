@@ -131,12 +131,13 @@ namespace KnkForms
 
             //Agregação
             oFormCadCidade.setFrmConEstados(oFormConEstados);
+            oFormCadCliente.setFrmConCidades(oFormConCidades);
             oFormCadCliente.setFrmConCondPag(oFormConCondPag);
             oFormCadCliente.setFrmConListaPrecos(oFormConListaPrecos);
+            oFormCadCliente.setFrmConRamoAtiv(oFormConRamoAtividades);
             oFormCadCliente.setFrmConRegioes(oFormConRegioes);
             oFormCadCliente.setFrmConTransportadoras(oFormConTransportadoras);
             oFormCadCliente.setFrmConVendedores(oFormConVendedores);
-            //oFormCadContador.setFrmConContatos(oFormConContatos);
             oFormCadContato.setFrmConClientes(oFormConClientes);
             oFormCadContador.setFrmConRegioes(oFormConRegioes);
             oFormCadEstado.setFrmConPaises(oFormConPaises);

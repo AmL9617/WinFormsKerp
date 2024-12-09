@@ -17,7 +17,8 @@ namespace KnkForms.FormsCon
     {
         FormCadContato oFormCadContato;
         Contatos oContato;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdContato, IdFornCliente, Tipo, Contato, Observacao, IdEmpresa FROM Contatos";
 
         public FormConContatos()
@@ -93,10 +94,13 @@ namespace KnkForms.FormsCon
                 string campo4 = selectedItem.SubItems[3].Text;
                 string campo5 = selectedItem.SubItems[4].Text;
                 string campo6 = selectedItem.SubItems[5].Text;
-                
+                string campo7 = selectedItem.SubItems[6].Text;
+                string campo8 = selectedItem.SubItems[7].Text;
+
+
                 oFormCadContato.ConhecaObj(oContato);
                 oFormCadContato.LimpaTxt();
-                oFormCadContato.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6);
+                oFormCadContato.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8);
                 oFormCadContato.ShowDialog();
             }
             CarregaLV();

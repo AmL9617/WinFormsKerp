@@ -12,6 +12,7 @@ namespace KnkForms.Forms
     public partial class FormCadRamoAtividade : KnkForms.FormCadPai
     {
         RamoAtividades oRamo;
+        char SalvarAlterar = '\0';
         public FormCadRamoAtividade()
         {
             InitializeComponent();
@@ -36,15 +37,15 @@ namespace KnkForms.Forms
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
         {
-            txtCod.Text = Convert.ToString(oRamo.Cod);
-            txtCod.Enabled = false;
-            txtNomeRamo.Text = oRamo.Ramo;
-            if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; };
-            txtCodUser.Text = Convert.ToString(oRamo.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oRamo.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oRamo.DataModificacao);
+            txtCod.Text = campo1;
+            txtNomeRamo.Text = campo2;
+            if (campo3 == "S") chkAtivo.Checked = true; else chkAtivo.Checked = false;
+            txtCodUser.Text = campo4;
+            txtDataCad.Text = campo5;
+            txtDataAlt.Text = campo6;
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()
@@ -69,14 +70,25 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oRamo.Cod = Convert.ToInt32(txtCod.Text);
             oRamo.Ramo = txtNomeRamo.Text;
             if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; }; 
-            oRamo.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oRamo.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oRamo.CodEmpresa = 1;
+            oRamo.DataModificacao = DateTime.Now;
 
-            txtCod.Enabled = true;
+            if (SalvarAlterar == 'A')
+            {
+                oRamo.Cod = Convert.ToInt32(txtCod.Text);
+                oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                oRamo.AlterarBD(oRamo.Cod);
+            }
+            else
+            {
+                oRamo.DataCadastro = DateTime.Today;
+                oRamo.SalvarBD();
+            }
+
+            SalvarAlterar = '\0';
+            Close();
         }
     }
 }

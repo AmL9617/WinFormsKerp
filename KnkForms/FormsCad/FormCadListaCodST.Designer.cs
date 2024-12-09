@@ -35,8 +35,13 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.Location = new System.Drawing.Point(139, 418);
             this.txtDataCad.TabIndex = 6;
             // 
@@ -46,6 +51,7 @@
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.Location = new System.Drawing.Point(262, 418);
             // 
             // lblDataAlteracao
@@ -58,6 +64,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.Location = new System.Drawing.Point(39, 418);
             this.txtCodUser.TabIndex = 5;
             // 

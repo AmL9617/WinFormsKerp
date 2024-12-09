@@ -45,12 +45,18 @@
             this.txtDia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.TabIndex = 11;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.TabIndex = 12;
             // 
             // btnSalvar
@@ -59,6 +65,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.TabIndex = 10;
             // 
             // btnSair

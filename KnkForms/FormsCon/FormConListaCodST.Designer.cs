@@ -28,7 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.codListaCST = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.desc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
+            // 
+            // listVConsulta
+            // 
+            this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.codListaCST,
+            this.tipo,
+            this.desc,
+            this.ativo,
+            this.codEmp});
+            // 
+            // codListaCST
+            // 
+            this.codListaCST.Text = "Código Lista CST";
+            this.codListaCST.Width = 120;
+            // 
+            // tipo
+            // 
+            this.tipo.Text = "Tipo";
+            // 
+            // desc
+            // 
+            this.desc.Text = "Descrição";
+            this.desc.Width = 100;
+            // 
+            // ativo
+            // 
+            this.ativo.Text = "Ativo";
+            // 
+            // codEmp
+            // 
+            this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 100;
             // 
             // FormConListaCodST
             // 
@@ -42,5 +79,11 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader codListaCST;
+        private System.Windows.Forms.ColumnHeader tipo;
+        private System.Windows.Forms.ColumnHeader desc;
+        private System.Windows.Forms.ColumnHeader ativo;
+        private System.Windows.Forms.ColumnHeader codEmp;
     }
 }

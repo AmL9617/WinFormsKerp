@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblNomeEstado = new System.Windows.Forms.Label();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtCodPais = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsulta = new System.Windows.Forms.Button();
@@ -47,12 +46,18 @@
             this.txtNomePais = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.TabIndex = 11;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.TabIndex = 12;
             // 
             // btnSalvar
@@ -61,6 +66,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.TabIndex = 10;
             // 
             // btnSair
@@ -100,17 +106,6 @@
             this.lblNomeEstado.Size = new System.Drawing.Size(40, 13);
             this.lblNomeEstado.TabIndex = 19;
             this.lblNomeEstado.Text = "Estado";
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(727, 28);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 5;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
             // 
             // txtCodPais
             // 
@@ -233,7 +228,6 @@
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.txtCodPais);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEstado);
@@ -247,7 +241,6 @@
             this.Controls.SetChildIndex(this.txtEstado, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtSigla, 0);
-            this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.lblCod, 0);
             this.Controls.SetChildIndex(this.txtCod, 0);
             this.Controls.SetChildIndex(this.lblDataCad, 0);
@@ -278,7 +271,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblNomeEstado;
-        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtCodPais;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConsulta;

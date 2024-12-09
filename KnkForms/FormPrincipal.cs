@@ -64,6 +64,7 @@ namespace KnkForms
             oSubgrupo = new Subgrupos();
             aTransportadora = new Transportadoras();
             oVendedor = new Vendedores();
+
         }
 
         //Cadastros

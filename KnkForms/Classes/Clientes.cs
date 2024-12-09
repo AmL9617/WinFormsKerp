@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Classes
 {
@@ -10,6 +12,7 @@ namespace KnkForms.Classes
     {
         protected string cliente;
         protected string razaoSocial;
+        protected string cpf;
         protected string endereco;
         protected int numero;
         protected string complemento;
@@ -57,10 +60,15 @@ namespace KnkForms.Classes
         protected Fornecedores fornecedores;
         protected ListaPrecos listaPrecos;
 
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+
+
         public Clientes()
         {
             cliente = "";
             razaoSocial = "";
+            cpf = "";
             endereco = "";
             numero = 0;
             complemento = "";
@@ -117,6 +125,12 @@ namespace KnkForms.Classes
         {
             get { return razaoSocial; }
             set { razaoSocial = value; }
+        }
+
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
         }
 
         public string Endereco
@@ -368,6 +382,117 @@ namespace KnkForms.Classes
         {
             get { return codListaPrecos; }
             set { codListaPrecos = value; }
+        }
+        public void SalvarBD()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO FornCliente (IdEmpresa, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, RegimeSemSt, ProdutorRural, DataUltimaCompra, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdCidadeEmp) VALUES (@IdEmpresa, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @RegimeSemSt, @ProdutorRural, @DataUltimaCompra, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdCidadeEmp)";
+
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@NomeFantasia", Cliente);
+                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
+                        command.Parameters.AddWithValue("@CpfCnpj", Cpf);
+                        command.Parameters.AddWithValue("@Tipo", VerEmFornecedores);
+                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
+                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
+                        command.Parameters.AddWithValue("@Logradouro", Endereco);
+                        command.Parameters.AddWithValue("@Numero", Numero);
+                        command.Parameters.AddWithValue("@Complemento", Complemento);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@ConsumidorRevenda", ConsumidorRevenda);
+                        command.Parameters.AddWithValue("@Observacao", ObsDiv);
+                        command.Parameters.AddWithValue("@RegimeSemSt", RegimeSemSt);
+                        command.Parameters.AddWithValue("@ProdutorRural", ProdutorRural);
+                        command.Parameters.AddWithValue("@DataUltimaCompra", UltimaCompra);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
+                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void AlterarBD(int CodFornCli)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE FornCliente SET IdEmpresa=@IdEmpresa, NomeFantasia=@NomeFantasia, InscricaoEstadual=@InscricaoEstadual, CpfCnpj=@CpfCnpj, Tipo=@Tipo, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro, Cep=@Cep, ConsumidorRevenda=@ConsumidorRevenda, Observacao=@Observacao, RegimeSemSt=@RegimeSemSt, ProdutorRural=@ProdutorRural, DataUltimaCompra=@DataUltimaCompra, Ativo=@Ativo, FisicaJuridica=@FisicaJuridica, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao, IdCidadeEmp=@IdCidadeEmp WHERE IdFornCliente = @IdFornCliente";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@NomeFantasia", Cliente);
+                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
+                        command.Parameters.AddWithValue("@CpfCnpj", Cpf);
+                        command.Parameters.AddWithValue("@Tipo", VerEmFornecedores);
+                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
+                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
+                        command.Parameters.AddWithValue("@Logradouro", Endereco);
+                        command.Parameters.AddWithValue("@Numero", Numero);
+                        command.Parameters.AddWithValue("@Complemento", Complemento);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@ConsumidorRevenda", ConsumidorRevenda);
+                        command.Parameters.AddWithValue("@Observacao", ObsDiv);
+                        command.Parameters.AddWithValue("@RegimeSemSt", RegimeSemSt);
+                        command.Parameters.AddWithValue("@ProdutorRural", ProdutorRural);
+                        command.Parameters.AddWithValue("@DataUltimaCompra", UltimaCompra);
+                        command.Parameters.AddWithValue("@Ativo", Ativo);
+                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
+                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
+                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
+                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void ExcluirBD(int CodFornCliente)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM FornCliente WHERE IdFornCliente = @IdFornCliente";
+                    using (var command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 

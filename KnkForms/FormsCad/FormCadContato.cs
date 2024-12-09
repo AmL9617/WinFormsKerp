@@ -28,6 +28,7 @@ namespace KnkForms.FormsCad
         public override void LimpaTxt()
         {
             txtCod.Clear();
+            txtCodFornCliente.Clear();
             txtFornCliente.Clear();
             txtTipo.Clear();
             txtContato.Clear();
@@ -37,20 +38,22 @@ namespace KnkForms.FormsCad
             txtDataAlt.Clear();
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
         {
             txtCod.Text = campo1;
-            txtCod.Enabled = false;
-            txtFornCliente.Text = campo2;
+            txtCodFornCliente.Text = campo2;
             txtTipo.Text = campo3;
             txtContato.Text = campo4;
             txtObservacao.Text = campo5;
             txtCodUser.Text = campo6;
+            txtDataCad.Text = campo7;
+            txtDataAlt.Text = campo8;
         }
 
         public override void BloqueiaTxt()
         {
             txtCod.Enabled = false;
+            txtCodFornCliente.Enabled = false;
             txtFornCliente.Enabled = false;
             txtTipo.Enabled = false;
             txtContato.Enabled = false;
@@ -63,6 +66,7 @@ namespace KnkForms.FormsCad
         public override void DesbloqueiaTxt()
         {
             txtCod.Enabled = true;
+            txtCodFornCliente.Enabled = true;
             txtFornCliente.Enabled = true;
             txtTipo.Enabled = true;
             txtContato.Enabled = true;
@@ -74,23 +78,36 @@ namespace KnkForms.FormsCad
 
         public override void Salvar()
         {
-            oContato.Cod = Convert.ToInt32(txtCod.Text);
-            oContato.CodFornCliente = Convert.ToInt32(txtFornCliente.Text);
+            
+            oContato.CodFornCliente = Convert.ToInt32(txtCodFornCliente.Text);
             oContato.Tipo = txtTipo.Text;
             oContato.Contato = txtContato.Text;
             oContato.Observacao = txtObservacao.Text;
-            oContato.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oContato.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oContato.CodEmpresa = 1;
+            oContato.DataModificacao = DateTime.Now;
 
             if (SalvarAlterar == 'A')
+            {
+                oContato.Cod = Convert.ToInt32(txtCod.Text);
+                oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oContato.AlterarBD(oContato.Cod);
+            }
+
             else
+            {
+                oContato.DataCadastro = DateTime.Now;
                 oContato.SalvarBD();
+            }
+                
             SalvarAlterar = '\0';
 
             txtCod.Enabled = true;
             Close();
+        }
+        public void SetClientes(int idCliente, string nomeCliente)
+        {
+            txtCodFornCliente.Text = Convert.ToString(idCliente);
+            txtFornCliente.Text = nomeCliente;
         }
         public void setFrmConClientes(Object obj)
         {
@@ -99,6 +116,7 @@ namespace KnkForms.FormsCad
         private void btnConsultaCid_Click(object sender, EventArgs e)
         {
             oFrmConClientes.ConhecaObj(oContato.Clientes);
+            oFrmConClientes.Owner = this;
             oFrmConClientes.ShowDialog();
         }
     }

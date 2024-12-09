@@ -33,7 +33,6 @@ namespace KnkForms.Classes
             txtEstado.Clear();
             txtSigla.Clear();
             txtCodPais.Clear();
-            chkAtivo.Checked = false;
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
@@ -67,7 +66,6 @@ namespace KnkForms.Classes
             txtEstado.Enabled = false;
             txtSigla.Enabled = false;
             txtCodPais.Enabled = false;
-            chkAtivo.Enabled = false;
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
@@ -84,7 +82,6 @@ namespace KnkForms.Classes
             txtSigla.Enabled = true;
             txtCodPais.Enabled = true;
             txtCodUser.Enabled = true;
-            chkAtivo.Enabled=true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
             txtPercIcms.Enabled = true;
@@ -95,26 +92,31 @@ namespace KnkForms.Classes
 
         public override void Salvar()
         {
-            oEstado.Cod = Convert.ToInt32(txtCod.Text);
             oEstado.Estado = txtEstado.Text;
             oEstado.Sigla = Convert.ToString(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
-            if (chkAtivo.Checked == true) { oEstado.Ativo = 'S'; } else { oEstado.Ativo = 'N'; };
-            oEstado.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oEstado.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
             oEstado.PercIcms = Convert.ToDouble(txtPercIcms.Text) ;
             oEstado.Icms = Convert.ToDouble(txtIcms.Text);
             oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
             oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
+            oEstado.CodEmpresa = 1;
+            oEstado.DataModificacao = DateTime.Now;
 
             if (SalvarAlterar == 'A')
+            {
+                oEstado.Cod = Convert.ToInt32(txtCod.Text);
+                oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oEstado.AlterarBD(oEstado.Cod);
+
+            }
             else
+            {
+
+                oEstado.DataCadastro = DateTime.Now;
                 oEstado.SalvarBD();
+            }
             SalvarAlterar = '\0';
 
-            txtCod.Enabled = true;
             Close();
         }
         private void chkBox(object sender, KeyEventArgs e)

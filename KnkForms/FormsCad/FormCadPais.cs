@@ -49,7 +49,7 @@ namespace KnkForms.Forms
             txtSigla.Text = campo3;
             txtDdi.Text = campo4;
             boxNacional.Text = campo5;
-            if (campo6 == "true") chkAtivo.Checked = true; else { chkAtivo.Checked = false; }
+            if (campo6 == "S") chkAtivo.Checked = true; else { chkAtivo.Checked = false; }
             txtCodUser.Text = campo7;
             txtDataCad.Text = campo8;
             txtDataAlt.Text = campo9;
@@ -87,7 +87,6 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oPais.Cod = Convert.ToInt32(txtCod.Text);
             oPais.Pais = txtPais.Text;
             oPais.Sigla = txtSigla.Text;
             oPais.DDI = Convert.ToInt32(txtDdi.Text);
@@ -95,15 +94,21 @@ namespace KnkForms.Forms
                 oPais.Nacional = 's';
             else if (boxNacional.Text == "Não")
                 oPais.Nacional = 'n';
-            oPais.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oPais.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oPais.CodEmpresa = 1;
+            oPais.DataModificacao = DateTime.Now;
             if (chkAtivo.Checked == true) { oPais.Ativo = 'S'; } else { oPais.Ativo = 'N'; };
 
             if (SalvarAlterar == 'A')
+            {
+                oPais.Cod = Convert.ToInt32(txtCod.Text);
+                oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oPais.AlterarBD(oPais.Cod);
+            }
             else
+            {
+                oPais.DataCadastro = DateTime.Now;
                 oPais.SalvarBD();
+            }
             SalvarAlterar = '\0';
 
             txtCod.Enabled = true;

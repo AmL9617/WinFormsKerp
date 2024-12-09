@@ -15,7 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadRegiao oFormCadRegiao;
         Regioes aRegiao;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdRegiao, Regiao, Descricao, Ativo, IdUsuario, IdEmpresa, DataCadastro, DataModificacao FROM Regiao";
         public FormConRegioes()
         {
@@ -161,13 +162,18 @@ namespace KnkForms.Classes
                 var selectedItem = listVConsulta.SelectedItems[0];
 
                 int idRegiao = Convert.ToInt32(selectedItem.SubItems[0].Text);
-                string nomeRegiao = (selectedItem.SubItems[2].Text);
+                string nomeRegiao = (selectedItem.SubItems[1].Text);
                 string tipo = "Regiao";
 
                 var cadFornecedor = this.Owner as FormCadFornecedor;
                 if (cadFornecedor != null)
                 {
                     cadFornecedor.SetConsultas(idRegiao, nomeRegiao, tipo);
+                }
+                var cadCliente = this.Owner as FormCadCliente;
+                if (cadCliente != null)
+                {
+                    cadCliente.SetConsultas(idRegiao, nomeRegiao, tipo);
                 }
 
                 this.Close();

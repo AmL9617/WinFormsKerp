@@ -39,12 +39,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.TabIndex = 8;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.TabIndex = 9;
             // 
             // btnSalvar
@@ -53,6 +59,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.TabIndex = 7;
             // 
             // btnSair

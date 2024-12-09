@@ -12,6 +12,8 @@ namespace KnkForms.FormsCad
     public partial class FormCadListaCodST : KnkForms.FormCadPai
     {
         ListaCodST aListaCodST;
+        char SalvarAlterar = '\0';
+
         public FormCadListaCodST()
         {
             InitializeComponent();
@@ -32,16 +34,15 @@ namespace KnkForms.FormsCad
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5)
         {
-            txtCod.Text = Convert.ToString(aListaCodST.Cod);
-            txtCod.Enabled = false;
-            txtTipo.Text = aListaCodST.Tipo;
-            txtDescricao.Text = aListaCodST.Descricao;
-            if (chkAtivo.Checked == true) { aListaCodST.Ativo = 'S'; } else { aListaCodST.Ativo = 'N'; };
-            txtCodUser.Text = Convert.ToString(aListaCodST.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(aListaCodST.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(aListaCodST.DataModificacao);
+            txtCod.Text = campo1;
+            txtTipo.Text = campo2;
+            txtDescricao.Text = campo3;
+            if (campo4 == "S") { chkAtivo.Checked = true; } else { chkAtivo.Checked = false; };
+            txtCodUser.Text = campo5;
+
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()
@@ -68,15 +69,26 @@ namespace KnkForms.FormsCad
 
         public override void Salvar()
         {
-            aListaCodST.Cod = Convert.ToInt32(txtCod.Text);
             aListaCodST.Tipo = txtTipo.Text;
             aListaCodST.Descricao = txtDescricao.Text;
             if (chkAtivo.Checked == true) { aListaCodST.Ativo = 'S'; } else { aListaCodST.Ativo = 'N'; };
-            aListaCodST.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            aListaCodST.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            aListaCodST.CodEmpresa = 1;
+            aListaCodST.DataModificacao = DateTime.Now;
 
-            txtCod.Enabled = true;
+            if (SalvarAlterar == 'A')
+            {
+                aListaCodST.Cod = Convert.ToInt32(txtCod.Text);
+                aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                aListaCodST.AlterarBD(aListaCodST.Cod);
+            }
+            else
+            {
+                aListaCodST.DataCadastro = DateTime.Now;
+                aListaCodST.SalvarBD();
+            }
+
+            SalvarAlterar = '\0';
+            Close();
         }
         private void chkBox(object sender, KeyEventArgs e)
         {

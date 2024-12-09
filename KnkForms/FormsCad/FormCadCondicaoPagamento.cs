@@ -42,7 +42,6 @@ namespace KnkForms.Forms
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12)
         {
             txtCod.Text = campo1;
-            txtCod.Enabled = false;
             txtCondPag.Text = campo2;
             txtTaxaJuro.Text = campo3;
             txtNumParc.Text = campo4;
@@ -91,7 +90,6 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            aCondPag.Cod = Convert.ToInt32(txtCod.Text);
             aCondPag.CondPag = txtCondPag.Text;
             aCondPag.Tipo = txtTipo.Text;
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
@@ -100,17 +98,23 @@ namespace KnkForms.Forms
             aCondPag.PorParcela = txtPorParcela.Text;
             aCondPag.Dia = txtDia.Text;
             if (chkAtivo.Checked == true) { aCondPag.Ativo = 'S'; } else { aCondPag.Ativo = 'N'; };
-            aCondPag.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            aCondPag.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            aCondPag.CodEmpresa = 1;
+            aCondPag.DataModificacao = DateTime.Now;
 
             if (SalvarAlterar == 'A')
+            {
+                aCondPag.Cod = Convert.ToInt32(txtCod.Text);
+                aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 aCondPag.AlterarBD(aCondPag.Cod);
+            }
+                
             else
+            {
+                aCondPag.DataCadastro = DateTime.Now;
                 aCondPag.SalvarBD();
+            }
+                
             SalvarAlterar = '\0';
-
-            txtCod.Enabled = true;
             Close();
         }
         private void chkBox(object sender, KeyEventArgs e)

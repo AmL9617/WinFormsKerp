@@ -71,20 +71,26 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oRegiao.Cod = Convert.ToInt32(txtCod.Text);
             oRegiao.Regiao = txtRegiao.Text;
             if (chkAtivo.Checked == true) { oRegiao.Ativo = 'S'; } else { oRegiao.Ativo = 'N'; };
-            oRegiao.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oRegiao.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            //Vai ficar valor 1 até eu implementar login
+            oRegiao.CodEmpresa = 1;
+            oRegiao.DataModificacao = DateTime.Today;
             oRegiao.Descricao = txtDescricao.Text;
 
             if (SalvarAlterar == 'A')
+            {
+                oRegiao.Cod = Convert.ToInt32(txtCod.Text);
+                oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oRegiao.AlterarBD(oRegiao.Cod);
+            }
             else
+            {
+                oRegiao.DataCadastro = DateTime.Today;
                 oRegiao.SalvarBD();
+            }
+                
             SalvarAlterar = '\0';
-            txtCod.Enabled = true;
             Close();
         }
         private void chkBox(object sender, KeyEventArgs e)

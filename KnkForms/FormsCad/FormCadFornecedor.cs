@@ -37,8 +37,8 @@ namespace KnkForms.Forms
         public override void LimpaTxt()
         {
             txtCod.Clear();
-            boxIndustria.Text = "";
-            boxFisJur.Text = "";
+            boxIndustria.SelectedIndex = -1; 
+            boxFisJur.SelectedIndex = -1; 
             txtRazaoSocial.Clear();
             txtNomeFantasia.Clear();
             txtEndereco.Clear();
@@ -46,10 +46,14 @@ namespace KnkForms.Forms
             txtComplemento.Clear();
             txtBairro.Clear();
             txtCodCidade.Clear();
+            txtNomeCidade.Clear();
             txtCep.Clear();
             txtCodRegiao.Clear();
+            txtNomeRegiao.Clear();
             txtCodLista.Clear();
+            txtNomeLista.Clear();
             txtCodCondPag.Clear();
+            txtNomeCondPag.Clear();
             txtTrade.Clear();
             txtCodProd.Clear();
             txtLimite.Clear();
@@ -82,7 +86,7 @@ namespace KnkForms.Forms
             txtCep.Text = campo13;       
             txtCodLista.Text = campo14;
             txtCodCondPag.Text = campo15;
-            if (campo16 == "N") boxIndustria.Text = "Não"; else boxIndustria.Text = "S";
+            if (campo16 == "N") boxIndustria.Text = "Não"; else boxIndustria.Text = "Sim";
             txtObservacao.Text = campo17;
             txtTrade.Text = campo18;
             txtCodProd.Text = campo19;
@@ -157,7 +161,6 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
             if (boxIndustria.Text == "Não")
                 oFornecedor.Industria = 'N';
             else if (boxIndustria.Text == "Sim")
@@ -192,14 +195,20 @@ namespace KnkForms.Forms
                 oFornecedor.Ativo = 'N';
             if (chkAtivo.Checked == true)
                 oFornecedor.Ativo = 'S';
-            oFornecedor.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oFornecedor.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oFornecedor.CodEmpresa = 1;
+            oFornecedor.DataModificacao = DateTime.Now;
 
             if (SalvarAlterar == 'A')
+            {
+                oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
+                oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oFornecedor.AlterarBD(oFornecedor.Cod);
+            }
             else
+            {
+                oFornecedor.DataCadastro = DateTime.Now;
                 oFornecedor.SalvarBD();
+            }
             SalvarAlterar = '\0';
 
             txtCod.Enabled = true;

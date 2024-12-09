@@ -19,7 +19,9 @@ namespace KnkForms.Forms
         FormConCondicaoPagamentos oFrmConCondPag;
         FormConRegioes oFrmConRegioes;
         FormConVendedores oFrmConVendedores;
+        FormConRamoAtividades oFrmConRamoAtiv;
         FormConTransportadoras oFrmConTransportadoras;
+        char SalvarAlterar = '\0';
         public FormCadCliente()
         {
             InitializeComponent();
@@ -66,7 +68,6 @@ namespace KnkForms.Forms
 
             txtIdListPrec.Clear();
             txtIdCondPag.Clear();
-            txtIdReg.Clear();
             txtIdVend.Clear();
             txtPessoasAut.Clear();
             chkVerForn.Checked = false;
@@ -81,7 +82,7 @@ namespace KnkForms.Forms
             txtObsDiv.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20, string campo21, string campo22, string campo23, string campo24, string campo25)
         {
             txtCod.Text = Convert.ToString(oCliente.Cod);
             txtCod.Enabled = false;
@@ -112,7 +113,6 @@ namespace KnkForms.Forms
 
             txtIdListPrec.Text = Convert.ToString(oCliente.CodListaPrecos);
             txtIdCondPag.Text = Convert.ToString(oCliente.CodCondicaoPagamentos);
-            txtIdReg.Text = Convert.ToString(oCliente.CodRegioes);
             txtIdVend.Text = Convert.ToString(oCliente.CodVendedores);
             txtPessoasAut.Text = Convert.ToString(oCliente.PessoasAutorizadas);
             if (oCliente.VerEmFornecedores == 'S') { chkVerForn.Checked = true; } else { chkVerForn.Checked = false; };
@@ -125,6 +125,8 @@ namespace KnkForms.Forms
             dataUltAlt.Value = oCliente.DataUltAlt2;
             dataUltComp.Value = oCliente.UltimaCompra;
             txtObsDiv.Text = oCliente.ObsDiv;
+
+
         }
 
         public override void BloqueiaTxt()
@@ -154,7 +156,6 @@ namespace KnkForms.Forms
 
             txtIdListPrec.Enabled = false;
             txtIdCondPag.Enabled = false;
-            txtIdReg.Enabled = false;
             txtIdVend.Enabled = false;
             txtPessoasAut.Enabled = false;
             chkVerForn.Enabled = false;
@@ -196,7 +197,6 @@ namespace KnkForms.Forms
 
             txtIdListPrec.Enabled = true;
             txtIdCondPag.Enabled = true;
-            txtIdReg.Enabled = true;
             txtIdVend.Enabled = true;
             txtPessoasAut.Enabled = true;
             chkVerForn.Enabled = true;
@@ -213,7 +213,6 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oCliente.Cod = Convert.ToInt32(txtCod.Text);
             oCliente.Cliente = txtCliente.Text;
             oCliente.Endereco = txtEndereco.Text;
             oCliente.Numero = Convert.ToInt32(txtNumero.Text);
@@ -228,9 +227,8 @@ namespace KnkForms.Forms
             if (chkAtivo.Enabled == true) { oCliente.Ativo = 'S'; } else { oCliente.Ativo = 'N'; };
 
 
-            oCliente.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oCliente.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oCliente.DataModificacao = Convert.ToDateTime(txtDataAlt);
+            oCliente.CodEmpresa = 1;
+            oCliente.DataModificacao = DateTime.Now;
 
             if (chkConsRev.Checked == true) { oCliente.ConsumidorRevenda = 'S'; } else { oCliente.ConsumidorRevenda = 'N'; };
             oCliente.InscricaoEstadual = txtInscEst.Text;
@@ -242,7 +240,6 @@ namespace KnkForms.Forms
 
             oCliente.CodListaPrecos = Convert.ToInt32(txtIdListPrec.Text);
             oCliente.CodCondicaoPagamentos = Convert.ToInt32(txtIdCondPag.Text);
-            oCliente.CodRegioes = Convert.ToInt32(txtIdReg.Text);
             oCliente.CodVendedores = Convert.ToInt32(txtIdVend.Text);
             oCliente.PessoasAutorizadas = txtPessoasAut.Text;
             if (chkVerForn.Checked == true) { oCliente.VerEmFornecedores = 'S'; } else { oCliente.VerEmFornecedores = 'N'; };
@@ -256,13 +253,47 @@ namespace KnkForms.Forms
             oCliente.UltimaCompra = dataUltComp.Value;
             oCliente.ObsDiv = txtObsDiv.Text;
 
+            if (SalvarAlterar == 'A')
+                oCliente.AlterarBD(oCliente.Cod);
+            else
+            {
+
+                oCliente.DataCadastro = DateTime.Now;
+                oCliente.SalvarBD();
+            }
+            SalvarAlterar = '\0';
+
             txtCod.Enabled = true;
+            Close();
         }
         private void chkBox(object sender, KeyEventArgs e)
         {
             CheckBox c1 = this.ActiveControl as CheckBox;
             if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
                 if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
+        }
+        public void SetConsultas(int id, string nome, string tipo)
+        {
+            if (tipo == "Cidade")
+            {
+                txtCodCidade.Text = Convert.ToString(id);
+                txtNomeCidade.Text = nome;
+            }
+            else if (tipo == "Regiao")
+            {
+                txtCodRegiao.Text = Convert.ToString(id);
+                txtNomeRegiao.Text = nome;
+            }
+            else if (tipo == "ListaPreco")
+            {
+                txtIdListPrec.Text = Convert.ToString(id);
+                txtNomeLista.Text = nome;
+            }
+            else if (tipo == "CondPag")
+            {
+                txtIdCondPag.Text = Convert.ToString(id);
+                txtNomeCondPag.Text = nome;
+            }
         }
         public void setFrmConCidades(Object obj)
         {
@@ -288,7 +319,10 @@ namespace KnkForms.Forms
         {
             oFrmConVendedores = (FormConVendedores)obj;
         }
-
+        public void setFrmConRamoAtiv(Object obj)
+        {
+            oFrmConRamoAtiv = (FormConRamoAtividades)obj;
+        }
         public void setFrmConTransportadoras(Object obj)
         {
             oFrmConTransportadoras = (FormConTransportadoras)obj;
@@ -296,42 +330,56 @@ namespace KnkForms.Forms
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             oFrmConCidades.ConhecaObj(oCliente.Cidades);
+            oFrmConCidades.Owner = this;
             oFrmConCidades.ShowDialog();
         }
         private void btnPesquisarListaPreco_Click(object sender, EventArgs e)
         {
             oFrmConListaPrecos.ConhecaObj(oCliente.ListaPrecos);
+            oFrmConListaPrecos.Owner = this;
             oFrmConListaPrecos.ShowDialog();
         }
 
         private void btnPesquisarCondPag_Click(object sender, EventArgs e)
         {
             oFrmConCondPag.ConhecaObj(oCliente.CondicaoPagamentos);
+            oFrmConCondPag.Owner = this;
             oFrmConCondPag.ShowDialog();
         }
 
         private void btnPesquisarRegiao_Click(object sender, EventArgs e)
         {
             oFrmConRegioes.ConhecaObj(oCliente.Regioes);
+            oFrmConRegioes.Owner = this;
             oFrmConRegioes.ShowDialog();
         }
 
         private void btnPesquisarVendedor_Click(object sender, EventArgs e)
         {
             oFrmConVendedores.ConhecaObj(oCliente.Vendedores);
+            oFrmConVendedores.Owner = this;
             oFrmConVendedores.ShowDialog();
         }
 
         private void btnPesquisarTransportadora_Click(object sender, EventArgs e)
         {
             oFrmConTransportadoras.ConhecaObj(oCliente.Transportadoras);
+            oFrmConTransportadoras.Owner = this;
             oFrmConTransportadoras.ShowDialog();
         }
 
         private void btnConsultaReg_Click(object sender, EventArgs e)
         {
             oFrmConRegioes.ConhecaObj(oCliente.Regioes);
+            oFrmConRegioes.Owner = this;
             oFrmConRegioes.ShowDialog();
+        }
+
+        private void btnPesquisarRamoAtiv_Click(object sender, EventArgs e)
+        {
+            oFrmConRamoAtiv.ConhecaObj(oCliente.RamoAtividades);
+            oFrmConRamoAtiv.Owner = this;
+            oFrmConRamoAtiv.ShowDialog();
         }
     }
 }

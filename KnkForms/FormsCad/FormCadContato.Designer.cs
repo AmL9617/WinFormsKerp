@@ -34,13 +34,19 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFornCliente = new System.Windows.Forms.TextBox();
+            this.txtCodFornCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnConsultaCid = new System.Windows.Forms.Button();
+            this.txtFornCliente = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
             // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.Location = new System.Drawing.Point(153, 414);
             this.txtDataCad.TabIndex = 7;
             // 
@@ -50,6 +56,7 @@
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.Location = new System.Drawing.Point(276, 414);
             this.txtDataAlt.TabIndex = 8;
             // 
@@ -64,6 +71,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.Location = new System.Drawing.Point(41, 414);
             this.txtCodUser.TabIndex = 6;
             // 
@@ -128,13 +136,14 @@
             this.label2.TabIndex = 57;
             this.label2.Text = "Observação";
             // 
-            // txtFornCliente
+            // txtCodFornCliente
             // 
-            this.txtFornCliente.Location = new System.Drawing.Point(122, 58);
-            this.txtFornCliente.MaxLength = 100;
-            this.txtFornCliente.Name = "txtFornCliente";
-            this.txtFornCliente.Size = new System.Drawing.Size(307, 20);
-            this.txtFornCliente.TabIndex = 58;
+            this.txtCodFornCliente.Enabled = false;
+            this.txtCodFornCliente.Location = new System.Drawing.Point(122, 58);
+            this.txtCodFornCliente.MaxLength = 100;
+            this.txtCodFornCliente.Name = "txtCodFornCliente";
+            this.txtCodFornCliente.Size = new System.Drawing.Size(307, 20);
+            this.txtCodFornCliente.TabIndex = 58;
             // 
             // label3
             // 
@@ -155,12 +164,22 @@
             this.btnConsultaCid.UseVisualStyleBackColor = true;
             this.btnConsultaCid.Click += new System.EventHandler(this.btnConsultaCid_Click);
             // 
+            // txtFornCliente
+            // 
+            this.txtFornCliente.Enabled = false;
+            this.txtFornCliente.Location = new System.Drawing.Point(122, 58);
+            this.txtFornCliente.MaxLength = 100;
+            this.txtFornCliente.Name = "txtFornCliente";
+            this.txtFornCliente.Size = new System.Drawing.Size(307, 20);
+            this.txtFornCliente.TabIndex = 60;
+            // 
             // FormCadContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(670, 450);
-            this.Controls.Add(this.btnConsultaCid);
             this.Controls.Add(this.txtFornCliente);
+            this.Controls.Add(this.btnConsultaCid);
+            this.Controls.Add(this.txtCodFornCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtObservacao);
             this.Controls.Add(this.label2);
@@ -187,8 +206,9 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtObservacao, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.txtFornCliente, 0);
+            this.Controls.SetChildIndex(this.txtCodFornCliente, 0);
             this.Controls.SetChildIndex(this.btnConsultaCid, 0);
+            this.Controls.SetChildIndex(this.txtFornCliente, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,8 +222,9 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFornCliente;
+        private System.Windows.Forms.TextBox txtCodFornCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConsultaCid;
+        private System.Windows.Forms.TextBox txtFornCliente;
     }
 }

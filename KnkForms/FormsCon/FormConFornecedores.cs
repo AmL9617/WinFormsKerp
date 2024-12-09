@@ -15,7 +15,8 @@ namespace KnkForms.Classes
     {
         FormCadFornecedor oFormCadFornecedor;
         Fornecedores oFornecedor;
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, IdLista, IdCondPag, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
         public FormConFornecedores()
         {
@@ -48,34 +49,37 @@ namespace KnkForms.Classes
                         {
                             while (reader.Read())
                             {
-                                ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
+                                if (reader["Tipo"].ToString() == "F" || reader["Tipo"].ToString() == "A")
+                                {
+                                    ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
 
-                                item.SubItems.Add(reader["RazaoSocial"].ToString());
-                                item.SubItems.Add(reader["NomeFantasia"].ToString());
-                                item.SubItems.Add(reader["InscricaoEstadual"].ToString());
-                                item.SubItems.Add(reader["CpfCnpj"].ToString());
-                                item.SubItems.Add(reader["Tipo"].ToString());
-                                item.SubItems.Add(reader["IdCidade"].ToString());
-                                item.SubItems.Add(reader["IdRegiao"].ToString());
-                                item.SubItems.Add(reader["Logradouro"].ToString());
-                                item.SubItems.Add(reader["Numero"].ToString());
-                                item.SubItems.Add(reader["Complemento"].ToString());
-                                item.SubItems.Add(reader["Bairro"].ToString());
-                                item.SubItems.Add(reader["Cep"].ToString());
-                                item.SubItems.Add(reader["IdLista"].ToString());
-                                item.SubItems.Add(reader["IdCondPag"].ToString());
-                                item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
-                                item.SubItems.Add(reader["Observacao"].ToString());
-                                item.SubItems.Add(reader["Trade"].ToString());
-                                item.SubItems.Add(reader["CodProdIgual"].ToString());
-                                item.SubItems.Add(reader["LimiteCredito"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["FisicaJuridica"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(reader["RazaoSocial"].ToString());
+                                    item.SubItems.Add(reader["NomeFantasia"].ToString());
+                                    item.SubItems.Add(reader["InscricaoEstadual"].ToString());
+                                    item.SubItems.Add(reader["CpfCnpj"].ToString());
+                                    item.SubItems.Add(reader["Tipo"].ToString());
+                                    item.SubItems.Add(reader["IdCidade"].ToString());
+                                    item.SubItems.Add(reader["IdRegiao"].ToString());
+                                    item.SubItems.Add(reader["Logradouro"].ToString());
+                                    item.SubItems.Add(reader["Numero"].ToString());
+                                    item.SubItems.Add(reader["Complemento"].ToString());
+                                    item.SubItems.Add(reader["Bairro"].ToString());
+                                    item.SubItems.Add(reader["Cep"].ToString());
+                                    item.SubItems.Add(reader["IdLista"].ToString());
+                                    item.SubItems.Add(reader["IdCondPag"].ToString());
+                                    item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
+                                    item.SubItems.Add(reader["Observacao"].ToString());
+                                    item.SubItems.Add(reader["Trade"].ToString());
+                                    item.SubItems.Add(reader["CodProdIgual"].ToString());
+                                    item.SubItems.Add(reader["LimiteCredito"].ToString());
+                                    item.SubItems.Add(reader["Ativo"].ToString());
+                                    item.SubItems.Add(reader["FisicaJuridica"].ToString());
+                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                listVConsulta.Items.Add(item);
+                                    listVConsulta.Items.Add(item);
+                                }
                             }
                         }
                     }
@@ -168,34 +172,37 @@ namespace KnkForms.Classes
                         {
                             while (reader.Read())
                             {
-                                ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
+                                if (reader["Tipo"].ToString() == "F" || reader["Tipo"].ToString() == "A")
+                                {
+                                    ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
 
-                                item.SubItems.Add(reader["RazaoSocial"].ToString());
-                                item.SubItems.Add(reader["NomeFantasia"].ToString());
-                                item.SubItems.Add(reader["InscricaoEstadual"].ToString());
-                                item.SubItems.Add(reader["CpfCnpj"].ToString());
-                                item.SubItems.Add(reader["Tipo"].ToString());
-                                item.SubItems.Add(reader["IdCidade"].ToString());
-                                item.SubItems.Add(reader["IdRegiao"].ToString());
-                                item.SubItems.Add(reader["Logradouro"].ToString());
-                                item.SubItems.Add(reader["Numero"].ToString());
-                                item.SubItems.Add(reader["Complemento"].ToString());
-                                item.SubItems.Add(reader["Bairro"].ToString());
-                                item.SubItems.Add(reader["Cep"].ToString());
-                                item.SubItems.Add(reader["IdLista"].ToString());
-                                item.SubItems.Add(reader["IdCondPag"].ToString());
-                                item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
-                                item.SubItems.Add(reader["Observacao"].ToString());
-                                item.SubItems.Add(reader["Trade"].ToString());
-                                item.SubItems.Add(reader["CodProdIgual"].ToString());
-                                item.SubItems.Add(reader["LimiteCredito"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["FisicaJuridica"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(reader["RazaoSocial"].ToString());
+                                    item.SubItems.Add(reader["NomeFantasia"].ToString());
+                                    item.SubItems.Add(reader["InscricaoEstadual"].ToString());
+                                    item.SubItems.Add(reader["CpfCnpj"].ToString());
+                                    item.SubItems.Add(reader["Tipo"].ToString());
+                                    item.SubItems.Add(reader["IdCidade"].ToString());
+                                    item.SubItems.Add(reader["IdRegiao"].ToString());
+                                    item.SubItems.Add(reader["Logradouro"].ToString());
+                                    item.SubItems.Add(reader["Numero"].ToString());
+                                    item.SubItems.Add(reader["Complemento"].ToString());
+                                    item.SubItems.Add(reader["Bairro"].ToString());
+                                    item.SubItems.Add(reader["Cep"].ToString());
+                                    item.SubItems.Add(reader["IdLista"].ToString());
+                                    item.SubItems.Add(reader["IdCondPag"].ToString());
+                                    item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
+                                    item.SubItems.Add(reader["Observacao"].ToString());
+                                    item.SubItems.Add(reader["Trade"].ToString());
+                                    item.SubItems.Add(reader["CodProdIgual"].ToString());
+                                    item.SubItems.Add(reader["LimiteCredito"].ToString());
+                                    item.SubItems.Add(reader["Ativo"].ToString());
+                                    item.SubItems.Add(reader["FisicaJuridica"].ToString());
+                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
 
-                                listVConsulta.Items.Add(item);
+                                    listVConsulta.Items.Add(item);
+                                }
                             }
                         }
                     }

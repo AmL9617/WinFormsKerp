@@ -80,8 +80,13 @@
             this.txtNomeCondPag = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.Location = new System.Drawing.Point(323, 711);
             this.txtDataCad.TabIndex = 25;
             // 
@@ -91,6 +96,7 @@
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.Location = new System.Drawing.Point(446, 711);
             this.txtDataAlt.TabIndex = 26;
             // 
@@ -105,6 +111,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.Location = new System.Drawing.Point(211, 711);
             this.txtCodUser.TabIndex = 24;
             // 
@@ -353,7 +360,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.Location = new System.Drawing.Point(327, 59);
+            this.txtRazaoSocial.Location = new System.Drawing.Point(341, 58);
             this.txtRazaoSocial.MaxLength = 100;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(307, 20);
@@ -362,7 +369,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 43);
+            this.label1.Location = new System.Drawing.Point(338, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 121;

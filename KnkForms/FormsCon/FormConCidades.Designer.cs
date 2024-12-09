@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.codCidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.codEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ddd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,8 +42,8 @@
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.codCidade,
-            this.codEstado,
             this.cidade,
+            this.estado,
             this.ddd,
             this.ativo,
             this.codEmpresa,
@@ -56,10 +56,10 @@
             this.codCidade.Text = "Código Cidade";
             this.codCidade.Width = 100;
             // 
-            // codEstado
+            // estado
             // 
-            this.codEstado.Text = "Código Estado";
-            this.codEstado.Width = 100;
+            this.estado.Text = "Estado";
+            this.estado.Width = 100;
             // 
             // cidade
             // 
@@ -103,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.ColumnHeader codCidade;
-        private System.Windows.Forms.ColumnHeader codEstado;
+        private System.Windows.Forms.ColumnHeader estado;
         private System.Windows.Forms.ColumnHeader cidade;
         private System.Windows.Forms.ColumnHeader ddd;
         private System.Windows.Forms.ColumnHeader ativo;

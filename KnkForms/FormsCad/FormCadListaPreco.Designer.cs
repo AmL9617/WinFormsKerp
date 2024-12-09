@@ -47,12 +47,18 @@
             this.txtNomeSubgrupo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.TabIndex = 10;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.TabIndex = 11;
             // 
             // btnSalvar
@@ -61,6 +67,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.TabIndex = 9;
             // 
             // btnSair

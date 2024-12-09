@@ -79,35 +79,42 @@
             // 
             // percICMS
             // 
+            this.percICMS.DisplayIndex = 4;
             this.percICMS.Text = "Percentual ICMS";
             this.percICMS.Width = 100;
             // 
             // icms
             // 
+            this.icms.DisplayIndex = 5;
             this.icms.Text = "ICMS";
             // 
             // percRedST
             // 
+            this.percRedST.DisplayIndex = 6;
             this.percRedST.Text = "Perc. Redução S.T.";
             this.percRedST.Width = 100;
             // 
             // codWeb
             // 
+            this.codWeb.DisplayIndex = 7;
             this.codWeb.Text = "Código Web";
             this.codWeb.Width = 80;
             // 
             // dataCadastro
             // 
+            this.dataCadastro.DisplayIndex = 9;
             this.dataCadastro.Text = "Data de Cadastro";
             this.dataCadastro.Width = 100;
             // 
             // dataModificacao
             // 
+            this.dataModificacao.DisplayIndex = 10;
             this.dataModificacao.Text = "Data de Modificacao";
             this.dataModificacao.Width = 100;
             // 
             // codEmp
             // 
+            this.codEmp.DisplayIndex = 8;
             this.codEmp.Text = "Código Empresa";
             this.codEmp.Width = 100;
             // 

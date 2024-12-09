@@ -34,23 +34,24 @@ namespace KnkForms.Forms
             txtCidade.Clear();
             txtDDD.Clear();
             txtCodEstado.Clear();
+            txtNomeEstado.Clear();
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9)
         {
             txtCod.Text = campo1;
-            txtCod.Enabled = false;
-            txtCodEstado.Text = campo2;
-            txtCidade.Text = campo3;
-            txtDDD.Text = campo4;
-            if (campo5 == "0") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; };
-            txtCodUser.Text = campo6;
-            txtDataCad.Text = campo7;
-            txtDataAlt.Text = campo8;
+            txtNomeEstado.Text = campo2;
+            txtCodEstado.Text = campo3;
+            txtCidade.Text = campo4;
+            txtDDD.Text = campo5;
+            if (campo6 == "0") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; };
+            txtCodUser.Text = campo7;
+            txtDataCad.Text = campo8;
+            txtDataAlt.Text = campo9;
             SalvarAlterar = 'A';
 
         }
@@ -81,25 +82,26 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            aCidade.Cod = Convert.ToInt32(txtCod.Text);
             aCidade.Cidade = txtCidade.Text;
             aCidade.DDD = Convert.ToInt32(txtDDD.Text);
             aCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
-            aCidade.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            aCidade.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
-            if (aCidade.Ativo == 'S') { chkAtivo.Checked = true; } else { chkAtivo.Enabled = false; };
+            aCidade.CodEmpresa = 1;
+            aCidade.DataModificacao = DateTime.Now;
+            if (chkAtivo.Checked == true) { aCidade.Ativo = 'S'; } else { aCidade.Ativo = 'N'; };
 
             if (SalvarAlterar == 'A')
             {
+                aCidade.Cod = Convert.ToInt32(txtCod.Text);
+                aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 aCidade.AlterarBD(aCidade.Cod);
-                SalvarAlterar = '\0';
 
             }
             else
+            {
+                aCidade.DataCadastro = DateTime.Now;
                 aCidade.SalvarBD();
-            
-            txtCod.Enabled = true;
+            }
+            SalvarAlterar = '\0';
             Close();
         }
         private void chkBox(object sender, KeyEventArgs e)

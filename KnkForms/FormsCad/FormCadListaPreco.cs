@@ -43,12 +43,11 @@ namespace KnkForms.Forms
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9)
         {
             txtCod.Text = campo1;
-            txtCod.Enabled = false;
             txtLista.Text = campo2;
             txtDescMax.Text = campo3;
             txtMargemLucro.Text = campo4;
             txtPercCom.Text = campo5;
-            if(campo6 == "true") chkTodas.Checked = true; else { chkTodas.Checked = false; }
+            if(campo6 == "S") chkTodas.Checked = true; else { chkTodas.Checked = false; }
             txtCodUser.Text = campo7;
             txtDataCad.Text = campo8;
             txtDataAlt.Text = campo9;
@@ -88,23 +87,27 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            aListaPreco.Cod = Convert.ToInt32(txtCod.Text);
             aListaPreco.Lista = txtLista.Text;
             aListaPreco.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
             aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
             aListaPreco.PercCom = Convert.ToDouble(txtPercCom.Text);
-            aListaPreco.CodMarca = Convert.ToInt32(txtCodMarca.Text);
-            aListaPreco.CodSubgrupo = Convert.ToInt32(txtCodSubgrupo.Text);
-            aListaPreco.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            aListaPreco.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            if(chkTodas.Checked == true) { aListaPreco.Todas = 'S'; } else { aListaPreco.Todas = 'N'; } 
+            aListaPreco.CodEmpresa = 1;
+            aListaPreco.DataModificacao = DateTime.Now;
 
             if (SalvarAlterar == 'A')
+            {
+                aListaPreco.Cod = Convert.ToInt32(txtCod.Text);
+                aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 aListaPreco.AlterarBD(aListaPreco.Cod);
+            }
             else
+            {
+                aListaPreco.DataCadastro = DateTime.Now;
                 aListaPreco.SalvarBD();
+            }
+                
             SalvarAlterar = '\0';
-            txtCod.Enabled = true;
             Close();
         }
         private void chkBox(object sender, KeyEventArgs e)

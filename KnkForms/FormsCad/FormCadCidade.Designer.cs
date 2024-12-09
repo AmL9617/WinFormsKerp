@@ -39,13 +39,19 @@
             this.txtNomeEstado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.MaxLength = 10;
             this.txtDataCad.TabIndex = 7;
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.MaxLength = 10;
             this.txtDataAlt.TabIndex = 8;
             // 
@@ -55,6 +61,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.TabIndex = 6;
             // 
             // btnSair

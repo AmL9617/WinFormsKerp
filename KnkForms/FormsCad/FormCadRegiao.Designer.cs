@@ -35,8 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // txtCod
+            // 
+            this.txtCod.Enabled = false;
+            // 
             // txtDataCad
             // 
+            this.txtDataCad.Enabled = false;
             this.txtDataCad.Location = new System.Drawing.Point(162, 414);
             this.txtDataCad.TabIndex = 6;
             // 
@@ -46,6 +51,7 @@
             // 
             // txtDataAlt
             // 
+            this.txtDataAlt.Enabled = false;
             this.txtDataAlt.Location = new System.Drawing.Point(285, 414);
             // 
             // lblDataAlteracao
@@ -58,6 +64,7 @@
             // 
             // txtCodUser
             // 
+            this.txtCodUser.Enabled = false;
             this.txtCodUser.Location = new System.Drawing.Point(50, 414);
             this.txtCodUser.TabIndex = 5;
             // 

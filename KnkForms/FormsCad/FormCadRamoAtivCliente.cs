@@ -1,5 +1,6 @@
 ﻿using KnkForms.Classes;
 using KnkForms.FormsCon;
+using Mysqlx.Notice;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace KnkForms.FormsCad
     {
         RamoAtividadesClientes oRamoAtivClientes;
         FormConClientes oFrmConClientes;
-       
+        char SalvarAlterar = '\0';
+
         public FormCadRamoAtivCliente()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace KnkForms.FormsCad
         {
             oRamoAtivClientes = (RamoAtividadesClientes)obj;
         }
+
 
         public override void LimpaTxt()
         {
@@ -38,7 +41,6 @@ namespace KnkForms.FormsCad
         public override void CarregaTxt()
         {
             txtCod.Text = Convert.ToString(oRamoAtivClientes.Cod);
-            txtCod.Enabled = false;
             txtCodCliForn.Text = Convert.ToString(oRamoAtivClientes.CodClienteFornecedor);
             txtPrioridade.Text = Convert.ToString(oRamoAtivClientes.Prioridade);
             txtCodUser.Text = Convert.ToString(oRamoAtivClientes.CodEmpresa);
@@ -68,14 +70,29 @@ namespace KnkForms.FormsCad
 
         public override void Salvar()
         {
-            oRamoAtivClientes.Cod = Convert.ToInt32(txtCod.Text);
             oRamoAtivClientes.CodClienteFornecedor = Convert.ToInt32(txtCodCliForn.Text);
             oRamoAtivClientes.Prioridade = Convert.ToInt32(txtPrioridade.Text);
-            oRamoAtivClientes.CodEmpresa = Convert.ToInt32(txtCodUser.Text);
-            oRamoAtivClientes.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-            oRamoAtivClientes.DataModificacao = Convert.ToDateTime(txtDataAlt.Text);
+            oRamoAtivClientes.CodEmpresa = 1;
+            oRamoAtivClientes.DataModificacao = DateTime.Now;
 
-            txtCod.Enabled = true;
+            if (SalvarAlterar == 'A')
+            {
+                oRamoAtivClientes.Cod = Convert.ToInt32(txtCod.Text);
+                oRamoAtivClientes.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                oRamoAtivClientes.AlterarBD(oRamoAtivClientes.Cod);
+            }
+            else
+            {
+                oRamoAtivClientes.DataCadastro = DateTime.Today;
+                oRamoAtivClientes.SalvarBD();
+            }
+
+            SalvarAlterar = '\0';
+        }
+        public void SetCliForn(int idEstado, string nomeEstado)
+        {
+            txtCodCliForn.Text = Convert.ToString(idEstado);
+            txtNomeCliForn.Text = nomeEstado;
         }
         public void setFrmConClientes(Object obj)
         {
@@ -85,6 +102,7 @@ namespace KnkForms.FormsCad
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             oFrmConClientes.ConhecaObj(oRamoAtivClientes.Clientes);
+            oFrmConClientes.Owner = this;
             oFrmConClientes.ShowDialog();
         }
     }

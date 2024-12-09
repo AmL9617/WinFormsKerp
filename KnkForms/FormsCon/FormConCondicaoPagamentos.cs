@@ -15,7 +15,8 @@ namespace KnkForms.Classes
         FormCadCondicaoPagamento oFormCadCondicaoPagamento;
         CondicaoPagamentos aCondicaoPagamento;
 
-        string connectionString = "Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
+        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         string query = "SELECT IdCondicaoPagamento, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, IdEmpresa, DataCadastro, DataModificacao FROM CondicaoPagamento";
 
         public FormConCondicaoPagamentos()
@@ -182,6 +183,11 @@ namespace KnkForms.Classes
                 if (cadFornecedor != null)
                 {
                     cadFornecedor.SetConsultas(idCondPag, nomeCondPag, tipo);
+                }
+                var cadCliente = this.Owner as FormCadCliente;
+                if (cadCliente != null)
+                {
+                    cadCliente.SetConsultas(idCondPag, nomeCondPag, tipo);
                 }
 
                 this.Close();
