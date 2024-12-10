@@ -45,6 +45,7 @@
             this.codEmp,
             this.dataCad,
             this.dataAlt});
+            this.listVConsulta.DoubleClick += new System.EventHandler(this.listV_DoubleClick);
             // 
             // codRamo
             // 

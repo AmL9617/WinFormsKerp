@@ -149,8 +149,8 @@ namespace KnkForms
             oFormCadListaPreco.setFrmConMarcas(oFormConMarcas);
             oFormCadListaPreco.setFrmConSubgrupos(oFormConSubgrupos);
             oFormCadRamoAtivCliente.setFrmConClientes(oFormConClientes);
+            oFormCadRamoAtivCliente.setFrmConRamoAtiv(oFormConRamoAtividades);
             oFormCadSubgrupo.setFrmConGrupos(oFormConGrupos);
-            //oFormCadTransportadora.setFrmConContatos(oFormConContatos);
             oFormCadTransportadora.setFrmConRegioes(oFormConRegioes);
         }
 

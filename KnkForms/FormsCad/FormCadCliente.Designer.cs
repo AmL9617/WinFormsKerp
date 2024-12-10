@@ -64,7 +64,7 @@
             this.btnPesquisarTransportadora = new System.Windows.Forms.Button();
             this.btnSalvarTransp = new System.Windows.Forms.Button();
             this.listVTrans = new System.Windows.Forms.ListView();
-            this.txtTransp = new System.Windows.Forms.TextBox();
+            this.txtCodTransp = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnPesquisarRamoAtiv = new System.Windows.Forms.Button();
@@ -108,6 +108,8 @@
             this.Menu = new System.Windows.Forms.TabControl();
             this.txtNomeCidade = new System.Windows.Forms.TextBox();
             this.txtNomeRegiao = new System.Windows.Forms.TextBox();
+            this.txtNomeRamoAtiv = new System.Windows.Forms.TextBox();
+            this.txtNomeTrans = new System.Windows.Forms.TextBox();
             this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -454,10 +456,11 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.txtNomeTrans);
             this.tabPage5.Controls.Add(this.btnPesquisarTransportadora);
             this.tabPage5.Controls.Add(this.btnSalvarTransp);
             this.tabPage5.Controls.Add(this.listVTrans);
-            this.tabPage5.Controls.Add(this.txtTransp);
+            this.tabPage5.Controls.Add(this.txtCodTransp);
             this.tabPage5.Controls.Add(this.label22);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -495,13 +498,14 @@
             this.listVTrans.TabIndex = 137;
             this.listVTrans.UseCompatibleStateImageBehavior = false;
             // 
-            // txtTransp
+            // txtCodTransp
             // 
-            this.txtTransp.Location = new System.Drawing.Point(15, 30);
-            this.txtTransp.MaxLength = 100;
-            this.txtTransp.Name = "txtTransp";
-            this.txtTransp.Size = new System.Drawing.Size(307, 20);
-            this.txtTransp.TabIndex = 136;
+            this.txtCodTransp.Enabled = false;
+            this.txtCodTransp.Location = new System.Drawing.Point(15, 30);
+            this.txtCodTransp.MaxLength = 100;
+            this.txtCodTransp.Name = "txtCodTransp";
+            this.txtCodTransp.Size = new System.Drawing.Size(307, 20);
+            this.txtCodTransp.TabIndex = 136;
             // 
             // label22
             // 
@@ -514,6 +518,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.txtNomeRamoAtiv);
             this.tabPage4.Controls.Add(this.btnPesquisarRamoAtiv);
             this.tabPage4.Controls.Add(this.btnSalvarAtiv);
             this.tabPage4.Controls.Add(this.listVAtiv);
@@ -557,6 +562,7 @@
             // 
             // txtIdRamoAtiv
             // 
+            this.txtIdRamoAtiv.Enabled = false;
             this.txtIdRamoAtiv.Location = new System.Drawing.Point(15, 28);
             this.txtIdRamoAtiv.MaxLength = 30;
             this.txtIdRamoAtiv.Name = "txtIdRamoAtiv";
@@ -930,6 +936,24 @@
             this.txtNomeRegiao.Size = new System.Drawing.Size(197, 20);
             this.txtNomeRegiao.TabIndex = 203;
             // 
+            // txtNomeRamoAtiv
+            // 
+            this.txtNomeRamoAtiv.Enabled = false;
+            this.txtNomeRamoAtiv.Location = new System.Drawing.Point(15, 28);
+            this.txtNomeRamoAtiv.MaxLength = 30;
+            this.txtNomeRamoAtiv.Name = "txtNomeRamoAtiv";
+            this.txtNomeRamoAtiv.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeRamoAtiv.TabIndex = 134;
+            // 
+            // txtNomeTrans
+            // 
+            this.txtNomeTrans.Enabled = false;
+            this.txtNomeTrans.Location = new System.Drawing.Point(15, 30);
+            this.txtNomeTrans.MaxLength = 100;
+            this.txtNomeTrans.Name = "txtNomeTrans";
+            this.txtNomeTrans.Size = new System.Drawing.Size(307, 20);
+            this.txtNomeTrans.TabIndex = 138;
+            // 
             // FormCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1051,7 +1075,7 @@
         private System.Windows.Forms.Button btnPesquisarTransportadora;
         private System.Windows.Forms.Button btnSalvarTransp;
         private System.Windows.Forms.ListView listVTrans;
-        private System.Windows.Forms.TextBox txtTransp;
+        private System.Windows.Forms.TextBox txtCodTransp;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnPesquisarRamoAtiv;
@@ -1095,5 +1119,7 @@
         private System.Windows.Forms.TextBox txtNomeLista;
         private System.Windows.Forms.TextBox txtNomeCidade;
         private System.Windows.Forms.TextBox txtNomeRegiao;
+        private System.Windows.Forms.TextBox txtNomeRamoAtiv;
+        private System.Windows.Forms.TextBox txtNomeTrans;
     }
 }

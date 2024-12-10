@@ -74,7 +74,7 @@ namespace KnkForms.Forms
 
             txtIdRamoAtiv.Clear();
 
-            txtTransp.Clear();
+            txtCodTransp.Clear();
 
             dataCad.Value = DateTime.Today;
             dataUltAlt.Value = DateTime.Today;
@@ -119,7 +119,7 @@ namespace KnkForms.Forms
 
             txtIdRamoAtiv.Text = Convert.ToString(oCliente.CodRamoAtividades);
 
-            txtTransp.Text = Convert.ToString(oCliente.CodTransportadoras);
+            txtCodTransp.Text = Convert.ToString(oCliente.CodTransportadoras);
 
             dataCad.Value = oCliente.DataCad2;
             dataUltAlt.Value = oCliente.DataUltAlt2;
@@ -162,7 +162,7 @@ namespace KnkForms.Forms
 
             txtIdRamoAtiv.Enabled = false;
 
-            txtTransp.Enabled = false;
+            txtCodTransp.Enabled = false;
 
             dataCad.Enabled = false;
             dataUltAlt.Enabled = false;
@@ -203,7 +203,7 @@ namespace KnkForms.Forms
 
             txtIdRamoAtiv.Enabled = true;
 
-            txtTransp.Enabled = true;
+            txtCodTransp.Enabled = true;
 
             dataCad.Enabled = true;
             dataUltAlt.Enabled = true;
@@ -246,7 +246,7 @@ namespace KnkForms.Forms
 
             oCliente.CodRamoAtividades = Convert.ToInt32(txtIdRamoAtiv.Text);
 
-            oCliente.CodTransportadoras = Convert.ToInt32(txtTransp.Text);
+            oCliente.CodTransportadoras = Convert.ToInt32(txtCodTransp.Text);
 
             oCliente.DataCad2 = dataCad.Value;
             oCliente.DataUltAlt2 = dataUltAlt.Value;
@@ -293,6 +293,16 @@ namespace KnkForms.Forms
             {
                 txtIdCondPag.Text = Convert.ToString(id);
                 txtNomeCondPag.Text = nome;
+            }
+            else if(tipo == "RamoAtiv")
+            {
+                txtIdRamoAtiv.Text = Convert.ToString(id);
+                txtNomeRamoAtiv.Text = nome;
+            }
+            else if(tipo == "Trans")
+            {
+                txtCodTransp.Text = Convert.ToString(id);
+                txtNomeTrans.Text = nome;
             }
         }
         public void setFrmConCidades(Object obj)

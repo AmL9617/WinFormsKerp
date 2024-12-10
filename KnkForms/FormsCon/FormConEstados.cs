@@ -16,7 +16,7 @@ namespace KnkForms.Classes
         Estados oEstado;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
         //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao FROM Estado";
+        string query = "SELECT Estado.IdEstado, Estado.IdPais, Estado.Estado, Estado.Sigla, Estado.PercIcms, Estado.IcmsInt, Estado.PerRedSt, Estado.CodigoWeb, Estado.IdEmpresa, Estado.DataCadastro, Estado.DataModificacao, Pais.Pais AS NomePais FROM Estado JOIN Pais ON Estado.IdPais = Pais.IdPais";
         public FormConEstados()
         {
             InitializeComponent();
@@ -50,8 +50,8 @@ namespace KnkForms.Classes
                             {
                                 ListViewItem item = new ListViewItem(reader["IdEstado"].ToString());
 
-                                item.SubItems.Add(reader["IdPais"].ToString());
                                 item.SubItems.Add(reader["Estado"].ToString());
+                                item.SubItems.Add(reader["NomePais"].ToString());
                                 item.SubItems.Add(reader["Sigla"].ToString());
                                 item.SubItems.Add(reader["PercIcms"].ToString());
                                 item.SubItems.Add(reader["IcmsInt"].ToString());
@@ -85,23 +85,43 @@ namespace KnkForms.Classes
             if (listVConsulta.SelectedItems.Count > 0)
             {
                 var selectedItem = listVConsulta.SelectedItems[0];
+                string idPais = "";
+                string nomePais = selectedItem.SubItems[2].Text;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SELECT IdPais FROM Pais WHERE Pais = @nomePais", connection))
+                    {
+                        command.Parameters.AddWithValue("@nomePais", nomePais);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                idPais = reader["idPais"].ToString();
+                            }
+                        }
+                    }
+                }
 
                 string campo1 = selectedItem.SubItems[0].Text;
                 string campo2 = selectedItem.SubItems[1].Text;
-                string campo3 = selectedItem.SubItems[2].Text;
-                string campo4 = selectedItem.SubItems[3].Text;
-                string campo5 = selectedItem.SubItems[4].Text;
-                string campo6 = selectedItem.SubItems[5].Text;
-                string campo7 = selectedItem.SubItems[6].Text;
-                string campo8 = selectedItem.SubItems[7].Text;
-                string campo9 = selectedItem.SubItems[8].Text;
-                string campo10 = selectedItem.SubItems[9].Text;
-                string campo11 = selectedItem.SubItems[10].Text;
+                string campo3 = idPais;
+                string campo4 = selectedItem.SubItems[2].Text;
+                string campo5 = selectedItem.SubItems[3].Text;
+                string campo6 = selectedItem.SubItems[4].Text;
+                string campo7 = selectedItem.SubItems[5].Text;
+                string campo8 = selectedItem.SubItems[6].Text;
+                string campo9 = selectedItem.SubItems[7].Text;
+                string campo10 = selectedItem.SubItems[8].Text;
+                string campo11 = selectedItem.SubItems[9].Text;
+                string campo12 = selectedItem.SubItems[10].Text;
 
 
                 oFormCadEstado.ConhecaObj(oEstado);
                 oFormCadEstado.LimpaTxt();
-                oFormCadEstado.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11);
+                oFormCadEstado.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12);
                 oFormCadEstado.ShowDialog();
             }
             CarregaLV();
@@ -129,8 +149,8 @@ namespace KnkForms.Classes
                 {
                     connection.Open();
 
-                    string queryPesquisa = "SELECT IdEstado, IdPais, Estado, Sigla, PercIcms, IcmsInt, PerRedSt, CodigoWeb, IdEmpresa, DataCadastro, DataModificacao " +
-                                   "FROM Estado WHERE Estado LIKE @searchText OR IdEstado LIKE @searchText";
+                    string queryPesquisa = "SELECT Estado.IdEstado, Estado.IdPais, Estado.Estado, Estado.Sigla, Estado.PercIcms, Estado.IcmsInt, Estado.PerRedSt, Estado.CodigoWeb, Estado.IdEmpresa, Estado.DataCadastro, Estado.DataModificacao, Pais.Pais AS NomePais  " +
+                                   "FROM Estado JOIN Pais ON Estado.IdPais = Pais.IdPais WHERE Estado LIKE @searchText OR IdEstado LIKE @searchText";
 
                     using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
                     {
@@ -142,8 +162,8 @@ namespace KnkForms.Classes
                             {
                                 ListViewItem item = new ListViewItem(reader["IdEstado"].ToString());
 
-                                item.SubItems.Add(reader["IdPais"].ToString());
                                 item.SubItems.Add(reader["Estado"].ToString());
+                                item.SubItems.Add(reader["NomePais"].ToString()); 
                                 item.SubItems.Add(reader["Sigla"].ToString());
                                 item.SubItems.Add(reader["PercIcms"].ToString());
                                 item.SubItems.Add(reader["IcmsInt"].ToString());

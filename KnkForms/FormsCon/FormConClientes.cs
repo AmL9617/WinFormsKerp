@@ -218,11 +218,12 @@ namespace KnkForms.FormsCon
 
                 int idCliente = Convert.ToInt32(selectedItem.SubItems[0].Text);
                 string nomeCliente = (selectedItem.SubItems[1].Text);
+                string tipo = "Cliente";
 
                 var cadRamoAtivCli = this.Owner as FormCadRamoAtivCliente;
                 if (cadRamoAtivCli != null)
                 {
-                    cadRamoAtivCli.SetCliForn(idCliente, nomeCliente);
+                    cadRamoAtivCli.SetConsultas(idCliente, nomeCliente, tipo);
                 }
                 var cadContato = this.Owner as FormCadContato;
                 if (cadContato != null)

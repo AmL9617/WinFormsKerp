@@ -1,5 +1,6 @@
 ﻿using KnkForms.Classes;
 using KnkForms.Forms;
+using KnkForms.FormsCad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -165,6 +166,12 @@ namespace KnkForms.FormsCon
                 if (cadCliente != null)
                 {
                     cadCliente.SetConsultas(idRamoAtiv, nomeRamoAtiv, tipo);
+                }
+
+                var cadRamoCliente = this.Owner as FormCadRamoAtivCliente;
+                if (cadRamoCliente != null)
+                {
+                    cadRamoCliente.SetConsultas(idRamoAtiv, nomeRamoAtiv, tipo);
                 }
 
                 this.Close();

@@ -28,7 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.codRamo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ramo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cliForn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.prioridade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codEmp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
+            // 
+            // listVConsulta
+            // 
+            this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.codRamo,
+            this.ramo,
+            this.cliForn,
+            this.prioridade,
+            this.codEmp});
+            // 
+            // codRamo
+            // 
+            this.codRamo.Text = "Código Ramo";
+            this.codRamo.Width = 100;
+            // 
+            // ramo
+            // 
+            this.ramo.Text = "Ramo de Atividade";
+            this.ramo.Width = 120;
+            // 
+            // cliForn
+            // 
+            this.cliForn.Text = "Cliente";
+            this.cliForn.Width = 100;
+            // 
+            // prioridade
+            // 
+            this.prioridade.Text = "Prioridade";
+            this.prioridade.Width = 100;
+            // 
+            // codEmp
+            // 
+            this.codEmp.Text = "Código Empresa";
+            this.codEmp.Width = 100;
             // 
             // FormConRamoAtivClientes
             // 
@@ -42,5 +81,11 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ColumnHeader codRamo;
+        private System.Windows.Forms.ColumnHeader ramo;
+        private System.Windows.Forms.ColumnHeader cliForn;
+        private System.Windows.Forms.ColumnHeader prioridade;
+        private System.Windows.Forms.ColumnHeader codEmp;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.codEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.codPais = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pais = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sigla = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.percICMS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,8 +45,8 @@
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.codEstado,
-            this.codPais,
             this.estado,
+            this.pais,
             this.sigla,
             this.percICMS,
             this.icms,
@@ -62,10 +62,10 @@
             this.codEstado.Text = "Código Estado";
             this.codEstado.Width = 100;
             // 
-            // codPais
+            // pais
             // 
-            this.codPais.Text = "Código País";
-            this.codPais.Width = 100;
+            this.pais.Text = "País";
+            this.pais.Width = 100;
             // 
             // estado
             // 
@@ -79,42 +79,35 @@
             // 
             // percICMS
             // 
-            this.percICMS.DisplayIndex = 4;
             this.percICMS.Text = "Percentual ICMS";
             this.percICMS.Width = 100;
             // 
             // icms
             // 
-            this.icms.DisplayIndex = 5;
             this.icms.Text = "ICMS";
             // 
             // percRedST
             // 
-            this.percRedST.DisplayIndex = 6;
             this.percRedST.Text = "Perc. Redução S.T.";
             this.percRedST.Width = 100;
             // 
             // codWeb
             // 
-            this.codWeb.DisplayIndex = 7;
             this.codWeb.Text = "Código Web";
             this.codWeb.Width = 80;
             // 
             // dataCadastro
             // 
-            this.dataCadastro.DisplayIndex = 9;
             this.dataCadastro.Text = "Data de Cadastro";
             this.dataCadastro.Width = 100;
             // 
             // dataModificacao
             // 
-            this.dataModificacao.DisplayIndex = 10;
             this.dataModificacao.Text = "Data de Modificacao";
             this.dataModificacao.Width = 100;
             // 
             // codEmp
             // 
-            this.codEmp.DisplayIndex = 8;
             this.codEmp.Text = "Código Empresa";
             this.codEmp.Width = 100;
             // 
@@ -132,7 +125,7 @@
         #endregion
 
         private System.Windows.Forms.ColumnHeader codEstado;
-        private System.Windows.Forms.ColumnHeader codPais;
+        private System.Windows.Forms.ColumnHeader pais;
         private System.Windows.Forms.ColumnHeader estado;
         private System.Windows.Forms.ColumnHeader sigla;
         private System.Windows.Forms.ColumnHeader percICMS;

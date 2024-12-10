@@ -42,20 +42,20 @@ namespace KnkForms.Classes
             txtCodWeb.Clear();
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12)
         {
             txtCod.Text = campo1;
-            txtCod.Enabled = false;
-            txtCodPais.Text = campo2;
-            txtEstado.Text = campo3;
-            txtSigla.Text = campo4;
-            txtPercIcms.Text = campo5;
-            txtIcms.Text = campo6;
-            txtPercRedST.Text = campo7;
-            txtCodWeb.Text = campo8;
-            txtCodUser.Text = campo9;
-            txtDataCad.Text = campo10;
-            txtDataAlt.Text = campo11;
+            txtNomePais.Text = campo2;
+            txtCodPais.Text = campo3;
+            txtEstado.Text = campo4;
+            txtSigla.Text = campo5;
+            txtPercIcms.Text = campo6;
+            txtIcms.Text = campo7;
+            txtPercRedST.Text = campo8;
+            txtCodWeb.Text = campo9;
+            txtCodUser.Text = campo10;
+            txtDataCad.Text = campo11;
+            txtDataAlt.Text = campo12;
             SalvarAlterar = 'A';
 
         }

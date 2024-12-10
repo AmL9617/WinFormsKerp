@@ -12,16 +12,19 @@ namespace KnkForms.Classes
     {
         protected int codClienteFornecedor;
         protected int prioridade;
+        
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
         //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
 
         protected Clientes clientes;
+        protected RamoAtividades ramoAtiv;
         public RamoAtividadesClientes()
         {
             codClienteFornecedor = 0;
             prioridade = 0;
             clientes = new Clientes();
+            ramoAtiv = new RamoAtividades();
         }
 
         public int CodClienteFornecedor
@@ -40,6 +43,11 @@ namespace KnkForms.Classes
             get { return clientes; }
             set { clientes = value; }
         }
+        public RamoAtividades RamoAtiv
+        {
+            get { return ramoAtiv; }
+            set { ramoAtiv = value; }
+        }
         public void SalvarBD()
         {
             try
@@ -47,11 +55,12 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO RamoAtividadeClientes (IdEmpresa, IdFornCliente, Prioridade) VALUES (@IdEmpresa, @IdFornCliente, @Prioridade)";
+                    string query = "INSERT INTO RamoAtividadeClientes (IdEmpresa, IdRamo, IdFornCliente, Prioridade) VALUES (@IdEmpresa, @IdRamo, @IdFornCliente, @Prioridade)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
+                        command.Parameters.AddWithValue("@IdRamo", Cod);
                         command.Parameters.AddWithValue("@IdFornCliente", CodClienteFornecedor);
                         command.Parameters.AddWithValue("@Prioridade", Prioridade);
 

@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace KnkForms.FormsCad
 {
-    public partial class FormCadRamoAtivCliente : KnkForms.Forms.FormCadRamoAtividade
+    public partial class FormCadRamoAtivCliente : KnkForms.FormCadPai
     {
         RamoAtividadesClientes oRamoAtivClientes;
         FormConClientes oFrmConClientes;
+        FormConRamoAtividades oFrmConRamoAtiv;
         char SalvarAlterar = '\0';
 
         public FormCadRamoAtivCliente()
@@ -38,14 +39,16 @@ namespace KnkForms.FormsCad
             txtDataAlt.Clear();
         }
 
-        public override void CarregaTxt()
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6)
         {
-            txtCod.Text = Convert.ToString(oRamoAtivClientes.Cod);
-            txtCodCliForn.Text = Convert.ToString(oRamoAtivClientes.CodClienteFornecedor);
-            txtPrioridade.Text = Convert.ToString(oRamoAtivClientes.Prioridade);
-            txtCodUser.Text = Convert.ToString(oRamoAtivClientes.CodEmpresa);
-            txtDataCad.Text = Convert.ToString(oRamoAtivClientes.DataCadastro);
-            txtDataAlt.Text = Convert.ToString(oRamoAtivClientes.DataModificacao);
+            txtCod.Text = campo1;
+            txtNomeRamo.Text = campo2;
+            txtNomeCliForn.Text = campo3;
+            txtCodCliForn.Text = campo4;
+            txtPrioridade.Text = campo5;
+            txtCodUser.Text = campo6;
+
+            SalvarAlterar = 'A';
         }
 
         public override void BloqueiaTxt()
@@ -70,6 +73,7 @@ namespace KnkForms.FormsCad
 
         public override void Salvar()
         {
+            oRamoAtivClientes.Cod = Convert.ToInt32(txtCod.Text);
             oRamoAtivClientes.CodClienteFornecedor = Convert.ToInt32(txtCodCliForn.Text);
             oRamoAtivClientes.Prioridade = Convert.ToInt32(txtPrioridade.Text);
             oRamoAtivClientes.CodEmpresa = 1;
@@ -77,8 +81,7 @@ namespace KnkForms.FormsCad
 
             if (SalvarAlterar == 'A')
             {
-                oRamoAtivClientes.Cod = Convert.ToInt32(txtCod.Text);
-                oRamoAtivClientes.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                //oRamoAtivClientes.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oRamoAtivClientes.AlterarBD(oRamoAtivClientes.Cod);
             }
             else
@@ -88,15 +91,29 @@ namespace KnkForms.FormsCad
             }
 
             SalvarAlterar = '\0';
+            Close();
         }
-        public void SetCliForn(int idEstado, string nomeEstado)
+        public void SetConsultas(int id, string nome, string tipo)
         {
-            txtCodCliForn.Text = Convert.ToString(idEstado);
-            txtNomeCliForn.Text = nomeEstado;
+            if(tipo == "Cliente")
+            {
+                txtCodCliForn.Text = Convert.ToString(id);
+                txtNomeCliForn.Text = nome;
+            }
+            if(tipo == "RamoAtiv")
+            {
+                txtCod.Text = Convert.ToString(id);
+                txtNomeRamo.Text = nome;
+            }
+            
         }
         public void setFrmConClientes(Object obj)
         {
             oFrmConClientes = (FormConClientes)obj;
+        }
+        public void setFrmConRamoAtiv(Object obj)
+        {
+            oFrmConRamoAtiv = (FormConRamoAtividades)obj;
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
@@ -104,6 +121,13 @@ namespace KnkForms.FormsCad
             oFrmConClientes.ConhecaObj(oRamoAtivClientes.Clientes);
             oFrmConClientes.Owner = this;
             oFrmConClientes.ShowDialog();
+        }
+
+        private void btnRamoAtiv_Click(object sender, EventArgs e)
+        {
+            oFrmConRamoAtiv.ConhecaObj(oRamoAtivClientes.RamoAtiv);
+            oFrmConRamoAtiv.Owner = this;
+            oFrmConRamoAtiv.ShowDialog();
         }
     }
 }
