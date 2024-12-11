@@ -72,5 +72,12 @@ namespace KnkForms.FormsCon
         {
 
         }
+        private void pesquisa(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnPesquisa_Click(sender, e);
+            }
+        }
     }
 }

@@ -56,6 +56,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(307, 20);
             this.txtPesquisa.TabIndex = 1;
+            this.txtPesquisa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.pesquisa);
             // 
             // btnPesquisa
             // 

@@ -27,9 +27,9 @@ namespace KnkForms.Forms
         {
             txtCod.Clear();
             txtCondPag.Clear();
-            txtTipo.Clear();
+            boxTipo.Text = "";
             txtTaxaJuro.Clear();
-            txtOpDisp.Clear();
+            boxOpDisp.Text = "";
             txtNumParc.Clear();
             txtDia.Clear();
             txtPorParcela.Clear();
@@ -45,9 +45,11 @@ namespace KnkForms.Forms
             txtCondPag.Text = campo2;
             txtTaxaJuro.Text = campo3;
             txtNumParc.Text = campo4;
-            txtTipo.Text = campo5;
+            if(campo5 == "P") { boxTipo.Text = "Prazo"; } else { boxTipo.Text = "Mensal"; }
             txtDia.Text = campo6;
-            txtOpDisp.Text = campo7;
+            if (campo7 == "C") { boxOpDisp.Text = "Compras"; }
+            else if (campo7 == "V") { boxOpDisp.Text = "Vendas"; }
+            else { boxOpDisp.Text = "Ambos"; }
             if (campo8 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
             txtPorParcela.Text = campo9;
             txtCodUser.Text = campo10;
@@ -60,9 +62,9 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = false;
             txtCondPag.Enabled = false;
-            txtTipo.Enabled = false;
+            boxTipo.Enabled = false;
             txtTaxaJuro.Enabled = false;
-            txtOpDisp.Enabled = false;
+            boxOpDisp.Enabled = false;
             txtNumParc.Enabled = false;
             txtPorParcela.Enabled = false;
             txtCodUser.Enabled = false;
@@ -76,9 +78,9 @@ namespace KnkForms.Forms
         {
             txtCod.Enabled = true;
             txtCondPag.Enabled = true;
-            txtTipo.Enabled = true;
+            boxTipo.Enabled = true;
             txtTaxaJuro.Enabled = true;
-            txtOpDisp.Enabled = true;
+            boxOpDisp.Enabled = true;
             txtNumParc.Enabled = true;
             txtPorParcela.Enabled = true;
             txtCodUser.Enabled = true;
@@ -91,9 +93,11 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aCondPag.CondPag = txtCondPag.Text;
-            aCondPag.Tipo = txtTipo.Text;
+            if(boxTipo.Text == "Prazo") { aCondPag.Tipo = "P"; } else { aCondPag.Tipo = "M"; }
             aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
-            aCondPag.OperacaoDisponivel = txtOpDisp.Text;
+            if(boxOpDisp.Text == "Compras") { aCondPag.OperacaoDisponivel = "C"; }
+            else if(boxOpDisp.Text == "Vendas") { aCondPag.OperacaoDisponivel = "V"; }
+            else { aCondPag.OperacaoDisponivel = "A"; }
             aCondPag.NumeroParcelas = Convert.ToInt32(txtNumParc.Text);
             aCondPag.PorParcela = txtPorParcela.Text;
             aCondPag.Dia = txtDia.Text;

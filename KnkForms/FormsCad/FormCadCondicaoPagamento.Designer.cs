@@ -34,15 +34,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTaxaJuro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtOpDisp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPorParcela = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumParc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDia = new System.Windows.Forms.TextBox();
+            this.boxOpDisp = new System.Windows.Forms.ComboBox();
+            this.boxTipo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCod
@@ -78,7 +78,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(738, 22);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 7;
+            this.chkAtivo.TabIndex = 6;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
@@ -103,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 100);
+            this.label5.Location = new System.Drawing.Point(139, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 13);
             this.label5.TabIndex = 58;
@@ -111,7 +111,7 @@
             // 
             // txtTaxaJuro
             // 
-            this.txtTaxaJuro.Location = new System.Drawing.Point(441, 58);
+            this.txtTaxaJuro.Location = new System.Drawing.Point(504, 58);
             this.txtTaxaJuro.MaxLength = 8;
             this.txtTaxaJuro.Name = "txtTaxaJuro";
             this.txtTaxaJuro.Size = new System.Drawing.Size(59, 20);
@@ -120,19 +120,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(438, 42);
+            this.label1.Location = new System.Drawing.Point(501, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 56;
             this.label1.Text = "Taxa dos Juros";
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(391, 58);
-            this.txtTipo.MaxLength = 1;
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(33, 20);
-            this.txtTipo.TabIndex = 3;
             // 
             // label2
             // 
@@ -143,18 +135,10 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Tipo";
             // 
-            // txtOpDisp
-            // 
-            this.txtOpDisp.Location = new System.Drawing.Point(533, 58);
-            this.txtOpDisp.MaxLength = 1;
-            this.txtOpDisp.Name = "txtOpDisp";
-            this.txtOpDisp.Size = new System.Drawing.Size(47, 20);
-            this.txtOpDisp.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(530, 42);
+            this.label4.Location = new System.Drawing.Point(593, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 62;
@@ -162,7 +146,7 @@
             // 
             // txtPorParcela
             // 
-            this.txtPorParcela.Location = new System.Drawing.Point(141, 116);
+            this.txtPorParcela.Location = new System.Drawing.Point(251, 115);
             this.txtPorParcela.MaxLength = 1;
             this.txtPorParcela.Name = "txtPorParcela";
             this.txtPorParcela.Size = new System.Drawing.Size(63, 20);
@@ -171,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(138, 100);
+            this.label7.Location = new System.Drawing.Point(248, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 13);
             this.label7.TabIndex = 64;
@@ -179,16 +163,16 @@
             // 
             // txtNumParc
             // 
-            this.txtNumParc.Location = new System.Drawing.Point(647, 58);
+            this.txtNumParc.Location = new System.Drawing.Point(35, 115);
             this.txtNumParc.MaxLength = 2;
             this.txtNumParc.Name = "txtNumParc";
             this.txtNumParc.Size = new System.Drawing.Size(47, 20);
-            this.txtNumParc.TabIndex = 6;
+            this.txtNumParc.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(644, 42);
+            this.label3.Location = new System.Drawing.Point(32, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 66;
@@ -196,27 +180,50 @@
             // 
             // txtDia
             // 
-            this.txtDia.Location = new System.Drawing.Point(32, 116);
+            this.txtDia.Location = new System.Drawing.Point(142, 115);
             this.txtDia.MaxLength = 10;
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(77, 20);
             this.txtDia.TabIndex = 8;
             // 
+            // boxOpDisp
+            // 
+            this.boxOpDisp.FormattingEnabled = true;
+            this.boxOpDisp.Items.AddRange(new object[] {
+            "Compras",
+            "Vendas",
+            "Ambos"});
+            this.boxOpDisp.Location = new System.Drawing.Point(596, 58);
+            this.boxOpDisp.Name = "boxOpDisp";
+            this.boxOpDisp.Size = new System.Drawing.Size(76, 21);
+            this.boxOpDisp.TabIndex = 5;
+            // 
+            // boxTipo
+            // 
+            this.boxTipo.FormattingEnabled = true;
+            this.boxTipo.Items.AddRange(new object[] {
+            "Prazo",
+            "Mensal"});
+            this.boxTipo.Location = new System.Drawing.Point(391, 58);
+            this.boxTipo.Name = "boxTipo";
+            this.boxTipo.Size = new System.Drawing.Size(86, 21);
+            this.boxTipo.TabIndex = 3;
+            // 
             // FormCadCondicaoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.boxTipo);
+            this.Controls.Add(this.boxOpDisp);
             this.Controls.Add(this.txtDia);
             this.Controls.Add(this.txtNumParc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPorParcela);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtOpDisp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTaxaJuro);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtCondPag);
@@ -237,17 +244,17 @@
             this.Controls.SetChildIndex(this.txtCondPag, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txtTipo, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtTaxaJuro, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtOpDisp, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtPorParcela, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtNumParc, 0);
             this.Controls.SetChildIndex(this.txtDia, 0);
+            this.Controls.SetChildIndex(this.boxOpDisp, 0);
+            this.Controls.SetChildIndex(this.boxTipo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,14 +268,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTaxaJuro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtOpDisp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPorParcela;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNumParc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDia;
+        private System.Windows.Forms.ComboBox boxOpDisp;
+        private System.Windows.Forms.ComboBox boxTipo;
     }
 }

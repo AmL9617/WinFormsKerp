@@ -85,6 +85,7 @@
             // 
             // txtSigla
             // 
+            this.txtSigla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSigla.Location = new System.Drawing.Point(394, 57);
             this.txtSigla.MaxLength = 2;
             this.txtSigla.Name = "txtSigla";
