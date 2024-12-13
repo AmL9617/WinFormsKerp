@@ -11,6 +11,7 @@ namespace KnkForms.Classes
     //ST é situação tributária
     internal class ListaCodST:Pai
     {
+        protected string codCst;
         protected string tipo;
         protected string descricao;
         protected char ativo;
@@ -19,9 +20,15 @@ namespace KnkForms.Classes
         //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public ListaCodST()
         {
+            codCst = "";
             tipo = "";
             descricao = "";
             ativo = '\0';
+        }
+        public string CodCst
+        {
+            get { return codCst; }
+            set { codCst = value; }
         }
 
         public string Tipo
@@ -47,10 +54,11 @@ namespace KnkForms.Classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO ListaCst (IdEmpresa, Tipo, Descricao, Ativo) VALUES (@IdEmpresa, @Tipo, @Descricao, @Ativo)";
+                    string query = "INSERT INTO ListaCst (IdListaCst, IdEmpresa, Tipo, Descricao, Ativo) VALUES (@IdListaCst, @IdEmpresa, @Tipo, @Descricao, @Ativo)";
 
                     using (var command = new SqlCommand(query, conn))
                     {
+                        command.Parameters.AddWithValue("@IdListaCst", CodCst);
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
                         command.Parameters.AddWithValue("@Tipo", Tipo);
                         command.Parameters.AddWithValue("@Descricao", Descricao);
@@ -67,14 +75,14 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void AlterarBD(int CodLista)
+        public void AlterarBD(string CodLista)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "UPDATE ListaCst SET IdEmpresa=@IdEmpresa, Tipo=@Tipo, Descricao=@Descricao, Ativo=@Ativo WHERE IdListaCst = @IdListaCst";
+                    string query = "UPDATE ListaCst SET IdListaCst=@IdListaCst, IdEmpresa=@IdEmpresa, Tipo=@Tipo, Descricao=@Descricao, Ativo=@Ativo WHERE IdListaCst = @IdListaCst";
                     using (var command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
@@ -94,17 +102,17 @@ namespace KnkForms.Classes
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void ExcluirBD(int CodLista)
+        public void ExcluirBD(string CodLista)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "DELETE FROM Lista WHERE IdLista = @IdLista";
+                    string query = "DELETE FROM ListaCst WHERE IdListaCst = @IdListaCst";
                     using (var command = new SqlCommand(query, conn))
                     {
-                        command.Parameters.AddWithValue("@IdLista", CodLista);
+                        command.Parameters.AddWithValue("@IdListaCst", CodLista);
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);

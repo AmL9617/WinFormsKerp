@@ -17,13 +17,9 @@ namespace KnkForms.FormsCon
         Cidades aCidade;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
 		//"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-
-		//string query = "SELECT IdCidade, IdEstado, Cidade, Ddd, Ativo, IdEmpresa, DataCadastro, DataModificacao FROM Cidade";
-
-		//TESTE
-		string query = "SELECT Cidade.IdCidade, Cidade.Cidade, Cidade.IdEstado, Cidade.Ddd, Cidade.Ativo, Cidade.IdEmpresa, Cidade.DataCadastro, Cidade.DataModificacao, Estado.Estado AS NomeEstado FROM Cidade JOIN Estado ON Cidade.IdEstado = Estado.IdEstado";
-        //TESTE
-
+        
+        string query = "SELECT Cidade.IdCidade, Cidade.Cidade, Cidade.IdEstado, Cidade.Ddd, Cidade.Ativo, Cidade.IdEmpresa, Cidade.DataCadastro, Cidade.DataModificacao, Estado.Estado AS NomeEstado FROM Cidade JOIN Estado ON Cidade.IdEstado = Estado.IdEstado";
+        
         public FormConCidades()
         {
             InitializeComponent();
@@ -57,13 +53,8 @@ namespace KnkForms.FormsCon
                             {
                                 ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
 
-                                //item.SubItems.Add(reader["IdEstado"].ToString());
                                 item.SubItems.Add(reader["Cidade"].ToString());
-                                
-                                //TESTE
                                 item.SubItems.Add(reader["NomeEstado"].ToString());
-                                //TESTE
-                                
                                 item.SubItems.Add(reader["Ddd"].ToString());
                                 item.SubItems.Add(reader["Ativo"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
@@ -98,7 +89,6 @@ namespace KnkForms.FormsCon
                 string idEstado = "";
                 string nomeEstado = selectedItem.SubItems[2].Text;
 
-                //TESTE
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -115,7 +105,6 @@ namespace KnkForms.FormsCon
                         }
                     }
                 }
-                //TESTE
 
                 string campo1 = selectedItem.SubItems[0].Text;
                 string campo2 = selectedItem.SubItems[2].Text;

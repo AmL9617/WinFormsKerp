@@ -38,16 +38,15 @@ namespace KnkForms.FormsCad
             txtDataAlt.Clear();
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7)
         {
             txtCod.Text = campo1;
             txtCodFornCliente.Text = campo2;
-            txtTipo.Text = campo3;
-            txtContato.Text = campo4;
-            txtObservacao.Text = campo5;
-            txtCodUser.Text = campo6;
-            txtDataCad.Text = campo7;
-            txtDataAlt.Text = campo8;
+            txtFornCliente.Text = campo3;
+            txtTipo.Text = campo4;
+            txtContato.Text = campo5;
+            txtObservacao.Text = campo6;
+            txtCodUser.Text = campo7;
         }
 
         public override void BloqueiaTxt()
@@ -89,7 +88,7 @@ namespace KnkForms.FormsCad
             if (SalvarAlterar == 'A')
             {
                 oContato.Cod = Convert.ToInt32(txtCod.Text);
-                oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                //oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
                 oContato.AlterarBD(oContato.Cod);
             }
 

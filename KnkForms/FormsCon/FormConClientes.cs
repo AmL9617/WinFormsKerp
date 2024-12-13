@@ -86,7 +86,7 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Clientees: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Clientes: " + ex.Message);
                 }
             }
         }

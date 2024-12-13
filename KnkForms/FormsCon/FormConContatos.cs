@@ -19,7 +19,7 @@ namespace KnkForms.FormsCon
         Contatos oContato;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
         //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdContato, IdFornCliente, Tipo, Contato, Observacao, IdEmpresa FROM Contatos";
+        string query = "SELECT Contatos.IdContato, Contatos.IdFornCliente, Contatos.Tipo, Contatos.Contato, Contatos.Observacao, Contatos.IdEmpresa, FornCliente.NomeFantasia AS NomeCliente FROM Contatos JOIN FornCliente ON Contatos.IdFornCliente = FornCliente.IdFornCliente";
 
         public FormConContatos()
         {
@@ -55,7 +55,7 @@ namespace KnkForms.FormsCon
                             {
                                 ListViewItem item = new ListViewItem(reader["IdContato"].ToString());
 
-                                item.SubItems.Add(reader["IdFornCliente"].ToString());
+                                item.SubItems.Add(reader["NomeCliente"].ToString());
                                 item.SubItems.Add(reader["Tipo"].ToString());
                                 item.SubItems.Add(reader["Contato"].ToString());
                                 item.SubItems.Add(reader["Observacao"].ToString());
@@ -87,20 +87,40 @@ namespace KnkForms.FormsCon
             if (listVConsulta.SelectedItems.Count > 0)
             {
                 var selectedItem = listVConsulta.SelectedItems[0];
+                string idCliente = "";
+                string nomeCliente = selectedItem.SubItems[1].Text;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SELECT IdFornCliente FROM FornCliente WHERE NomeFantasia = @nomeCliente", connection))
+                    {
+                        command.Parameters.AddWithValue("@nomeCliente", nomeCliente);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                idCliente = reader["idFornCliente"].ToString();
+                            }
+                        }
+                    }
+                }
 
                 string campo1 = selectedItem.SubItems[0].Text;
-                string campo2 = selectedItem.SubItems[1].Text;
-                string campo3 = selectedItem.SubItems[2].Text;
-                string campo4 = selectedItem.SubItems[3].Text;
-                string campo5 = selectedItem.SubItems[4].Text;
-                string campo6 = selectedItem.SubItems[5].Text;
-                string campo7 = selectedItem.SubItems[6].Text;
-                string campo8 = selectedItem.SubItems[7].Text;
+                string campo2 = idCliente;
+                string campo3 = selectedItem.SubItems[1].Text;
+                string campo4 = selectedItem.SubItems[2].Text;
+                string campo5 = selectedItem.SubItems[3].Text;
+                string campo6 = selectedItem.SubItems[4].Text;
+                string campo7 = selectedItem.SubItems[5].Text;
+                //string campo8 = selectedItem.SubItems[6].Text;
+                //string campo9 = selectedItem.SubItems[7].Text;
 
 
                 oFormCadContato.ConhecaObj(oContato);
                 oFormCadContato.LimpaTxt();
-                oFormCadContato.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8);
+                oFormCadContato.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7);
                 oFormCadContato.ShowDialog();
             }
             CarregaLV();

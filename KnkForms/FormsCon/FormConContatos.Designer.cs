@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.codContato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.codFornCli = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.fornCli = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.observacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,7 +40,7 @@
             // 
             this.listVConsulta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.codContato,
-            this.codFornCli,
+            this.fornCli,
             this.tipo,
             this.contato,
             this.observacao,
@@ -51,10 +51,10 @@
             this.codContato.Text = "Código Contato";
             this.codContato.Width = 100;
             // 
-            // codFornCli
+            // fornCli
             // 
-            this.codFornCli.Text = "Código Fornecedor/Cliente";
-            this.codFornCli.Width = 100;
+            this.fornCli.Text = "Cliente";
+            this.fornCli.Width = 100;
             // 
             // tipo
             // 
@@ -89,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.ColumnHeader codContato;
-        private System.Windows.Forms.ColumnHeader codFornCli;
+        private System.Windows.Forms.ColumnHeader fornCli;
         private System.Windows.Forms.ColumnHeader tipo;
         private System.Windows.Forms.ColumnHeader contato;
         private System.Windows.Forms.ColumnHeader observacao;

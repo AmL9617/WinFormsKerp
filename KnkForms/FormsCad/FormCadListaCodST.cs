@@ -16,6 +16,7 @@ namespace KnkForms.FormsCad
 
         public FormCadListaCodST()
         {
+            txtCod.Enabled = true;
             InitializeComponent();
         }
         public override void ConhecaObj(Object obj)
@@ -36,6 +37,7 @@ namespace KnkForms.FormsCad
 
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5)
         {
+            txtCod.Enabled = false;
             txtCod.Text = campo1;
             txtTipo.Text = campo2;
             txtDescricao.Text = campo3;
@@ -69,6 +71,7 @@ namespace KnkForms.FormsCad
 
         public override void Salvar()
         {
+            aListaCodST.CodCst = txtCod.Text;
             aListaCodST.Tipo = txtTipo.Text;
             aListaCodST.Descricao = txtDescricao.Text;
             if (chkAtivo.Checked == true) { aListaCodST.Ativo = 'S'; } else { aListaCodST.Ativo = 'N'; };
@@ -77,16 +80,16 @@ namespace KnkForms.FormsCad
 
             if (SalvarAlterar == 'A')
             {
-                aListaCodST.Cod = Convert.ToInt32(txtCod.Text);
-                aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                aListaCodST.AlterarBD(aListaCodST.Cod);
+                //aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                aListaCodST.AlterarBD(aListaCodST.CodCst);
+                
             }
             else
             {
                 aListaCodST.DataCadastro = DateTime.Now;
                 aListaCodST.SalvarBD();
             }
-
+            
             SalvarAlterar = '\0';
             Close();
         }

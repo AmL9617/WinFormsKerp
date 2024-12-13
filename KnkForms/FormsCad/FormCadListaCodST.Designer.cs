@@ -37,7 +37,7 @@
             // 
             // txtCod
             // 
-            this.txtCod.Enabled = false;
+            this.txtCod.MaxLength = 3;
             // 
             // txtDataCad
             // 
@@ -90,7 +90,7 @@
             this.txtTipo.Location = new System.Drawing.Point(110, 58);
             this.txtTipo.MaxLength = 1;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(25, 20);
+            this.txtTipo.Size = new System.Drawing.Size(37, 20);
             this.txtTipo.TabIndex = 2;
             // 
             // label2
