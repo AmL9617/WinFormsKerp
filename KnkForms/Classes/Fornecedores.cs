@@ -17,7 +17,7 @@ namespace KnkForms.Classes
         protected string razaoSocial;
         protected string nomeFantasia;
         protected string endereco;
-        protected int numero;
+        protected int? numero;
         protected string complemento;
         protected string bairro;
         protected string cep;
@@ -25,16 +25,16 @@ namespace KnkForms.Classes
         protected string inscricaoEstadual;
         protected string trade;
         protected string codProdIgual;
-        protected double limiteCredito;
+        protected double? limiteCredito;
         protected string observacoes;
         protected char verEmClientes;
-        protected DateTime ultimoMovimento;
+        protected DateTime? ultimoMovimento;
 
         //Placeholder
-        protected int codCidades;
-        protected int codRegioes;
-        protected int codListaPrecos;
-        protected int codCondPag;
+        protected int? codCidades;
+        protected int? codRegioes;
+        protected int? codListaPrecos;
+        protected int? codCondPag;
         //Agregação
         protected Cidades cidades;
         protected Regioes regioes;
@@ -110,7 +110,7 @@ namespace KnkForms.Classes
             set { endereco = value; }
         }
 
-        public int Numero
+        public int? Numero
         {
             get { return numero; }
             set { numero = value; }
@@ -158,7 +158,7 @@ namespace KnkForms.Classes
             set { codProdIgual = value; }
         }
 
-        public double LimiteCredito
+        public double? LimiteCredito
         {
             get { return limiteCredito; }
             set { limiteCredito = value; }
@@ -176,30 +176,30 @@ namespace KnkForms.Classes
             set { verEmClientes = value; }
         }
 
-        public DateTime UltimoMovimento
+        public DateTime? UltimoMovimento
         {
             get { return ultimoMovimento; }
             set { ultimoMovimento = value; }
         }
 
 
-        public int CodCidades
+        public int? CodCidades
         {
             get { return codCidades; }
             set { codCidades = value; }
         }
 
-        public int CodRegioes
+        public int? CodRegioes
         {
             get { return codRegioes; }
             set { codRegioes = value; }
         }
-        public int CodListaPrecos
+        public int? CodListaPrecos
         {
             get { return codListaPrecos; }
             set { codListaPrecos = value; }
         }
-        public int CodCondPag
+        public int? CodCondPag
         {
             get { return codCondPag; }
             set { codCondPag = value; }

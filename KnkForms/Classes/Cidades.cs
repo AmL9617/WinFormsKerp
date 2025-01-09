@@ -13,7 +13,7 @@ namespace KnkForms.Classes
     internal class Cidades : Pai
     {
         protected string cidade;
-        protected int ddd;
+        protected int? ddd;
         protected char ativo;
 
         //Placeholder
@@ -39,7 +39,7 @@ namespace KnkForms.Classes
             set { cidade = value; }
         }
 
-        public int DDD
+        public int? DDD
         {
             get { return ddd; }
             set { ddd = value; }
@@ -76,7 +76,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
                         command.Parameters.AddWithValue("@IdEstado", CodEstado);
                         command.Parameters.AddWithValue("@Cidade", Cidade);
-                        command.Parameters.AddWithValue("@Ddd", DDD);
+                        command.Parameters.AddWithValue("@Ddd", DDD.HasValue ? (object)DDD.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
@@ -106,7 +106,7 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
                         command.Parameters.AddWithValue("@IdEstado", CodEstado);
                         command.Parameters.AddWithValue("@Cidade", Cidade);
-                        command.Parameters.AddWithValue("@Ddd", DDD);
+                        command.Parameters.AddWithValue("@Ddd", DDD.HasValue ? (object)DDD.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@Ativo", Ativo);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);

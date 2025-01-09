@@ -95,10 +95,10 @@ namespace KnkForms.Classes
             oEstado.Estado = txtEstado.Text;
             oEstado.Sigla = Convert.ToString(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
-            oEstado.PercIcms = Convert.ToDouble(txtPercIcms.Text) ;
-            oEstado.Icms = Convert.ToDouble(txtIcms.Text);
-            oEstado.PercRedST = Convert.ToDouble(txtPercIcms.Text);
-            oEstado.CodWeb = Convert.ToInt32(txtCodWeb.Text);
+            oEstado.PercIcms = !string.IsNullOrEmpty(txtPercIcms.Text) ? (double?)Convert.ToInt32(txtPercIcms.Text) : null;
+            oEstado.Icms = !string.IsNullOrEmpty(txtIcms.Text) ? (double?)Convert.ToInt32(txtIcms.Text) : null;
+            oEstado.PercRedST = !string.IsNullOrEmpty(txtPercRedST.Text) ? (double?)Convert.ToInt32(txtPercRedST.Text) : null; ;
+            oEstado.CodWeb = !string.IsNullOrEmpty(txtCodWeb.Text) ? (int?)Convert.ToInt32(txtCodWeb.Text) : null; ;
             oEstado.CodEmpresa = 1;
             oEstado.DataModificacao = DateTime.Now;
 

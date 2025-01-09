@@ -83,7 +83,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             aCidade.Cidade = txtCidade.Text;
-            aCidade.DDD = Convert.ToInt32(txtDDD.Text);
+            aCidade.DDD = !string.IsNullOrEmpty(txtDDD.Text) ? (int?)Convert.ToInt32(txtDDD.Text) : null;
             aCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
             aCidade.CodEmpresa = 1;
             aCidade.DataModificacao = DateTime.Now;

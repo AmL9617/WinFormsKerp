@@ -15,10 +15,10 @@ namespace KnkForms.Classes
         protected string estado;
         protected string sigla;
         protected char ativo;
-        protected double percIcms;
-        protected double icms;
-        protected double percRedST; //Percentual de Redução da Substituição Tributária 
-        protected int codWeb;
+        protected double? percIcms;
+        protected double? icms;
+        protected double? percRedST; //Percentual de Redução da Substituição Tributária 
+        protected int? codWeb;
 
         //Placeholder
         protected int codPais;
@@ -78,23 +78,23 @@ namespace KnkForms.Classes
             get { return codPais; }
             set { codPais = value; }
         }
-        public double PercIcms
+        public double? PercIcms
         {
             get { return percIcms; }
             set { percIcms = value; }
         }
 
-        public double Icms
+        public double? Icms
         {
             get { return icms; }
             set { icms = value; }
         }
-        public double PercRedST
+        public double? PercRedST
         {
             get { return percRedST; }
             set { percRedST = value; }
         }
-        public int CodWeb
+        public int? CodWeb
         {
             get { return codWeb; }
             set { codWeb = value; }
@@ -119,10 +119,10 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@IdPais", CodPais);
                         command.Parameters.AddWithValue("@Estado", Estado);
                         command.Parameters.AddWithValue("@Sigla", Sigla);
-                        command.Parameters.AddWithValue("@PercIcms", PercIcms);
-                        command.Parameters.AddWithValue("@IcmsInt", Icms);
-                        command.Parameters.AddWithValue("@PerRedSt", PercRedST);
-                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
+                        command.Parameters.AddWithValue("@PercIcms", PercIcms.HasValue ? (object)PercIcms.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@IcmsInt", Icms.HasValue ? (object)Icms.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@PerRedSt", PercRedST.HasValue ? (object)PercRedST.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb.HasValue ? (object)CodWeb.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
 
@@ -151,10 +151,10 @@ namespace KnkForms.Classes
                         command.Parameters.AddWithValue("@IdPais", CodPais);
                         command.Parameters.AddWithValue("@Estado", Estado);
                         command.Parameters.AddWithValue("@Sigla", Sigla);
-                        command.Parameters.AddWithValue("@PercIcms", PercIcms);
-                        command.Parameters.AddWithValue("@IcmsInt", Icms);
-                        command.Parameters.AddWithValue("@PerRedSt", PercRedST);
-                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb);
+                        command.Parameters.AddWithValue("@PercIcms", PercIcms.HasValue ? (object)PercIcms.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@IcmsInt", Icms.HasValue ? (object)Icms.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@PerRedSt", PercRedST.HasValue ? (object)PercRedST.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@CodigoWeb", CodWeb.HasValue ? (object)CodWeb.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
                         command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
                         command.Parameters.AddWithValue("@IdEstado", CodEstado);

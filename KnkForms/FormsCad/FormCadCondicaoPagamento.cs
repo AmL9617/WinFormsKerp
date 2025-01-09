@@ -94,11 +94,11 @@ namespace KnkForms.Forms
         {
             aCondPag.CondPag = txtCondPag.Text;
             if(boxTipo.Text == "Prazo") { aCondPag.Tipo = "P"; } else { aCondPag.Tipo = "M"; }
-            aCondPag.TaxaJuro = Convert.ToDouble(txtTaxaJuro.Text);
+            aCondPag.TaxaJuro = !string.IsNullOrEmpty(txtTaxaJuro.Text) ? (double?)Convert.ToInt32(txtTaxaJuro.Text) : null; ;
             if(boxOpDisp.Text == "Compras") { aCondPag.OperacaoDisponivel = "C"; }
             else if(boxOpDisp.Text == "Vendas") { aCondPag.OperacaoDisponivel = "V"; }
             else { aCondPag.OperacaoDisponivel = "A"; }
-            aCondPag.NumeroParcelas = Convert.ToInt32(txtNumParc.Text);
+            aCondPag.NumeroParcelas = !string.IsNullOrEmpty(txtNumParc.Text) ? (int?)Convert.ToInt32(txtNumParc.Text) : null; ;
             aCondPag.PorParcela = txtPorParcela.Text;
             aCondPag.Dia = txtDia.Text;
             if (chkAtivo.Checked == true) { aCondPag.Ativo = 'S'; } else { aCondPag.Ativo = 'N'; };

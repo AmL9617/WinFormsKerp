@@ -14,9 +14,9 @@ namespace KnkForms.Classes
         protected string condPag;
         protected char ativo;
         protected string tipo;
-        protected double taxaJuro;
+        protected double? taxaJuro;
         protected string operacaoDisponivel;
-        protected int numeroParcelas;
+        protected int? numeroParcelas;
         protected string dia;
         protected string porParcela;
 
@@ -53,7 +53,7 @@ namespace KnkForms.Classes
             set { tipo = value; }
         }
 
-        public double TaxaJuro
+        public double? TaxaJuro
         {
             get { return taxaJuro; }
             set { taxaJuro = value; }
@@ -65,7 +65,7 @@ namespace KnkForms.Classes
             set { operacaoDisponivel = value; }
         }
 
-        public int NumeroParcelas
+        public int? NumeroParcelas
         {
             get { return numeroParcelas; }
             set { numeroParcelas = value; }
@@ -93,8 +93,8 @@ namespace KnkForms.Classes
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
                         command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
-                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro);
-                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas);
+                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro.HasValue ? (object)TaxaJuro.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas.HasValue ? (object)NumeroParcelas.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@Tipo", Tipo);
                         command.Parameters.AddWithValue("@Dia", Dia);
                         command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
@@ -126,8 +126,8 @@ namespace KnkForms.Classes
                     {
                         command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
                         command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
-                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro);
-                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas);
+                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro.HasValue ? (object)TaxaJuro.Value : DBNull.Value);
+                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas.HasValue ? (object)NumeroParcelas.Value : DBNull.Value);
                         command.Parameters.AddWithValue("@Tipo", Tipo);
                         command.Parameters.AddWithValue("@Dia", Dia);
                         command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
