@@ -82,27 +82,32 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
+
             aCidade.Cidade = txtCidade.Text;
-            aCidade.DDD = !string.IsNullOrEmpty(txtDDD.Text) ? (int?)Convert.ToInt32(txtDDD.Text) : null;
+            aCidade.DDD = !string.IsNullOrEmpty(txtDDD.Text) ? txtDDD.Text : null;
             aCidade.CodEstado = Convert.ToInt32(txtCodEstado.Text);
+            aCidade.Estado = txtNomeEstado.Text;
             aCidade.CodEmpresa = 1;
-            aCidade.DataModificacao = DateTime.Now;
+            aCidade.DataModificacao = DateTime.Today;
             if (chkAtivo.Checked == true) { aCidade.Ativo = 'S'; } else { aCidade.Ativo = 'N'; };
 
             if (SalvarAlterar == 'A')
             {
                 aCidade.Cod = Convert.ToInt32(txtCod.Text);
                 aCidade.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                aCidade.AlterarBD(aCidade.Cod);
+                aCidade.AlterarBD(aCidade);
 
             }
             else
             {
-                aCidade.DataCadastro = DateTime.Now;
-                aCidade.SalvarBD();
+                aCidade.DataCadastro = DateTime.Today;
+                aCidade.SalvarBD(aCidade);
             }
+
             SalvarAlterar = '\0';
             Close();
+
+
         }
         private void chkBox(object sender, KeyEventArgs e)
         {
@@ -123,7 +128,7 @@ namespace KnkForms.Forms
         }
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            oFrmConEstados.ConhecaObj(aCidade.Estado);
+            oFrmConEstados.ConhecaObj(aCidade.Estados);
             oFrmConEstados.Owner = this;
             oFrmConEstados.ShowDialog();
         }

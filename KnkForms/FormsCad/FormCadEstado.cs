@@ -106,14 +106,14 @@ namespace KnkForms.Classes
             {
                 oEstado.Cod = Convert.ToInt32(txtCod.Text);
                 oEstado.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oEstado.AlterarBD(oEstado.Cod);
+                oEstado.AlterarBD(oEstado);
 
             }
             else
             {
 
                 oEstado.DataCadastro = DateTime.Now;
-                oEstado.SalvarBD();
+                oEstado.SalvarBD(oEstado);
             }
             SalvarAlterar = '\0';
 

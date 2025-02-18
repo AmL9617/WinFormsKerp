@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,24 +30,26 @@ namespace KnkForms.Classes
             this.dataModificacao = dataModificacao;
         }
 
+        [JsonProperty("Id")]
         public int Cod
         {
             get { return cod; }
             set { cod = value; }
         }
 
+        [JsonProperty("IdEmpresa")]
         public int CodEmpresa
         {
             get { return codEmpresa; }
             set { codEmpresa = value; }
         }
-
+        [JsonProperty("DataCadastro")]
         public DateTime DataCadastro
         {
             get { return dataCadastro; }
             set { dataCadastro = value; }
         }
-
+        [JsonProperty("DataModificacao")]
         public DateTime DataModificacao
         {
             get { return dataModificacao; }

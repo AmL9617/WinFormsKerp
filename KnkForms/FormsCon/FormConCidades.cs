@@ -6,8 +6,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
 using System.Windows.Forms;
+using KnkForms.Services;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Threading.Tasks;
 
 namespace KnkForms.FormsCon
 {
@@ -16,10 +20,7 @@ namespace KnkForms.FormsCon
         FormCadCidade oFormCadCidade;
         Cidades aCidade;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-		//"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        
-        string query = "SELECT Cidade.IdCidade, Cidade.Cidade, Cidade.IdEstado, Cidade.Ddd, Cidade.Ativo, Cidade.IdEmpresa, Cidade.DataCadastro, Cidade.DataModificacao, Estado.Estado AS NomeEstado FROM Cidade JOIN Estado ON Cidade.IdEstado = Estado.IdEstado";
-        
+
         public FormConCidades()
         {
             InitializeComponent();
@@ -34,36 +35,47 @@ namespace KnkForms.FormsCon
         {
             aCidade = (Cidades)obj;
         }
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Cidade");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
+                        CidadeServices buscaCidade = new CidadeServices();
+                        List<Cidades> CidadeProcurada = await buscaCidade.Dados();
 
-                                item.SubItems.Add(reader["Cidade"].ToString());
-                                item.SubItems.Add(reader["NomeEstado"].ToString());
-                                item.SubItems.Add(reader["Ddd"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (Cidades cidade in CidadeProcurada)
+                            {
+                                ListViewItem item = new ListViewItem(Convert.ToString(cidade.Cod));
+                                item.SubItems.Add(Convert.ToString(cidade.Cidade));
+                                item.SubItems.Add(Convert.ToString(cidade.Estado));
+                                item.SubItems.Add(Convert.ToString(cidade.DDD));
+                                item.SubItems.Add(Convert.ToString(cidade.Ativo));
+                                item.SubItems.Add(Convert.ToString(cidade.CodEmpresa));
+                                item.SubItems.Add(Convert.ToDateTime(cidade.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(cidade.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
@@ -141,14 +153,13 @@ namespace KnkForms.FormsCon
         protected override void Pesquisar()
         {
             listVConsulta.Items.Clear();
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
 
-                    string queryPesquisa = "SELECT Cidade.IdCidade, Cidade.IdEstado, Cidade.Cidade, Cidade.Ddd, Cidade.Ativo, Cidade.IdEmpresa, Cidade.DataCadastro, Cidade.DataModificacao, Estado.Estado AS NomeEstado " +
+                    string queryPesquisa = "SELECT Cidade.IdCidade, Cidade.IdEstado, Cidade.Cidade, Cidade.DDD, Cidade.Ativo, Cidade.IdEmpresa, Cidade.DataCadastro, Cidade.DataModificacao, Estado.Estado AS NomeEstado  " +
                                    "FROM Cidade JOIN Estado ON Cidade.IdEstado = Estado.IdEstado WHERE Cidade LIKE @searchText OR IdCidade LIKE @searchText";
 
                     using (SqlCommand command = new SqlCommand(queryPesquisa, connection))
@@ -160,10 +171,10 @@ namespace KnkForms.FormsCon
                             while (reader.Read())
                             {
                                 ListViewItem item = new ListViewItem(reader["IdCidade"].ToString());
-                                
+
                                 item.SubItems.Add(reader["Cidade"].ToString());
                                 item.SubItems.Add(reader["NomeEstado"].ToString());
-                                item.SubItems.Add(reader["Ddd"].ToString());
+                                item.SubItems.Add(reader["DDD"].ToString());
                                 item.SubItems.Add(reader["Ativo"].ToString());
                                 item.SubItems.Add(reader["IdEmpresa"].ToString());
                                 item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
@@ -176,8 +187,9 @@ namespace KnkForms.FormsCon
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao pesquisar os dados de Cidade: " + ex.Message);
+                    MessageBox.Show("Erro ao pesquisar os dados de Cidades: " + ex.Message);
                 }
+
             }
         }
         private void listV_DoubleClick(object sender, EventArgs e)

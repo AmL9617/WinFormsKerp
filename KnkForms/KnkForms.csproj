@@ -417,6 +417,27 @@
     <Compile Include="Interfaces.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CidadeServices.cs" />
+    <Compile Include="Services\ClienteServices.cs" />
+    <Compile Include="Services\CondicaoPagamentoServices.cs" />
+    <Compile Include="Services\ContadorServices.cs" />
+    <Compile Include="Services\ContatoServices.cs" />
+    <Compile Include="Services\EstadoServices.cs" />
+    <Compile Include="Services\FormaPagamentoServices.cs" />
+    <Compile Include="Services\FornecedorServices.cs" />
+    <Compile Include="Services\FuncionarioServices.cs" />
+    <Compile Include="Services\GrupoServices.cs" />
+    <Compile Include="Services\ListaCodStServices.cs" />
+    <Compile Include="Services\ListaPrecoServices.cs" />
+    <Compile Include="Services\MarcaServices.cs" />
+    <Compile Include="Services\PaisServices.cs" />
+    <Compile Include="Services\ParcelaServices.cs" />
+    <Compile Include="Services\RamoAtividadeCliente.cs" />
+    <Compile Include="Services\RamoAtividadeServices.cs" />
+    <Compile Include="Services\RegiaoServices.cs" />
+    <Compile Include="Services\SubgrupoServices.cs" />
+    <Compile Include="Services\TransportadoraServices.cs" />
+    <Compile Include="Services\VendedorServices.cs" />
     <EmbeddedResource Include="FormPai.resx">
       <DependentUpon>FormPai.cs</DependentUpon>
     </EmbeddedResource>

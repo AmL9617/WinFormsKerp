@@ -1,11 +1,14 @@
 ﻿using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KnkForms.Classes
@@ -31,39 +34,52 @@ namespace KnkForms.Classes
         {
             oEstado = (Estados)obj;
         }
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
 
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Estado");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdEstado"].ToString());
+                        EstadoServices buscaEstado = new EstadoServices();
+                        List<Estados> EstadoProcurado = await buscaEstado.Dados();
 
-                                item.SubItems.Add(reader["Estado"].ToString());
-                                item.SubItems.Add(reader["NomePais"].ToString());
-                                item.SubItems.Add(reader["Sigla"].ToString());
-                                item.SubItems.Add(reader["PercIcms"].ToString());
-                                item.SubItems.Add(reader["IcmsInt"].ToString());
-                                item.SubItems.Add(reader["PerRedSt"].ToString());
-                                item.SubItems.Add(reader["CodigoWeb"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (Estados estado in EstadoProcurado)
+                            {
+                                ListViewItem item = new ListViewItem(Convert.ToString(estado.Cod));
+
+                                item.SubItems.Add(estado.Estado);
+                                item.SubItems.Add(estado.NomePais);
+                                item.SubItems.Add(estado.Sigla);
+                                item.SubItems.Add(Convert.ToString(estado.PercIcms));
+                                item.SubItems.Add(Convert.ToString(estado.Icms));
+                                item.SubItems.Add(Convert.ToString(estado.PercRedST));
+                                item.SubItems.Add(Convert.ToString(estado.CodWeb));
+                                item.SubItems.Add(Convert.ToString(estado.CodEmpresa));
+                                item.SubItems.Add(Convert.ToDateTime(estado.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(estado.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
@@ -192,7 +208,7 @@ namespace KnkForms.Classes
                 var selectedItem = listVConsulta.SelectedItems[0];
 
                 int idEstado = Convert.ToInt32(selectedItem.SubItems[0].Text);
-                string nomeEstado = (selectedItem.SubItems[2].Text);
+                string nomeEstado = (selectedItem.SubItems[1].Text);
 
                 var cadCidade = this.Owner as FormCadCidade;
                 if (cadCidade != null)

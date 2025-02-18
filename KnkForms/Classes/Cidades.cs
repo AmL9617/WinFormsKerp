@@ -1,149 +1,138 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KnkForms.Services;
 
 namespace KnkForms.Classes
 {
     internal class Cidades : Pai
     {
         protected string cidade;
-        protected int? ddd;
+        protected string ddd;
         protected char ativo;
 
         //Placeholder
         protected int codEstado;
-        //Agregação
-        protected Estados estado;
-
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-		//"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-
-		public Cidades()
+        protected Estados estados;
+        protected string estado;
+        
+        
+        public Cidades()
         {
             cidade = "";
-            ddd = 0;
+            ddd = "";
             ativo = '\0';
-            estado = new Estados();
-            codEstado = 0; 
+            estado = "";
+            estados = new Estados();
+            codEstado = 0;
+            
         }
 
+        [JsonProperty("Cidade")]
         public string Cidade
         {
             get { return cidade; }
             set { cidade = value; }
         }
 
-        public int? DDD
+        [JsonProperty("Ddd")]
+        public string DDD
         {
             get { return ddd; }
             set { ddd = value; }
         }
 
+        [JsonProperty("Ativo")]
         public char Ativo
         {
             get { return ativo; }
             set { ativo = value; }
         }
 
+        [JsonProperty("IdEstado")]
         public int CodEstado
         {
             get { return codEstado; }
             set { codEstado = value; }
         }
-
-        public Estados Estado
-        { 
-            get { return estado; } 
-            set { estado = value; } 
-        }
-        public void SalvarBD()
+        [JsonProperty("Estado")]
+        public string Estado
         {
-            try
+            get { return estado; }
+            set {  estado = value; }
+        }
+        [JsonIgnore]
+        public Estados Estados
+        {
+            get { return estados; }
+            set { estados = value; }
+        }
+        public async Task SalvarBD(Cidades aCidade)
+        {
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Cidade (IdEmpresa, IdEstado, Cidade, Ddd, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @IdEstado, @Cidade, @Ddd, @Ativo, @DataCadastro, @DataModificacao)";
+                    string jsonItem = JsonConvert.SerializeObject(aCidade, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Cidade", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdEstado", CodEstado);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
-                        command.Parameters.AddWithValue("@Ddd", DDD.HasValue ? (object)DDD.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
-            }
-
         }
-        public void AlterarBD(int CodCidade)
+        public async void AlterarBD(Cidades aCidade)
         {
-            try
+            int idEmp = 1;
+            int id = aCidade.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE Cidade SET IdEmpresa=@IdEmpresa, IdEstado=@IdEstado, Cidade=@Cidade, Ddd=@Ddd, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCidade = @IdCidade";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdEstado", CodEstado);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
-                        command.Parameters.AddWithValue("@Ddd", DDD.HasValue ? (object)DDD.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdCidade", CodCidade);
+                    string jsonItem = JsonConvert.SerializeObject(aCidade);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Cidade/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
-            }
         }
-        public void ExcluirBD(int CodCidade)
+        public async void ExcluirBD(int CodCidade)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                
+                CidadeServices buscaCidade = new CidadeServices();
+                try
                 {
-                    conn.Open();
-                    string query = "DELETE FROM Cidade WHERE IdCidade = @IdCidade";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdCidade", CodCidade);
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Cidade/{CodEmp}/{CodCidade}");
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
