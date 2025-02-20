@@ -1,8 +1,11 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,21 +15,15 @@ namespace KnkForms.Classes
     internal class Paises : Pai
     {
         protected string pais;
-        protected string tipoPais;
         protected string sigla;
-        protected int ddi;
-        protected char ativo;
+        protected string ddi;
         protected char nacional;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Paises()
         {
             pais = "";
-            tipoPais = "";
             sigla = ""; 
-            ddi = 0;
-            ativo = '\0';
+            ddi = "";
             nacional = '\0';
         }
 
@@ -36,117 +33,82 @@ namespace KnkForms.Classes
             set { pais = value; }
         }
 
-        public string TipoPais
-        {
-            get { return tipoPais; }
-            set { tipoPais = value; }
-        }
 
         public string Sigla
         {
             get { return sigla; }
             set { sigla = value; }
         }
-
-        public int DDI
+        public string DDI
         {
             get { return ddi; }
             set { ddi = value; }
         }
 
-        public char Ativo
-        {
-            get { return ativo; }
-            set { ativo = value; }
-        }
         public char Nacional
         {
             get { return nacional; }
             set { nacional = value; }
         }
 
-        public void SalvarBD()
+        public async void SalvarBD(Paises oPais)
         {
-            try
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Pais (IdEmpresa, Pais, Sigla, Ddi, Nacional, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Pais, @Sigla, @Ddi, @Nacional, @Ativo, @DataCadastro, @DataModificacao)";
+                    string jsonItem = JsonConvert.SerializeObject(oPais, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Pais", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Pais", Pais);
-                        command.Parameters.AddWithValue("@Sigla", Sigla);
-                        command.Parameters.AddWithValue("@Ddi", DDI);
-                        command.Parameters.AddWithValue("@Nacional", Nacional);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodPaises)
+        public async void AlterarBD(Paises oPais)
         {
-            try
+            int idEmp = 1;
+            int id = oPais.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE Pais SET IdEmpresa=@IdEmpresa, Pais=@Pais, Sigla=@Sigla, Ddi=@Ddi, Nacional=@Nacional, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdPais = @IdPais";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Pais", Pais);
-                        command.Parameters.AddWithValue("@Sigla", Sigla);
-                        command.Parameters.AddWithValue("@Ddi", DDI);
-                        command.Parameters.AddWithValue("@Nacional", Nacional);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdPais", CodPaises);
+                    string jsonItem = JsonConvert.SerializeObject(oPais);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Pais/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodPais)
+        public async void ExcluirBD(int CodPais)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM Pais WHERE IdPais = @IdPais";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdPais", CodPais);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                EstadoServices buscaEstado = new EstadoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Pais/{CodEmp}/{CodPais}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

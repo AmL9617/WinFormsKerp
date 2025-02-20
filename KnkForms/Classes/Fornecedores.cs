@@ -1,8 +1,11 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,13 +14,13 @@ namespace KnkForms.Classes
 {
     internal class Fornecedores : Pai
     {
-        protected char industria;
-        protected char fisicaJuridica;
-        protected char ativo;
+        protected string industria; //ConsumidorRevenda
+        protected string fisicaJuridica;
+        protected string ativo;
         protected string razaoSocial;
         protected string nomeFantasia;
         protected string endereco;
-        protected int? numero;
+        protected string numero;
         protected string complemento;
         protected string bairro;
         protected string cep;
@@ -27,7 +30,7 @@ namespace KnkForms.Classes
         protected string codProdIgual;
         protected double? limiteCredito;
         protected string observacoes;
-        protected char verEmClientes;
+        protected string verEmClientes;
         protected DateTime? ultimoMovimento;
 
         //Placeholder
@@ -35,23 +38,24 @@ namespace KnkForms.Classes
         protected int? codRegioes;
         protected int? codListaPrecos;
         protected int? codCondPag;
+        protected string nomeCidade;
+        protected string nomeRegiao;
+
         //Agregação
         protected Cidades cidades;
         protected Regioes regioes;
         protected ListaPrecos listaPrecos;
         protected CondicaoPagamentos condicaoPagamentos;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public Fornecedores()
         {
-            industria = '\0';
-            fisicaJuridica = '\0';
-            ativo = '\0';
+            industria = "";
+            fisicaJuridica = "";
+            ativo = "";
             razaoSocial = "";
             nomeFantasia = "";
             endereco = "";
-            numero = 0;
+            numero = "";
             complemento = "";
             bairro = "";
             cep = "";
@@ -61,32 +65,34 @@ namespace KnkForms.Classes
             codProdIgual = "";
             limiteCredito = 0.0f;
             observacoes = "";
-            verEmClientes = '\0';
+            verEmClientes = "";
             ultimoMovimento = DateTime.MinValue;
 
             codCidades = 0;
+            nomeCidade = "";
             cidades = new Cidades();
             codRegioes = 0;
+            nomeRegiao = "";
             regioes = new Regioes();
             codListaPrecos = 0;
             listaPrecos = new ListaPrecos();
             codCondPag = 0;
             condicaoPagamentos = new CondicaoPagamentos();
         }
-
-        public char Industria
+        [JsonProperty("ConsumidorRevenda")]
+        public string Industria
         {
             get { return industria; }
             set { industria = value; }
         }
 
-        public char FisicaJuridica
+        public string FisicaJuridica
         {
             get { return fisicaJuridica; }
             set { fisicaJuridica = value; }
         }
 
-        public char Ativo
+        public string Ativo
         {
             get { return ativo; }
             set { ativo = value; }
@@ -103,14 +109,14 @@ namespace KnkForms.Classes
             get { return nomeFantasia; }
             set { nomeFantasia = value; }
         }
-
+        [JsonProperty("Logradouro")]
         public string Endereco
         {
             get { return endereco; }
             set { endereco = value; }
         }
 
-        public int? Numero
+        public string Numero
         {
             get { return numero; }
             set { numero = value; }
@@ -133,7 +139,7 @@ namespace KnkForms.Classes
             get { return cep; }
             set { cep = value; }
         }
-
+        [JsonProperty("CpfCnpj")]
         public string CNPJ
         {
             get { return cnpj; }
@@ -151,7 +157,7 @@ namespace KnkForms.Classes
             get { return trade; }
             set { trade = value; }
         }
-
+        [JsonIgnore]
         public string CodProdIgual
         {
             get { return codProdIgual; }
@@ -163,188 +169,144 @@ namespace KnkForms.Classes
             get { return limiteCredito; }
             set { limiteCredito = value; }
         }
-
+        [JsonProperty("Observacao")]
         public string Observacoes
         {
             get { return observacoes; }
             set { observacoes = value; }
         }
-
-        public char VerEmClientes
+        [JsonProperty("Tipo")]
+        public string VerEmClientes
         {
             get { return verEmClientes; }
             set { verEmClientes = value; }
         }
-
+        [JsonIgnore]
         public DateTime? UltimoMovimento
         {
             get { return ultimoMovimento; }
             set { ultimoMovimento = value; }
         }
 
-
+        [JsonProperty("IdCidade")]
         public int? CodCidades
         {
             get { return codCidades; }
             set { codCidades = value; }
         }
-
+        [JsonProperty("IdRegiao")]
         public int? CodRegioes
         {
             get { return codRegioes; }
             set { codRegioes = value; }
         }
+        [JsonIgnore]
         public int? CodListaPrecos
         {
             get { return codListaPrecos; }
             set { codListaPrecos = value; }
         }
+        [JsonIgnore]
         public int? CodCondPag
         {
             get { return codCondPag; }
             set { codCondPag = value; }
         }
+        [JsonProperty("Cidade")]
+        public string NomeCidade
+        {
+            get { return nomeCidade; }
+            set { nomeCidade = value; }
+        }
+        [JsonProperty("Regiao")]
+        public string NomeRegiao
+        {
+            get { return nomeRegiao; }
+            set { nomeRegiao = value; }
+        }
+        [JsonIgnore]
         public Cidades Cidades
         {
             get { return cidades; }
             set { cidades = value; }
         }
+        [JsonIgnore]
         public Regioes Regioes
         {
             get { return regioes; }
             set { regioes = value; }
         }
+        [JsonIgnore]
         public ListaPrecos ListaPrecos
         {
             get { return listaPrecos; }
             set { listaPrecos = value; }
         }
+        [JsonIgnore]
         public CondicaoPagamentos CondicaoPagamentos
         {
             get { return condicaoPagamentos; }
             set { condicaoPagamentos = value; }
         }
 
-        public void SalvarBD()
+        public async void SalvarBD(Fornecedores oFornecedor)
         {
-            try
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO FornCliente (IdEmpresa, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, DataCadastro, DataModificacao, IdLista, IdListaEmp, IdCondPag, IdCondPagEmp, IdCidadeEmp) VALUES (@IdEmpresa, @RazaoSocial, @NomeFantasia, @InscricaoEstadual, @CpfCnpj, @Tipo, @IdCidade, @IdRegiao, @Logradouro, @Numero, @Complemento, @Bairro, @Cep, @ConsumidorRevenda, @Observacao, @Trade, @CodProdIgual, @LimiteCredito, @Ativo, @FisicaJuridica, @DataCadastro, @DataModificacao, @IdLista, @IdListaEmp, @IdCondPag, @IdCondPagEmp, @IdCidadeEmp)";
+                    string jsonItem = JsonConvert.SerializeObject(oFornecedor, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Fornecedor", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@RazaoSocial", RazaoSocial);
-                        command.Parameters.AddWithValue("@NomeFantasia", NomeFantasia);
-                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
-                        command.Parameters.AddWithValue("@CpfCnpj", CNPJ);
-                        command.Parameters.AddWithValue("@Tipo", VerEmClientes);
-                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
-                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
-                        command.Parameters.AddWithValue("@Logradouro", Endereco);
-                        command.Parameters.AddWithValue("@Numero", Numero);
-                        command.Parameters.AddWithValue("@Complemento", Complemento);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
-                        command.Parameters.AddWithValue("@Observacao", Observacoes);
-                        command.Parameters.AddWithValue("@Trade", Trade);
-                        command.Parameters.AddWithValue("@CodProdIgual", CodProdIgual);
-                        command.Parameters.AddWithValue("@LimiteCredito", LimiteCredito);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
-                        command.Parameters.AddWithValue("@IdLista", CodListaPrecos);
-                        command.Parameters.AddWithValue("@IdListaEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdCondPag", CodCondPag);
-                        command.Parameters.AddWithValue("@IdCondPagEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodFornCli)
+        public async void AlterarBD(Fornecedores oFornecedor)
         {
-            try
+            int idEmp = 1;
+            int id = oFornecedor.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE FornCliente SET IdEmpresa=@IdEmpresa, RazaoSocial=@RazaoSocial, NomeFantasia=@NomeFantasia, InscricaoEstadual=@InscricaoEstadual, CpfCnpj=@CpfCnpj, Tipo=@Tipo, IdCidade=@IdCidade, IdRegiao=@IdRegiao, Logradouro=@Logradouro, Numero=@Numero, Complemento=@Complemento, Bairro=@Bairro, Cep=@Cep, ConsumidorRevenda=@ConsumidorRevenda, Observacao=@Observacao, Trade=@Trade, CodProdIgual=@CodProdIgual, LimiteCredito=@LimiteCredito, Ativo=@Ativo, FisicaJuridica=@FisicaJuridica, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdFornCliente = @IdFornCliente";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@RazaoSocial", RazaoSocial);
-                        command.Parameters.AddWithValue("@NomeFantasia", NomeFantasia);
-                        command.Parameters.AddWithValue("@InscricaoEstadual", InscricaoEstadual);
-                        command.Parameters.AddWithValue("@CpfCnpj", CNPJ);
-                        command.Parameters.AddWithValue("@Tipo", VerEmClientes);
-                        command.Parameters.AddWithValue("@IdCidade", CodCidades);
-                        command.Parameters.AddWithValue("@IdRegiao", CodRegioes);
-                        command.Parameters.AddWithValue("@Logradouro", Endereco);
-                        command.Parameters.AddWithValue("@Numero", Numero);
-                        command.Parameters.AddWithValue("@Complemento", Complemento);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@ConsumidorRevenda", Industria);
-                        command.Parameters.AddWithValue("@Observacao", Observacoes);
-                        command.Parameters.AddWithValue("@Trade", Trade);
-                        command.Parameters.AddWithValue("@CodProdIgual", CodProdIgual);
-                        command.Parameters.AddWithValue("@LimiteCredito", LimiteCredito);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@FisicaJuridica", FisicaJuridica);
-                        command.Parameters.AddWithValue("@IdLista", CodListaPrecos);
-                        command.Parameters.AddWithValue("@IdListaEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdCondPag", CodCondPag);
-                        command.Parameters.AddWithValue("@IdCondPagEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdCidadeEmp", CodEmpresa);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCli);
+                    string jsonItem = JsonConvert.SerializeObject(oFornecedor);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Fornecedor/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodFornCliente)
+        public async void ExcluirBD(int CodFornecedor)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM FornCliente WHERE IdFornCliente = @IdFornCliente";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                RegiaoServices buscarRegiao = new RegiaoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Fornecedor/{CodEmp}/{CodFornecedor}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

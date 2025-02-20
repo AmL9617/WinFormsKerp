@@ -1,12 +1,15 @@
 ﻿using KnkForms.Classes;
 using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KnkForms.FormsCon
@@ -17,9 +20,7 @@ namespace KnkForms.FormsCon
         ListaPrecos aListaPreco;
 
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdLista, Lista, DescMax, MargemLucro, PerComissao, Todas, IdEmpresa, DataCadastro, DataModificacao FROM Lista";
-
+        
         public FormConListaPrecos()
         {
             InitializeComponent();
@@ -34,41 +35,55 @@ namespace KnkForms.FormsCon
         {
             aListaPreco = (ListaPrecos)obj;
         }
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Lista");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdLista"].ToString());
+                        ListaPrecoServices buscalista = new ListaPrecoServices();
+                        List<ListaPrecos> listaProcurada = await buscalista.Dados();
 
-                                item.SubItems.Add(reader["Lista"].ToString());
-                                item.SubItems.Add(reader["DescMax"].ToString());
-                                item.SubItems.Add(reader["MargemLucro"].ToString());
-                                item.SubItems.Add(reader["PerComissao"].ToString());
-                                item.SubItems.Add(reader["Todas"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (ListaPrecos lista in listaProcurada)
+                            {
+                                ListViewItem item = new ListViewItem(lista.Cod.ToString());
+
+                                item.SubItems.Add(lista.Lista.ToString());
+                                item.SubItems.Add(lista.DescontoMaximo.ToString());
+                                item.SubItems.Add(lista.MargemLucro.ToString());
+                                item.SubItems.Add(lista.PercCom.ToString());
+                                item.SubItems.Add(lista.Todas);
+                                item.SubItems.Add(lista.CodEmpresa.ToString());
+                                item.SubItems.Add(Convert.ToDateTime(lista.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(lista.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
+
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de ListaPreço: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Condicoes Pagamentos: " + ex.Message);
                 }
             }
         }

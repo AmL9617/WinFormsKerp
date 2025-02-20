@@ -1,8 +1,11 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,82 +57,64 @@ namespace KnkForms.Classes
             get { return clientes; }
             set { clientes = value; }
         }
-        public void SalvarBD()
+        public async void SalvarBD(Contatos oContato)
         {
-            try
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Contatos (IdEmpresa, IdFornCliente, Tipo, Contato, Observacao) VALUES (@IdEmpresa, @IdFornCliente, @Tipo, @Contato, @Observacao)";
+                    string jsonItem = JsonConvert.SerializeObject(oContato, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Contato", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
-                        command.Parameters.AddWithValue("@Tipo", Tipo);
-                        command.Parameters.AddWithValue("@Contato", Contato);
-                        command.Parameters.AddWithValue("@Observacao", Observacao);
-                        
-                        command.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodContato)
+        public async void AlterarBD(Contatos oContato)
         {
-            try
+            int idEmp = 1;
+            int id = oContato.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE Contatos SET IdEmpresa=@IdEmpresa, IdFornCliente=@IdFornCliente, Tipo=@Tipo, Contato=@Contato, Observacao=@Observacao WHERE IdContato = @IdContato";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@IdFornCliente", CodFornCliente);
-                        command.Parameters.AddWithValue("@Tipo", Tipo);
-                        command.Parameters.AddWithValue("@Contato", Contato);
-                        command.Parameters.AddWithValue("@Observacao", Observacao);
-                        command.Parameters.AddWithValue("@IdContato", CodContato);
+                    string jsonItem = JsonConvert.SerializeObject(oContato);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Contato/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodContato)
+        public async void ExcluirBD(int CodContato)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM Contatos WHERE IdContato = @IdContato";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdContato", CodContato);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                EstadoServices buscaEstado = new EstadoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Contato/{CodEmp}/{CodContato}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

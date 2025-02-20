@@ -89,13 +89,13 @@ namespace KnkForms.FormsCad
             {
                 oContato.Cod = Convert.ToInt32(txtCod.Text);
                 //oContato.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oContato.AlterarBD(oContato.Cod);
+                oContato.AlterarBD(oContato);
             }
 
             else
             {
                 oContato.DataCadastro = DateTime.Now;
-                oContato.SalvarBD();
+                oContato.SalvarBD(oContato);
             }
                 
             SalvarAlterar = '\0';

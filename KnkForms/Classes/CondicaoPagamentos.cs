@@ -1,8 +1,11 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,27 +17,24 @@ namespace KnkForms.Classes
         protected string condPag;
         protected char ativo;
         protected string tipo;
-        protected double? taxaJuro;
+        protected decimal? taxaJuro;
         protected string operacaoDisponivel;
         protected int? numeroParcelas;
         protected string dia;
         protected string porParcela;
-
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
 
         public CondicaoPagamentos()
         {
             condPag = "";
             ativo = '\0';
             tipo = "";
-            taxaJuro = 0.0f;
+            taxaJuro = 0;
             operacaoDisponivel = "";
             numeroParcelas = 0;
             dia = "";
             porParcela = "";
         }
-
+        [JsonProperty("CondicaoPagamento")]
         public string CondPag
         {
             get { return condPag; }
@@ -52,13 +52,13 @@ namespace KnkForms.Classes
             get { return tipo; }
             set { tipo = value; }
         }
-
-        public double? TaxaJuro
+        [JsonProperty("TaxaJuros")]
+        public decimal? TaxaJuro
         {
             get { return taxaJuro; }
             set { taxaJuro = value; }
         }
-
+        [JsonProperty("Operacao")]
         public string OperacaoDisponivel
         {
             get { return operacaoDisponivel; }
@@ -80,95 +80,64 @@ namespace KnkForms.Classes
             get { return porParcela; }
             set { porParcela = value; }
         }
-        public void SalvarBD()
+        public async void SalvarBD(CondicaoPagamentos aCondPag)
         {
-            try
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO CondicaoPagamento (IdEmpresa, CondicaoPagamento, TaxaJuros, NumeroParcelas, Tipo, Dia, Operacao, Ativo, PorParcela, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @CondicaoPagamento, @TaxaJuros, @NumeroParcelas, @Tipo, @Dia, @Operacao, @Ativo, @PorParcela, @DataCadastro, @DataModificacao)";
+                    string jsonItem = JsonConvert.SerializeObject(aCondPag, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/CondPag", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
-                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro.HasValue ? (object)TaxaJuro.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas.HasValue ? (object)NumeroParcelas.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@Tipo", Tipo);
-                        command.Parameters.AddWithValue("@Dia", Dia);
-                        command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@PorParcela", PorParcela);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodCondPag)
+        public async void AlterarBD(CondicaoPagamentos aCondPag)
         {
-            try
+            int idEmp = 1;
+            int id = aCondPag.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE CondicaoPagamento SET IdEmpresa=@IdEmpresa, CondicaoPagamento=@CondicaoPagamento, TaxaJuros=@TaxaJuros, NumeroParcelas=@NumeroParcelas, Tipo=@Tipo, Dia=@Dia, Operacao=@Operacao, Ativo=@Ativo, PorParcela=@PorParcela, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@CondicaoPagamento", CondPag);
-                        command.Parameters.AddWithValue("@TaxaJuros", TaxaJuro.HasValue ? (object)TaxaJuro.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@NumeroParcelas", NumeroParcelas.HasValue ? (object)NumeroParcelas.Value : DBNull.Value);
-                        command.Parameters.AddWithValue("@Tipo", Tipo);
-                        command.Parameters.AddWithValue("@Dia", Dia);
-                        command.Parameters.AddWithValue("@Operacao", OperacaoDisponivel);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@PorParcela", PorParcela);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdCondicaoPagamento", CodCondPag);
+                    string jsonItem = JsonConvert.SerializeObject(aCondPag);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/CondPag/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodCondicaoPagamento)
+        public async void ExcluirBD(int CodCondPag)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM CondicaoPagamento WHERE IdCondicaoPagamento = @IdCondicaoPagamento";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdCondicaoPagamento", CodCondicaoPagamento);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                EstadoServices buscaEstado = new EstadoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/CondPag/{CodEmp}/{CodCondPag}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

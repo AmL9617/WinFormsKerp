@@ -17,10 +17,9 @@ namespace KnkForms.Classes
     {
         protected string estado;
         protected string sigla;
-        protected char ativo;
-        protected double? percIcms;
-        protected double? icms;
-        protected double? percRedST; //Percentual de Redução da Substituição Tributária 
+        protected decimal? percIcms;
+        protected decimal? icms;
+        protected decimal? percRedST; //Percentual de Redução da Substituição Tributária 
         protected int? codWeb;
 
         //Placeholder
@@ -34,7 +33,6 @@ namespace KnkForms.Classes
         {
             estado = "";
             sigla = ""; 
-            ativo = '\0';
             codPais = 0;
             percIcms = 0;
             icms = 0;
@@ -48,7 +46,6 @@ namespace KnkForms.Classes
         {
             estado = Estado;
             sigla = sigla;
-            ativo = ativo;
             percIcms = percIcms;
             icms = icms;
             percRedST = percRedST;
@@ -69,33 +66,27 @@ namespace KnkForms.Classes
             get { return sigla; }
             set { sigla = value; }
         }
-
-        public char Ativo
-        {
-            get { return ativo; }
-            set { ativo = value; }
-        }
         [JsonProperty("IdPais")]
         public int CodPais
         {
             get { return codPais; }
             set { codPais = value; }
         }
-        public double? PercIcms
+        public decimal? PercIcms
         {
             get { return percIcms; }
             set { percIcms = value; }
         }
 
         [JsonProperty("IcmsInt")]
-        public double? Icms
+        public decimal? Icms
         {
             get { return icms; }
             set { icms = value; }
         }
 
         [JsonProperty("PerRedSt")]
-        public double? PercRedST
+        public decimal? PercRedST
         {
             get { return percRedST; }
             set { percRedST = value; }
@@ -149,7 +140,7 @@ namespace KnkForms.Classes
                 {
                     string jsonItem = JsonConvert.SerializeObject(oEstado);
                     HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Cidade/{idEmp}/{id}", content);
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Estado/{idEmp}/{id}", content);
                     response.EnsureSuccessStatusCode();
 
                     MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

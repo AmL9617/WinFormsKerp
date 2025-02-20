@@ -1,11 +1,14 @@
 ﻿using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -32,36 +35,48 @@ namespace KnkForms.Classes
         {
             aRegiao = (Regioes)obj;
         }
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/regiao");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdRegiao"].ToString());
+                        RegiaoServices buscaregiao = new RegiaoServices();
+                        List<Regioes> regiaoProcurada = await buscaregiao.Dados();
 
-                                item.SubItems.Add(reader["Regiao"].ToString());
-                                item.SubItems.Add(reader["Descricao"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["IdUsuario"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (Regioes regiao in regiaoProcurada)
+                            {
+                                ListViewItem item = new ListViewItem(regiao.Cod.ToString());
+
+                                item.SubItems.Add(regiao.Regiao.ToString());
+                                item.SubItems.Add(regiao.Descricao.ToString());
+                                item.SubItems.Add(regiao.Ativo.ToString());
+                                item.SubItems.Add(regiao.CodUsuario.ToString());
+                                item.SubItems.Add(regiao.CodEmpresa.ToString());
+                                item.SubItems.Add(Convert.ToDateTime(regiao.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(regiao.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)

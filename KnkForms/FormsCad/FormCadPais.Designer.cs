@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.boxNacional = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -118,17 +117,6 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "DDI";
             // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(727, 28);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 6;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chkBox);
-            // 
             // boxNacional
             // 
             this.boxNacional.FormattingEnabled = true;
@@ -155,7 +143,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.boxNacional);
-            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtDdi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSigla);
@@ -170,7 +157,6 @@
             this.Controls.SetChildIndex(this.txtSigla, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtDdi, 0);
-            this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.lblCodUser, 0);
             this.Controls.SetChildIndex(this.txtCodUser, 0);
             this.Controls.SetChildIndex(this.btnSair, 0);
@@ -196,7 +182,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDdi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.ComboBox boxNacional;
         private System.Windows.Forms.Label label4;
     }

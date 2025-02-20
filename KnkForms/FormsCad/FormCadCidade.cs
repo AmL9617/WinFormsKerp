@@ -48,7 +48,7 @@ namespace KnkForms.Forms
             txtCodEstado.Text = campo3;
             txtCidade.Text = campo4;
             txtDDD.Text = campo5;
-            if (campo6 == "0") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; };
+            if (campo6 == "N") { chkAtivo.Checked = false; } else { chkAtivo.Checked = true; };
             txtCodUser.Text = campo7;
             txtDataCad.Text = campo8;
             txtDataAlt.Text = campo9;

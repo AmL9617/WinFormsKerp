@@ -1,11 +1,14 @@
 ﻿using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KnkForms.Classes
@@ -34,44 +37,57 @@ namespace KnkForms.Classes
             aCondicaoPagamento = (CondicaoPagamentos)obj;
         }
 
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/CondPag");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdCondicaoPagamento"].ToString());
+                        CondicaoPagamentoServices buscaCondPag = new CondicaoPagamentoServices();
+                        List<CondicaoPagamentos> CondPagProcurada = await buscaCondPag.Dados();
 
-                                item.SubItems.Add(reader["CondicaoPagamento"].ToString());
-                                item.SubItems.Add(reader["TaxaJuros"].ToString());
-                                item.SubItems.Add(reader["NumeroParcelas"].ToString());
-                                item.SubItems.Add(reader["Tipo"].ToString());
-                                item.SubItems.Add(reader["Dia"].ToString());
-                                item.SubItems.Add(reader["Operacao"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["PorParcela"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (CondicaoPagamentos condPag in CondPagProcurada)
+                            {
+                                ListViewItem item = new ListViewItem(condPag.Cod.ToString());
+
+                                item.SubItems.Add(condPag.CondPag.ToString());
+                                item.SubItems.Add(condPag.TaxaJuro.ToString());
+                                item.SubItems.Add(condPag.NumeroParcelas.ToString());
+                                item.SubItems.Add(condPag.Tipo.ToString());
+                                item.SubItems.Add(condPag.Dia.ToString());
+                                item.SubItems.Add(condPag.OperacaoDisponivel.ToString());
+                                item.SubItems.Add(condPag.Ativo.ToString());
+                                item.SubItems.Add(condPag.PorParcela.ToString());
+                                item.SubItems.Add(condPag.CodEmpresa.ToString());
+                                item.SubItems.Add(Convert.ToDateTime(condPag.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(condPag.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de CondicaoPagamento: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Condicoes Pagamentos: " + ex.Message);
                 }
             }
         }

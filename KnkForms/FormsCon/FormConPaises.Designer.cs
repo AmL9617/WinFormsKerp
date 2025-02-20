@@ -36,7 +36,6 @@
             this.DataCad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataMod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ddi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ativo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listVConsulta
@@ -47,7 +46,6 @@
             this.Sigla,
             this.ddi,
             this.Nacional,
-            this.ativo,
             this.codEmp,
             this.DataCad,
             this.dataMod});
@@ -90,10 +88,6 @@
             // 
             this.ddi.Text = "DDI";
             // 
-            // ativo
-            // 
-            this.ativo.Text = "Ativo";
-            // 
             // FormConPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +109,5 @@
         private System.Windows.Forms.ColumnHeader DataCad;
         private System.Windows.Forms.ColumnHeader dataMod;
         private System.Windows.Forms.ColumnHeader ddi;
-        private System.Windows.Forms.ColumnHeader ativo;
     }
 }

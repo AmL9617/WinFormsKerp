@@ -1,13 +1,16 @@
 ﻿using KnkForms.Classes;
 using KnkForms.Forms;
 using KnkForms.FormsCad;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KnkForms.FormsCon
@@ -34,40 +37,51 @@ namespace KnkForms.FormsCon
         {
             oRamoAtividade = (RamoAtividades)obj;
         }
-
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/ramoAtividades");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdRamo"].ToString());
+                        RamoAtividadeServices buscaRamoAtividades = new RamoAtividadeServices();
+                        List<RamoAtividades> ramoAtividadesProcurada = await buscaRamoAtividades.Dados();
 
-                                item.SubItems.Add(reader["NomeRamo"].ToString());
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (RamoAtividades ramoAtividades in ramoAtividadesProcurada)
+                            {
+                                ListViewItem item = new ListViewItem(ramoAtividades.Cod.ToString());
+
+                                item.SubItems.Add(ramoAtividades.Ramo.ToString());
+                                item.SubItems.Add(ramoAtividades.Ativo.ToString());
+                                item.SubItems.Add(ramoAtividades.CodEmpresa.ToString());
+                                item.SubItems.Add(Convert.ToDateTime(ramoAtividades.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(ramoAtividades.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de Ramo de Atividades: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de RamoAtividadeses: " + ex.Message);
                 }
             }
         }

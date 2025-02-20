@@ -45,9 +45,9 @@ namespace KnkForms.Classes
         public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12)
         {
             txtCod.Text = campo1;
-            txtNomePais.Text = campo2;
+            txtEstado.Text = campo2;
             txtCodPais.Text = campo3;
-            txtEstado.Text = campo4;
+            txtNomePais.Text = campo4;
             txtSigla.Text = campo5;
             txtPercIcms.Text = campo6;
             txtIcms.Text = campo7;
@@ -95,13 +95,14 @@ namespace KnkForms.Classes
             oEstado.Estado = txtEstado.Text;
             oEstado.Sigla = Convert.ToString(txtSigla.Text);
             oEstado.CodPais = Convert.ToInt32(txtCodPais.Text);
-            oEstado.PercIcms = !string.IsNullOrEmpty(txtPercIcms.Text) ? (double?)Convert.ToInt32(txtPercIcms.Text) : null;
-            oEstado.Icms = !string.IsNullOrEmpty(txtIcms.Text) ? (double?)Convert.ToInt32(txtIcms.Text) : null;
-            oEstado.PercRedST = !string.IsNullOrEmpty(txtPercRedST.Text) ? (double?)Convert.ToInt32(txtPercRedST.Text) : null; ;
+            oEstado.PercIcms = !string.IsNullOrEmpty(txtPercIcms.Text) ? (decimal?)Convert.ToDecimal(txtPercIcms.Text) : null;
+            oEstado.Icms = !string.IsNullOrEmpty(txtIcms.Text) ? (decimal?)Convert.ToDecimal(txtIcms.Text) : null;
+            oEstado.PercRedST = !string.IsNullOrEmpty(txtPercRedST.Text) ? (decimal?)Convert.ToDecimal(txtPercRedST.Text) : null; ;
             oEstado.CodWeb = !string.IsNullOrEmpty(txtCodWeb.Text) ? (int?)Convert.ToInt32(txtCodWeb.Text) : null; ;
             oEstado.CodEmpresa = 1;
             oEstado.DataModificacao = DateTime.Now;
-
+            oEstado.NomePais = txtNomePais.Text;
+            
             if (SalvarAlterar == 'A')
             {
                 oEstado.Cod = Convert.ToInt32(txtCod.Text);
@@ -118,12 +119,6 @@ namespace KnkForms.Classes
             SalvarAlterar = '\0';
 
             Close();
-        }
-        private void chkBox(object sender, KeyEventArgs e)
-        {
-            CheckBox c1 = this.ActiveControl as CheckBox;
-            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
         public void SetPais(int idPais, string nomePais)
         {

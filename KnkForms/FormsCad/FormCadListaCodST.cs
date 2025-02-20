@@ -81,13 +81,13 @@ namespace KnkForms.FormsCad
             if (SalvarAlterar == 'A')
             {
                 //aListaCodST.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                aListaCodST.AlterarBD(aListaCodST.CodCst);
+                aListaCodST.AlterarBD(aListaCodST);
                 
             }
             else
             {
                 aListaCodST.DataCadastro = DateTime.Now;
-                aListaCodST.SalvarBD();
+                aListaCodST.SalvarBD(aListaCodST);
             }
             
             SalvarAlterar = '\0';

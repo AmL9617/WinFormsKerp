@@ -38,10 +38,9 @@ namespace KnkForms.Forms
             txtCodUser.Clear();
             txtDataCad.Clear();
             txtDataAlt.Clear();
-            chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8)
         {
             txtCod.Text = campo1;
             txtCod.Enabled = false;
@@ -49,10 +48,9 @@ namespace KnkForms.Forms
             txtSigla.Text = campo3;
             txtDdi.Text = campo4;
             boxNacional.Text = campo5;
-            if (campo6 == "S") chkAtivo.Checked = true; else { chkAtivo.Checked = false; }
-            txtCodUser.Text = campo7;
-            txtDataCad.Text = campo8;
-            txtDataAlt.Text = campo9;
+            txtCodUser.Text = campo6;
+            txtDataCad.Text = campo7;
+            txtDataAlt.Text = campo8;
             SalvarAlterar = 'A';
             
         }
@@ -67,7 +65,6 @@ namespace KnkForms.Forms
             txtCodUser.Enabled = false;
             txtDataCad.Enabled = false;
             txtDataAlt.Enabled = false;
-            chkAtivo.Enabled = false;
             boxNacional.Enabled = false;
         }
 
@@ -81,7 +78,6 @@ namespace KnkForms.Forms
             txtCodUser.Enabled = true;
             txtDataCad.Enabled = true;
             txtDataAlt.Enabled = true;
-            chkAtivo.Enabled = true;
             boxNacional.Enabled = true;
         }
 
@@ -89,36 +85,29 @@ namespace KnkForms.Forms
         {
             oPais.Pais = txtPais.Text;
             oPais.Sigla = txtSigla.Text;
-            oPais.DDI = Convert.ToInt32(txtDdi.Text);
+            oPais.DDI = txtDdi.Text;
             if (boxNacional.Text == "Sim")
-                oPais.Nacional = 's';
+                oPais.Nacional = 'S';
             else if (boxNacional.Text == "Não")
-                oPais.Nacional = 'n';
+                oPais.Nacional = 'N';
             oPais.CodEmpresa = 1;
             oPais.DataModificacao = DateTime.Now;
-            if (chkAtivo.Checked == true) { oPais.Ativo = 'S'; } else { oPais.Ativo = 'N'; };
-
+            
             if (SalvarAlterar == 'A')
             {
                 oPais.Cod = Convert.ToInt32(txtCod.Text);
                 oPais.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oPais.AlterarBD(oPais.Cod);
+                oPais.AlterarBD(oPais);
             }
             else
             {
                 oPais.DataCadastro = DateTime.Now;
-                oPais.SalvarBD();
+                oPais.SalvarBD(oPais);
             }
             SalvarAlterar = '\0';
 
             txtCod.Enabled = true;
             Close();
-        }
-        private void chkBox(object sender, KeyEventArgs e)
-        {
-            CheckBox c1 = this.ActiveControl as CheckBox;
-            if (e.KeyData == Keys.Enter && this.ActiveControl.Equals(c1))
-                if (c1.Checked == false) c1.Checked = true; else c1.Checked = false;
         }
     }
 }

@@ -1,7 +1,10 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,15 +16,15 @@ namespace KnkForms.Classes
         protected string regiao;
         protected char ativo;
         protected string descricao;
+        protected int codUsuario;
 
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-
+            
         public Regioes()
         {
             regiao = "";
             ativo = '\0';
             descricao = "";
+            codUsuario = 0;
         }
 
         public string Regiao
@@ -40,87 +43,70 @@ namespace KnkForms.Classes
             get { return descricao; }
             set { descricao = value; }
         }
-        public void SalvarBD()
+        [JsonProperty("IdUsuario")]
+        public int CodUsuario
         {
-            try
+            get { return codUsuario; }
+            set { codUsuario = value; }
+        }
+        public async void SalvarBD(Regioes aRegiao)
+        {
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Regiao (IdEmpresa, Regiao, Descricao, IdUsuario, Ativo, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Regiao, @Descricao, @IdUsuario, @Ativo, @DataCadastro, @DataModificacao)";
+                    string jsonItem = JsonConvert.SerializeObject(aRegiao, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Regiao", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Regiao", Regiao);
-                        command.Parameters.AddWithValue("@Descricao", Descricao);
-                        command.Parameters.AddWithValue("@IdUsuario", CodEmpresa);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodRegiao)
+        public async void AlterarBD(Regioes aRegiao)
         {
-            try
+            int idEmp = 1;
+            int id = aRegiao.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE Regiao SET IdEmpresa=@IdEmpresa, Regiao=@Regiao, Descricao=@Descricao, IdUsuario=@IdUsuario, Ativo=@Ativo, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdRegiao = @IdRegiao";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Regiao", Regiao);
-                        command.Parameters.AddWithValue("@Descricao", Descricao);
-                        command.Parameters.AddWithValue("@IdUsuario", CodEmpresa);
-                        command.Parameters.AddWithValue("@Ativo", Ativo);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdRegiao", CodRegiao);
+                    string jsonItem = JsonConvert.SerializeObject(aRegiao);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Regiao/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodRegiao)
+        public async void ExcluirBD(int CodRegiao)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM Regiao WHERE IdRegiao = @IdRegiao";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdRegiao", CodRegiao);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                RegiaoServices buscarRegiao = new RegiaoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Regiao/{CodEmp}/{CodRegiao}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

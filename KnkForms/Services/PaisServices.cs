@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KnkForms.Services
 {
@@ -17,8 +18,16 @@ namespace KnkForms.Services
             var response = await httpClient.GetAsync($"https://localhost:7231/Pais");
             var jsonString = await response.Content.ReadAsStringAsync();
 
-            List<Paises> JsonObject = JsonConvert.DeserializeObject<List<Paises>>(jsonString);
-            return JsonObject;
+            try
+            {
+                List<Paises> JsonObject = JsonConvert.DeserializeObject<List<Paises>>(jsonString);
+                return JsonObject;
+            }
+            catch (JsonSerializationException ex)
+            {
+                MessageBox.Show($"Deserialização falhou: {ex.Message}");
+                throw;
+            }
         }
     }
 }

@@ -1,13 +1,16 @@
 ﻿using KnkForms.Classes;
 using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -37,41 +40,53 @@ namespace KnkForms.FormsCon
             oPais = (Paises)obj;
         }
 
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Pais");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                ListViewItem item = new ListViewItem(reader["IdPais"].ToString());
+                        PaisServices buscaPais = new PaisServices();
+                        List<Paises> PaisProcurado = await buscaPais.Dados();
 
-                                item.SubItems.Add(reader["Pais"].ToString());
-                                item.SubItems.Add(reader["Sigla"].ToString());
-                                item.SubItems.Add(reader["DDI"].ToString());
-                                item.SubItems.Add(Convert.ToChar(reader["Nacional"]) == 's' ? "Sim" : "Não");
-                                item.SubItems.Add(reader["Ativo"].ToString());
-                                item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                        try
+                        {
+                            listVConsulta.Items.Clear();
+
+                            foreach (Paises pais in PaisProcurado)
+                            {
+                                ListViewItem item = new ListViewItem(pais.Cod.ToString());
+
+                                item.SubItems.Add(pais.Pais.ToString());
+                                item.SubItems.Add(pais.Sigla.ToString());
+                                item.SubItems.Add(pais.DDI.ToString());
+                                item.SubItems.Add(Convert.ToChar(pais.Nacional) == 'S' ? "Sim" : "Não");
+                                item.SubItems.Add(Convert.ToString(pais.CodEmpresa));
+                                item.SubItems.Add(Convert.ToDateTime(pais.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(pais.DataModificacao).ToString("dd/MM/yyyy"));
 
                                 listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar os dados de País: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar os dados de Paises: " + ex.Message);
                 }
             }
         }
@@ -98,11 +113,10 @@ namespace KnkForms.FormsCon
                 string campo6 = selectedItem.SubItems[5].Text;
                 string campo7 = selectedItem.SubItems[6].Text;
                 string campo8 = selectedItem.SubItems[7].Text;
-                string campo9 = selectedItem.SubItems[8].Text;
 
                 oFormCadPais.ConhecaObj(oPais);
                 oFormCadPais.LimpaTxt();
-                oFormCadPais.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9);
+                oFormCadPais.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8);
                 oFormCadPais.ShowDialog();
             }
             CarregaLV();

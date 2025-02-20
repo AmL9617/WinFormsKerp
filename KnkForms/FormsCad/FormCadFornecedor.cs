@@ -162,22 +162,24 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             if (boxIndustria.Text == "Não")
-                oFornecedor.Industria = 'N';
+                oFornecedor.Industria = "N";
             else if (boxIndustria.Text == "Sim")
-                oFornecedor.Industria = 'S';
+                oFornecedor.Industria = "S";
             if (boxFisJur.Text == "Fisica")
-                oFornecedor.FisicaJuridica = 'F';
+                oFornecedor.FisicaJuridica = "F";
             else if (boxFisJur.Text == "Juridica")
-                oFornecedor.FisicaJuridica = 'J';
+                oFornecedor.FisicaJuridica = "J";
             oFornecedor.RazaoSocial = txtRazaoSocial.Text;
             oFornecedor.NomeFantasia = txtNomeFantasia.Text;
             oFornecedor.Endereco = txtEndereco.Text;
-            oFornecedor.Numero = Convert.ToInt32(txtNumero.Text);
+            oFornecedor.Numero = txtNumero.Text;
             oFornecedor.Complemento = txtComplemento.Text;
             oFornecedor.Bairro = txtBairro.Text;
             oFornecedor.CodCidades = Convert.ToInt32(txtCodCidade.Text);
+            oFornecedor.NomeCidade = txtNomeCidade.Text;
             oFornecedor.Cep = txtCep.Text;
             oFornecedor.CodRegioes = Convert.ToInt32(txtCodRegiao.Text);
+            oFornecedor.NomeRegiao = txtNomeRegiao.Text;
             oFornecedor.CodListaPrecos = Convert.ToInt32(txtCodLista.Text);
             oFornecedor.CodCondPag = Convert.ToInt32(txtCodCondPag.Text);
             oFornecedor.Trade = txtTrade.Text;
@@ -187,14 +189,14 @@ namespace KnkForms.Forms
             oFornecedor.CNPJ = txtCnpj.Text;
             oFornecedor.UltimoMovimento = dataUltMov.Value;
             if (chkVerCliente.Checked == false)
-                oFornecedor.VerEmClientes = 'F';
+                oFornecedor.VerEmClientes = "F";
             if (chkVerCliente.Checked == true)
-                oFornecedor.VerEmClientes = 'A';
+                oFornecedor.VerEmClientes = "A";
             oFornecedor.Observacoes = txtObservacao.Text;
             if (chkAtivo.Checked == false)
-                oFornecedor.Ativo = 'N';
+                oFornecedor.Ativo = "N";
             if (chkAtivo.Checked == true)
-                oFornecedor.Ativo = 'S';
+                oFornecedor.Ativo = "S";
             oFornecedor.CodEmpresa = 1;
             oFornecedor.DataModificacao = DateTime.Now;
 
@@ -202,14 +204,14 @@ namespace KnkForms.Forms
             {
                 oFornecedor.Cod = Convert.ToInt32(txtCod.Text);
                 oFornecedor.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oFornecedor.AlterarBD(oFornecedor.Cod);
+                oFornecedor.AlterarBD(oFornecedor);
             }
             else
             {
                 oFornecedor.DataCadastro = DateTime.Now;
-                oFornecedor.SalvarBD();
+                oFornecedor.SalvarBD(oFornecedor);
             }
-            SalvarAlterar = '\0';
+            SalvarAlterar ='\0';
 
             txtCod.Enabled = true;
             Close();

@@ -91,7 +91,7 @@ namespace KnkForms.Forms
             aListaPreco.DescontoMaximo = Convert.ToDouble(txtDescMax.Text);
             aListaPreco.MargemLucro = Convert.ToDouble(txtMargemLucro.Text);
             aListaPreco.PercCom = Convert.ToDouble(txtPercCom.Text);
-            if(chkTodas.Checked == true) { aListaPreco.Todas = 'S'; } else { aListaPreco.Todas = 'N'; } 
+            if(chkTodas.Checked == true) { aListaPreco.Todas = "S"; } else { aListaPreco.Todas = "N"; } 
             aListaPreco.CodEmpresa = 1;
             aListaPreco.DataModificacao = DateTime.Now;
 
@@ -99,12 +99,12 @@ namespace KnkForms.Forms
             {
                 aListaPreco.Cod = Convert.ToInt32(txtCod.Text);
                 aListaPreco.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                aListaPreco.AlterarBD(aListaPreco.Cod);
+                aListaPreco.AlterarBD(aListaPreco);
             }
             else
             {
                 aListaPreco.DataCadastro = DateTime.Now;
-                aListaPreco.SalvarBD();
+                aListaPreco.SalvarBD(aListaPreco);
             }
                 
             SalvarAlterar = '\0';

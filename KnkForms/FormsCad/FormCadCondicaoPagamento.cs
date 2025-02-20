@@ -50,7 +50,7 @@ namespace KnkForms.Forms
             if (campo7 == "C") { boxOpDisp.Text = "Compras"; }
             else if (campo7 == "V") { boxOpDisp.Text = "Vendas"; }
             else { boxOpDisp.Text = "Ambos"; }
-            if (campo8 == "0") chkAtivo.Checked = false; else chkAtivo.Checked = true;
+            if (campo8 == "N") chkAtivo.Checked = false; else chkAtivo.Checked = true;
             txtPorParcela.Text = campo9;
             txtCodUser.Text = campo10;
             txtDataCad.Text = campo11;
@@ -94,7 +94,7 @@ namespace KnkForms.Forms
         {
             aCondPag.CondPag = txtCondPag.Text;
             if(boxTipo.Text == "Prazo") { aCondPag.Tipo = "P"; } else { aCondPag.Tipo = "M"; }
-            aCondPag.TaxaJuro = !string.IsNullOrEmpty(txtTaxaJuro.Text) ? (double?)Convert.ToInt32(txtTaxaJuro.Text) : null; ;
+            aCondPag.TaxaJuro = !string.IsNullOrEmpty(txtTaxaJuro.Text) ? (decimal?)Convert.ToDecimal(txtTaxaJuro.Text) : null; ;
             if(boxOpDisp.Text == "Compras") { aCondPag.OperacaoDisponivel = "C"; }
             else if(boxOpDisp.Text == "Vendas") { aCondPag.OperacaoDisponivel = "V"; }
             else { aCondPag.OperacaoDisponivel = "A"; }
@@ -109,13 +109,13 @@ namespace KnkForms.Forms
             {
                 aCondPag.Cod = Convert.ToInt32(txtCod.Text);
                 aCondPag.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                aCondPag.AlterarBD(aCondPag.Cod);
+                aCondPag.AlterarBD(aCondPag);
             }
                 
             else
             {
                 aCondPag.DataCadastro = DateTime.Now;
-                aCondPag.SalvarBD();
+                aCondPag.SalvarBD(aCondPag);
             }
                 
             SalvarAlterar = '\0';

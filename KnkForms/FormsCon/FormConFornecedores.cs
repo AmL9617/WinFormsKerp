@@ -1,4 +1,5 @@
 ﻿using KnkForms.Forms;
+using KnkForms.Services;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KnkForms.Classes
@@ -17,7 +20,7 @@ namespace KnkForms.Classes
         Fornecedores oFornecedor;
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
         //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
-        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, IdRegiao, Logradouro, Numero, Complemento, Bairro, Cep, IdLista, IdCondPag, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
+        string query = "SELECT IdFornCliente, RazaoSocial, NomeFantasia, InscricaoEstadual, CpfCnpj, Tipo, IdCidade, Idfornecedor, Logradouro, Numero, Complemento, Bairro, Cep, IdLista, IdCondPag, ConsumidorRevenda, Observacao, Trade, CodProdIgual, LimiteCredito, Ativo, FisicaJuridica, IdEmpresa, DataCadastro, DataModificacao FROM FornCliente";
         public FormConFornecedores()
         {
             InitializeComponent();
@@ -32,56 +35,65 @@ namespace KnkForms.Classes
         {
             oFornecedor = (Fornecedores)obj;
         }
-        protected override void CarregaLV()
+        private async Task CarregaLV()
         {
-
-            listVConsulta.Items.Clear();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (HttpClient httpClient = new HttpClient())
             {
+
                 try
                 {
-                    connection.Open();
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/fornecedor");
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (response.IsSuccessStatusCode)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        FornecedorServices buscaFornecedor = new FornecedorServices();
+                        List<Fornecedores> fornecedorProcurada = await buscaFornecedor.Dados();
+
+                        try
                         {
-                            while (reader.Read())
+                            listVConsulta.Items.Clear();
+
+                            foreach (Fornecedores fornecedor in fornecedorProcurada)
                             {
-                                if (reader["Tipo"].ToString() == "F" || reader["Tipo"].ToString() == "A")
-                                {
-                                    ListViewItem item = new ListViewItem(reader["IdFornCliente"].ToString());
+                                ListViewItem item = new ListViewItem(fornecedor.Cod.ToString());
 
-                                    item.SubItems.Add(reader["RazaoSocial"].ToString());
-                                    item.SubItems.Add(reader["NomeFantasia"].ToString());
-                                    item.SubItems.Add(reader["InscricaoEstadual"].ToString());
-                                    item.SubItems.Add(reader["CpfCnpj"].ToString());
-                                    item.SubItems.Add(reader["Tipo"].ToString());
-                                    item.SubItems.Add(reader["IdCidade"].ToString());
-                                    item.SubItems.Add(reader["IdRegiao"].ToString());
-                                    item.SubItems.Add(reader["Logradouro"].ToString());
-                                    item.SubItems.Add(reader["Numero"].ToString());
-                                    item.SubItems.Add(reader["Complemento"].ToString());
-                                    item.SubItems.Add(reader["Bairro"].ToString());
-                                    item.SubItems.Add(reader["Cep"].ToString());
-                                    item.SubItems.Add(reader["IdLista"].ToString());
-                                    item.SubItems.Add(reader["IdCondPag"].ToString());
-                                    item.SubItems.Add(reader["ConsumidorRevenda"].ToString());
-                                    item.SubItems.Add(reader["Observacao"].ToString());
-                                    item.SubItems.Add(reader["Trade"].ToString());
-                                    item.SubItems.Add(reader["CodProdIgual"].ToString());
-                                    item.SubItems.Add(reader["LimiteCredito"].ToString());
-                                    item.SubItems.Add(reader["Ativo"].ToString());
-                                    item.SubItems.Add(reader["FisicaJuridica"].ToString());
-                                    item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(fornecedor.RazaoSocial.ToString());
+                                item.SubItems.Add(fornecedor.NomeFantasia.ToString());
+                                item.SubItems.Add(fornecedor.InscricaoEstadual.ToString());
+                                item.SubItems.Add(fornecedor.CNPJ.ToString());
+                                item.SubItems.Add(fornecedor.VerEmClientes.ToString());
+                                item.SubItems.Add(fornecedor.CodCidades.ToString());
+                                item.SubItems.Add(fornecedor.CodRegioes.ToString());
+                                item.SubItems.Add(fornecedor.Endereco.ToString());
+                                item.SubItems.Add(fornecedor.Numero.ToString());
+                                item.SubItems.Add(fornecedor.Complemento.ToString());
+                                item.SubItems.Add(fornecedor.Bairro.ToString());
+                                item.SubItems.Add(fornecedor.Cep.ToString());
+                                item.SubItems.Add(fornecedor.CodListaPrecos.ToString());
+                                item.SubItems.Add(fornecedor.CodCondPag.ToString());
+                                item.SubItems.Add(fornecedor.Industria.ToString());
+                                item.SubItems.Add(fornecedor.Observacoes.ToString());
+                                item.SubItems.Add(fornecedor.Trade.ToString());
+                                item.SubItems.Add(fornecedor.CodProdIgual.ToString());
+                                item.SubItems.Add(fornecedor.LimiteCredito.ToString());
+                                item.SubItems.Add(fornecedor.Ativo.ToString());
+                                item.SubItems.Add(fornecedor.FisicaJuridica.ToString());
+                                item.SubItems.Add(fornecedor.CodEmpresa.ToString());
+                                item.SubItems.Add(Convert.ToDateTime(fornecedor.DataCadastro).ToString("dd/MM/yyyy"));
+                                item.SubItems.Add(Convert.ToDateTime(fornecedor.DataModificacao).ToString("dd/MM/yyyy"));
 
-                                    listVConsulta.Items.Add(item);
-                                }
+                                listVConsulta.Items.Add(item);
                             }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show($"Falha na requisição. Status: {response.StatusCode}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
@@ -198,8 +210,8 @@ namespace KnkForms.Classes
                                     item.SubItems.Add(reader["Ativo"].ToString());
                                     item.SubItems.Add(reader["FisicaJuridica"].ToString());
                                     item.SubItems.Add(reader["IdEmpresa"].ToString());
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd/MM/yyyy"));
-                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd/MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataCadastro"]).ToString("dd /MM/yyyy"));
+                                    item.SubItems.Add(Convert.ToDateTime(reader["DataModificacao"]).ToString("dd /MM/yyyy"));
 
                                     listVConsulta.Items.Add(item);
                                 }

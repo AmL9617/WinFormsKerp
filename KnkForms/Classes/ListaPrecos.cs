@@ -1,8 +1,11 @@
-﻿using System;
+﻿using KnkForms.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +18,7 @@ namespace KnkForms.Classes
         protected double descontoMaximo;
         protected double margemLucro;
         protected double percCom;
-        protected char todas;
+        protected string todas;
 
         //Placeholder
         protected int codMarca;
@@ -25,15 +28,13 @@ namespace KnkForms.Classes
         protected Marcas marcas;
         protected Subgrupos subgrupos;
         
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-        //"Server=192.168.20.150,49172;Database=kerp;User Id=Administrador;Password=T0r1@2017;";
         public ListaPrecos()
         {
             lista = "";
             descontoMaximo = 0.0f;
             margemLucro = 0.0f;
             percCom = 0.0f;
-            todas = '\0';
+            todas = "";
             marcas = new Marcas();
             subgrupos = new Subgrupos();
             codMarca = 0;
@@ -45,7 +46,7 @@ namespace KnkForms.Classes
             get { return lista; }
             set { lista = value; }
         }
-
+        [JsonProperty("DescMax")]
         public double DescontoMaximo
         {
             get { return descontoMaximo; }
@@ -57,125 +58,100 @@ namespace KnkForms.Classes
             get { return margemLucro; }
             set { margemLucro = value; }
         }
-
+        [JsonProperty("PerComissao")]
         public double PercCom
         {
             get { return percCom; }
             set { percCom = value; }
         }
 
-        public char Todas
+        public string Todas
         {
             get { return todas; }
             set { todas = value; }
         }
-
+        [JsonIgnore]
         public int CodMarca
         {
             get { return codMarca; }
             set { codMarca = value; }
         }
-
+        [JsonIgnore]
         public int CodSubgrupo
         {
             get { return codSubgrupo; }
             set { codSubgrupo = value; }
         }
-
+        [JsonIgnore]
         public Marcas Marcas
         {
             get { return marcas; }
             set { marcas = value; }
         }
-
+        [JsonIgnore]
         public Subgrupos Subgrupos
         {
             get { return subgrupos; }
             set { subgrupos = value; }
         }
-        public void SalvarBD()
+        public async void SalvarBD(ListaPrecos aLista)
         {
-            try
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Lista (IdEmpresa, Lista, DescMax, MargemLucro, PerComissao, Todas, DataCadastro, DataModificacao) VALUES (@IdEmpresa, @Lista, @DescMax, @MargemLucro, @PerComissao, @Todas, @DataCadastro, @DataModificacao)";
+                    string jsonItem = JsonConvert.SerializeObject(aLista, Formatting.Indented);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync("https://localhost:7231/Lista", content);
+                    response.EnsureSuccessStatusCode();
 
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Lista", Lista);
-                        command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
-                        command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
-                        command.Parameters.AddWithValue("@PerComissao", PercCom);
-                        command.Parameters.AddWithValue("@Todas", Todas);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro);
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void AlterarBD(int CodLista)
+        public async void AlterarBD(ListaPrecos aLista)
         {
-            try
+            int idEmp = 1;
+            int id = aLista.Cod;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    conn.Open();
-                    string query = "UPDATE Lista SET IdEmpresa=@IdEmpresa, Lista=@Lista, DescMax=@DescMax, MargemLucro=@MargemLucro, PerComissao=@PerComissao, Todas=@Todas, DataCadastro=@DataCadastro, DataModificacao=@DataModificacao WHERE IdLista = @IdLista";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdEmpresa", CodEmpresa);
-                        command.Parameters.AddWithValue("@Lista", Lista);
-                        command.Parameters.AddWithValue("@DescMax", DescontoMaximo);
-                        command.Parameters.AddWithValue("@MargemLucro", MargemLucro);
-                        command.Parameters.AddWithValue("@PerComissao", PercCom);
-                        command.Parameters.AddWithValue("@Todas", Todas);
-                        command.Parameters.AddWithValue("@DataCadastro", DataCadastro.ToString());
-                        command.Parameters.AddWithValue("@DataModificacao", DataModificacao);
-                        command.Parameters.AddWithValue("@IdLista", CodLista);
+                    string jsonItem = JsonConvert.SerializeObject(aLista);
+                    HttpContent content = new StringContent(jsonItem, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:7231/Lista/{idEmp}/{id}", content);
+                    response.EnsureSuccessStatusCode();
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados atualizados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                    MessageBox.Show("Item Atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-        public void ExcluirBD(int CodLista)
+        public async void ExcluirBD(int CodLista)
         {
-            try
+            int CodEmp = 1;
+            using (HttpClient httpClient = new HttpClient())
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM Lista WHERE IdLista = @IdLista";
-                    using (var command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@IdLista", CodLista);
 
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Dados deletados com sucesso", "Sucesso", MessageBoxButtons.OK);
-                    }
+                ListaPrecoServices buscaLista = new ListaPrecoServices();
+                try
+                {
+                    HttpResponseMessage response = await httpClient.DeleteAsync($"https://localhost:7231/Lista/{CodEmp}/{CodLista}");
+
+                    response.EnsureSuccessStatusCode();
+                    MessageBox.Show($"Deletado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show(ex.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu um erro:{ex}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

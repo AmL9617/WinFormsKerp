@@ -71,7 +71,7 @@ namespace KnkForms.Forms
         public override void Salvar()
         {
             oRamo.Ramo = txtNomeRamo.Text;
-            if (chkAtivo.Checked == true) { oRamo.Ativo = 'S'; } else { oRamo.Ativo = 'N'; }; 
+            if (chkAtivo.Checked == true) { oRamo.Ativo = "S"; } else { oRamo.Ativo = "N"; }; 
             oRamo.CodEmpresa = 1;
             oRamo.DataModificacao = DateTime.Now;
 
@@ -79,12 +79,12 @@ namespace KnkForms.Forms
             {
                 oRamo.Cod = Convert.ToInt32(txtCod.Text);
                 oRamo.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oRamo.AlterarBD(oRamo.Cod);
+                oRamo.AlterarBD(oRamo);
             }
             else
             {
                 oRamo.DataCadastro = DateTime.Today;
-                oRamo.SalvarBD();
+                oRamo.SalvarBD(oRamo);
             }
 
             SalvarAlterar = '\0';

@@ -11,7 +11,7 @@ namespace KnkForms.Forms
 {
     public partial class FormCadRegiao : KnkForms.FormCadPai
     {
-        Regioes oRegiao;
+        Regioes aRegiao;
         FormConRegioes oFormConRegioes;
         char SalvarAlterar = '\0';
         public FormCadRegiao()
@@ -20,7 +20,7 @@ namespace KnkForms.Forms
         }
         public override void ConhecaObj(Object obj)
         {
-            oRegiao = (Regioes)obj;
+            aRegiao = (Regioes)obj;
         }
 
         public override void LimpaTxt()
@@ -71,23 +71,24 @@ namespace KnkForms.Forms
 
         public override void Salvar()
         {
-            oRegiao.Regiao = txtRegiao.Text;
-            if (chkAtivo.Checked == true) { oRegiao.Ativo = 'S'; } else { oRegiao.Ativo = 'N'; };
+            aRegiao.Regiao = txtRegiao.Text;
+            if (chkAtivo.Checked == true) { aRegiao.Ativo = 'S'; } else { aRegiao.Ativo = 'N'; };
             //Vai ficar valor 1 até eu implementar login
-            oRegiao.CodEmpresa = 1;
-            oRegiao.DataModificacao = DateTime.Today;
-            oRegiao.Descricao = txtDescricao.Text;
+            aRegiao.CodEmpresa = 1;
+            aRegiao.CodUsuario = 1;
+            aRegiao.DataModificacao = DateTime.Today;
+            aRegiao.Descricao = txtDescricao.Text;
 
             if (SalvarAlterar == 'A')
             {
-                oRegiao.Cod = Convert.ToInt32(txtCod.Text);
-                oRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
-                oRegiao.AlterarBD(oRegiao.Cod);
+                aRegiao.Cod = Convert.ToInt32(txtCod.Text);
+                aRegiao.DataCadastro = Convert.ToDateTime(txtDataCad.Text);
+                aRegiao.AlterarBD(aRegiao);
             }
             else
             {
-                oRegiao.DataCadastro = DateTime.Today;
-                oRegiao.SalvarBD();
+                aRegiao.DataCadastro = DateTime.Today;
+                aRegiao.SalvarBD(aRegiao);
             }
                 
             SalvarAlterar = '\0';
