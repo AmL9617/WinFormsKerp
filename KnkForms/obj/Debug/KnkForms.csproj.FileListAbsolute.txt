@@ -210,3 +210,6 @@ C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System
 C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\obj\Debug\KnkForms.csproj.Up2Date
+C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\usuario\Documents\GitHub\KerpApi\WinFormsKerp\KnkForms\bin\Debug\System.Net.Http.Primitives.dll

@@ -95,7 +95,7 @@ namespace KnkForms.FormsCon
             CarregaLV();
         }
 
-        protected override void Alterar()
+        protected override async void Alterar()
         {
             if (listVConsulta.SelectedItems.Count > 0)
             {

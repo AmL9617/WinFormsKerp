@@ -16,7 +16,7 @@ namespace KnkForms.Services
         {
             HttpClient httpClient = new HttpClient();
             var response = await httpClient.GetAsync($"https://localhost:7231/Fornecedor");
-            var jsonString = await response.Content.ReadAsStringAsync();
+            var jsonString = await response.Content.ReadAsStringAsync(); 
 
             try
             {

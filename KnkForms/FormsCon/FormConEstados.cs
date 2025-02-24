@@ -96,7 +96,7 @@ namespace KnkForms.Classes
             CarregaLV();
         }
 
-        protected override void Alterar()
+        protected override async void Alterar()
         {
             if (listVConsulta.SelectedItems.Count > 0)
             {
@@ -104,20 +104,20 @@ namespace KnkForms.Classes
                 string idPais = "";
                 string nomePais = selectedItem.SubItems[2].Text;
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (HttpClient httpClient = new HttpClient())
                 {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand("SELECT IdPais FROM Pais WHERE Pais = @nomePais", connection))
+                    string idEmpresa = selectedItem.SubItems[8].Text;
+                    string idEstado = selectedItem.SubItems[0].Text;
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Estado/{idEmpresa}/{idEstado}");
+                    if (response.IsSuccessStatusCode)
                     {
-                        command.Parameters.AddWithValue("@nomePais", nomePais);
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                idPais = reader["idPais"].ToString();
-                            }
-                        }
+                        var estado = await response.Content.ReadAsAsync<Estados>();
+                        idPais = estado.CodPais.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao carregar os dados de Estados.");
+                        return;
                     }
                 }
 

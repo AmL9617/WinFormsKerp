@@ -663,16 +663,6 @@
             this.Controls.SetChildIndex(this.dataUltMov, 0);
             this.Controls.SetChildIndex(this.chkAtivo, 0);
             this.Controls.SetChildIndex(this.chkVerCliente, 0);
-            this.Controls.SetChildIndex(this.lblCodUser, 0);
-            this.Controls.SetChildIndex(this.txtCodUser, 0);
-            this.Controls.SetChildIndex(this.btnSair, 0);
-            this.Controls.SetChildIndex(this.lblCod, 0);
-            this.Controls.SetChildIndex(this.txtCod, 0);
-            this.Controls.SetChildIndex(this.lblDataCad, 0);
-            this.Controls.SetChildIndex(this.txtDataCad, 0);
-            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
-            this.Controls.SetChildIndex(this.txtDataAlt, 0);
-            this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.txtCodCidade, 0);
             this.Controls.SetChildIndex(this.btnConsultaCid, 0);
@@ -690,6 +680,16 @@
             this.Controls.SetChildIndex(this.txtNomeRegiao, 0);
             this.Controls.SetChildIndex(this.txtNomeLista, 0);
             this.Controls.SetChildIndex(this.txtNomeCondPag, 0);
+            this.Controls.SetChildIndex(this.lblCodUser, 0);
+            this.Controls.SetChildIndex(this.txtCodUser, 0);
+            this.Controls.SetChildIndex(this.btnSair, 0);
+            this.Controls.SetChildIndex(this.lblCod, 0);
+            this.Controls.SetChildIndex(this.txtCod, 0);
+            this.Controls.SetChildIndex(this.lblDataCad, 0);
+            this.Controls.SetChildIndex(this.txtDataCad, 0);
+            this.Controls.SetChildIndex(this.lblDataAlteracao, 0);
+            this.Controls.SetChildIndex(this.txtDataAlt, 0);
+            this.Controls.SetChildIndex(this.btnSalvar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

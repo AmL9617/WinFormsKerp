@@ -50,6 +50,7 @@
             // 
             // txtCod
             // 
+            this.txtCod.Enabled = false;
             this.txtCod.Location = new System.Drawing.Point(35, 58);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(63, 20);

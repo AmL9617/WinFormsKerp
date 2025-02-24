@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using KnkForms.Services;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 namespace KnkForms.FormsCon
 {
@@ -19,8 +20,7 @@ namespace KnkForms.FormsCon
     {
         FormCadCidade oFormCadCidade;
         Cidades aCidade;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\usuario\\Documents\\GitHub\\WinFormsKerp\\KnkForms\\localKerp.mdf;Integrated Security=True;Connect Timeout=30";
-
+        
         public FormConCidades()
         {
             InitializeComponent();
@@ -92,29 +92,28 @@ namespace KnkForms.FormsCon
             CarregaLV();
         }
 
-        protected override void Alterar()
+        protected override async void Alterar()
         {
-            
             if (listVConsulta.SelectedItems.Count > 0)
             {
                 var selectedItem = listVConsulta.SelectedItems[0];
                 string idEstado = "";
                 string nomeEstado = selectedItem.SubItems[2].Text;
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (HttpClient httpClient = new HttpClient())
                 {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand("SELECT IdEstado FROM Estado WHERE Estado = @nomeEstado", connection))
+                    string idEmpresa = selectedItem.SubItems[5].Text;
+                    string idCidade = selectedItem.SubItems[0].Text;
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Cidade/{idEmpresa}/{idCidade}");
+                    if (response.IsSuccessStatusCode)
                     {
-                        command.Parameters.AddWithValue("@nomeEstado", nomeEstado);
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                idEstado = reader["idEstado"].ToString();
-                            }
-                        }
+                        var cidade = await response.Content.ReadAsAsync<Cidades>();
+                        idEstado = cidade.CodEstado.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao carregar os dados de Cidade.");
+                        return;
                     }
                 }
 
@@ -128,8 +127,6 @@ namespace KnkForms.FormsCon
                 string campo8 = selectedItem.SubItems[6].Text;
                 string campo9 = selectedItem.SubItems[7].Text;
 
-                
-
                 oFormCadCidade.ConhecaObj(aCidade);
                 oFormCadCidade.LimpaTxt();
                 oFormCadCidade.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9);
@@ -137,6 +134,8 @@ namespace KnkForms.FormsCon
             }
             CarregaLV();
         }
+
+        
 
         protected override void Excluir()
         {
@@ -150,7 +149,45 @@ namespace KnkForms.FormsCon
             }
             CarregaLV();
         }
-        protected override void Pesquisar()
+        protected override async void Pesquisar()
+        {
+            listVConsulta.Items.Clear(); 
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Cidade/");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var cidades = await response.Content.ReadAsAsync<List<Cidades>>();
+
+                        foreach (var cidade in cidades)
+                        {
+                            ListViewItem item = new ListViewItem(cidade.Cod.ToString());
+                            item.SubItems.Add(cidade.Cidade);
+                            item.SubItems.Add(cidade.Estado);
+                            item.SubItems.Add(cidade.DDD);
+                            item.SubItems.Add(cidade.Ativo.ToString());
+                            item.SubItems.Add(cidade.CodEmpresa.ToString());
+                            item.SubItems.Add(cidade.DataCadastro.ToString("dd/MM/yyyy"));
+                            item.SubItems.Add(cidade.DataModificacao.ToString("dd/MM/yyyy"));
+
+                            listVConsulta.Items.Add(item);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao pesquisar os dados de Cidades: " + response.ReasonPhrase);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao pesquisar os dados de Cidades: " + ex.Message);
+                }
+            }
+        }
+        /*protected override void Pesquisar()
         {
             listVConsulta.Items.Clear();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -191,7 +228,7 @@ namespace KnkForms.FormsCon
                 }
 
             }
-        }
+        }*/
         private void listV_DoubleClick(object sender, EventArgs e)
         {
             if (listVConsulta.SelectedItems.Count > 0)

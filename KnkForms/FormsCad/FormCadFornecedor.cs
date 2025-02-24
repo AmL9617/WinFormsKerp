@@ -68,7 +68,7 @@ namespace KnkForms.Forms
             chkAtivo.Checked = false;
         }
 
-        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20, string campo21, string campo22, string campo23, string campo24, string campo25)
+        public void CarregaTxt(string campo1, string campo2, string campo3, string campo4, string campo5, string campo6, string campo7, string campo8, string campo9, string campo10, string campo11, string campo12, string campo13, string campo14, string campo15, string campo16, string campo17, string campo18, string campo19, string campo20, string campo21, string campo22, string campo23, string campo24, string campo25, string campo26, string campo27)
         {
             txtCod.Text = campo1;
             txtCod.Enabled = false;
@@ -78,24 +78,26 @@ namespace KnkForms.Forms
             if (campo6 == "A") chkVerCliente.Checked = true; else chkVerCliente.Checked = false;
             txtCnpj.Text = campo5;
             txtCodCidade.Text = campo7;
-            txtCodRegiao.Text = campo8;
-            txtEndereco.Text = campo9;
-            txtNumero.Text = campo10;
-            txtComplemento.Text = campo11;
-            txtBairro.Text = campo12;
-            txtCep.Text = campo13;       
-            txtCodLista.Text = campo14;
-            txtCodCondPag.Text = campo15;
-            if (campo16 == "N") boxIndustria.Text = "Não"; else boxIndustria.Text = "Sim";
-            txtObservacao.Text = campo17;
-            txtTrade.Text = campo18;
-            txtCodProd.Text = campo19;
-            txtLimite.Text = campo20;
-            if(campo21 == "N") chkAtivo.Checked = false; else chkAtivo.Checked = true;
-            if (campo22 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
-            txtCodUser.Text = campo23;
-            txtDataCad.Text = campo24;
-            txtDataAlt.Text = campo25;
+            txtNomeCidade.Text = campo8;
+            txtCodRegiao.Text = campo9;
+            txtNomeRegiao.Text = campo10;
+            txtEndereco.Text = campo11;
+            txtNumero.Text = campo12;
+            txtComplemento.Text = campo13;
+            txtBairro.Text = campo14;
+            txtCep.Text = campo15;       
+            txtCodLista.Text = campo16;
+            txtCodCondPag.Text = campo17;
+            if (campo18 == "N") boxIndustria.Text = "Não"; else boxIndustria.Text = "Sim";
+            txtObservacao.Text = campo19;
+            txtTrade.Text = campo20;
+            txtCodProd.Text = campo21;
+            txtLimite.Text = campo22;
+            if(campo23 == "N") chkAtivo.Checked = false; else chkAtivo.Checked = true;
+            if (campo24 == "Fisica") boxFisJur.Text = "Fisica"; else boxFisJur.Text = "Juridica";    
+            txtCodUser.Text = campo25;
+            txtDataCad.Text = campo26;
+            txtDataAlt.Text = campo27;
             SalvarAlterar = 'A';
         }
 

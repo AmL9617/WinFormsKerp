@@ -62,8 +62,8 @@ namespace KnkForms.Classes
                                 item.SubItems.Add(fornecedor.InscricaoEstadual.ToString());
                                 item.SubItems.Add(fornecedor.CNPJ.ToString());
                                 item.SubItems.Add(fornecedor.VerEmClientes.ToString());
-                                item.SubItems.Add(fornecedor.CodCidades.ToString());
-                                item.SubItems.Add(fornecedor.CodRegioes.ToString());
+                                item.SubItems.Add(fornecedor.NomeCidade.ToString());
+                                item.SubItems.Add(fornecedor.NomeRegiao.ToString());
                                 item.SubItems.Add(fornecedor.Endereco.ToString());
                                 item.SubItems.Add(fornecedor.Numero.ToString());
                                 item.SubItems.Add(fornecedor.Complemento.ToString());
@@ -111,11 +111,40 @@ namespace KnkForms.Classes
             CarregaLV();
         }
 
-        protected override void Alterar()
+        protected override async void Alterar()
         {
             if (listVConsulta.SelectedItems.Count > 0)
             {
                 var selectedItem = listVConsulta.SelectedItems[0];
+                string idCidade = "";
+                string nomeCidade = selectedItem.SubItems[2].Text;
+                string idRegiao = "";
+                string nomeRegiao = selectedItem.SubItems[2].Text;
+                /*string idLista = "";
+                string nomeLista = selectedItem.SubItems[2].Text;
+                string idCondPag = "";
+                string nomeCondPag = selectedItem.SubItems[2].Text;*/
+
+
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    string idEmpresa = selectedItem.SubItems[22].Text;
+                    string idFornecedor = selectedItem.SubItems[0].Text;
+                    HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:7231/Fornecedor/{idEmpresa}/{idFornecedor}");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var fornecedor = await response.Content.ReadAsAsync<Fornecedores>();
+                        idCidade = fornecedor.CodCidades.ToString();
+                        idRegiao = fornecedor.CodRegioes.ToString();
+                        //idLista = fornecedor.CodEstado.ToString();
+                        //idCondPag = fornecedor.CodEstado.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao carregar os dados de Fornecedores.");
+                        return;
+                    }
+                }
 
                 string campo1 = selectedItem.SubItems[0].Text;
                 string campo2 = selectedItem.SubItems[1].Text;
@@ -123,29 +152,31 @@ namespace KnkForms.Classes
                 string campo4 = selectedItem.SubItems[3].Text;
                 string campo5 = selectedItem.SubItems[4].Text;
                 string campo6 = selectedItem.SubItems[5].Text;
-                string campo7 = selectedItem.SubItems[6].Text;
-                string campo8 = selectedItem.SubItems[7].Text;
-                string campo9 = selectedItem.SubItems[8].Text;
-                string campo10 = selectedItem.SubItems[9].Text;
-                string campo11 = selectedItem.SubItems[10].Text;
-                string campo12 = selectedItem.SubItems[11].Text;
-                string campo13 = selectedItem.SubItems[12].Text;
-                string campo14 = selectedItem.SubItems[13].Text;
-                string campo15 = selectedItem.SubItems[14].Text;
-                string campo16 = selectedItem.SubItems[15].Text;
-                string campo17 = selectedItem.SubItems[16].Text;
-                string campo18 = selectedItem.SubItems[17].Text;
-                string campo19 = selectedItem.SubItems[18].Text;
-                string campo20 = selectedItem.SubItems[19].Text;
-                string campo21 = selectedItem.SubItems[20].Text;
-                string campo22 = selectedItem.SubItems[21].Text;
-                string campo23 = selectedItem.SubItems[22].Text;
-                string campo24 = selectedItem.SubItems[23].Text;
-                string campo25 = selectedItem.SubItems[24].Text;
-
+                string campo7 = idCidade.ToString();
+                string campo8 = selectedItem.SubItems[6].Text;//nomecidade
+                string campo9 = idRegiao.ToString();
+                string campo10 = selectedItem.SubItems[7].Text; //nomereg
+                string campo11 = selectedItem.SubItems[8].Text;
+                string campo12 = selectedItem.SubItems[9].Text;
+                string campo13 = selectedItem.SubItems[10].Text;
+                string campo14 = selectedItem.SubItems[11].Text;
+                string campo15 = selectedItem.SubItems[12].Text;
+                string campo16 = selectedItem.SubItems[13].Text;
+                string campo17 = selectedItem.SubItems[14].Text;
+                string campo18 = selectedItem.SubItems[15].Text;
+                string campo19 = selectedItem.SubItems[16].Text;
+                string campo20 = selectedItem.SubItems[17].Text;
+                string campo21 = selectedItem.SubItems[18].Text;
+                string campo22 = selectedItem.SubItems[19].Text;
+                string campo23 = selectedItem.SubItems[20].Text;
+                string campo24 = selectedItem.SubItems[21].Text;
+                string campo25 = selectedItem.SubItems[22].Text;
+                string campo26 = selectedItem.SubItems[23].Text;
+                string campo27 = selectedItem.SubItems[24].Text;
+          
                 oFormCadFornecedor.ConhecaObj(oFornecedor);
                 oFormCadFornecedor.LimpaTxt();
-                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19, campo20, campo21, campo22, campo23, campo24, campo25);
+                oFormCadFornecedor.CarregaTxt(campo1, campo2, campo3, campo4, campo5, campo6, campo7, campo8, campo9, campo10, campo11, campo12, campo13, campo14, campo15, campo16, campo17, campo18, campo19, campo20, campo21, campo22, campo23, campo24, campo25, campo26, campo27);
                 oFormCadFornecedor.ShowDialog();
             }
             CarregaLV();

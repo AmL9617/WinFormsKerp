@@ -114,12 +114,12 @@
             // 
             // codCidade
             // 
-            this.codCidade.Text = "Código Cidade";
+            this.codCidade.Text = "Cidade";
             this.codCidade.Width = 90;
             // 
             // codRegiao
             // 
-            this.codRegiao.Text = "Código Região";
+            this.codRegiao.Text = "Região";
             this.codRegiao.Width = 85;
             // 
             // endereco
